@@ -1,0 +1,16 @@
+
+body{
+    font-family: 'Courier New';
+    background: azure;
+}
+
+.box_name{
+    
+    background: chocolate;
+    color: white;
+    font-size: 12pt;
+    width: 8%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
