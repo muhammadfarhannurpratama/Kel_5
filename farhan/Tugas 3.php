@@ -4,7 +4,7 @@
 <title>Page Title</title>
 </head>
 <body>
-
+<body bgcolor="#FFF0F5">
 <h1 style="color:red">Selamat Belajar HTML</h1>
 <h2 style="color:blue">Nama Saya: Muhammad Farhan Nur Pratma</h2>
 <h3>Politeknik Negeri Jember</h3>
@@ -17,24 +17,25 @@
 
 	echo "<h1 style='color:red'>Selamat Belajar HTML ".$tempat."</h1>";
 	ECHO "<h2 style='color:blue'>Selamat Belajar HTML</h2>";
-	EcHo "<h3>Selamat Belajar HTML ".$Tempat."</h3>";
+	EcHo "<h3> Selamat Belajar HTML ".$Tempat."</h3>";
 	echo $TempaT."</br></br>";
-	echo date("D/m/y")."</br></br>";
+	echo date("D/M/Y")."</br></br>";
 
 	//Penjumlahan
-	$a = 10; $b = $c = 20; $d = 2;
+	$a = 20; $b = $c = 20; $d = 2;
 	$jumlah = ($a + $b)/$d;
 
 	echo $jumlah."</br></br>";
 
-	for ($x = 0; $x <= 10; $x++) {
+	for ($x = 0; $x <= 13; $x++) {
     	echo "Tempat Ke - ".$x."<br>";
 		}
 
 	$t = date("H");
 
 	if ($t < "20") {
-    	echo "Selamat Pagi!";
+     
+    	echo "Selamat Siang!";
 	}
 
 	//Konstanta
