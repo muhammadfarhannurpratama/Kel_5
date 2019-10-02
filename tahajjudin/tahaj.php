@@ -1,11 +1,19 @@
+<?php 
+echo "Selamat Datang Brother";
+$nama ="Tahajjudin Fajri";
+$prodi ="TIF";
+$nim ="E41182137";
+
+?>
 
 
 
-<html>
+
+
+<!-- <html>
 <head>
     <title> kelompok 5 </title>
 </head>
-
 <body bgcolor="#809FDA">
     <br><br><br><br>
     <center>
@@ -34,4 +42,4 @@
         <a href="tahaj2.html">ke tahaj2</a>
 </body>
 
-</html>
+</html> -->
