@@ -1,19 +1,19 @@
 <?php 
-echo "Selamat Datang Brother <br>";
-$nama ="Tahajjudin Fajri";
-$prodi ="TIF";
-$nim ="E41182137";
-
-echo "$nama<br>";
-echo "$prodi<br>";
-echo $nim;
+function days(){
+    echo"Selamat      ";
+date_default_timezone_set("Asia/Jakarta");
+$waktu = date("h");
+if(($waktu >= 4) && ($waktu <= 11)){ echo"Pagi";}
+elseif(($waktu >11) && ($waktu<=15)){echo"siang";}
+elseif(($waktu >15) && ($waktu<=18)){echo"sore";}
+else{echo"malam";}
+}
+$nama =["Tahajjudin Fajri", "Diego kosta"];
+$prodi =["TIF", "Soccer"];
+$nim =["E41182137","E41182617"];
 ?>
 
-
-
-
-
-<!-- <html>
+<html>
 <head>
     <title> kelompok 5 </title>
 </head>
@@ -21,28 +21,40 @@ echo $nim;
     <br><br><br><br>
     <center>
         <h1>
-            <font color="black" size="">BELAJAR HTML</font>
+            <font color="black" size=""><?= days(). $nama[0]; ?></font>
         </h1>
         <table border="0" cellpadding="5" cellspacing="0">
+ 
             <tr>
                 <td>
                     <h1>
                         <font color="white" size="5">Nama :</font>
-                        <font color="black" size="4">Tahajjudin Fajri </font>
+                        <font color="black" size="4"><?= $nama[0]; ?> </font>
                     </h1>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     <h1>
                         <font color="white" size="5">NIM :</font>
-                        <font color="black" size="4">E41182137 </font>
+                        <font color="black" size="4"><?= $nim[0]; ?></font>
                     </h1>
                 </td>
             </tr>
+
+            <tr>
+                <td>
+                    <h1>
+                        <font color="white" size="5">PRODI :</font>
+                        <font color="black" size="4"><?= $prodi[0]; ?></font>
+                    </h1>
+                </td>
+            </tr>
+
         </table>
 
         <a href="tahaj2.html">ke tahaj2</a>
 </body>
 
-</html> -->
+</html>
