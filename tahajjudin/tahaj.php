@@ -1,9 +1,12 @@
 <?php 
-echo "Selamat Datang Brother";
+echo "Selamat Datang Brother <br>";
 $nama ="Tahajjudin Fajri";
 $prodi ="TIF";
 $nim ="E41182137";
 
+echo "$nama<br>";
+echo "$prodi<br>";
+echo $nim;
 ?>
 
 
