@@ -1,3 +1,4 @@
+//untuk koneksi
 <?php
 //koneksi DB
 $host = "localhost";
@@ -13,3 +14,4 @@ if ($koneksi ->connect_error) {
 }
 echo "Koneksi Berhasil";
 ?>
+
