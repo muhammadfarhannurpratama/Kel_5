@@ -20,7 +20,7 @@
 <body>
     <br><br><br>
     <center>
-        <h1><a href="tahaj.html">kembali ke tahaj1</a></h1>
+        <h1><a href="tahaj.php">kembali ke tahaj1</a></h1>
         <a href="http://www.google.com">GOOGLE</a>
     </center>
 
