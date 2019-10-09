@@ -5,8 +5,8 @@
 </head>
 <body>
 
-<h1 style="color:red">Selamat Belajar HTML</h1>
-<h2 style="color:blue">Nama Saya: Muhammad Muchlis</h2>
+<h1 style="color:maroon">Selamat Belajar HTML</h1>
+<h2 style="color:darkblue">Nama Saya: Muhammad Muchlis</h2>
 <h3>Politeknik Negeri Jember</h3>
 
 <?php
