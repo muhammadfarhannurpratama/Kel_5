@@ -54,7 +54,7 @@ $nim =["E41182137","E41182617"];
 
         </table>
 
-        <a href="tahaj2.html">ke tahaj2</a>
+        <a href="tahaj2.php">ke tahaj2</a>
 </body>
 
 </html>
