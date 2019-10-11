@@ -21,6 +21,6 @@ echo "Belajar Include dan Require di www.malasngoding.com";
 ?>
 <br>
 
-<h1>Penanganan Form</h1>
+<h1>Kembali Ke Form Awal</h1>
 untuk penanganan form, klik
 <a href="index.php"> disini </a>
