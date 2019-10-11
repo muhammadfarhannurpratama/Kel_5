@@ -1,18 +1,22 @@
+<?php
+// koneksi DB 
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "malasngoding";
+
+$koneksi = mysqli_connect($host, $user, $password, $database);
+
+if($koneksi->connect_error){
+    die("koneksi gagal: " .$koneksi->connect_error);
 <?php 
-// isi nama host, username mysql, dan password mysql anda
-$host = mysql_connect("localhost","root","xxx");
  
-if($host){
-	echo "koneksi host berhasil.<br/>";
-}else{
-	echo "koneksi gagal.<br/>";
-}
-// isikan dengan nama database yang akan di hubungkan
-$db = mysql_select_db("malasngoding");
+$koneksi = mysqli_connect("localhost","root","","malasngoding");
  
-if($db){
-	echo "koneksi database berhasil.";
-}else{
-	echo "koneksi database gagal.";
+// Check connection
+if (mysqli_connect_errno()){
+	echo "Koneksi database gagal : " . mysqli_connect_error();
 }
+echo "Koneksi Berhasil";
+ 
 ?>
