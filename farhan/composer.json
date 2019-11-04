@@ -1,0 +1,14 @@
+{
+    "name": "farhan/farhan.php",
+    "description": "tugas composer",
+    "type": "library",
+    "authors": [
+        {
+            "name": "muhammadfarhannurpratama",
+            "email": "55246227+muhammadfarhannurpratama@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.9"
+    }
+}
