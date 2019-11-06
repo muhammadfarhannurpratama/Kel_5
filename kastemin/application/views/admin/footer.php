@@ -1,0 +1,1 @@
+<div class="text-center" style="margin-top:5%;margin-bottom:5%; color:#A5A8AD">Coyright &copy; MY JERSEY 2019</div>

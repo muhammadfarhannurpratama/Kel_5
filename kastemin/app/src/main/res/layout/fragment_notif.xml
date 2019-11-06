@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.DashboardFragment"
+    android:background="@color/colorPutih">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/not"
+            android:layout_marginTop="140dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/notification"/>
+
+
+        <TextView
+            android:layout_below="@+id/not"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@color/colorAbu"
+            android:text="Belum Ada Notifikasi" />
+
+    </RelativeLayout>
+    <!--<android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coba">
+    </android.support.v7.widget.RecyclerView>-->
+</RelativeLayout>

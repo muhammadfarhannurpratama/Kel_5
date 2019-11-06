@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_insert"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".PesanBarangActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tool">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPutih" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/tvGambar"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tool"
+        android:paddingTop="20dp"
+        android:layout_height="230dp"
+        android:src="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:paddingTop="20dp"
+        android:id="@+id/tvJkain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kain: "
+        android:layout_below="@id/tvGambar"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvJmlhBj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Baju : "
+        android:layout_below="@id/tvJkain"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvUkuran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ukuran : "
+        android:layout_below="@id/tvJmlhBj"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvUploud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploud Baju: "
+        android:layout_below="@id/tvUkuran"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvCatatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catatan: "
+        android:layout_below="@id/tvUploud"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/Jkain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:layout_toRightOf="@+id/tvJkain"
+        android:layout_alignBaseline="@+id/tvJkain"/>
+    <EditText
+        android:id="@+id/JmlhBj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:layout_toRightOf="@+id/tvJmlhBj"
+        android:layout_alignBaseline="@+id/tvJmlhBj"/>
+    <EditText
+        android:id="@+id/Ukuran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:layout_toRightOf="@+id/tvUkuran"
+        android:layout_alignBaseline="@+id/tvUkuran"/>
+    <EditText
+        android:id="@+id/Uploud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:layout_toRightOf="@+id/tvUploud"
+        android:layout_alignBaseline="@+id/tvUploud"/>
+    <EditText
+        android:id="@+id/Catatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:layout_toRightOf="@+id/tvCatatan"
+        android:layout_alignBaseline="@+id/tvCatatan"/>
+    <LinearLayout
+        android:id="@+id/Linearlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvCatatan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+    <Button
+        android:id="@+id/btPesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesan"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
