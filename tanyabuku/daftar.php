@@ -1,5 +1,4 @@
 <?php
-include "header.php";
 ?>
 <div class='container content' style="padding:0;margin-top:	10%;border-bottom:20px solid #54A2D7;border-radius:0">
 <nav class="navbar navbar-default" style="border:0;background:#54A2D7;border-radius:0">
