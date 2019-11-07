@@ -22,7 +22,23 @@ include "header.php";
 
 			<div class='panel panel-primary' style='border:0;-radius:0px;-webkit-border-radius:0px;-moz-border-radius : 0px;-o-border-radius : 0px;'>
 
-
+<!-- input username dan pasword -->
+<div class="container">
+        <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form class="form-login" action="login_proses.php" method="post">
+              <br><br><br><br>
+              <h1 class="text-center">LOGIN</h1>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="masukan nama anda">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name= "password"class="form-control" placeholder="masukan password anda">
+			  </div>
+			  
 				<div class='panel-body'>
 					<form action='<?php echo base_url();?>registrasi/cek' method='post'>
 					<div class="row placeholders">
