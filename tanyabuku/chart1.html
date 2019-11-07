@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title><?php echo $conf->config('title').'&nbsp;'.$select->setup('nama'). ' (Ver '.$conf->config('ver').')';?></title>
+	<link rel="shortcut icon" href="images/favicon.ico" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="css/start/jquery-ui-1.8.14.custom.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.14.custom.min.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/ajaxFunction.js"></script>
+	<script type="text/javascript" src="js/topMenu.js"></script>
+	<script type="text/javascript" src="js/pindah.js"></script>
+	<script type="text/javascript" src="js/hanyaNomor.js"></script>
+	<script type="text/javascript" src="js/currency.js"></script>
+     <!--
+	<script type="text/javascript" src="js/runtime/jsLinb/js/linb-all.js"></script>
+	<script type="text/javascript" src="js/dLinb.js"></script>
+	<script type="text/javascript" src="js/pjlLinb.js"></script>
+     -->
+
+</head>
+<body>
+    <center>
+	<div id="abs"></div>
+	<div id="top_menu" style="width:1000px; border-left:solid 1px #648CB4; border-right:solid 1px #648CB4;">
+			<?php include 'main/top_menu.php';?>
+	</div>
+	<div style="width:1000px; height:524px; border:solid 1px #648CB4;">
+		<div style="float:left; width:99.59%; height:520px; border:solid 1px #648CB4; margin:1px;">
+			<div style="width:100%; height:26px;">
+				<div id="hd" style="width:100%; background-image:url('images/header2.png'); height:25px;">
+					&nbsp;<b id="capTitle" style="padding-left:2px; font-size:14px; color:#000; float:left;"></b>
+					&nbsp;<b id="capTitleRight" style="font-size:14px; color:#000; float:right;"></b>
+				</div>
+				<div class="row header">
+					<b id="hd_kolom"></b>
+					 <input type="hidden" id="nil" value="0" style="font-weight:bold; font-size:11px; width:20px; height:12px; margin:1px;"/> 
+				</div>
+					<div style="overflow:auto; width:100%; height:auto; background-color:#fff; background-position:center; background-attachment: fixed; background-repeat:no-repeat;">
+					<div id="main"><center><img style="margin-top:200px;" src="images/indicator.gif" /></center></div>
+					<script>
+                    function rm(nil){
+                      for(i=1; i<=5; i++){
+                      var nil=nil.replace(' ','+');
+                      }
+                      return nil;
+          	    	}
+                    function formPjln(){
+                      linb.UI.setTheme('default');
+                      linb.Com.load('App');
+                      //linb.Com.load('AppPjl');
+                    }
+                    function initCall(){
+                      $('#hd_kolom').html('');
+                      $('#capTitleRight').show();
+                      $('#foot_kolom').hide();
+                      $('#main').css({
+                        width:'',
+                        height:''
+                        });
+                    }
+                    var get_menu='<?php echo $_GET[menu];?>'
+                    if(get_menu!=''){
+                      loadMenu(get_menu,'1');
+					  click_in('tabs2');
+                      $('#top_menu').hide();
+                      $('#hd').hide();
+                    }else{
+					loadMenu('013','1');
+					click_in('tabs2');
+                    }
+					function loadMenu(menu,hal){
+					aktifMenu(menu);
+					//Panggil init call
+                    initCall();
+					switch (menu){
+							case '001': jQuery('#main').load('main/lap_supplier.php'); break;
+							case '002': jQuery('#main').load('main/lap_katalog.php'); break;
+							case '003': jQuery('#main').load('main/lap_supplier.php?menu='+menu); break;
+							case '004': jQuery('#main').load('main/lap_katalog.php'); break;
+							case '005': jQuery('#main').load('main/pembelian.php'); break;
+							case '006': jQuery('#main').load('main/trm_barang.php'); break;
+							case '007': jQuery('#main').load('main/lap_order.php'); break;
+							case '008': jQuery('#main').load('main/lap_trm_barang.php'); break;
+							case '009': jQuery('#main').load('main/lap_pembelian.php?stat=beli'); break;
+							case '010': jQuery('#main').load('main/lap_penjualan.php'); break;
+							case '011': jQuery('#main').load('main/lap_gudang.php'); break;
+							case '012': jQuery('#main').load('main/lap_barang.php?hal='+hal); break;
+							case '013': jQuery('#main').load('main/penjualan.php');break;
+							case '014': jQuery('#main').load('main/lap_pelanggan.php');break;
+							case '015': jQuery('#main').load('main/pembelian_lsg.php');break;
+							case '016': jQuery('#main').load('main/return_pembelian.php');break;
+							case '017': jQuery('#main').load('main/return_penjualan.php');break;
+							case '018': jQuery('#main').load('main/lap_ret_pemb.php');break;
+							case '019': jQuery('#main').load('main/lap_ret_penjualan.php');break;
+							case '020': jQuery('#main').load('main/setting.php');break;
+							case '021': jQuery('#main').load('main/lap_pelunasan.php');break;
+							case '022': jQuery('#main').load('main/lap_hutang.php');break;
+							case '023': jQuery('#main').load('main/lap_keuangan.php');break;
+						}
+					}
+					</script>
+				</div>
+				<div class="footer" >
+					<div id="foot_kolom"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    </center>
+</body>
+</html>
+
+<script>
+$(function(){
+    //incCounter();
+
+});
+
+function incCounter() {
+        setTimeout('incCounter()',1700);
+        var nil=parseInt($('#nil').val());
+        var count=nil+1;
+        var dsp=$('#nil').val(count);
+        if(count==2){
+          $('#nil').val(0);
+        }
+       lap_order();
+}
+
+</script>
