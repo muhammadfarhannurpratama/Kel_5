@@ -66,7 +66,7 @@
 
 <!-- button login dan daftar -->
               <center>
-                <button type="submit" name="masuk" class="btn-primary buttona">MASUK</button>
+                <button type="submit" name="submit" class="btn-primary buttona">MASUK</button>
                 <button type="submit" class="btn-primary buttona">DAFTAR</button>
               </center>
     
