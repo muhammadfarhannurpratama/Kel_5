@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Tanya Buku</title>
+    <title>tanyabuku</title>
     <style>
         body {
           background-color: #D6E8ED;
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body background="bgs.png">
-  <br><br><br><br><br>   
+    
  <!-- navbar logo tanya buku, button login, home -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top  shadow p-3 mb-5 bg-white rounded" id="mainNav">
           <div class="container">
@@ -39,39 +39,97 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="  navbar-nav ml-auto ">
                 <li class="nav-item">
-                  <form action="" method="post" name="home">
-                  <a class="nav-link" href=""><b>Home</b></a>
-                  </form>
+                  <a class="nav-link" href="halamanutama.html"><b>Home</b></a>
                 </li>
                 <li class="nav-item">
-                  <form name="belanjaan" action="" method="post">
-                  <a class="nav-link" href=""><b>Belanjaan</b></a>
-                  </form>
+                    <a class="nav-link" href="chart2.html"><b>Belanjaan</b></a> 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href=""><b>Profil</b></a>
+                    <a class="nav-link" href="Profil.html"><b>Profil</b></a> 
                 </li>
                 <li class="nav-item">
-                  <form action="halamanutama.php">
-                  <button  type="submit" class=" btn btn-dark">Logout</button>
-                  </form>
+                    <form action="logout.html">
+                      <button type="submit" class=" btn btn-dark">Logout</button>
+                    </form>
                 </li>
               </ul>
             </div>
           </div>
     </nav>
+    <br><br><br><br>
 
+    <!-- membuat kategori,membuat search input dan button -->
+    <form action="" class="form-group">
+      <nav class="">
+          <div class="row">
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8">
+                <table border="0" cellpadding="5" cellspacing="0">
 
-<!-- ISI WEB -->
-<iframe src="1userhome.php"
- style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%;"></iframe>
+                  <tr class="container">
+                    <td><h4><center>Profil</center></h4></td>
+                    
+                  </tr>
 
- 
-<!-- keterangan -->
-<div class="fixed-bottom bg-light">
+                  <tr>
+                    <td><iframe src="" frameborder="1" height="240" width="780"></iframe></td>
+                    <td>  <tr>
+                        <td> Nama  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Username  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> password  </td>
+                        <td><input type="password" /></td>
+                    </tr>
+                  
+                    <tr>
+                        <td> Provinsi  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Kota  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Alamat  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Kode Pos  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> No Telepon  </td>
+                        <td><input type="number" /></td>
+                    </tr>
+                </td>
+                  </tr>
+
+                </table>
+              </div>
+              <div class="col-lg-2"></div>
+          </div>
+      </nav>
+    </form>
+    
+  <!-- keterangan -->
+  <div class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container pt-4 pb-4 ">
+
     </div>
-</div>
+  </div>
+
+
+
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
