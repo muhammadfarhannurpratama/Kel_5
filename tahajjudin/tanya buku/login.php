@@ -1,3 +1,19 @@
+<?php 
+if (isset($_POST["masuk"])) {
+    if ($_POST["username"] == "user" && $_POST["password"] == "123") {
+        header("Location: tampilanuser.php");
+        exit;
+    }else{
+    $error = true;
+  }
+}
+
+if (isset($_POST["daftar"])) {
+      header("Location: daftar.php");
+      exit;
+  }else{
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,14 +24,6 @@
           height:12 ;
           width:720 ;
         }   
-        .floating-box {
-          display: inline-block;
-          width: 150px;
-          height: 75px;
-          margin: 10px;
-          border: 3px solid #73AD21;  
-      }
-
     .buttona {
       width: 49%;
     }
@@ -40,7 +48,7 @@
             <ul class="  navbar-nav ml-auto ">
               <li class="nav-item">
                   <form action="halamanutama.html">
-                    <a class="nav-link" href="halamanutama.html"><b>Home</b></a>
+                    <a class="nav-link" href="halamanutama.php"><b>Home</b></a>
                   </form>
               </li>
             </ul>
@@ -54,16 +62,16 @@
         <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-            <form class="form-login" action="" name="">
+            <form class="form-login" action="" method="post">
               <br><br><br><br>
               <h1 class="text-center">LOGIN</h1>
               <div class="form-group">
-                <label for="">Username</label>
-                <input type="text" class="form-control" placeholder="masukan username anda">
+                <label for="username">Username</label>
+                <input name="username" id="username" type="text" class="form-control" placeholder="masukan username anda">
               </div>
               <div class="form-group">
-                <label for="">Password</label>
-                <input type="password" class="form-control" placeholder="masukan password anda">
+                <label for="password">Password</label>
+                <input name="password" id="password" type="password" class="form-control" placeholder="masukan password anda">
               </div>
               <div class="form-group">
                 <div class="form-check">
@@ -76,18 +84,21 @@
 
 <!-- button login dan daftar -->
               <center>
-                <button type="submit" class="btn-primary buttona">MASUK</button>
-                <button type="submit" class="btn-primary buttona">DAFTAR</button>
+                <button name="masuk" type="submit" class="btn-primary buttona">MASUK</button>
+                <button name="daftar" type="submit" class="btn-primary buttona" >DAFTAR</button>
               </center>
     
-            </form>
+           
+                          <?php if(isset($error)){ ?>
+                            <center><h9 style="color:red; font-style: italic" >username / password salah</h3></center>
+                          <?php } ?>
           </div>
      </div>
       </div>
 <!-- keterangan -->
 <br><br><br><br><br><br><br><br><br>
   <div class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container pt-5 pb-4 ">
+        <div class="pt-4 pb-4 ">
     
         </div>
       </div>

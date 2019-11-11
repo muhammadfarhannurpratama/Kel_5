@@ -42,8 +42,14 @@
                   <a class="nav-link" href="halamanutama.html"><b>Home</b></a>
                 </li>
                 <li class="nav-item">
-                    <form action="login.html">
-                      <button type="submit" class=" btn btn-dark">Login</button>
+                    <a class="nav-link" href="chart2.html"><b>Belanjaan</b></a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Profil.html"><b>Profil</b></a> 
+                </li>
+                <li class="nav-item">
+                    <form action="logout.html">
+                      <button type="submit" class=" btn btn-dark">Logout</button>
                     </form>
                 </li>
               </ul>
@@ -51,13 +57,6 @@
           </div>
     </nav>
     <br><br><br><br>
-
-    <!-- tampilan video -->
-    <nav>
-      <div class="container">
-        <center><iframe src="" frameborder="1" height="240" width="427"></iframe></center>
-      </div>
-    </nav><br>
 
     <!-- membuat kategori,membuat search input dan button -->
     <form action="" class="form-group">
@@ -68,14 +67,46 @@
                 <table border="0" cellpadding="5" cellspacing="0">
 
                   <tr class="container">
-                    <td><h4><center>Kategori</center></h4></td>
-                    <td class="form-inline"><button class="btn btn-outline-light my-2 my-sm-0" type="submit"><input type="image" src="search.png" width="15" height="17"></button>
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></td>
+                    <td><h4><center>Profil</center></h4></td>
+                    
                   </tr>
 
                   <tr>
-                    <td><center><iframe src="" frameborder="1" height="240" width="150"></iframe></center></td>
                     <td><iframe src="" frameborder="1" height="240" width="780"></iframe></td>
+                    <td>  <tr>
+                        <td> Nama  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Username  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> password  </td>
+                        <td><input type="password" /></td>
+                    </tr>
+                  
+                    <tr>
+                        <td> Provinsi  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Kota  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Alamat  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> Kode Pos  </td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td> No Telepon  </td>
+                        <td><input type="number" /></td>
+                    </tr>
+                </td>
                   </tr>
 
                 </table>

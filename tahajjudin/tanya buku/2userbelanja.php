@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>tanyabuku</title>
+    <style>
+        body {
+          background-color: #D6E8ED;
+          height:12 ;
+          width:720 ;
+        }   
+        .floating-box {
+          display: inline-block;
+          width: 150px;
+          height: 75px;
+          margin: 10px;
+          border: 3px solid #73AD21;  
+        .buttona {
+           width: 30%;
+            }
+      }
+      </style>
+
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body background="bgs.png">
+    <br><br><br>
+      <nav class="container">
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-3">
+            <h2>Transaksi</h2><br>
+
+          </div>
+          <div class="col-lg-5">
+            <h2>Tujuan</h2><br>
+            <table border="0" cellpadding="5" cellspacing="0">
+            <tr>
+                        <td> <h4>Nama</h4>  </td>
+                        <td><input class="form-control" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Provinsi</h4></td>
+                        <td><input class="form-control" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Kota</h4> </td>
+                        <td><input class="form-control" type="text" /></td>
+                    </tr>
+                  
+                    <tr>
+                        <td><h4>Kode Pos</h4> </td>
+                        <td><input class="form-control" type="number" /></td>
+                    </tr>
+                    <tr>
+                        <td><h4>No Telepon</h4> </td>
+                        <td><input class="form-control" type="number" /></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Kurir</h4> </td>
+                        <td><input class="form-control" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td><h4>Pembayaran</h4> </td>
+                        <td><input class="form-control" type="text" /></td>
+                    </tr>
+            </table>
+            <center>
+                <button name="masuk" type="submit" class="btn-primary buttona">MASUK</button>
+                <button name="daftar" type="submit" class="btn-primary buttona" >DAFTAR</button>
+            </center>
+          </div>
+          <div class="col-lg-2"></div>
+        </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
