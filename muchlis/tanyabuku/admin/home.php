@@ -96,10 +96,10 @@ input[type=submit]{margin:10px 0 10px 0;outline:0;background:#2ecc71;color:#fff;
 		<p style="font-size: 13px; margin-top: 10px; color: #ccc">*Kelompok Produk</p>
 		  <select name="kelompok">
 			 <?php 
-				$data=mysql_query("SELECT * from kelompok order by id desc");
+				$data=mysqli_query("SELECT * from kelompok order by id desc");
 			 ?>
 			 <?php 
-			 	while (list($n,$k)=mysql_fetch_array($data)) {
+			 	while (list($n,$k)=mysqli_fetch_array($data)) {
 			 		?>
 			 			<option value="<?php echo $k; ?>"><?php echo $k; ?></option>
 			 		<?php
@@ -110,10 +110,10 @@ input[type=submit]{margin:10px 0 10px 0;outline:0;background:#2ecc71;color:#fff;
 <p style="font-size: 13px; margin-top: 10px; color: #ccc">*Katalog</p>
 		  <select name="katalog">
 			 <?php 
-				$data=mysql_query("SELECT * from Katalog order by id_katalog desc");
+				$data=mysqli_query("SELECT * from Katalog order by id_katalog desc");
 			 ?>
 			 <?php 
-			 	while (list($n,$k)=mysql_fetch_array($data)) {
+			 	while (list($n,$k)=mysqli_fetch_array($data)) {
 			 		?>
 			 			<option value="<?php echo $k; ?>"><?php echo $k; ?></option>
 			 		<?php

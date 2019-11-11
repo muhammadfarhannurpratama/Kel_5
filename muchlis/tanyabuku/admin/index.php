@@ -17,7 +17,7 @@
 		<form id="formmeong" action="handler.php?aksi=login" method="post">
 			<table>
 				<tr>
-					<td><input type="text" placeholder="Username" name="username"></td>
+					<td><input type="text" placeholder="username" name="username"></td>
 				</tr>
 				<tr>
 					<td><input type="password" placeholder="password" name="password"></td>
