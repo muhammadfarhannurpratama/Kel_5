@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Tanya Buku</title>
+    <title>tanyabuku</title>
     <style>
         body {
           background-color: #D6E8ED;
@@ -39,31 +39,77 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="  navbar-nav ml-auto ">
                 <li class="nav-item">
-                  <a class="nav-link" href=""><b>Home</b></a>
+                  <a class="nav-link" href="halamanutama.php"><b>Home</b></a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href=""><b>Belanjaan</b></a>
-                      </li>
-                      <li class="nav-item">
-                            <a class="nav-link" href=""><b>Profil</b></a>
-                          </li>
-                <li class="nav-item">
-                    <button type="submit" class=" btn btn-dark">Logout</button>
+                    <form action="login.php">
+                      <button type="submit" class=" btn btn-dark">Login</button>
+                    </form>
                 </li>
               </ul>
             </div>
           </div>
     </nav>
-    <br><br><br><br><br>
+    <br><br><br><br>
+<!-- tampilan video -->
+    <!-- <nav>
+      <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 embed-responsive embed-responsive-16by9">
+        <center><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" frameborder="1" height="240" width="427" allowfullscreen></iframe></center>
+      </div>
+      </div>
+    </nav><br> -->
 
-    <!-- ISI WEB -->
+<!-- membuat kategori,membuat search input dan button -->
+    <!-- <form action="" class="form-group">
+      <nav class="">
+          <div class="row">
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8">
+                <table border="0" cellpadding="5" cellspacing="0">
+
+                  <tr class="">
+                    <td><h4><center>Kategori</center></h4></td>
+                    <td class="form-inline"><button class="btn btn-outline-light my-2 my-sm-0" type="submit"><input type="image" src="search.png" width="15" height="17"></button>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></td>
+                  </tr>
+
+                  <tr>
+                    <td><center><iframe src="" frameborder="1" height="240" width="150"></iframe></center></td>
+                    <td><iframe src="" frameborder="1" height="240" width="750"></iframe></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-lg-2"></div>
+          </div>
+      </nav>
+    </form> -->
+    
+  <!-- keterangan -->
+  <!-- <div class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container pt-4 pb-5 ">
+
+    </div>
+  </div> -->
+
+<!-- ISI WEB -->
+<iframe src="1userhome.php"
+ style="border: 0; position:fixed; top:0; left:0; right:0; bottom:0; width:100%; height:100%;">
+</iframe>
+<!-- keterangan -->
+<div class="fixed-bottom bg-light">
+    <div class="container pt-4 pb-4 ">
+    </div>
+</div>
 
 
 
 
 
 
- 
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
