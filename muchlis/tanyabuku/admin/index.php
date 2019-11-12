@@ -64,25 +64,33 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
               <div class="menu_section">
                 <h3>Menu</h3>
                 <ul class="nav side-menu">
-                  <li>
-                    <a href="index.php"><i class="fa fa-home"></i> Home </a> </ul>
+                  
+                  <li><a href="index.php"><i class="fa fa-home"></i> Home </a>
+                    <ul class="nav child_menu">
+                      
+                    </ul>
                   </li>
-                  <ul class="nav side-menu">
-                  <li>
-                    <a href="index.php?halaman=produk"><i class="fa fa-edit"></i> Produk </a> </ul>
+                  <li><a href="index.php?halaman=produk"><i class="fa fa-edit"></i> Produk</a>
+                    <ul class="nav child_menu">
+                      
+                    </ul>
                   </li>
-                   <ul class="nav side-menu">
-                  <li>
-                    <a href="index.php?halaman=pembelian"><i class="fa fa-windows"></i> Pembelian </a> </ul>
+                  <li><a href="index.php?halaman=pembelian"><i class="fa fa-desktop"></i> Pembelian</a>
+                    <ul class="nav child_menu">
+                     
+                    </ul>
                   </li>
-                   <ul class="nav side-menu">
-                  <li>
-                    <a href="index.php?halaman=pelanggan"><i class="fa fa-sitemap"></i> Pelanggan </a> </ul>
+                  <li><a href="index.php?halaman=pelanggan"><i class="fa fa-table"></i> Pelanggan </a>
+                    <ul class="nav child_menu">
+
+                    </ul>
                   </li>
-                   <ul class="nav side-menu">
-                  <li>
-                    <a href="index.php?halaman=logout"><i class="fa fa-laptop"></i> Logout </a> </ul>
+                  <li><a href="index.php?halaman=logout"><i class="fa fa-bar-chart-o"></i> Logout</a>
+                    <ul class="nav child_menu">
+
+                    </ul>
                   </li>
+                </ul>    
               </div>
             </div>
             <!-- /sidebar menu -->
