@@ -25,7 +25,7 @@
 			</td>
 			<td>
 				<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn-danger btn">Hapus</a>
-				<a href="" class="btn btn-warning">Ubah</a>
+				<a href="index.php?halaman=ubahproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn btn-warning">Ubah</a>
 			</td>
 		</tr>
 		<?php $nomor++; ?>

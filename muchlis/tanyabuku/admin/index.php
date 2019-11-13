@@ -239,6 +239,10 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                         {
                           include 'hapusproduk.php';
                         }
+                        elseif ($_GET['halaman']=="ubahproduk")
+                        {
+                          include 'ubahproduk.php';
+                        }
                 }
                 else
                 {
