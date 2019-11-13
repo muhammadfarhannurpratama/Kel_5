@@ -1,6 +1,15 @@
 <?php 
+session_start();
 //koneksi database
 $koneksi = new mysqli("localhost","root","","db_tanyabuku");
+
+if(!isset($_SESSION['admin']))
+{
+  echo "<script>alert('Anda Harus Login !');</script>";
+  echo "<script>location='login.php';</script>";
+  header('location:login.php');
+  exit();
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +115,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -242,6 +251,10 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                         elseif ($_GET['halaman']=="ubahproduk")
                         {
                           include 'ubahproduk.php';
+                        }
+                        elseif ($_GET['halaman']=="logout")
+                        {
+                          include 'logout.php';
                         }
                 }
                 else

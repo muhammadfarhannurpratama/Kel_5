@@ -1,3 +1,9 @@
+<?php
+session_start(); 
+//koneksi
+$koneksi=new mysqli("localhost","root","","db_tanyabuku");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,16 +36,16 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
-              <h1>Login Form</h1>
+            <form method="post">
+              <h1>Login Administrator</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" name="user" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" name="pass" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
+                <button class="btn btn-primay" name="login">Log in</button>
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
@@ -47,9 +53,28 @@
 
               <div class="separator">
                 <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
+                  <a href="#signup" class="to_register"> Create Account </a>  
                 </p>
+                <?php 
+                if (isset($_POST['login']))
+                {
+                  $ambil=$koneksi->query("SELECT * FROM admin WHERE username='$_POST[user]'
+                    AND password='$_POST[pass]'");
+                  $yangcocok=$ambil->num_rows;
+                  if($yangcocok==1)
+                  {
+                    $_SESSION['admin']=$ambil->fetch_assoc();
+                    echo "<div class='alert alert-info'>Login Berhasil !</div>";
+                    echo "<meta http-equiv='refresh' content='1;url=index.php'>";
+                  }
+                  else 
+                  {
+                    echo "<div class='alert alert-danger'>Login Gagal !</div>";
+                    echo "<meta http-equiv='refresh' content='1;url=login.php'>";
+                  }
+                }
 
+                 ?>
                 <div class="clearfix"></div>
                 <br />
 
