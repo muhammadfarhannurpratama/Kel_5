@@ -99,27 +99,7 @@
                         <td><input type="text" /></td>
                     </tr>  
                     <h1> Total buku yang dibayarkan :  </h1>  
-                    <a class="btn btn-primary" href="chart3.html" role="button">Lanjut</a>
-                    
-                    <!-- <p>
-                    <?php
-      include 'data.php';
-      $data = datapinjaman();
-      $i = 1;
-      foreach($data as $pinjaman){ <!-- AWAL PERULANGAN 
-      ?>
-      <tr>
-         <td><?php echo $i++ ?></td>
-         <td><?php echo $pinjaman['nim'] ?></td>
-         <td><?php echo $pinjaman['nama'] ?></td>
-         <td><?php echo $pinjaman['judul'] ?></td>
-         <td><?php echo $pinjaman['pengarang'] ?></td>
-         <td><?php echo $pinjaman['penerbit'] ?></td>
-   <?php
--->
-
-
-                    
+                    <a class="btn btn-primary" href="chart3.html" role="button">Lanjut</a>          
                   </tr>
 
                 </table>
