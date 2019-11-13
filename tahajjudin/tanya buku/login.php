@@ -19,6 +19,13 @@ if (isset($_POST["daftar"])) {
   <head>
     <title>Tanya Buku</title>
     <style>
+      .box{
+        width: 80%;
+        margin-top: 5%;
+        box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+        padding: 25px;
+        background: white;
+      }
         body {
           background-color: #D6E8ED;
           height:12 ;
@@ -55,24 +62,26 @@ if (isset($_POST["daftar"])) {
           </div>
         </div>
   </nav>
-  <br><br><br>
-
+  <br><br><br><br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
 <!-- input username dan pasword -->
-    <div class="container">
-        <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
-            <form class="form-login" action="" method="post">
-              <br><br><br><br>
+    <div class="container box">
+            <form class="" action="" method="post">
               <h1 class="text-center">LOGIN</h1>
+
               <div class="form-group">
                 <label for="username">Username</label>
                 <input name="username" id="username" type="text" class="form-control" placeholder="masukan username anda">
               </div>
+              
               <div class="form-group">
                 <label for="password">Password</label>
                 <input name="password" id="password" type="password" class="form-control" placeholder="masukan password anda">
               </div>
+
               <div class="form-group">
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="dropdownCheck">
@@ -81,27 +90,28 @@ if (isset($_POST["daftar"])) {
                   </label>
                 </div>
               </div>
-
-<!-- button login dan daftar -->
               <center>
                 <button name="masuk" type="submit" class="btn-primary buttona">MASUK</button>
                 <button name="daftar" type="submit" class="btn-primary buttona" >DAFTAR</button>
-              </center>
-    
-           
+              </center> 
+              </form>
+<!-- button login dan daftar -->         
                           <?php if(isset($error)){ ?>
                             <center><h9 style="color:red; font-style: italic" >username / password salah</h3></center>
                           <?php } ?>
-          </div>
-     </div>
       </div>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>  
+</div>
+
 <!-- keterangan -->
-<br><br><br><br><br><br><br><br><br>
-  <div class="navbar navbar-expand-lg navbar-light bg-light">
+<br><br><br><br><br>
+  <div class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
         <div class="pt-4 pb-4 ">
     
         </div>
-      </div>
+  </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

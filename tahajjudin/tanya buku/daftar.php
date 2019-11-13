@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style>
+    .box{
+        width: 90%;
+        margin-top: 15%;
+        box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+        padding: 25px;
+        background: white;
+      }
     body {
       background-color: #D6E8ED;
       background-image: url(bgs.png);
@@ -57,24 +64,21 @@
     <div class="row">
     <div class="col-lg-3"> </div>
     <div class="col-lg-6">
-        <form class="form-login">
+      <div class="container box">
         <form class="daftar">
-          <br><br><br><br>
           <h4 class="text-center">DAFTAR</h4>
           <div class="form-group">
-            <label for="">Nama</label>
-            <input type="text" class="form-control" placeholder="nama depan">
-            <label for=""></label>
-            <input type="text" class="form-control" placeholder="nama belakang">
+            <label for="nama">Nama</label>
+            <input id="nama" type="text" class="form-control" placeholder="masukan nama">
 
-            <label for="">Password</label>
-            <input type="password" class="form-control" placeholder="password">
+            <label for="username">Username</label>
+            <input id="username" type="text" class="form-control" placeholder="masukan username">
 
-            <label for="">Email</label>
-            <input type="text" class="form-control" placeholder="masukan email">
+            <label for="password">Password</label>
+            <input id="password" type="password" class="form-control" placeholder="masukan password">
             
-            <label for="">No Telepon</label>
-            <input type="text" class="form-control" placeholder="masukan no telepon">
+            <label for="email">Email</label>
+            <input id="email" type="text" class="form-control" placeholder="masukan Email">
           </div>
           <center>
             <button type="submit" class="btn-primary button">DAFTAR</button>
@@ -83,11 +87,18 @@
           </center>
 
         </form>
+        </div>
       </div>
       <div class="col-lg-3"> </div>
     </div>
   </div>
-
+<!-- keterangan -->
+<br><br><br><br><br>
+  <div class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
+        <div class="pt-4 pb-4 ">
+    
+        </div>
+  </div>
 
 
   <!-- Optional JavaScript -->

@@ -14,10 +14,10 @@
           height: 75px;
           margin: 10px;
           border: 3px solid #73AD21;  
-        .buttona {
-           width: 30%;
-            }
       }
+              .buttona {
+           width: 49%;
+            }
       </style>
 
 
@@ -39,38 +39,28 @@
 
           </div>
           <div class="col-lg-5">
-            <h2>Tujuan</h2><br>
-            <table border="0" cellpadding="5" cellspacing="0">
-            <tr>
-                        <td> <h4>Nama</h4>  </td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Provinsi</h4></td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Kota</h4> </td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
+            <h2>Tujuan</h2><br>          
+                         <h5>Nama</h5>  
+                        <input class="form-control" type="text" />
+                   
+                        <h5>Provinsi</h5>
+                        <input class="form-control" type="text" />
+                   
+                        <h5>Kota</h5> 
+                        <input class="form-control" type="text" />
                   
-                    <tr>
-                        <td><h4>Kode Pos</h4> </td>
-                        <td><input class="form-control" type="number" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>No Telepon</h4> </td>
-                        <td><input class="form-control" type="number" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Kurir</h4> </td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Pembayaran</h4> </td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
-            </table>
+                   
+                        <h5>Kode Pos</h5> 
+                        <input class="form-control" type="number" />
+                   
+                        <h5>No Telepon</h5> 
+                        <input class="form-control" type="number" />
+                   
+                        <h5>Kurir</h5> 
+                        <input class="form-control" type="text" />                   
+                        <h5>Pembayaran</h5> 
+                        <input class="form-control" type="text" />
+                        <br>
             <center>
                 <button name="masuk" type="submit" class="btn-primary buttona">MASUK</button>
                 <button name="daftar" type="submit" class="btn-primary buttona" >DAFTAR</button>
