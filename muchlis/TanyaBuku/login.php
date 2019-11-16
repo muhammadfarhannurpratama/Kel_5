@@ -1,13 +1,14 @@
 <?php 
 session_start();
-//koneksi database
-$koneksi = new mysqli("localhost","root","","db_tanyabuku");
+$koneksi=new mysqli("localhost","root","","db_tanyabuku");
+
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Keranjang Belanja</title>
+  <title>Login Pelanggan</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -62,66 +63,83 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
-            <li><a href="logout.php">Logout</a></li>
+          	<li><a href="logout.php">Logout</a></li>
           <!--jika belum login ( belum ada SESSION pelanggan)-->
-      <?php else :  ?>
-      <li class="menu-has-children"><a href="">Daftar</a>
+		  <?php else :  ?>
+		  <li class="menu-has-children"><a href="">Daftar</a>
             <ul>
               <li><a href="#">Daftar</a></li>
               <li><a href="login.php">Masuk</a></li>
             </ul>
-          </li> 
-          <?php endif ?>          
+          </li>	
+      	  <?php endif ?>          
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header>
+  <br>
+  <br>
+  <br>
 
-  <!--mulai coding keranjang-->
-  
-  <section class="konten">
-    <div class="container">
-      <br>
-      <br>
-      <br>
-      <h3>Keranjang Belanja</h3>
-      <hr>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Produk</th>
-            <th>Harga</th>
-            <th>Jumlah</th>
-            <th>SubHarga</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php $nomor=1; ?>
-          <?php foreach ($_SESSION["keranjang"] as $id_produk => $jumlah): ?>
-          <!-- menampilkan produk yg sedak diperulangkan berdasarkan id_roduk -->
-          <?php
-           $ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
-           $pecah=$ambil->fetch_assoc();
-           $subharga=$pecah['harga_produk']*$jumlah;
-           ?>
-          <tr>
-            <td><?php echo $nomor; ?></td>
-            <td><?php echo $pecah['nama_produk']; ?></td>
-            <td>Rp. <?php echo number_format($pecah['harga_produk']); ?></td>
-            <td><?php echo $jumlah; ?></td>
-            <td>Rp. <?php echo number_format($subharga); ?></td>
-          </tr>
-          <?php $nomor++; ?>
-          <?php endforeach ?>
-        </tbody>
-      </table>
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-4">
+  			<div class="panel panel-default">
+  				<div class="panel-heading">
+  					<h3 class="panel-title">Login Pelanggan</h3>
+  					<br>
 
-      <a href="index.php" class="btn btn-primary">Lanjutkan Belanja</a>
-      <a href="login.php" class="btn btn-primary">Checkout</a>
-    </div>
-  </section>
+  				</div>
+  				<div class="panel-body">
+  					<form method="post">
+  						<div class="form-group">
+  							<label>Email</label>
+  							<input type="email" class="form-control" name="email">
+  						</div>
+  						<div class="form-group">
+  							<label>Password</label>
+  							<input type="password" class="form-control" name="password">
+  						</div>
+  						<button class="btn btn-primary" name="login">Masuk</button>
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+<!--sinkron database email pengguna -->
+  <?php  
+  if (isset($_POST['login']))
+  {
+  	$email=$_POST['email'];
+  	$password=$_POST['password'];
+  	//query cek sesuai di database
+  	$ambil=$koneksi->query("SELECT * FROM pelanggan 
+  		WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
 
+  	//mencari akun di db
+  	$akunyangcocok=$ambil->num_rows;
+
+  	if ($akunyangcocok==1)
+  	{
+  		//sukses login
+  		//mendapatkan akun dalam bentuk array
+  		$akun=$ambil->fetch_assoc();
+  		//login di session pelanggan
+  		$_SESSION['pelanggan'] = $akun;
+  		echo "<script>alert('Login Sukses !');</script>";
+  		echo "<script>location='checkout.php';</script>";
+
+  	}
+  	else 
+  	{
+  		//gagal login
+  		echo "<script>alert('Login Gagal, Periksa Kembali Akun Anda !');</script>";
+  		echo "<script>location='login.php';</script>";
+  	}
+  }
+
+  ?>
 
 
   <!-- JavaScript Libraries -->

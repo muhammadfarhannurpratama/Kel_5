@@ -47,38 +47,36 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
+        <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li class="menu-active"><a href="index.php">Home</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#team">Best Seller</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="menu-has-children"><a href="">Daftar</a>
+          <li><a href="checkout.php">Checkout</a></li>
+          <!--jika sudah login (ada SESSION pelanggan)-->
+          <?php if (isset($_SESSION['pelanggan'])): ?>
+            <li><a href="logout.php">Logout</a></li>
+          <!--jika belum login ( belum ada SESSION pelanggan)-->
+      <?php else :  ?>
+      <li class="menu-has-children"><a href="">Daftar</a>
             <ul>
               <li><a href="#">Daftar</a></li>
-              <li><a href="admin/index.php">Masuk</a></li>
+              <li><a href="login.php">Masuk</a></li>
             </ul>
+          </li> 
+          <?php endif ?>          
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
-  </header><!-- #header -->
+  </header>
+<!-- #header -->
 
   <!--==========================
     Hero Section

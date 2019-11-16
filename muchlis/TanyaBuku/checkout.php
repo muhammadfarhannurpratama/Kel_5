@@ -1,13 +1,20 @@
 <?php 
 session_start();
-//koneksi database
-$koneksi = new mysqli("localhost","root","","db_tanyabuku");
- ?>
+$koneksi=new mysqli("localhost","root","","db_tanyabuku");
+ 
+//if belum login, maka masuk login.php 
+if (!isset($_SESSION['pelanggan']))
+{
+	 echo "<script>alert('Silahkan Login !');</script>";
+	 echo "<script>location='login.php';</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Keranjang Belanja</title>
+  <title>Checkout</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -62,67 +69,20 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
-            <li><a href="logout.php">Logout</a></li>
+          	<li><a href="logout.php">Logout</a></li>
           <!--jika belum login ( belum ada SESSION pelanggan)-->
-      <?php else :  ?>
-      <li class="menu-has-children"><a href="">Daftar</a>
+		  <?php else :  ?>
+		  <li class="menu-has-children"><a href="">Daftar</a>
             <ul>
               <li><a href="#">Daftar</a></li>
               <li><a href="login.php">Masuk</a></li>
             </ul>
-          </li> 
-          <?php endif ?>          
+          </li>	
+      	  <?php endif ?>          
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header>
-
-  <!--mulai coding keranjang-->
-  
-  <section class="konten">
-    <div class="container">
-      <br>
-      <br>
-      <br>
-      <h3>Keranjang Belanja</h3>
-      <hr>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Produk</th>
-            <th>Harga</th>
-            <th>Jumlah</th>
-            <th>SubHarga</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php $nomor=1; ?>
-          <?php foreach ($_SESSION["keranjang"] as $id_produk => $jumlah): ?>
-          <!-- menampilkan produk yg sedak diperulangkan berdasarkan id_roduk -->
-          <?php
-           $ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
-           $pecah=$ambil->fetch_assoc();
-           $subharga=$pecah['harga_produk']*$jumlah;
-           ?>
-          <tr>
-            <td><?php echo $nomor; ?></td>
-            <td><?php echo $pecah['nama_produk']; ?></td>
-            <td>Rp. <?php echo number_format($pecah['harga_produk']); ?></td>
-            <td><?php echo $jumlah; ?></td>
-            <td>Rp. <?php echo number_format($subharga); ?></td>
-          </tr>
-          <?php $nomor++; ?>
-          <?php endforeach ?>
-        </tbody>
-      </table>
-
-      <a href="index.php" class="btn btn-primary">Lanjutkan Belanja</a>
-      <a href="login.php" class="btn btn-primary">Checkout</a>
-    </div>
-  </section>
-
-
 
   <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
