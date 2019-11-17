@@ -93,6 +93,13 @@ if(!isset($_SESSION['admin']))
                     <ul class="nav child_menu">
 
                     </ul>
+
+                    </li>
+                  <li><a href="index.php?halaman=tambahadmin"><i class="fa fa-bar-chart-o"></i> Tambah Admin</a>
+                    <ul class="nav child_menu">
+
+                    </ul>
+
                   </li>
                   <li><a href="index.php?halaman=logout"><i class="fa fa-bar-chart-o"></i> Logout</a>
                     <ul class="nav child_menu">
@@ -255,6 +262,14 @@ if(!isset($_SESSION['admin']))
                         elseif ($_GET['halaman']=="logout")
                         {
                           include 'logout.php';
+                        }
+                        elseif ($_GET['halaman']=="tambahadmin") 
+                        {
+                          include 'tambahadmin.php'; 
+                        }
+                        elseif ($_GET['halaman']=="tambahdataadmin")
+                        {
+                          include 'tambahdataadmin.php';
                         }
                 }
                 else
