@@ -302,257 +302,6 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       </div>
     </div>
   </section>
-
-
-  <!--==========================
-    Testimonials Section
-  ============================-->
-
-  <section id="testimonials" class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col-md-8">
-
-          <div class="testimonials-content">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-              <div class="carousel-inner" role="listbox">
-
-                <div class="carousel-item  active">
-                  <div class="top-top">
-
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>Kimberly Tran<span>manager</span></h4>
-
-                  </div>
-                </div>
-
-                <div class="carousel-item ">
-                  <div class="top-top">
-
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>Henderson<span>manager</span></h4>
-
-                  </div>
-                </div>
-
-                <div class="carousel-item ">
-                  <div class="top-top">
-
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>David Spark<span>manager</span></h4>
-
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="btm-btm">
-
-                <ul class="list-unstyled carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Pricing Table Section
-  ============================-->
-  <section id="pricing" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>Meet With Price</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>basic</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>PERSONAL</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>BUSINESS</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>profeesional</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Blog Section
-  ============================-->
-  <section id="blog" class="padd-section wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>Latest posts</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="admin/assetss/img/blog/blog-image-1.jpg" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="admin/assetss/img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="admin/assetss/img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Newsletter Section
-  ============================-->
-  <section id="newsletter" class="newsletter text-center wow fadeInUp">
-    <div class="overlay padd-section">
-      <div class="container">
-
-        <div class="row justify-content-center">
-          <div class="col-md-9 col-lg-6">
-            <form class="form-inline" method="POST" action="#">
-
-              <input type="email" class="form-control " placeholder="Email Adress" name="email">
-              <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
-
-            </form>
-
-          </div>
-        </div>
-
-          <ul class="list-unstyled">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-
-
-      </div>
-    </div>
-  </section>
-
   <!--==========================
     Contact Section
   ============================-->
@@ -573,17 +322,17 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
           <div class="info">
             <div>
               <i class="fa fa-map-marker"></i>
-              <p>A108 Adam Street<br>New York, NY 535022</p>
+              <p>POLIBON<br>Bondowoso, Jawa Timur</p>
             </div>
 
             <div class="email">
               <i class="fa fa-envelope"></i>
-              <p>info@example.com</p>
+              <p>tahajjudin28@gmail.com</p>
             </div>
 
             <div>
               <i class="fa fa-phone"></i>
-              <p>+1 5589 55488 55s</p>
+              <p>082330044949</p>
             </div>
           </div>
 
@@ -715,7 +464,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
           -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="">Kelompok 5</a>
         </div>
       </div>
     </div>
