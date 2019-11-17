@@ -92,25 +92,25 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
   				<div class="panel-body">
   					<form method="post">
   						<div class="form-group">
-  							<label>Nama</label>
-  							<input type="nama" class="form-control" name="nama">
-  						</div>
-  						<div class="form-group">
-  							<label>Username</label>
-  							<input type="username" class="form-control" name="username">
-  						</div>
-  						<div class="form-group">
   							<label>Email</label>
-  							<input type="email" class="form-control" name="email">
+  							<input type="email_pelanggan" class="form-control" name="email_pelanggan">
   						</div>
   						<div class="form-group">
   							<label>Password</label>
-  							<input type="password" class="form-control" name="password">
+  							<input type="password" class="form-control" name="password_pelanggan">
   						</div>
   						<div class="form-group">
-  							<label>Provinsi</label>
-  							<input type="provinsi" class="form-control" name="provinsi">
+  							<label>Nama</label>
+  							<input type="nama_pelanggan" class="form-control" name="nama_pelanggan">
   						</div>
+  						<div class="form-group">
+  							<label>Telepon</label>
+  							<input type="number" class="form-control" name="telepon_pelanggan">
+  						</div>
+              <div class="form-group">
+                <label>Provinsi</label>
+                <input type="provinsi" class="form-control" name="provinsi">
+              </div>
   						<div class="form-group">
   							<label>Kota</label>
   							<input type="kota" class="form-control" name="kota">
@@ -121,11 +121,7 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
   						</div>
   						<div class="form-group">
   							<label>Kode Pos</label>
-  							<input type="kode_pos" class="form-control" name="kode_pos">
-  						</div>
-  						<div class="form-group">
-  							<label>No Telepon</label>
-  							<input type="no_telepon" class="form-control" name="no_telepon">
+  							<input type="number" class="form-control" name="kode_pos">
   						</div>
   						<center><button class="btn btn-primary" name="save">Registrasi</button></center>
   					</form>
@@ -140,9 +136,9 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
   {
 
   	//query cek sesuai di database
-  	$koneksi->query("INSERT INTO registrasi
-    (nama,username,email,password,provinsi,kota,alamat,kode_pos,no_telepon)
-    VALUES('$_POST[nama]','$_POST[username]','$_POST[email]','$_POST[password]','$_POST[provinsi]','$_POST[kota]','$_POST[alamat]','$_POST[kode_pos]','$_POST[no_telepon]')");
+  	$koneksi->query("INSERT INTO pelanggan
+    (email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan,provinsi,kota,alamat,kode_pos)
+    VALUES('$_POST[email_pelanggan]','$_POST[password_pelanggan]','$_POST[nama_pelanggan]','$_POST[telepon_pelanggan]','$_POST[provinsi]','$_POST[kota]','$_POST[alamat]','$_POST[kode_pos]')");
 
 
   echo "<div class='alert alert-info'>Data Tersimpan !</div>";
