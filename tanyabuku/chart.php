@@ -49,7 +49,7 @@
                 </li>
                 <li class="nav-item">
                     <form action="logout.html">
-                      <button type="submit" class=" btn btn-dark">Logout</button>
+                      <button type="submit" class=" btn btn-dark" >Logout</button>
                     </form>
                 </li>
               </ul>
@@ -57,7 +57,6 @@
           </div>
     </nav>
     <br><br><br><br>
-
 
     <!-- membuat kategori,membuat search input dan button -->
     <form action="" class="form-group">
@@ -68,7 +67,21 @@
                 <table border="0" cellpadding="5" cellspacing="0">
 
                   <tr>
-                    <td> <center> <iframe src="" frameborder="1" height="500" width="800"></iframe> </center> </td>
+                    <td><center><iframe src="" frameborder="1" height="500" width="250"></iframe></center></td>
+                    <h1><leght>Transaksi</leght></h1>
+
+
+
+
+
+
+
+                    <!-- Tabel Kanan -->
+                    <td><iframe src="" frameborder="1" height="500" width="750"></iframe></td>
+                   <h1> <right>Tujuan</right> </h1>  
+                  </tr>
+                  <form action=" Tujuan.html" method="get">
+ 
                     <tr>
                         <td> Nama  </td>
                         <td><input type="text" /></td>
@@ -97,32 +110,14 @@
                     <tr>
                         <td> Pembayaran  </td>
                         <td><input type="text" /></td>
-                    </tr>  
-                    <h1> Total buku yang dibayarkan :  </h1>  
-                    <a class="btn btn-primary" href="chart3.html" role="button">Lanjut</a>
+                    </tr>
                     
-                    <!-- <p>
-                    <?php
-      include 'data.php';
-      $data = datapinjaman();
-      $i = 1;
-      foreach($data as $pinjaman){ <!-- AWAL PERULANGAN 
-      ?>
-      <tr>
-         <td><?php echo $i++ ?></td>
-         <td><?php echo $pinjaman['nim'] ?></td>
-         <td><?php echo $pinjaman['nama'] ?></td>
-         <td><?php echo $pinjaman['judul'] ?></td>
-         <td><?php echo $pinjaman['pengarang'] ?></td>
-         <td><?php echo $pinjaman['penerbit'] ?></td>
-   <?php
--->
-
-
-                    
-                  </tr>
-
+                    </form>
                 </table>
+                <input class="btn btn-primary" type="reset" value="Reset">
+                <a class="btn btn-primary" href="chart3.html" role="button">Lanjut</a>
+                
+                
               </div>
               <div class="col-lg-2"></div>
           </div>

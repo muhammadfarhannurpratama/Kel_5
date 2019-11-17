@@ -46,12 +46,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <!-- nav -->
                 <div class="top-w3pvt d-flex">
                     <div id="logo">
-                        <h1> <a href="index.html"><span class="log-w3pvt">Tanya Buku</a> <label class="sub-des">Online Store Books</label></h1>
+                        <h1> <a href="index.php"><span class="log-w3pvt">Tanya Buku</a> <label class="sub-des">Online Store Books</label></h1>
                     </div>
 
                     <div class="forms ml-auto">
-                        <a href="login.html" class="btn"><span class="fa fa-user-circle-o"></span> Masuk</a>
-                        <a href="register.html" class="btn"><span class="fa fa-pencil-square-o"></span> Registrasi</a>
+                        <a href="login.php" class="btn"><span class="fa fa-user-circle-o"></span> Masuk</a>
+                        <a href="register.php" class="btn"><span class="fa fa-pencil-square-o"></span> Registrasi</a>
                     </div>
                 </div>
                 <div class="nav-top-wthree">
@@ -59,8 +59,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                         <input type="checkbox" id="drop" />
                         <ul class="menu">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="about.html">Produk</a></li>
+                            <li class="active"><a href="index.php">Home</a></li>
+                            <li><a href="about.php">Produk</a></li>
                             <li>
                                 <!-- First Tier Drop Down 
                                 <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
@@ -75,8 +75,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </ul>
                             </li>
                         -->
-                            <li><a href="shop.html">Koleksi</a></li>
-                            <li><a href="contact.html">Kontak Kami</a></li>
+                            <li><a href="shop.php">Koleksi</a></li>
+                            <li><a href="contact.php">Kontak Kami</a></li>
                         </ul>
                     </nav>
                     <!-- //nav -->
@@ -98,7 +98,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="row">
                 <div class="col-lg-5 banner-left-info">
                     <h3>Berisikan Buku Tentang Karakter <span> Kebudayaan Dan Keagamaan</span></h3>
-                    <a href="shop.html" class="btn shop">Belanja Sekarang</a>
+                    <a href="shop.php" class="btn shop">Belanja Sekarang</a>
                 </div>
 
                 <div class="col-lg-7 banner-img">
@@ -126,7 +126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-md-4 content-gd-wthree ab-content py-lg-5 my-lg-5">
                     <h4>Buku Novel</h4>
                     <p>Berisikan Buku novel dari dalam negeri dan luar negeri.</p>
-                    <a href="shop.html" class="btn shop mt-3">BELANJA SEKARANG</a>
+                    <a href="shop.php" class="btn shop mt-3">BELANJA SEKARANG</a>
 
                 </div>
                 <div class="col-md-4 content-gd-wthree">
@@ -140,9 +140,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h3 class="sub-w3ls-headf">AKun Kami</h3>
                 <div class="social-ficons">
                     <ul>
-                        <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
-                        <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
-                        <li><a href="#"><span class="fa fa-google"></span>Google</a></li>
+                        <li><a href="https://id-id.facebook.com/"><span class="fa fa-facebook"></span> Facebook</a></li>
+                        <li><a href="https://twitter.com/login?lang=id"><span class="fa fa-twitter"></span> Twitter</a></li>
+                        <li><a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><span class="fa fa-google"></span>Google</a></li>
                     </ul>
                 </div>
             </div>

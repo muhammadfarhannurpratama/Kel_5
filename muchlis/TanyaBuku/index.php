@@ -67,7 +67,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       <?php else :  ?>
       <li class="menu-has-children"><a href="">Daftar</a>
             <ul>
-              <li><a href="#">Daftar</a></li>
+              <li><a href="registrasi_user.php">Daftar</a></li>
               <li><a href="login.php">Masuk</a></li>
             </ul>
           </li> 
