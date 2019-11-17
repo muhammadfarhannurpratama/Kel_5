@@ -267,10 +267,6 @@ if(!isset($_SESSION['admin']))
                         {
                           include 'tambahadmin.php'; 
                         }
-                        elseif ($_GET['halaman']=="tambahdataadmin")
-                        {
-                          include 'tambahdataadmin.php';
-                        }
                 }
                 else
                 {
