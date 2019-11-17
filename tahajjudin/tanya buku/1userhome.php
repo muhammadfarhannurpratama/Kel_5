@@ -39,19 +39,25 @@
     </nav> <br>
 
 <!-- membuat kategori,membuat search input dan button -->
-    <form action="" class="form-group">
+
       <nav class="">
           <div class="row">
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
                 <table border="0" cellpadding="5" cellspacing="0">
-
+                <form action="" class="form-group"></form>
                   <tr class="">
                     <td><h4><center>Kategori</center></h4></td>
-                    <td class="form-inline"><button class="btn btn-outline-light my-2 my-sm-0" type="submit"><input type="image" src="search.png" width="15" height="17"></button>
-                    <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Search"></td>
+                    <td>
+                      <div class="form-inline">
+                        <div class="form-group"></div>
+                          <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><input type="image" src="search.png" width="15" height="17"></button>
+                          <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Search">
+                        </div>
+                      </div>
+                  </td>
                   </tr>
-
+                  </form>
                   <tr>
                     <td><center><iframe src="" frameborder="1" height="500" width="150"></iframe></center></td>
                     <td><iframe src="" frameborder="1" height="500" width="780"></iframe></td>
@@ -62,7 +68,7 @@
               <div class="col-lg-2"></div>
           </div>
       </nav>
-    </form>
+
 <!-- kosong kebawah -->
 <br>
     <!-- Optional JavaScript -->
