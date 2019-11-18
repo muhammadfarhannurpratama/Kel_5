@@ -34,10 +34,17 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
   <style>
+    body{
+      background: url(images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    }
   </style>
 </head>
 
-<body background="">
+<body>
 
   <header id="header" class="header header-hide">
     <div class="container">

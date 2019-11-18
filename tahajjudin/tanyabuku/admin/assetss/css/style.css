@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background: ;
+  background:url(../img/bgweb.png) no-repeat center center fixed;
   background-color: #fff;
   color: #333;
 }
