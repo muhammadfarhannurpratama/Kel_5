@@ -166,7 +166,7 @@ span {
 }
 
 #header #logo h1 a {
-  color: #555;
+  color: rgb(0, 0, 0);
   line-height: 1;
   display: inline-block;
   text-decoration: none;
