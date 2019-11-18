@@ -1,21 +1,12 @@
 <?php 
-session_start();
-//koneksi database
-$koneksi = new mysqli("localhost","root","","db_tanyabuku");
+$koneksi=new mysqli("localhost","root","","db_tanyabuku");
+ ?>
  
-
-if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang'])) 
-{
-  echo "<script>alert ('Keranjang Kosong!, Silahkan Berbelanja..');</script>";
-  echo "<script>location='index.php';</script>";
-}
-
-?>
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Keranjang Belanja</title>
+  <title>Nota Pembelian</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -85,58 +76,80 @@ if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
     </div>
   </header>
 
-  <!--mulai coding keranjang-->
-  
+  <!--mulai coding-->
+
   <section class="konten">
-    <div class="container">
-      <br>
-      <br>
-      <br>
-      <h3>Keranjang Belanja</h3>
-      <hr>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Produk</th>
-            <th>Harga</th>
-            <th>Jumlah</th>
-            <th>SubHarga</th>
-            <th>Button</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php $nomor=1; ?>
-          <?php foreach ($_SESSION["keranjang"] as $id_produk => $jumlah): ?>
-          <!-- menampilkan produk yg sedak diperulangkan berdasarkan id_roduk -->
-          <?php
-           $ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
-           $pecah=$ambil->fetch_assoc();
-           $subharga=$pecah['harga_produk']*$jumlah;
-           ?>
-          <tr>
-            <td><?php echo $nomor; ?></td>
-            <td><?php echo $pecah['nama_produk']; ?></td>
-            <td>Rp. <?php echo number_format($pecah['harga_produk']); ?></td>
-            <td><?php echo $jumlah; ?></td>
-            <td>Rp. <?php echo number_format($subharga); ?></td>
-            <td>
-              <a href="hapuskeranjang.php?id=<?php echo $id_produk ?>"class="btn btn-danger btn-xs">Hapus</a>
-            </td>
-          </tr>
-          <?php $nomor++; ?>
-          <?php endforeach ?>
-        </tbody>
-      </table>
+  	<div class="container">
+  		
 
-      <a href="index.php" class="btn btn-primary">Lanjutkan Belanja</a>
-      <a href="login.php" class="btn btn-primary">Checkout</a>
-    </div>
+ 	<!-- nota copas dari admin-->
+ 	
+<?php 
+$ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan
+	ON pembelian.id_pelanggan=pelanggan.id_pelanggan
+	WHERE pembelian.id_pembelian='$_GET[id]'");
+$detail=$ambil->fetch_assoc();
+ ?>
+ <br>
+ <br>
+ <br>
+
+ <strong><?php echo $detail['nama_pelanggan']; ?></strong> <br>
+ <p>
+ 	<?php echo $detail['telepon_pelanggan']; ?> <br>
+ 	<?php  echo $detail['email_pelanggan']; ?>
+ </p>
+
+ <p>
+ 	Tanggal : <?php echo $detail['tanggal_pembelian']; ?> <br>
+ 	Total	: <?php echo number_format($detail['total_pembelian']); ?>
+ </p>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>No</th>
+			<th>Nama Produk</th>
+			<th>Harga</th>
+			<th>Jumlah</th>
+			<th>Subtotal</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php $nomor=1; ?>
+		<?php $ambil=$koneksi->query("SELECT * FROM pembelian_produk JOIN produk ON pembelian_produk.id_produk=produk.id_produk
+		WHERE pembelian_produk.id_pembelian='$_GET[id]'"); ?>
+		<?php while($pecah=$ambil->fetch_assoc()){ ?>
+		<tr>
+			<td><?php echo $nomor; ?></td>
+			<td><?php echo $pecah['nama_produk']; ?></td>
+			<td><?php echo $pecah['harga_produk']; ?></td>
+			<td><?php echo $pecah['jumlah']; ?></td>
+			<td>
+				<?php echo $pecah['harga_produk']*$pecah['jumlah']; ?>
+			</td>
+		</tr>
+		<?php $nomor++; ?>
+	<?php } ?>
+	</tbody>
+</table>
+
+
+<div class="row">
+	<div class="col-md-7">
+		<div class="alert alert-info">
+			<p>
+				Silahkan Melakukan Pembayaran Rp. <?php echo number_format($detail['total_pembelian']); ?> <br>
+				<strong>KE NOMOR REKENING DI BAWAH INI :</strong> <br>
+				<strong>BANK BCA : 123-444-000-321 A/N. TANYA BUKU</strong>
+			</p>
+		</div>
+	</div>
+</div>  		
+
+  	</div>
   </section>
-
-
-
-  <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
   <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
   <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
