@@ -133,7 +133,7 @@ span {
 }
 
 .back-to-top:hover {
-  background: #55b03f;
+  background: #95B9E0;
   color: #fff;
 }
 
@@ -1046,7 +1046,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #pricing .block-pricing .table .table_btn a:hover {
-  background: #55b03f;
+  background: #95B9E0;
 }
 
 #pricing .block-pricing .table .table_btn a .fa {
@@ -1167,7 +1167,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter .btn:hover {
-  background: #55b03f;
+  background: #95B9E0;
 }
 
 #newsletter .btn .fa {
@@ -1193,7 +1193,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter ul li:hover {
-  background: #55b03f;
+  background: #95B9E0;
 }
 
 #newsletter ul li .fa {
@@ -1246,7 +1246,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .social-links a:hover {
-  background: #55b03f;
+  background: #95B9E0;
   color: #fff;
 }
 
@@ -1299,7 +1299,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #92d283;
+  background: #95B9E0;
 }
 
 /*--------------------------------------------------------------
