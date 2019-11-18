@@ -33,13 +33,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <style>
+  </style>
 </head>
 
 <body>
@@ -83,9 +78,9 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   ============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <h1>Selamat Datang di Tanya Buku Store</h1>
+      <h1 >Selamat Datang di  Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
-      <img src="admin/assetss/img/hero-img.png" alt="Hero Imgs">
+      <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
       <div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
@@ -103,7 +98,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     <div class="container">
       <div class="section-title text-center">
 
-        <h2>Buku Best Seller </h2>
+        <h2><b>Buku Best Seller </b></h2>
         <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
 
       </div>
@@ -147,7 +142,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
               <center><img src="admin/assetss/img/img.jpg" alt="" width="640" height="360"></center>
             </div>
             <p class="">
-              <h5>
+              <h4>
               Toko Doni adalah sebuah toko yang menyediakan berbagai macam peralatan assek
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
               optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
@@ -159,7 +154,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
               optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
               optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-            </h5>
+            </h4>
             </p>
 
             <ul class="list-unstyled">
@@ -183,7 +178,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
     <div class="container">
       <div class="section-title text-center">
-        <h2>Testimoni</h2>
+        <h2><b>Testimoni</b></h2>
         <p class="separator">Beberapa testimoni dari user Tanya Buku..</p>
       </div>
     </div>
@@ -230,7 +225,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     <div class="container">
       <div class="section-title text-center">
 
-        <h2>Best Seller</h2>
+        <h2><b>Best Seller</b></h2>
         <p class="separator">Beberapa Buku Best Seller di Tanya Buku Store..</p>
 
       </div>
@@ -302,257 +297,6 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       </div>
     </div>
   </section>
-
-
-  <!--==========================
-    Testimonials Section
-  ============================-->
-
-  <section id="testimonials" class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col-md-8">
-
-          <div class="testimonials-content">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-              <div class="carousel-inner" role="listbox">
-
-                <div class="carousel-item  active">
-                  <div class="top-top">
-
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>Kimberly Tran<span>manager</span></h4>
-
-                  </div>
-                </div>
-
-                <div class="carousel-item ">
-                  <div class="top-top">
-
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>Henderson<span>manager</span></h4>
-
-                  </div>
-                </div>
-
-                <div class="carousel-item ">
-                  <div class="top-top">
-
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>David Spark<span>manager</span></h4>
-
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="btm-btm">
-
-                <ul class="list-unstyled carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Pricing Table Section
-  ============================-->
-  <section id="pricing" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>Meet With Price</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>basic</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>PERSONAL</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>BUSINESS</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>profeesional</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Blog Section
-  ============================-->
-  <section id="blog" class="padd-section wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>Latest posts</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="admin/assetss/img/blog/blog-image-1.jpg" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="admin/assetss/img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="admin/assetss/img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Newsletter Section
-  ============================-->
-  <section id="newsletter" class="newsletter text-center wow fadeInUp">
-    <div class="overlay padd-section">
-      <div class="container">
-
-        <div class="row justify-content-center">
-          <div class="col-md-9 col-lg-6">
-            <form class="form-inline" method="POST" action="#">
-
-              <input type="email" class="form-control " placeholder="Email Adress" name="email">
-              <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
-
-            </form>
-
-          </div>
-        </div>
-
-          <ul class="list-unstyled">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-
-
-      </div>
-    </div>
-  </section>
-
   <!--==========================
     Contact Section
   ============================-->
@@ -560,7 +304,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
     <div class="container">
       <div class="section-title text-center">
-        <h2>Contact</h2>
+        <h2><b>Contact</b></h2>
         <p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
       </div>
     </div>
@@ -624,7 +368,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
         </div>
       </div>
     </div>
-  </section><!-- #contact -->
+  </section>
+  <!-- #contact -->
 
   <!--==========================
     Footer
@@ -715,7 +460,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
           -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a href="">Tanya Buku</a>
         </div>
       </div>
     </div>

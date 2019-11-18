@@ -39,7 +39,6 @@
 
           </div>
           <div class="col-lg-5">
-<<<<<<< HEAD
             <h2>Tujuan</h2><br>          
                          <h5>Nama</h5>  
                         <input class="form-control" type="text" />
@@ -49,26 +48,6 @@
                    
                         <h5>Kota</h5> 
                         <input class="form-control" type="text" />
-=======
-            <h2>Tujuan</h2><br>
-            <table border="0" cellpadding="5" cellspacing="0">
-            <tr>
-                        <td> <h4>Nama</h4>  </td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Provinsi</h4></td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Kota</h4> </td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
-                    <tr>
-                        <td><h4>Alamat</h4> </td>
-                        <td><input class="form-control" type="text" /></td>
-                    </tr>
->>>>>>> 61e42e302f1129aee40de5fab7e0b16567e19652
                   
                    
                         <h5>Kode Pos</h5> 
