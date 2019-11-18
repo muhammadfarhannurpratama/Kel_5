@@ -148,17 +148,9 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             </div>
             <p class="">
               <h5>
-              Toko Doni adalah sebuah toko yang menyediakan berbagai macam peralatan assek
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
+              Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
+              Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
+              Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
             </h5>
             </p>
 
