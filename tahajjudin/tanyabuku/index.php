@@ -37,7 +37,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   </style>
 </head>
 
-<body>
+<body background="bgwe.png"
 
   <header id="header" class="header header-hide">
     <div class="container">
