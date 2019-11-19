@@ -189,11 +189,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-<<<<<<< HEAD
             <img src="admin/assetss/img/team/tahaj.jpg" class="img-responsive" alt="img">
-=======
-            <img src="admin/assetss/img/team/1.jpg" class="img-responsive" alt="img">
->>>>>>> e2be8ffa8d99d9ad46f596ce2456fca2db7a6ba2
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
