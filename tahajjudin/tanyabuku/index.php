@@ -37,7 +37,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   </style>
 </head>
 
-<body background="bgwe.png"
+<body>
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -49,7 +49,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       </div>
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
-        <ul class="nav-menu">
+        <ul class="nav-menu ">
           <li class="menu-active"><a href="index.php">Home</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
@@ -78,7 +78,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   ============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <h1 >Selamat Datang di  Tanya Buku Store</h1>
+      <h1 style="color:black" >Selamat Datang di  Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
@@ -156,15 +156,6 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
               optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
             </h4>
             </p>
-
-            <ul class="list-unstyled">
-              <li><i class="fa fa-angle-right"></i>Creative Design</li>
-              <li><i class="fa fa-angle-right"></i>Retina Ready</li>
-              <li><i class="fa fa-angle-right"></i>Easy to Use</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-            </ul>
-
         </div>
         </div>
 
@@ -381,7 +372,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
         <div class="col-md-12 col-lg-4">
           <div class="footer-logo">
 
-            <a class="navbar-brand" href="#">eStartup</a>
+            <a class="navbar-brand" href="#">Tanya Buku</a>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
 
           </div>
