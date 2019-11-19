@@ -34,13 +34,6 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
   <style>
-    body{
-      background: url(images/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-    }
   </style>
 </head>
 
@@ -163,15 +156,6 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
               optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
             </h4>
             </p>
-
-            <ul class="list-unstyled">
-              <li><i class="fa fa-angle-right"></i>Creative Design</li>
-              <li><i class="fa fa-angle-right"></i>Retina Ready</li>
-              <li><i class="fa fa-angle-right"></i>Easy to Use</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-            </ul>
-
         </div>
         </div>
 
@@ -388,7 +372,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
         <div class="col-md-12 col-lg-4">
           <div class="footer-logo">
 
-            <a class="navbar-brand" href="#">eStartup</a>
+            <a class="navbar-brand" href="#">Tanya Buku</a>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
 
           </div>
