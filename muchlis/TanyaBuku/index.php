@@ -190,15 +190,24 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
+<<<<<<< HEAD
             <img src="admin/assetss/img/team/tahaj.jpg" class="img-responsive" alt="img">
+=======
+            <img src="admin/assetss/img/team/1.jpg" class="img-responsive" alt="img">
+>>>>>>> e2be8ffa8d99d9ad46f596ce2456fca2db7a6ba2
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
+<<<<<<< HEAD
               <span>Manager</span>
               <h4>Tahajjudin Fajri</h4>
+=======
+              <span>Komik</span>
+              <h4>Raditya Dika</h4>
+>>>>>>> e2be8ffa8d99d9ad46f596ce2456fca2db7a6ba2
             </div>
           </div>
         </div>
@@ -212,8 +221,13 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
+<<<<<<< HEAD
               <span>Pendodol Pecel</span>
               <h4>Markona</h4>
+=======
+              <span>Najwa Sihab</span>
+              <h4>Catatan Najwa</h4>
+>>>>>>> e2be8ffa8d99d9ad46f596ce2456fca2db7a6ba2
             </div>
           </div>
         </div>
@@ -227,8 +241,13 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
+<<<<<<< HEAD
               <span>Pendodol Cupang</span>
               <h4>Cak Sugeng</h4>
+=======
+              <span>Best Seller</span>
+              <h4>My Stupid Boss</h4>
+>>>>>>> e2be8ffa8d99d9ad46f596ce2456fca2db7a6ba2
             </div>
           </div>
         </div>
@@ -242,8 +261,13 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
+<<<<<<< HEAD
               <span>Pendodol Kripik</span>
               <h4>Yuk Na dulure Yuk Sri</h4>
+=======
+              <span>Best Seller</span>
+              <h4>Dari Allah Menuju Allah</h4>
+>>>>>>> e2be8ffa8d99d9ad46f596ce2456fca2db7a6ba2
             </div>
           </div>
         </div>
@@ -285,7 +309,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   <!--==========================
     Contact Section
   ============================-->
-  <section id="contact" class="padd-section wow fadeInUp">
+  <!-- <section id="contact" class="padd-section wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
@@ -379,7 +403,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <ul class="list-unstyled">
               <li><a href="#">About us</a></li>
               <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Best Seller</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
 
@@ -394,7 +418,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <ul class="list-unstyled">
               <li><a href="#">About us</a></li>
               <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
+              <li><a href="#">Best Seller</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
 
