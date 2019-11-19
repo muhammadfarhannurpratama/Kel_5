@@ -8,11 +8,24 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+.body2 {
   background:url(../img/bgweb.png) no-repeat center center fixed;
   background-size:100% auto;
   background-color: #fff;
   color: #333;
+}
+.body3 {
+  background:url(../img/bgweb2.png) center center fixed;
+  background-size:100% auto;
+  background-color: #fff;
+  color: #333;
+}
+.box{
+  width: 100%;
+  margin-top: 5%;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+  padding: 25px;
+  background: white;
 }
 
 h1, h2, h3, h4, h5, h6 {

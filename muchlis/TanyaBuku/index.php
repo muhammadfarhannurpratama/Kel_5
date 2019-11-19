@@ -42,7 +42,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   ======================================================= -->
 </head>
 
-<body>
+<body class="body2">
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -57,8 +57,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.php">Home</a></li>
           <li><a href="#about-us">About</a></li>
-          <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#team">Best Seller</a></li>
+          <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
@@ -85,15 +85,53 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     <div class="hero-container">
       <h1>Selamat Datang di Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
-      <img src="admin/assetss/img/hero-img.png" alt="Hero Imgs">
-      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-      <div class="btns">
-        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
-        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-      </div>
+      <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
+      <a href="#video" class="btn-get-started scrollto">video</a>
+        <br>
     </div>
   </section><!-- #hero -->
+
+  <!--==========================
+    Video Section
+  ============================-->
+  <section id="video" class="text-center wow fadeInUp">
+    <div class="overlay">
+      <div class="container-fluid container-full">
+
+        <div class="row">
+          <a href="#" class="js-modal-btn play-btn" data-video-id="LjuXwpXQsy8"></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    About Us Section
+  ============================-->
+  <section id="about-us" class="about-us padd-section wow fadeInUp">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-7 col-lg-9 ">
+        <div class="about-content">
+            <h2 class="text-center"><span>Tanya Buku</span> <br> Selamat Datang di Toko Doni </h2>
+            <div class="">
+              <center><img src="admin/assetss/img/img.jpg" alt="" width="640" height="360"></center>
+            </div>
+            <p class="">
+              <h5 class="box">
+              Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
+              Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
+              Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
+            </h5>
+            </p>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!--==========================
     Get Started Section
@@ -103,7 +141,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     <div class="container">
       <div class="section-title text-center">
 
-        <h2>Buku Best Seller </h2>
+        <h2><b>Beberapa Buku</b> </h2>
         <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
 
       </div>
@@ -134,48 +172,94 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   </section>
 
   <!--==========================
-    About Us Section
+    Team Section
   ============================-->
-  <section id="about-us" class="about-us padd-section wow fadeInUp">
+  <section id="team" class="padd-section text-center wow fadeInUp">
+
     <div class="container">
-      <div class="row justify-content-center">
+      <div class="section-title text-center">
 
-        <div class="col-md-7 col-lg-9 ">
-        <div class="about-content">
-            <h2 class="text-center"><span>Tanya Buku</span> <br> Selamat Datang di Toko Doni </h2>
-            <div class="">
-              <center><img src="admin/assetss/img/img.jpg" alt="" width="640" height="360"></center>
+        <h2><b>Buku Best Seller</b></h2>
+        <p class="separator">Beberapa Buku Best Seller di Tanya Buku Store..</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="admin/assetss/img/team/tahaj.jpg" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>Manager</span>
+              <h4>Tahajjudin Fajri</h4>
             </div>
-            <p class="">
-              <h5>
-              Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
-              Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
-              Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
-            </h5>
-            </p>
-
-            <ul class="list-unstyled">
-              <li><i class="fa fa-angle-right"></i>Creative Design</li>
-              <li><i class="fa fa-angle-right"></i>Retina Ready</li>
-              <li><i class="fa fa-angle-right"></i>Easy to Use</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-            </ul>
-
+          </div>
         </div>
+
+       <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="admin/assetss/img/team/2.jpg" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>Pendodol Pecel</span>
+              <h4>Markona</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="admin/assetss/img/team/3.jpg" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>Pendodol Cupang</span>
+              <h4>Cak Sugeng</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="admin/assetss/img/team/4.jpg" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <span>Pendodol Kripik</span>
+              <h4>Yuk Na dulure Yuk Sri</h4>
+            </div>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
-  <!--==========================
+
+    <!--==========================
     Screenshots Section
   ============================-->
   <section id="screenshots" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
-        <h2>Testimoni</h2>
+        <h2><b>Testimoni</b></h2>
         <p class="separator">Beberapa testimoni dari user Tanya Buku..</p>
       </div>
     </div>
@@ -199,109 +283,13 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   </section>
 
   <!--==========================
-    Video Section
-  ============================-->
-
-  <section id="video" class="text-center wow fadeInUp">
-    <div class="overlay">
-      <div class="container-fluid container-full">
-
-        <div class="row">
-          <a href="#" class="js-modal-btn play-btn" data-video-id="LjuXwpXQsy8"></a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Team Section
-  ============================-->
-  <section id="team" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2>Best Seller</h2>
-        <p class="separator">Beberapa Buku Best Seller di Tanya Buku Store..</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="foto_produk/filosofi.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
-
-       <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/2.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/3.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/4.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!--==========================
     Contact Section
   ============================-->
   <section id="contact" class="padd-section wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
-        <h2>Contact</h2>
+        <h2><b>Contact</b></h2>
         <p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
       </div>
     </div>
@@ -377,7 +365,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
         <div class="col-md-12 col-lg-4">
           <div class="footer-logo">
 
-            <a class="navbar-brand" href="#">eStartup</a>
+            <a class="navbar-brand" href="#">Tanya Buku</a>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
 
           </div>

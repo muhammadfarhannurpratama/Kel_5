@@ -37,7 +37,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   </style>
 </head>
 
-<body>
+<body class="body2">
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -52,8 +52,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
         <ul class="nav-menu ">
           <li class="menu-active"><a href="index.php">Home</a></li>
           <li><a href="#about-us">About</a></li>
-          <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#team">Best Seller</a></li>
+          <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
@@ -81,24 +81,71 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       <h1 style="color:black" >Selamat Datang di  Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
-      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-      <div class="btns">
-        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
-        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-      </div>
+      <a href="#video" class="btn-get-started scrollto">Video</a>
+        <br>
     </div>
   </section><!-- #hero -->
 
+    <!--==========================
+    Video Section
+  ============================-->
+
+  <section id="video" class="text-center wow fadeInUp">
+    <div class="overlay">
+      <div class="container-fluid container-full">
+
+        <div class="row">
+          <a href="#" class="js-modal-btn play-btn" data-video-id="LjuXwpXQsy8"></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!--==========================
-    Get Started Section
+    About Us Section
+  ============================-->
+  <section id="about-us" class="about-us padd-section wow fadeInUp">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-7 col-lg-9 ">
+        <div class="about-content">
+            <h2 class="text-center"><span>Tanya Buku</span> <br> Selamat Datang di Toko Doni </h2>
+            <div class="">
+              <center><img src="admin/assetss/img/img.jpg" alt="" width="640" height="360"></center>
+            </div>
+            <p class="">
+              <h4 class="box">
+              Toko Doni adalah sebuah toko yang menyediakan berbagai macam peralatan assek
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
+              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
+              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
+              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
+              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
+              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
+            </h4>
+            </p>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Best Seller
   ============================-->
   <section id="get-started" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
 
-        <h2><b>Buku Best Seller </b></h2>
+        <h2><b>Beberapa Buku </b></h2>
         <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
 
       </div>
@@ -129,86 +176,6 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   </section>
 
   <!--==========================
-    About Us Section
-  ============================-->
-  <section id="about-us" class="about-us padd-section wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col-md-7 col-lg-9 ">
-        <div class="about-content">
-            <h2 class="text-center"><span>Tanya Buku</span> <br> Selamat Datang di Toko Doni </h2>
-            <div class="">
-              <center><img src="admin/assetss/img/img.jpg" alt="" width="640" height="360"></center>
-            </div>
-            <p class="">
-              <h4>
-              Toko Doni adalah sebuah toko yang menyediakan berbagai macam peralatan assek
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-            </h4>
-            </p>
-        </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!--==========================
-    Screenshots Section
-  ============================-->
-  <section id="screenshots" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-        <h2><b>Testimoni</b></h2>
-        <p class="separator">Beberapa testimoni dari user Tanya Buku..</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="owl-carousel owl-theme">
-
-        <div><img src="admin/assetss/img/screen/1.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/2.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/3.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/4.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/5.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/6.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/7.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/8.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/9.jpg" alt="img"></div>
-
-      </div>
-    </div>
-
-  </section>
-
-  <!--==========================
-    Video Section
-  ============================-->
-
-  <section id="video" class="text-center wow fadeInUp">
-    <div class="overlay">
-      <div class="container-fluid container-full">
-
-        <div class="row">
-          <a href="#" class="js-modal-btn play-btn" data-video-id="LjuXwpXQsy8"></a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
     Team Section
   ============================-->
   <section id="team" class="padd-section text-center wow fadeInUp">
@@ -216,7 +183,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     <div class="container">
       <div class="section-title text-center">
 
-        <h2><b>Best Seller</b></h2>
+        <h2><b>Buku Best Seller</b></h2>
         <p class="separator">Beberapa Buku Best Seller di Tanya Buku Store..</p>
 
       </div>
@@ -288,6 +255,37 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       </div>
     </div>
   </section>
+
+    <!--==========================
+    Screenshots Section
+  ============================-->
+  <section id="screenshots" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2><b>Testimoni</b></h2>
+        <p class="separator">Beberapa testimoni dari user Tanya Buku..</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="owl-carousel owl-theme">
+
+        <div><img src="admin/assetss/img/screen/1.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/2.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/3.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/4.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/5.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/6.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/7.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/8.jpg" alt="img"></div>
+        <div><img src="admin/assetss/img/screen/9.jpg" alt="img"></div>
+
+      </div>
+    </div>
+
+  </section>
+
   <!--==========================
     Contact Section
   ============================-->

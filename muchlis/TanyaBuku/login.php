@@ -33,16 +33,9 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 
-<body>
+<body class="body3">
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -83,8 +76,10 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
 
   <div class="container">
   	<div class="row">
-  		<div class="col-md-4">
-  			<div class="panel panel-default">
+      <div class="col-lg-4"></div>
+  		<div class="col-lg-4">
+        <br><br><br>
+  			<div class="panel panel-default container box">
   				<div class="panel-heading">
   					<h3 class="panel-title">Login Pelanggan</h3>
   					<br>
@@ -104,7 +99,8 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
   					</form>
   				</div>
   			</div>
-  		</div>
+      </div>
+      <div class="col-lg-4"></div>
   	</div>
   </div>
 <!--sinkron database email pengguna -->
