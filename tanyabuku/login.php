@@ -81,7 +81,7 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
         <br><br><br>
   			<div class="panel panel-default container box">
   				<div class="panel-heading">
-  					<h3 class="panel-title">Login Pelanggan</h3>
+  					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
   					<br>
 
   				</div>
@@ -95,7 +95,7 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
   							<label>Password</label>
   							<input type="password" class="form-control" name="password">
   						</div>
-  						<button class="btn btn-primary" name="login">Masuk</button>
+  						<center><button class="btn btn-primary" name="login">Masuk</button></center>
   					</form>
   				</div>
   			</div>

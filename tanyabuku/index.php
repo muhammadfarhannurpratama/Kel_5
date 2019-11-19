@@ -33,13 +33,6 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 </head>
 
 <body class="body2">
@@ -78,9 +71,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   </header>
 <!-- #header -->
 
-  <!--==========================
-    Hero Section
-  ============================-->
+  <!--==========================Hero Section============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
       <h1>Selamat Datang di Tanya Buku Store</h1>
@@ -90,9 +81,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     </div>
   </section><!-- #hero -->
 
-  <!--==========================
-    Video Section
-  ============================-->
+  <!--==========================Video Section============================-->
   <section id="video" class="text-center wow fadeInUp">
     <div class="overlay">
       <div class="container-fluid container-full">
@@ -105,9 +94,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     </div>
   </section>
 
-  <!--==========================
-    About Us Section
-  ============================-->
+  <!--==========================About Us Section============================-->
   <section id="about-us" class="about-us padd-section wow fadeInUp">
     <div class="container">
       <div class="row justify-content-center">
@@ -132,9 +119,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     </div>
   </section>
 
-  <!--==========================
-    Get Started Section
-  ============================-->
+  <!--==========================Get Started Section============================-->
   <section id="get-started" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
@@ -170,9 +155,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
   </section>
 
-  <!--==========================
-    Team Section
-  ============================-->
+  <!--==========================Team Section============================-->
   <section id="team" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
@@ -251,9 +234,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     </div>
   </section>
 
-    <!--==========================
-    Screenshots Section
-  ============================-->
+    <!--==========================Screenshots Section============================-->
   <section id="screenshots" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
@@ -281,10 +262,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
   </section>
 
-  <!--==========================
-    Contact Section
-  ============================-->
-  <!-- <section id="contact" class="padd-section wow fadeInUp">
+  <!--==========================Contact Section============================-->
+  <section id="contact" class="padd-section wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
@@ -352,11 +331,10 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
         </div>
       </div>
     </div>
-  </section><!-- #contact -->
+  </section>
 
-  <!--==========================
-    Footer
-  ============================-->
+
+<!--==========================Footer============================-->
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -365,71 +343,45 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
           <div class="footer-logo">
 
             <a class="navbar-brand" href="#">Tanya Buku</a>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
+            <p>
+              Tanya buku adalah Webseite layanan jual beli buku. Di website ini, 
+              memudahkan user untuk membeli dan mencari buku yang diinginkan.
+            </p>
 
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 col-lg-2">
+        <div class="col-sm-6 col-md-3 col-lg-6">
           <div class="list-menu">
 
-            <h4>Abou Us</h4>
+            <h4>Kelompok 5</h4>
 
             <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Best Seller</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+                <br>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+                <br>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+                <br>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+
+              </ul>
 
           </div>
         </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Best Seller</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Support</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">faq</a></li>
-              <li><a href="#">Editor help</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
+        <div class="col-sm-6 col-md-3 col-lg-2"></div>
       </div>
     </div>
 

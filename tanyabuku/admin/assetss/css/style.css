@@ -330,6 +330,7 @@ span {
 .nav-menu li {
   position: relative;
   white-space: nowrap;
+  
 }
 
 .nav-menu > li {
@@ -348,6 +349,7 @@ span {
 
 .nav-menu ul li {
   min-width: 180px;
+  
 }
 
 /* Nav Menu Arrows */
@@ -386,21 +388,23 @@ span {
   padding: 8px 8px;
   text-decoration: none;
   display: inline-block;
-  color: #555;
+  color: rgb(0, 0, 0);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   outline: none;
   letter-spacing: 0;
   transition: 0.3s;
+  font-weight: 900;
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-  color: #71c55d;
+  color: #a5c4e9;
 }
 
 .nav-menu > li {
   margin-left: 10px;
+  
 }
 
 .nav-menu ul {
@@ -416,7 +420,7 @@ span {
 
 .nav-menu ul li a {
   padding: 5px 10px;
-  color: #333;
+  color: rgb(47, 76, 51);
   transition: 0.3s;
   display: block;
   font-size: 14px;
@@ -448,7 +452,7 @@ span {
 }
 
 #mobile-nav-toggle i {
-  color: #555;
+  color: rgb(0, 0, 0);
   font-size: 24px;
 }
 
