@@ -93,7 +93,7 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
   					<form method="post">
   						<div class="form-group">
   							<label>Email</label>
-  							<input type="email_pelanggan" class="form-control" name="email_pelanggan">
+  							<input type="email" class="form-control" name="email_pelanggan">
   						</div>
   						<div class="form-group">
   							<label>Password</label>
