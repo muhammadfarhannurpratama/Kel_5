@@ -78,7 +78,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
       <a href="#video" class="btn-get-started scrollto">video</a>
-      <br><br><br>
+      
     </div>
   </section>
 
@@ -358,8 +358,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <h4>Kelompok 5</h4>
 
             <ul class="list-unstyled">
-                <li>Nama: Tahajjudin Fajri <br>
-                    NIM: E41182137 <br>
+                <li>Nama: Muhammad Farhan Nur Pratama <br>
+                    NIM: E41181773<br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
@@ -368,8 +368,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
-                <li>Nama: Tahajjudin Fajri <br>
-                    NIM: E41182137 <br>
+                <li>Nama: Muhammad Muchlis <br>
+                    NIM: E41182166 <br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
