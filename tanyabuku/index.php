@@ -373,8 +373,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
-                <li>Nama: Tahajjudin Fajri <br>
-                    NIM: E41182137 <br>
+                <li>Nama: Fauziyatur Rohmah <br>
+                    NIM: E41181624 <br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
 
