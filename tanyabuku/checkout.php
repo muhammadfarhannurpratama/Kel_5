@@ -62,10 +62,9 @@ if (!isset($_SESSION['pelanggan']))
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#screenshots">Testimoni</a></li>
-          <li><a href="#team">Best Seller</a></li>
+          <li><a href="index.php">About</a></li>
+          <li><a href="index.php#team">Best Seller</a></li>
+           <li><a href="index.php#screenshots">Testimoni</a></li>
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
