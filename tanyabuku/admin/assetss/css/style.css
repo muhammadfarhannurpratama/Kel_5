@@ -469,7 +469,7 @@ span {
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgba(52, 59, 64, 0.9);
+  background: rgba(15, 141, 231, 0.9);
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -517,11 +517,11 @@ span {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #71c55d;
+  color: #ffffff;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #71c55d;
+  color: #ffffff;
 }
 
 #mobile-body-overly {
@@ -543,9 +543,9 @@ body.mobile-nav-active {
 body.mobile-nav-active #mobile-nav {
   left: 0;
 }
-
 body.mobile-nav-active #mobile-nav-toggle i {
   color: #fff;
+  
 }
 
 /*--------------------------------------------------------------
