@@ -112,20 +112,6 @@ if(!isset($_SESSION['admin']))
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              
-                <span class="" aria-hidden="true"></span>
-              </a>
-             
-                <span class="" aria-hidden="true"></span>
-              </a>
-          
-                <span class="" aria-hidden="true"></span>
-              </a>
-                <span class="" aria-hidden="true"></span>
-              </a>
-            </div>
-            <!-- /menu footer buttons -->
           </div>
         </div>
 
