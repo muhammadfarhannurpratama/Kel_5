@@ -469,7 +469,7 @@ span {
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgba(15, 141, 231, 0.9);
+  background: rgba(15, 15, 15, 0.9);
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -531,13 +531,13 @@ span {
   top: 0;
   left: 0;
   position: fixed;
-  background: rgba(52, 59, 64, 0.9);
+  background:none;
   display: none;
 }
 
 /* Mobile Nav body classes */
 body.mobile-nav-active {
-  overflow: hidden;
+  overflow: auto;
 }
 
 body.mobile-nav-active #mobile-nav {
