@@ -73,12 +73,11 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   <!--==========================Tampilan Awal============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <br>
       <h1>Selamat Datang di Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
       <a href="#video" class="btn-get-started scrollto">video</a>
-      
+      <br>
     </div>
   </section>
 
