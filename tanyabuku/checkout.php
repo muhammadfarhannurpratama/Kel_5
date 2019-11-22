@@ -167,20 +167,33 @@ if (!isset($_SESSION['pelanggan']))
 
         $ambil=$koneksi->query("SELECT * FROM ongkir WHERE id_ongkir='$id_ongkir'");
         $arrayongkir=$ambil->fetch_assoc();
+        $nama_kota=$arrayongkir['nama_kota'];
         $tarif=$arrayongkir['tarif'];
 
         $total_pembelian=$totalbelanja + $tarif;
+        
         # 1. simpan data ke tabel pembelian
-        $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian )
-          VALUES('$id_pelanggan','$id_ongkir','$tanggal_pembelian','$total_pembelian')");
+        $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif )
+          VALUES('$id_pelanggan','$id_ongkir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif')");
 
         # 2. mendapatkan id_pembelian yg baru saja terjadi
         $id_pembelian_baru_terjadi=$koneksi->insert_id;
 
         foreach ($_SESSION['keranjang'] as $id_produk => $jumlah) 
         {
-          $koneksi->query("INSERT INTO pembelian_produk (id_pembelian,id_produk,jumlah)
-            VALUES ('$id_pembelian_baru_terjadi','$id_produk','$jumlah')");
+          #mendapatkan data produk berdasarkan id_produk
+          $ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+          $perproduk=$ambil->fetch_assoc();
+
+
+          $nama=$perproduk['nama_produk'];
+          $harga=$perproduk['harga_produk'];
+          $berat=$perproduk['berat'];
+
+          $subberat=$perproduk['berat']*$jumlah;
+          $subharga=$perproduk['harga_produk']*$jumlah;
+          $koneksi->query("INSERT INTO pembelian_produk (id_pembelian,id_produk,nama,harga,berat,subberat,subharga,jumlah)
+            VALUES ('$id_pembelian_baru_terjadi','$id_produk','$nama','$harga','$berat','$subberat','$subharga','$jumlah')");
         }
 
         #kosongkan keranjang belanja
