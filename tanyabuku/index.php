@@ -1,7 +1,7 @@
 <?php 
 session_start();
 //koneksi database
-$koneksi = new mysqli("localhost","root","","db_tanyabuku");
+include 'koneksi.php';
  ?>
 <!DOCTYPE html>
 
@@ -73,12 +73,15 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   <!--==========================Tampilan Awal============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <br>
       <h1>Selamat Datang di Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
       <a href="#video" class="btn-get-started scrollto">video</a>
+<<<<<<< HEAD
       <br><br><br>
+=======
+      <br>
+>>>>>>> 2ab11614ac875292c0c5eee4823675aa83bd7b88
     </div>
   </section>
 
@@ -144,7 +147,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <div class="caption">
               <h4><?php echo $perproduk['nama_produk']; ?></h4>
               <h5><?php echo number_format($perproduk['harga_produk']); ?></h5>
-              <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>              
+              <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>
+              <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Detail</a>              
             </div>
           </div>
         </div>
