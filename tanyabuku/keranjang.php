@@ -1,7 +1,7 @@
 <?php 
 session_start();
 //koneksi database
-$koneksi = new mysqli("localhost","root","","db_tanyabuku");
+include 'koneksi.php';
  
 
 if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang'])) 

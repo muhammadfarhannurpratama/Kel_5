@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$koneksi=new mysqli("localhost","root","","db_tanyabuku");
+include 'koneksi.php';
  
 //if belum login, maka masuk login.php 
 if (!isset($_SESSION['pelanggan']))

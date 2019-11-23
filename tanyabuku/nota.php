@@ -1,6 +1,6 @@
-<?php 
-$koneksi=new mysqli("localhost","root","","db_tanyabuku");
- ?>
+<?php  
+include 'koneksi.php';
+?>
  
  <!DOCTYPE html>
 <html lang="en">
