@@ -155,6 +155,10 @@ if (!isset($_SESSION['pelanggan']))
             </select>
           </div>
         </div>
+        <div class="form-group">
+          <label>Alamat Lengkap Pengiriman</label>
+          <textarea class="form-control" name="alamat_pengiriman" placeholder="Masukkan Alamat Pengiriman"></textarea>
+        </div>
         <button class="btn btn-primary " name="checkout">Checkout</button>
       </form>
 
@@ -164,6 +168,7 @@ if (!isset($_SESSION['pelanggan']))
         $id_pelanggan=$_SESSION['pelanggan']['id_pelanggan'];
         $id_ongkir=$_POST['id_ongkir'];
         $tanggal_pembelian=date("Y-m-d");
+        $alamat_pengiriman=$_POST['alamat_pengiriman'];
 
         $ambil=$koneksi->query("SELECT * FROM ongkir WHERE id_ongkir='$id_ongkir'");
         $arrayongkir=$ambil->fetch_assoc();
@@ -173,8 +178,8 @@ if (!isset($_SESSION['pelanggan']))
         $total_pembelian=$totalbelanja + $tarif;
         
         # 1. simpan data ke tabel pembelian
-        $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif )
-          VALUES('$id_pelanggan','$id_ongkir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif')");
+        $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif,alamat_pengiriman )
+          VALUES('$id_pelanggan','$id_ongkir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman')");
 
         # 2. mendapatkan id_pembelian yg baru saja terjadi
         $id_pembelian_baru_terjadi=$koneksi->insert_id;

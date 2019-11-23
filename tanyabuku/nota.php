@@ -112,7 +112,8 @@ $detail=$ambil->fetch_assoc();
    <div class="col-md-4">
      <h3>Pengiriman</h3>
      <strong><?php echo $detail['nama_kota']; ?></strong> <br>
-     Ongkos Kirim : Rp. <?php echo number_format($detail['tarif']); ?>
+     Ongkos Kirim : Rp. <?php echo number_format($detail['tarif']); ?> <br>
+     Alamat : <?php echo $detail['alamat_pengiriman']; ?>
    </div>
  </div>
 
