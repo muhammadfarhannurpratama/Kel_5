@@ -40,7 +40,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
   <header id="header" class="header header-hide">
     <div class="container">
 
-      <div id="logo" class="pull-left">
+      <div id="lgoo" class="pull-left">
         <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
@@ -78,7 +78,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
       <a href="#video" class="btn-get-started scrollto">video</a>
-      
+      <br><br><br>
     </div>
   </section>
 
@@ -358,8 +358,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <h4>Kelompok 5</h4>
 
             <ul class="list-unstyled">
-                <li>Nama: Muhammad Farhan Nur Pratama <br>
-                    NIM: E41181773<br>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
@@ -368,13 +368,13 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
-                <li>Nama: Muhammad Muchlis <br>
-                    NIM: E41182166 <br>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
-                <li>Nama: Fauziyatur Rohmah <br>
-                    NIM: E41181624 <br>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
 
