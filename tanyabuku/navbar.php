@@ -21,7 +21,7 @@
       <?php else :  ?>
       <li class="menu-has-children"><a href="">Daftar</a>
             <ul>
-              <li><a href="registrasi_user.php">Daftar</a></li>
+              <li><a href="daftar.php">Daftar</a></li>
               <li><a href="login.php">Masuk</a></li>
             </ul>
           </li> 
