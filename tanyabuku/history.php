@@ -1,14 +1,13 @@
 <?php 
 session_start();
-include 'koneksi.php';
-
+include 'koneksi.php'
  ?>
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Login Pelanggan</title>
+  <title>Keranjang Belanja</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -33,90 +32,21 @@ include 'koneksi.php';
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
 
-<body class="body3">
+<body>
 
   <?php include 'navbar.php'; ?>
-  <br>
-  <br>
-  <br>
 
-  <div class="container">
-  	<div class="row">
-      <div class="col-lg-4"></div>
-  		<div class="col-lg-4">
-        <br><br><br>
-  			<div class="panel panel-default container box">
-  				<div class="panel-heading">
-  					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
-  					<br>
-
-  				</div>
-  				<div class="panel-body">
-  					<form method="post">
-  						<div class="form-group">
-  							<label>Email</label>
-  							<input type="email" class="form-control" name="email">
-  						</div>
-  						<div class="form-group">
-  							<label>Password</label>
-  							<input type="password" class="form-control" name="password">
-  						</div>
-  						<center><button class="btn btn-primary" name="login">Masuk</button></center>
-  					</form>
-  				</div>
-  			</div>
-      </div>
-      <div class="col-lg-4"></div>
-  	</div>
-  </div>
-<!--sinkron database email pengguna -->
-  <?php  
-  if (isset($_POST['login']))
-  {
-  	$email=$_POST['email'];
-  	$password=$_POST['password'];
-  	//query cek sesuai di database
-  	$ambil=$koneksi->query("SELECT * FROM pelanggan 
-  		WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
-
-  	//mencari akun di db
-  	$akunyangcocok=$ambil->num_rows;
-
-  	if ($akunyangcocok==1)
-  	{
-  		//sukses login
-  		//mendapatkan akun dalam bentuk array
-  		$akun=$ambil->fetch_assoc();
-  		//login di session pelanggan
-  		$_SESSION['pelanggan'] = $akun;
-  		echo "<script>alert('Login Sukses !');</script>";
-
-      //jika sudah ATC
-      if (isset($_SESSION['keranjang']) OR !empty($_SESSION['keranjang'])) 
-      {
-        echo "<script>location='checkout.php';</script>";
-      }
-      else
-      {
-        echo "<script>location='history.php';</script>"; 
-      }
-  		
-
-  	}
-  	else 
-  	{
-  		//gagal login
-  		echo "<script>alert('Login Gagal, Periksa Kembali Akun Anda !');</script>";
-  		echo "<script>location='login.php';</script>";
-  	}
-  }
-
-  ?>
-
-
-  <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
   <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
   <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

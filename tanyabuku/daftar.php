@@ -1,5 +1,4 @@
 <?php include 'koneksi.php'; ?>
-<?php include 'koneksi.php'; ?>
 <!DOCTYPE html>
 
 <html lang="en">
