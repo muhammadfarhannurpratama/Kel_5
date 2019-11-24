@@ -30,6 +30,29 @@
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script>
+    
+    $(document).ready(function() {
+      $('#provinsi').change(function(){
+          var provinsi_id = $(this).val();
+
+          $.ajax({
+            type: 'POST',
+            url: 'kota.php',
+            data: 'prov_id='+provinsi_id,
+            success: function(response) {
+              $('#kota').html(response);
+            }
+          });
+      })
+
+    });
+
+  </script>
+
+
+
 </head>
 
 <body class="body2">
@@ -62,6 +85,30 @@
   							<label>Password</label>
   							<input type="password" class="form-control" name="password" required>
   						</div>
+              <div class="form-group">
+                <label>Provinsi</label>
+                <?php $sql_provinsi=$koneksi->query("SELECT * FROM provinsi"); ?>
+                <select name="provinsi" id="provinsi" class="form-control">
+                  <option value="">Pilih Provinsi</option>
+                  <?php while($row_provinsi = mysqli_fetch_array($sql_provinsi)) { ?>
+                  <option value="<?php echo $row_provinsi['id_prov'] ?>"><?php echo $row_provinsi['nama_prov'] ?></option>
+                <?php } ?>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Kota</label>
+                <select name="kota" id="kota" class="form-control">
+                  <option value="">Pilih Kota</option>
+                  <option></option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Kecamatan</label>
+                <select name="kecamatan" id="kecamatan" class="form-control">
+                  <option value="">Pilih Kecamatan</option>
+                  <option></option>
+                </select>
+              </div>
   						<div class="form-group">
   							<label>Alamat</label>
   							<textarea class="form-control" name="alamat" required></textarea>
