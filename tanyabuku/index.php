@@ -55,7 +55,7 @@ include 'koneksi.php'
       <div class="container-fluid container-full">
 
         <div class="row">
-          <a href="#" class="js-modal-btn play-btn" data-video-id="LjuXwpXQsy8"></a>
+          <a href="#" class="js-modal-btn play-btn" data-video-id="59e0NheJnHg"></a>
         </div>
 
       </div>
