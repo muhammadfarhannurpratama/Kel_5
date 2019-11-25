@@ -10,7 +10,7 @@ $pecah=$ambil->fetch_assoc();
  	</div>
  	<div class="form-group">
  		<label>Password</label>
- 		<input type="number" name="pass" class="form-control" value="<?php echo $pecah ['password']; ?>">
+ 		<input type="password" name="pass" class="form-control" value="<?php echo $pecah ['password']; ?>">
  	</div>
  	<div class="form-group">
  		<label>Nama Lengkap</label>
@@ -28,7 +28,6 @@ if (isset($_POST['ubah']))
 
 	echo "<script>alert('Data Admin Telah Diubah');</script>";
 	echo "<script>location='index.php?halaman=tambahadmin';</script>";
-
 
 }
 	
