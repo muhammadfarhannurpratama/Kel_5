@@ -1,7 +1,7 @@
 <?php 
 session_start();
 //koneksi database
-include 'koneksi.php';
+$koneksi = new mysqli("localhost","root","","db_tanyabuku");
  ?>
 <!DOCTYPE html>
 
@@ -37,7 +37,39 @@ include 'koneksi.php';
 
 <body class="body2">
 
-  <?php include 'navbar.php'; ?>
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+<!-- #nav-menu-container -->
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.php">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#team">Best Seller</a></li>
+          <li><a href="#screenshots">Testimoni</a></li>
+          <li><a href="checkout.php">Checkout</a></li>
+          <!--jika sudah login (ada SESSION pelanggan)-->
+          <?php if (isset($_SESSION['pelanggan'])): ?>
+            <li><a href="logout.php">Logout</a></li>
+          <!--jika belum login ( belum ada SESSION pelanggan)-->
+      <?php else :  ?>
+      <li class="menu-has-children"><a href="">Daftar</a>
+            <ul>
+              <li><a href="registrasi_user.php">Daftar</a></li>
+              <li><a href="login.php">Masuk</a></li>
+            </ul>
+          </li> 
+          <?php endif ?>          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <!--==========================Tampilan Awal============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
@@ -45,11 +77,7 @@ include 'koneksi.php';
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
       <a href="#video" class="btn-get-started scrollto">video</a>
-<<<<<<< HEAD
-      <br><br><br>
-=======
       <br>
->>>>>>> 2ab11614ac875292c0c5eee4823675aa83bd7b88
     </div>
   </section>
 
@@ -115,8 +143,7 @@ include 'koneksi.php';
             <div class="caption">
               <h4><?php echo $perproduk['nama_produk']; ?></h4>
               <h5><?php echo number_format($perproduk['harga_produk']); ?></h5>
-              <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>
-              <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Detail</a>              
+              <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>              
             </div>
           </div>
         </div>
@@ -330,8 +357,8 @@ include 'koneksi.php';
             <h4>Kelompok 5</h4>
 
             <ul class="list-unstyled">
-                <li>Nama: Tahajjudin Fajri <br>
-                    NIM: E41182137 <br>
+                <li>Nama: Muhammad Farhan Nur Pratama <br>
+                    NIM: E41181773<br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
@@ -340,13 +367,13 @@ include 'koneksi.php';
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
-                <li>Nama: Tahajjudin Fajri <br>
-                    NIM: E41182137 <br>
+                <li>Nama: Muhammad Muchlis <br>
+                    NIM: E41182166 <br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
                 <br>
-                <li>Nama: Tahajjudin Fajri <br>
-                    NIM: E41182137 <br>
+                <li>Nama: Fauziyatur Rohmah <br>
+                    NIM: E41181624 <br>
                     PRODI: Teknik Informatika Kampus Bondowoso
                 </li>
 
