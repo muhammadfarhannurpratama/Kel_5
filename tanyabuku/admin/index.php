@@ -252,6 +252,18 @@ if(!isset($_SESSION['admin']))
                         {
                           include 'tambahadmin.php'; 
                         }
+                        elseif ($_GET['halaman']=="tambahdataadmin") 
+                        {
+                          include 'tambahdataadmin.php'; 
+                        }
+                        elseif ($_GET['halaman']=="hapusadmin") 
+                        {
+                          include 'hapusadmin.php'; 
+                        }
+                        elseif ($_GET['halaman']=="ubahadmin") 
+                        {
+                          include 'ubahadmin.php'; 
+                        }
                 }
                 else
                 {
