@@ -264,6 +264,10 @@ if(!isset($_SESSION['admin']))
                         {
                           include 'ubahadmin.php'; 
                         }
+                        elseif ($_GET['halaman']=="hapuspelanggan") 
+                        {
+                          include 'hapuspelanggan.php'; 
+                        }
                 }
                 else
                 {
