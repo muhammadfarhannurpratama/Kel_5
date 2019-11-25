@@ -1,7 +1,7 @@
 <header id="header" class="header header-hide">
     <div class="container">
 
-      <div id="lgoo" class="pull-left">
+      <div id="logo" class="pull-left">
         <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
