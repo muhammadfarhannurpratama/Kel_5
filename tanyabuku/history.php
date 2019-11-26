@@ -7,7 +7,7 @@ include 'koneksi.php'
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Keranjang Belanja</title>
+  <title>History</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -45,6 +45,54 @@ include 'koneksi.php'
 <body>
 
   <?php include 'navbar.php'; ?>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- <pre><?php print_r($_SESSION); ?></pre> -->
+  <section class="history">
+    <div class="container">
+      <h3><span>HISTORY BELANJA</span> <br><br>
+       Nama Pelanggan : <?php echo $_SESSION['pelanggan']['nama_pelanggan']; ?></h3>
+      <br>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Opsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php 
+          $nomor=1;
+          //mendapatkan id pelanggan yg login
+          $id_pelanggan = $_SESSION['pelanggan'] ['id_pelanggan'];
+
+          $ambil = $koneksi->query("SELECT * FROM pembelian WHERE id_pelanggan='$id_pelanggan'");
+          while($pecah = $ambil->fetch_Assoc()){  
+           ?>
+          <tr>
+            <td><?php echo $nomor; ?></td>
+            <td><?php echo $pecah['tanggal_pembelian'] ?></td>
+            <td><?php echo $pecah['status_pembelian'] ?></td>
+            <td>Rp. <?php echo number_format($pecah['total_pembelian']);  ?></td>
+            <td>
+                <a href="nota.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-info">Nota</a>
+                <a href="" class="btn btn-success">Pembayaran</a>
+            </td>
+          </tr>
+          <?php $nomor++; ?>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
     <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>

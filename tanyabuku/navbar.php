@@ -16,6 +16,7 @@
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
+            <li><a href="history.php">History</a></li>
             <li><a href="logout.php">Logout</a></li>
           <!--jika belum login ( belum ada SESSION pelanggan)-->
       <?php else :  ?>

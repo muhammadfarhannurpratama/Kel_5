@@ -64,6 +64,22 @@ $ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan
 	WHERE pembelian.id_pembelian='$_GET[id]'");
 $detail=$ambil->fetch_assoc();
  ?>
+
+ <!-- jika pelanggan yang beli tidak sama dgn pelanggan yg login maka dilarikan ke history.php (tdk berhak melihat note org lain) -->
+ <!-- pelanggan yg beli harus yg login -->
+ <?php 
+// mendapatkan id pelanggan yg beli
+ $id_pelangganygbeli = $detail['id_pelanggan'];
+ // medapatkan id pelanggan yg login
+ $id_pelangganyglogin = $_SESSION['pelanggan']['id_pelanggan'];
+
+ if ($id_pelangganygbeli!==$id_pelangganyglogin) 
+ {
+   echo "<script>alert('gagal !');</script>";
+   echo "<script>location='history.php';</script>";
+   exit();
+ }
+  ?>
  <br>
  <br>
  <br>
