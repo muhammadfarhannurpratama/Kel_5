@@ -1,10 +1,10 @@
 <header id="header" class="header header-hide">
     <div class="container">
-
       <div id="logo" class="pull-left">
-        <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
+        <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
+
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+         <a href="index.php"><img src="tanyaico.png" alt="" title="tanyabuku" /></a>
       </div>
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
