@@ -3,7 +3,7 @@
 <form method="post" enctype="multipart/form-data">
 	<div class="form-group">
 		<label>Username</label>
-		<input type="text" class="form-control" name="user">
+		<input type="email" class="form-control" name="user">
 	</div>
 	<div class="form-group">
 		<label>Password</label>
