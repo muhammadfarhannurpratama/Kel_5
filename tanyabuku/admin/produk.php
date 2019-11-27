@@ -24,7 +24,7 @@
 				<img src="../foto_produk/<?php echo $pecah['foto_produk']; ?>" width="100">
 			</td>
 			<td>
-				<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn-danger btn">Hapus</a>
+				<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" onclick="return confirm('Apakah Anda Yakin Menghapusnya')" class="btn-danger btn">Hapus</a>
 				<a href="index.php?halaman=ubahproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn btn-warning">Ubah</a>
 			</td>
 		</tr>
