@@ -8,7 +8,11 @@
       </div>
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
-        <ul class="nav-menu">
+        <ul class="nav-menu"> 
+          <form action="pencarian.php" method="get" class="navbar-form">
+          <input type="text" class="form-control" name="keyword">
+          <button class="btn btn-primary">Cari</button>
+           </form>
           <li class="menu-active"><a href="index.php">Home</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="#team">Best Seller</a></li>
