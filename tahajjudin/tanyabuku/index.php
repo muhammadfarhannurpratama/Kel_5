@@ -62,31 +62,6 @@ include 'koneksi.php'
     </div>
   </section>
 
-  <!--==========================About Us Section============================-->
-  <section id="about-us" class="about-us padd-section wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col-md-7 col-lg-9 ">
-        <div class="about-content">
-            <h2 class="text-center"><span>Tanya Buku</span> <br> Selamat Datang di Toko Doni </h2>
-            <div class="">
-              <center><img src="admin/assetss/img/img.jpg" alt="" width="640" height="360"></center>
-            </div>
-            <p class="">
-              <h5 class="box">
-              Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
-              Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
-              Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
-            </h5>
-            </p>
-        </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!--==========================Get Started Section============================-->
   <section id="get-started" class="padd-section text-center wow fadeInUp">
 
@@ -303,12 +278,11 @@ include 'koneksi.php'
   </section>
 
 
-<!--==========================Footer============================-->
-  <footer class="footer">
+<!--==========================About US============================-->
+  <footer class="footer" id="about-us">
     <div class="container">
       <div class="row">
-
-        <div class="col-md-12 col-lg-8">
+        <div class="col-md-12 col-lg-6">
           <div class="footer-logo">
 
             <div class="navbar-brand" style="color:white;">Toko Doni</div>
@@ -316,17 +290,18 @@ include 'koneksi.php'
               <img src="admin/assetss/img/img.jpg" alt="" width="400" height="245">
             </div>
             <p>
-              Tanya buku adalah Webseite layanan jual beli buku. Di website ini, 
-              memudahkan user untuk membeli dan mencari buku yang diinginkan.
+              Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
+              Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
+              Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
             </p>
 
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 col-lg-4">
+        <div class="col-sm-6 col-md-3 col-lg-6">
           <div class="list-menu">
 
-            <h4>Kelompok 5</h4>
+            <h4>Tanya Buku Group</h4>
 
             <ul class="list-unstyled">
                 <li>Nama: Muhammad Farhan Nur Pratama <br>
@@ -366,7 +341,7 @@ include 'koneksi.php'
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
           -->
-          Designed by <a href="">Kelompok 5</a>
+          Designed by <a href="">Tanya Buku Group</a>
         </div>
       </div>
     </div>
