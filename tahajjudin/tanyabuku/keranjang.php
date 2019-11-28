@@ -1,8 +1,16 @@
 <?php 
 session_start();
 //koneksi database
-$koneksi = new mysqli("localhost","root","","db_tanyabuku");
- ?>
+include 'koneksi.php';
+ 
+
+if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang'])) 
+{
+  echo "<script>alert ('Keranjang Kosong!, Silahkan Berbelanja..');</script>";
+  echo "<script>location='index.php';</script>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,39 +51,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
 <body>
 
-  <header id="header" class="header header-hide">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#screenshots">Testimoni</a></li>
-          <li><a href="#team">Best Seller</a></li>
-          <li><a href="checkout.php">Checkout</a></li>
-          <!--jika sudah login (ada SESSION pelanggan)-->
-          <?php if (isset($_SESSION['pelanggan'])): ?>
-            <li><a href="logout.php">Logout</a></li>
-          <!--jika belum login ( belum ada SESSION pelanggan)-->
-      <?php else :  ?>
-      <li class="menu-has-children"><a href="">Daftar</a>
-            <ul>
-              <li><a href="#">Daftar</a></li>
-              <li><a href="login.php">Masuk</a></li>
-            </ul>
-          </li> 
-          <?php endif ?>          
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header>
+  <?php include 'navbar.php'; ?>
 
   <!--mulai coding keranjang-->
   
@@ -94,6 +70,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <th>Harga</th>
             <th>Jumlah</th>
             <th>SubHarga</th>
+            <th>Button</th>
           </tr>
         </thead>
         <tbody>
@@ -111,6 +88,9 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <td>Rp. <?php echo number_format($pecah['harga_produk']); ?></td>
             <td><?php echo $jumlah; ?></td>
             <td>Rp. <?php echo number_format($subharga); ?></td>
+            <td>
+              <a href="hapuskeranjang.php?id=<?php echo $id_produk ?>"class="btn btn-danger btn-xs">Hapus</a>
+            </td>
           </tr>
           <?php $nomor++; ?>
           <?php endforeach ?>

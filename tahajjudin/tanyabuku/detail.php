@@ -1,14 +1,19 @@
+<?php session_start(); ?>
+<?php include 'koneksi.php'; ?>
 <?php 
-session_start();
-include 'koneksi.php';
+//mendapatkan id_produk dari url
+$id_produk=$_GET['id'];
 
- ?>
-
+//query ambil data
+$ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
+$detail=$ambil->fetch_assoc(); 
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Login Pelanggan</title>
+  <title>Detail Produk</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -35,85 +40,57 @@ include 'koneksi.php';
   <link href="admin/assetss/css/style.css" rel="stylesheet">
 </head>
 
-<body class="body3">
+<body class="body2">
 
   <?php include 'navbar.php'; ?>
+
+  <br>
+  <br>
   <br>
   <br>
   <br>
 
-  <div class="container">
-  	<div class="row">
-      <div class="col-lg-4"></div>
-  		<div class="col-lg-4">
-        <br><br><br>
-  			<div class="panel panel-default container box">
-  				<div class="panel-heading">
-  					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
-  					<br>
-
-  				</div>
-  				<div class="panel-body">
-  					<form method="post">
-  						<div class="form-group">
-  							<label>Email</label>
-  							<input type="email" class="form-control" name="email">
-  						</div>
-  						<div class="form-group">
-  							<label>Password</label>
-  							<input type="password" class="form-control" name="password">
-  						</div>
-  						<center><button class="btn btn-primary" name="login">Masuk</button></center>
-  					</form>
-  				</div>
+  <section class="konten">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-6">
+  				<img src="foto_produk/<?php echo $detail['foto_produk']; ?>" alt="" class="img-responsive">
   			</div>
-      </div>
-      <div class="col-lg-4"></div>
+  			<div class="col-md-6">
+  				<h2><?php echo $detail['nama_produk']; ?></h2>
+  				<h4>Rp. <?php echo number_format($detail['harga_produk']); ?></h4>
+
+  				<form method="post">
+  					<div class="form-group">
+  						<div class="input-group">
+  							<input type="number" min="1" class="form-control" name="jumlah" >
+  							<div class="input-group-btn">
+  								<button class="btn btn-primary" name="beli">Beli</button>
+  							</div>
+  						</div>
+  					</div>
+  				</form>
+
+  				<?php 
+  				// if tombol beli
+  				if (isset($_POST['beli']))
+  				{
+  					//medapatkkan jumlah yg di inputkan
+  					$jumlah=$_POST['jumlah'];
+  					//masukkan dikeranjang belanja
+  					$_SESSION['keranjang'][$id_produk] = $jumlah;
+
+  					echo "<script>alert('Produk Telah Masuk Ke Keranjang Belanja !');</script>";
+  					echo "<script>location='keranjang.php';</script>";
+  				}
+  				 ?>
+
+  				<p><?php echo $detail['deskripsi_produk']; ?></p>
+  			</div>
+  		</div>
   	</div>
-  </div>
-<!--sinkron database email pengguna -->
-  <?php  
-  if (isset($_POST['login']))
-  {
-  	$email=$_POST['email'];
-  	$password=$_POST['password'];
-  	//query cek sesuai di database
-  	$ambil=$koneksi->query("SELECT * FROM pelanggan 
-  		WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
+  </section>
 
-  	//mencari akun di db
-  	$akunyangcocok=$ambil->num_rows;
-
-  	if ($akunyangcocok==1)
-  	{
-  		//sukses login
-  		//mendapatkan akun dalam bentuk array
-  		$akun=$ambil->fetch_assoc();
-  		//login di session pelanggan
-  		$_SESSION['pelanggan'] = $akun;
-  		echo "<script>alert('Login Sukses !');</script>";
-
-      //jika sudah ATC
-      if (isset($_SESSION['keranjang']) OR !empty($_SESSION['keranjang'])) 
-      {
-        echo "<script>location='checkout.php';</script>";
-      }
-      else
-      {
-        echo "<script>location='history.php';</script>"; 
-      }
-  		
-
-  	}
-  	else 
-  	{
-  		//gagal login
-  		echo "<script>alert('Login Gagal, Periksa Kembali Akun Anda !');</script>";
-  		echo "<script>location='login.php';</script>";
-  	}
-  }
-
-  ?>
 
 
   <!-- JavaScript Libraries -->

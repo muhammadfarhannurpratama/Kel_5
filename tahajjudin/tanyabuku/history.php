@@ -1,14 +1,13 @@
 <?php 
 session_start();
-include 'koneksi.php';
-
+include 'koneksi.php'
  ?>
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Login Pelanggan</title>
+  <title>History</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -33,90 +32,69 @@ include 'koneksi.php';
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
 
-<body class="body3">
+<body>
 
   <?php include 'navbar.php'; ?>
+
   <br>
   <br>
   <br>
+  <br>
 
-  <div class="container">
-  	<div class="row">
-      <div class="col-lg-4"></div>
-  		<div class="col-lg-4">
-        <br><br><br>
-  			<div class="panel panel-default container box">
-  				<div class="panel-heading">
-  					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
-  					<br>
+  <!-- <pre><?php print_r($_SESSION); ?></pre> -->
+  <section class="history">
+    <div class="container">
+      <h3><span>HISTORY BELANJA</span> <br><br>
+       Nama Pelanggan : <?php echo $_SESSION['pelanggan']['nama_pelanggan']; ?></h3>
+      <br>
 
-  				</div>
-  				<div class="panel-body">
-  					<form method="post">
-  						<div class="form-group">
-  							<label>Email</label>
-  							<input type="email" class="form-control" name="email">
-  						</div>
-  						<div class="form-group">
-  							<label>Password</label>
-  							<input type="password" class="form-control" name="password">
-  						</div>
-  						<center><button class="btn btn-primary" name="login">Masuk</button></center>
-  					</form>
-  				</div>
-  			</div>
-      </div>
-      <div class="col-lg-4"></div>
-  	</div>
-  </div>
-<!--sinkron database email pengguna -->
-  <?php  
-  if (isset($_POST['login']))
-  {
-  	$email=$_POST['email'];
-  	$password=$_POST['password'];
-  	//query cek sesuai di database
-  	$ambil=$koneksi->query("SELECT * FROM pelanggan 
-  		WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th>Opsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php 
+          $nomor=1;
+          //mendapatkan id pelanggan yg login
+          $id_pelanggan = $_SESSION['pelanggan'] ['id_pelanggan'];
 
-  	//mencari akun di db
-  	$akunyangcocok=$ambil->num_rows;
+          $ambil = $koneksi->query("SELECT * FROM pembelian WHERE id_pelanggan='$id_pelanggan'");
+          while($pecah = $ambil->fetch_Assoc()){  
+           ?>
+          <tr>
+            <td><?php echo $nomor; ?></td>
+            <td><?php echo $pecah['tanggal_pembelian'] ?></td>
+            <td><?php echo $pecah['status_pembelian'] ?></td>
+            <td>Rp. <?php echo number_format($pecah['total_pembelian']);  ?></td>
+            <td>
+                <a href="nota.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-info">Nota</a>
+                <a href="" class="btn btn-success">Pembayaran</a>
+            </td>
+          </tr>
+          <?php $nomor++; ?>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  	if ($akunyangcocok==1)
-  	{
-  		//sukses login
-  		//mendapatkan akun dalam bentuk array
-  		$akun=$ambil->fetch_assoc();
-  		//login di session pelanggan
-  		$_SESSION['pelanggan'] = $akun;
-  		echo "<script>alert('Login Sukses !');</script>";
-
-      //jika sudah ATC
-      if (isset($_SESSION['keranjang']) OR !empty($_SESSION['keranjang'])) 
-      {
-        echo "<script>location='checkout.php';</script>";
-      }
-      else
-      {
-        echo "<script>location='history.php';</script>"; 
-      }
-  		
-
-  	}
-  	else 
-  	{
-  		//gagal login
-  		echo "<script>alert('Login Gagal, Periksa Kembali Akun Anda !');</script>";
-  		echo "<script>location='login.php';</script>";
-  	}
-  }
-
-  ?>
-
-
-  <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
   <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
   <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

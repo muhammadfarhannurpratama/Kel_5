@@ -1,7 +1,6 @@
 <?php 
 session_start();
-//koneksi database
-$koneksi = new mysqli("localhost","root","","db_tanyabuku");
+include 'koneksi.php'
  ?>
 <!DOCTYPE html>
 
@@ -33,78 +32,37 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
-  <style>
-  </style>
 </head>
 
 <body class="body2">
 
-  <header id="header" class="header header-hide">
-    <div class="container">
+  <?php include 'navbar.php'; ?>
 
-      <div id="logo" class="pull-left">
-        <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
-      </div>
-<!-- #nav-menu-container -->
-      <nav id="nav-menu-container">
-        <ul class="nav-menu ">
-          <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="#team">Best Seller</a></li>
-          <li><a href="#screenshots">Testimoni</a></li>
-          <li><a href="checkout.php">Checkout</a></li>
-          <!--jika sudah login (ada SESSION pelanggan)-->
-          <?php if (isset($_SESSION['pelanggan'])): ?>
-            <li><a href="logout.php">Logout</a></li>
-          <!--jika belum login ( belum ada SESSION pelanggan)-->
-      <?php else :  ?>
-      <li class="menu-has-children"><a href="">Daftar</a>
-            <ul>
-              <li><a href="registrasi_user.php">Daftar</a></li>
-              <li><a href="login.php">Masuk</a></li>
-            </ul>
-          </li> 
-          <?php endif ?>          
-        </ul>
-      </nav>
-    </div>
-  </header>
-<!-- #header -->
-
-  <!--==========================
-    Hero Section
-  ============================-->
+  <!--==========================Tampilan Awal============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <h1 style="color:black" >Selamat Datang di  Tanya Buku Store</h1>
+      <h1>Selamat Datang di Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
-      <img src="admin/assetss/img/logotanyabukupercobaan.png" alt="Hero Imgs">
-      <a href="#video" class="btn-get-started scrollto">Video</a>
-        <br>
+      <img src="admin/assetss/img/tanyabuku.png" alt="Hero Imgs">
+      <a href="#video" class="btn-get-started scrollto">video</a>
+      <br>
     </div>
-  </section><!-- #hero -->
+  </section>
 
-    <!--==========================
-    Video Section
-  ============================-->
-
+  <!--==========================Video============================-->
   <section id="video" class="text-center wow fadeInUp">
     <div class="overlay">
       <div class="container-fluid container-full">
 
         <div class="row">
-          <a href="#" class="js-modal-btn play-btn" data-video-id="LjuXwpXQsy8"></a>
+          <a href="#" class="js-modal-btn play-btn" data-video-id="59e0NheJnHg"></a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!--==========================
-    About Us Section
-  ============================-->
+  <!--==========================About Us Section============================-->
   <section id="about-us" class="about-us padd-section wow fadeInUp">
     <div class="container">
       <div class="row justify-content-center">
@@ -116,19 +74,11 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
               <center><img src="admin/assetss/img/img.jpg" alt="" width="640" height="360"></center>
             </div>
             <p class="">
-              <h4 class="box">
-              Toko Doni adalah sebuah toko yang menyediakan berbagai macam peralatan assek
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nisi architecto delectus dolores? Perferendis 
-              optio facere aliquam molestias accusantium! Sapiente iusto harum culpa odio earum debitis obcaecati veniam, quos et.
-            </h4>
+              <h5 class="box">
+              Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
+              Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
+              Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
+            </h5>
             </p>
         </div>
         </div>
@@ -137,15 +87,13 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     </div>
   </section>
 
-  <!--==========================
-    Best Seller
-  ============================-->
+  <!--==========================Get Started Section============================-->
   <section id="get-started" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
 
-        <h2><b>Beberapa Buku </b></h2>
+        <h2><b>Beberapa Buku</b> </h2>
         <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
 
       </div>
@@ -163,7 +111,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             <div class="caption">
               <h4><?php echo $perproduk['nama_produk']; ?></h4>
               <h5><?php echo number_format($perproduk['harga_produk']); ?></h5>
-              <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>              
+              <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>
+              <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Detail</a>              
             </div>
           </div>
         </div>
@@ -175,9 +124,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
   </section>
 
-  <!--==========================
-    Team Section
-  ============================-->
+  <!--==========================Team Section============================-->
   <section id="team" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
@@ -194,15 +141,15 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
         <div class="col-md-6 col-md-4 col-lg-3">
           <div class="team-block bottom">
-            <img src="foto_produk/filosofi.jpg" class="img-responsive" alt="img">
+            <img src="admin/assetss/img/team/tahaj.jpg" class="img-responsive" alt="img">
             <div class="team-content">
               <ul class="list-unstyled">
                 <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
+              <span>Manager</span>
+              <h4>Tahajjudin Fajri</h4>
             </div>
           </div>
         </div>
@@ -216,8 +163,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
+              <span>Pendodol Pecel</span>
+              <h4>Markona</h4>
             </div>
           </div>
         </div>
@@ -231,8 +178,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
+              <span>Pendodol Cupang</span>
+              <h4>Cak Sugeng</h4>
             </div>
           </div>
         </div>
@@ -246,8 +193,8 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
+              <span>Pendodol Kripik</span>
+              <h4>Yuk Na dulure Yuk Sri</h4>
             </div>
           </div>
         </div>
@@ -256,9 +203,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
     </div>
   </section>
 
-    <!--==========================
-    Screenshots Section
-  ============================-->
+    <!--==========================Screenshots Section============================-->
   <section id="screenshots" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
@@ -286,9 +231,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
 
   </section>
 
-  <!--==========================
-    Contact Section
-  ============================-->
+  <!--==========================Contact Section============================-->
   <section id="contact" class="padd-section wow fadeInUp">
 
     <div class="container">
@@ -306,17 +249,17 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
           <div class="info">
             <div>
               <i class="fa fa-map-marker"></i>
-              <p>A108 Adam Street<br>New York, NY 535022</p>
+              <p>POLIBON<br>Bondowoso, Jawa Timur</p>
             </div>
 
             <div class="email">
               <i class="fa fa-envelope"></i>
-              <p>info@example.com</p>
+              <p>tahajjudin28@gmail.com</p>
             </div>
 
             <div>
               <i class="fa fa-phone"></i>
-              <p>+1 5589 55488 55s</p>
+              <p>082330044949</p>
             </div>
           </div>
 
@@ -358,11 +301,9 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
       </div>
     </div>
   </section>
-  <!-- #contact -->
 
-  <!--==========================
-    Footer
-  ============================-->
+
+<!--==========================Footer============================-->
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -371,71 +312,45 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
           <div class="footer-logo">
 
             <a class="navbar-brand" href="#">Tanya Buku</a>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
+            <p>
+              Tanya buku adalah Webseite layanan jual beli buku. Di website ini, 
+              memudahkan user untuk membeli dan mencari buku yang diinginkan.
+            </p>
 
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 col-lg-2">
+        <div class="col-sm-6 col-md-3 col-lg-6">
           <div class="list-menu">
 
-            <h4>Abou Us</h4>
+            <h4>Kelompok 5</h4>
 
             <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
+                <li>Nama: Muhammad Farhan Nur Pratama <br>
+                    NIM: E41181773<br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+                <br>
+                <li>Nama: Tahajjudin Fajri <br>
+                    NIM: E41182137 <br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+                <br>
+                <li>Nama: Muhammad Muchlis <br>
+                    NIM: E41182166 <br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+                <br>
+                <li>Nama: Fauziyatur Rohmah <br>
+                    NIM: E41181624 <br>
+                    PRODI: Teknik Informatika Kampus Bondowoso
+                </li>
+
+              </ul>
 
           </div>
         </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Support</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">faq</a></li>
-              <li><a href="#">Editor help</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
-
-            <h4>Abou Us</h4>
-
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-
-          </div>
-        </div>
-
+        <div class="col-sm-6 col-md-3 col-lg-2"></div>
       </div>
     </div>
 
@@ -449,7 +364,7 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
           -->
-          Designed by <a href="">Tanya Buku</a>
+          Designed by <a href="">Kelompok 5</a>
         </div>
       </div>
     </div>

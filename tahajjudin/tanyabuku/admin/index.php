@@ -112,21 +112,6 @@ if(!isset($_SESSION['admin']))
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.php">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>
-            <!-- /menu footer buttons -->
           </div>
         </div>
 
@@ -267,9 +252,21 @@ if(!isset($_SESSION['admin']))
                         {
                           include 'tambahadmin.php'; 
                         }
-                        elseif ($_GET['halaman']=="tambahdataadmin")
+                        elseif ($_GET['halaman']=="tambahdataadmin") 
                         {
-                          include 'tambahdataadmin.php';
+                          include 'tambahdataadmin.php'; 
+                        }
+                        elseif ($_GET['halaman']=="hapusadmin") 
+                        {
+                          include 'hapusadmin.php'; 
+                        }
+                        elseif ($_GET['halaman']=="ubahadmin") 
+                        {
+                          include 'ubahadmin.php'; 
+                        }
+                        elseif ($_GET['halaman']=="hapuspelanggan") 
+                        {
+                          include 'hapuspelanggan.php'; 
                         }
                 }
                 else
