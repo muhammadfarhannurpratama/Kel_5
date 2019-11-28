@@ -1,11 +1,16 @@
 <header id="header" class="header header-hide">
-    <div class="container">
+    <div class="container" style="">
       <div id="logo" class="pull-left">
         <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
 
         <!-- Uncomment below if you prefer to use an image logo -->
          <a href="index.php"><img src="ico2.png" alt="" title="tanyabuku" /></a>
       </div>
+
+      <div class="pull-left navbar">
+                <input class="form-control" type="search" placeholder="Cari Buku" aria-label="Search">
+      </div>
+
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
         <ul class="nav-menu">
