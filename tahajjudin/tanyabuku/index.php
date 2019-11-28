@@ -308,10 +308,13 @@ include 'koneksi.php'
     <div class="container">
       <div class="row">
 
-        <div class="col-md-12 col-lg-4">
+        <div class="col-md-12 col-lg-8">
           <div class="footer-logo">
 
-            <a class="navbar-brand" href="#">Tanya Buku</a>
+            <div class="navbar-brand" style="color:white;">Toko Doni</div>
+            <div class="">
+              <img src="admin/assetss/img/img.jpg" alt="" width="400" height="245">
+            </div>
             <p>
               Tanya buku adalah Webseite layanan jual beli buku. Di website ini, 
               memudahkan user untuk membeli dan mencari buku yang diinginkan.
@@ -320,7 +323,7 @@ include 'koneksi.php'
           </div>
         </div>
 
-        <div class="col-sm-6 col-md-3 col-lg-6">
+        <div class="col-sm-6 col-md-3 col-lg-4">
           <div class="list-menu">
 
             <h4>Kelompok 5</h4>
@@ -350,7 +353,6 @@ include 'koneksi.php'
 
           </div>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-2"></div>
       </div>
     </div>
 
