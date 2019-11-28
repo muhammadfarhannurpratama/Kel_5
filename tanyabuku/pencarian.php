@@ -55,7 +55,7 @@ $ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword
   ======================================================= -->
 </head>
 
-<body>
+<body class="body2">
 
   <?php include 'navbar.php'; ?>
   <br>
@@ -72,23 +72,19 @@ $ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword
     <?php foreach ($semuadata as $key => $value): ?>
       <div class="col-md-3">
         <div class="feature-block">
-          <img src="foto_produk/<?php echo $value["foto_produk"] ?>" alt="" class="container-fluid">
+          <img src="foto_produk/<?php echo $value["foto_produk"]; ?>" alt="" class="container-fluid">
           <div class="caption">
             <h4><?php echo $value["nama_produk"] ?> </h4>
             <h5>Rp. <?php echo number_format($value['harga_produk']) ?> </h5>
-            <a href="beli.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-default">Beli</a>
-                    <a href="detail.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-default">Detail</a>
+            <a href="beli.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-primary">Beli</a>
+            <a href="detail.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-primary">Detail</a>
           </div>
-          
         </div>
-        
       </div>
     <?php endforeach ?>
   </div>
   
-  
 </div>
-
 
   <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
