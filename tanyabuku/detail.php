@@ -60,10 +60,13 @@ $detail=$ambil->fetch_assoc();
   				<h2><?php echo $detail['nama_produk']; ?></h2>
   				<h4>Rp. <?php echo number_format($detail['harga_produk']); ?></h4>
 
+          <h5>Stok : <?php echo $detail['stok_produk'] ?></h5>
+          <br>
+
   				<form method="post">
   					<div class="form-group">
   						<div class="input-group">
-  							<input type="number" min="1" class="form-control" name="jumlah" >
+  							<input type="number" min="1" class="form-control" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" >
   							<div class="input-group-btn">
   								<button class="btn btn-primary" name="beli">Beli</button>
   							</div>

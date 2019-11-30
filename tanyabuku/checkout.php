@@ -170,6 +170,11 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
           $subharga=$perproduk['harga_produk']*$jumlah;
           $koneksi->query("INSERT INTO pembelian_produk (id_pembelian,id_produk,nama,harga,berat,subberat,subharga,jumlah)
             VALUES ('$id_pembelian_baru_terjadi','$id_produk','$nama','$harga','$berat','$subberat','$subharga','$jumlah')");
+
+          // query update stok
+
+          $koneksi->query("UPDATE produk SET stok_produk=stok_produk -$jumlah
+            WHERE id_produk='$id_produk'");
         }
 
         #kosongkan keranjang belanja
