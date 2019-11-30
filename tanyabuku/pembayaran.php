@@ -108,18 +108,14 @@ if ($id_pelanggan_login !==$id_Pelanggan_beli)
 <?php 
 
 // if ada tombol kirim
-if (isset($_POST['kirim'])) 
+if (isset($_POST["kirim"])) 
 {
   // upload foto bukti transfer
-  $namabukti = $_FILES['bukti']['name'];
-  $lokasibukti = $_FILES['bukti']['tmp_name'];
-  $namafix = date('YmdHis').$namabukti;
-  move_uploaded_file($lokasibukti, 'bukti_pembayaran/$namafix');
+  $namabukti = $_FILES["bukti"]["name"];
+  $lokasibukti = $_FILES["bukti"]["tmp_name"];
+  $namafix = date("YmdHis").$namabukti;
+  move_uploaded_file($lokasibukti, "bukti_pembayaran/$namafix");
 
-  $nama = $_POST['nama'];
-  $bank = $_POST['bank'];
-  $jumlah = $_POST['jumlah'];
-  $tanggal = date('Y-m-d');
 
   $koneksi->query("INSERT INTO pembayaran(id_pembelian,nama,bank,jumlah,tanggal,bukti)
     VALUES ('$idpem','$nama','$bank','$jumlah','$tanggal','$namafix')");
