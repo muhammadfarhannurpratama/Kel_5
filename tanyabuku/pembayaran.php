@@ -116,9 +116,21 @@ if (isset($_POST["kirim"]))
   $namafix = date("YmdHis").$namabukti;
   move_uploaded_file($lokasibukti, "bukti_pembayaran/$namafix");
 
+  $nama = $_POST["nama"];
+  $bank = $_POST["bank"];
+  $jumlah = $_POST["jumlah"];
+  $tanggal = date("Y-m-d");
 
+  // simpan pembayaran
   $koneksi->query("INSERT INTO pembayaran(id_pembelian,nama,bank,jumlah,tanggal,bukti)
     VALUES ('$idpem','$nama','$bank','$jumlah','$tanggal','$namafix')");
+
+  // update data pembelian dari pending menjadi sudah melakukan pembayaran 
+  $koneksi->query("UPDATE pembelian SET status_pembelian = 'Telah Melakukan Pembayaran' 
+    WHERE id_pembelian = '$idpem'");
+
+  echo "<script>alert('Terimakasih Telah Mengirim Bukti Pembayaran ');</script>";
+  echo "<script>location='history.php';</script>";
 }
  ?>
 
