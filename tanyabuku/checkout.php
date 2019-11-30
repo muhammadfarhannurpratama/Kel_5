@@ -3,10 +3,11 @@ session_start();
 include 'koneksi.php';
  
 //if belum login, maka masuk login.php 
-if (!isset($_SESSION['pelanggan']))
+if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 {
 	 echo "<script>alert('Silahkan Login !');</script>";
 	 echo "<script>location='login.php';</script>";
+   exit();
 }
 ?>
 
