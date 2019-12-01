@@ -268,6 +268,10 @@ if(!isset($_SESSION['admin']))
                         {
                           include 'hapuspelanggan.php'; 
                         }
+                        elseif ($_GET['halaman']=="pembayaran") 
+                        {
+                          include 'pembayaran.php';
+                        }
                 }
                 else
                 {

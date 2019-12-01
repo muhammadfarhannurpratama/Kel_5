@@ -90,7 +90,13 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
           <tr>
             <td><?php echo $nomor; ?></td>
             <td><?php echo $pecah['tanggal_pembelian'] ?></td>
-            <td><?php echo $pecah['status_pembelian'] ?></td>
+            <td>
+              <?php echo $pecah['status_pembelian'] ?>
+              <br>
+              <?php if (!empty($pecah['resi_pengiriman'])):?>
+              Resi : <?php echo $pecah['resi_pengiriman']; ?>
+              <?php endif ?>  
+            </td>
             <td>Rp. <?php echo number_format($pecah['total_pembelian']);  ?></td>
             <td>
                 <a href="nota.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-info">Nota</a>
