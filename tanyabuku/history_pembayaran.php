@@ -2,6 +2,32 @@
 session_start();
 include 'koneksi.php';
 
+$id_pembelian = $_GET['id'];
+
+$ambil = $koneksi->query("SELECT * FROM pembayaran 
+	LEFT JOIN pembelian ON pembayaran.id_pembelian=pembelian.id_pembelian 
+	WHERE pembelian.id_pembelian ='$id_pembelian'");
+$detailbayar = $ambil->fetch_assoc();
+
+// echo "<pre>";
+// print_r($detailbayar);
+// echo "</pre>";
+
+// jika tidak ada data pembayaran
+if (empty($detailbayar)) 
+{
+	echo "<script>alert('gagal !');</script>";
+   	echo "<script>location='history.php';</script>";
+   	exit();
+}
+
+// jika data pelanggan yg bayar tidak sesuai dengan yg login
+if ($_SESSION['pelanggan']['id_pelanggan']!==$detailbayar['id_pelanggan']) 
+{
+	echo "<script>alert('gagal !');</script>";
+   	echo "<script>location='history.php';</script>";
+   	exit();
+}
 //if belum login, maka masuk login.php 
 if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 {
@@ -17,7 +43,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>History</title>
+  <title>History Pembayaran</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -61,63 +87,37 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
   <br>
   <br>
 
-  <!-- <pre><?php print_r($_SESSION); ?></pre> -->
-  <section class="history">
-    <div class="container">
-      <h3><span>HISTORY BELANJA</span> <br><br>
-       Nama Pelanggan : <?php echo $_SESSION['pelanggan']['nama_pelanggan']; ?></h3>
-      <br>
+  <div class="container">
+  	<h3>History Pembayaran</h3><br>
+  	<div class="row">
+  		<div class="col-md-6">
+  			<table class="table">
+  				<tr>
+  					<th>Nama</th>
+  					<td><?php echo $detailbayar['nama']; ?></td>
+  				</tr>
+  				<tr>
+  					<th>Bank</th>
+  					<td><?php echo $detailbayar['bank']; ?></td>
+  				</tr>
+  				<tr>
+  					<th>Tanggal</th>
+  					<td><?php echo $detailbayar['tanggal']; ?></td>
+  				</tr>
+  				<tr>
+  					<th>Jumlah</th>
+  					<td>Rp. <?php echo number_format($detailbayar['jumlah']); ?></td>
+  				</tr>
+  			</table>
+  		</div>
+  		<div class="col-md-6">
+  			<img src="bukti_pembayaran/<?php echo $detailbayar['bukti']; ?>" alt="" class="img-responsive">
+  			
+  		</div>
+  	</div>
+  </div>
 
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Tanggal</th>
-            <th>Status</th>
-            <th>Total</th>
-            <th>Opsi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php 
-          $nomor=1;
-          //mendapatkan id pelanggan yg login
-          $id_pelanggan = $_SESSION['pelanggan'] ['id_pelanggan'];
-
-          $ambil = $koneksi->query("SELECT * FROM pembelian WHERE id_pelanggan='$id_pelanggan'");
-          while($pecah = $ambil->fetch_Assoc()){  
-           ?>
-          <tr>
-            <td><?php echo $nomor; ?></td>
-            <td><?php echo $pecah['tanggal_pembelian'] ?></td>
-            <td>
-              <?php echo $pecah['status_pembelian'] ?>
-              <br>
-              <?php if (!empty($pecah['resi_pengiriman'])):?>
-              Resi : <?php echo $pecah['resi_pengiriman']; ?>
-              <?php endif ?>  
-            </td>
-            <td>Rp. <?php echo number_format($pecah['total_pembelian']);  ?></td>
-            <td>
-                <a href="nota.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-info">Nota</a>
-
-                <?php if ($pecah['status_pembelian']=='Menunggu Pembayaran'): ?>
-                <a href="pembayaran.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-success">
-                Lakukan Pembayaran
-              </a>
-                <?php else: ?>
-                  <a href="history_pembayaran.php?id=<?php echo $pecah['id_pembelian']; ?>" class="btn btn-warning">
-                    History Pembayaran
-                  </a>
-                <?php endif ?>
-            </td>
-          </tr>
-          <?php $nomor++; ?>
-          <?php } ?>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  
 
     <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
