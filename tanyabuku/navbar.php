@@ -2,7 +2,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-         <a href="index.php"><img src="ico2.png" alt="" title="tanyabuku" /></a>
+         <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
       </div>
 
       <nav id="nav-menu-container">
