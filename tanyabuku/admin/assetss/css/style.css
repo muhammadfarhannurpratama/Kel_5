@@ -15,10 +15,8 @@
   color: #333;
 }
 .body3 {
-  background:url(../img/bgweb2.png) center center fixed;
-  background-size:100% auto;
-  background-color: #fff;
-  color: #333;
+  background:url(../img/bgweb2.png);
+
 }
 .box{
   width: 100%;
@@ -450,9 +448,7 @@ span {
   outline: none;
   cursor: pointer;
 }
-#mobile-nav-toggle i .body2{
-  background: none;
-}
+
 #mobile-nav-toggle i {
   color: rgb(59, 54, 54);
   font-size: 24px;
@@ -1224,7 +1220,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /* Contact Section
 --------------------------------*/
 #contact {
-  background: #fff;
+  background:skyblue;
 }
 
 #contact .info {
@@ -1233,7 +1229,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #contact .info i {
   font-size: 32px;
-  color: #71c55d;
+  color: #ffffff;
   float: left;
 }
 
@@ -1241,7 +1237,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
   padding: 0 0 10px 50px;
   margin-bottom: 20px;
   line-height: 22px;
-  font-size: 14px;
+  font-size: 15px;
+  color: white;
 }
 
 #contact .info .email p {
@@ -1255,8 +1252,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 #contact .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #71c55d;
-  color: #fff;
+  background: #ffffff;
+  color: skyblue;
   line-height: 1;
   padding: 6px 0 8px 0;
   border-radius: 50%;
@@ -1267,13 +1264,13 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .social-links a:hover {
-  background: #55b03f;
+  background:skyblue;
   color: #fff;
 }
 
 #contact .form #sendmessage {
   color: #71c55d;
-  border: 1px solid #71c55d;
+  border: 1px solid #d6e4d3;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1312,7 +1309,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .form button[type="submit"] {
-  background: #71c55d;
+  background: #51a6dc;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1320,7 +1317,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #92d283;
+  background: rgb(90, 161, 189);
 }
 
 /*--------------------------------------------------------------
