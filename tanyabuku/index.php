@@ -43,7 +43,7 @@ include 'koneksi.php'
     <div class="hero-container">
       <h1>Selamat Datang di Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
-      <img src="admin/assetss/img/tanyabuku.png" alt="Hero Imgs">
+      <img src="admin/assetss/img/tanyabuku.png">
       <a href="#video" class="btn-get-started scrollto">video</a>
       <br>
     </div>

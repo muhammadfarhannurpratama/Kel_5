@@ -204,6 +204,7 @@ span {
   width: 100%;
   height: calc(100vh - 40px);
   background: url(../img/kocheng.gif) center bottom no-repeat;
+  background-color: white;
   background-size: 100%;
   position: relative;
   margin-top: 40px;
@@ -212,6 +213,7 @@ span {
 @media (min-width: 1025px) {
   #hero {
     background-attachment: fixed;
+
   }
 }
 
