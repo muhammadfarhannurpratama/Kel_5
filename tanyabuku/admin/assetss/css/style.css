@@ -26,6 +26,14 @@
   background:url(../img/bgweb2.png);
 
 }
+@media screen and (max-width: 480px) {
+  .body3 {
+    background:url(../img/bgweb2.png) no-repeat center center fixed;
+    background-size: auto auto ;
+
+  }
+}
+
 .box{
   width: 100%;
   margin-top: 5%;

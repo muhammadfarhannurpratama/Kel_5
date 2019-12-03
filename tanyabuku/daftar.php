@@ -73,7 +73,7 @@
 
 </head>
 
-<body class="">
+<body class="body2">
 
  <?php include 'navbar.php'; ?>
  <br>
