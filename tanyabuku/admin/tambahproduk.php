@@ -14,6 +14,10 @@
 		<input type="number" class="form-control" name="Berat">
 	</div>
 	<div class="form-group">
+		<label>Stok</label>
+		<input type="number" class="form-control" name="Stok" min="1">
+	</div>
+	<div class="form-group">
 		<label>Deskripsi</label>
 		<textarea class="form-control" name="Deskripsi" rows="10"></textarea>
 	</div>
@@ -30,8 +34,8 @@ if (isset($_POST['save']))
 	$lokasi = $_FILES['foto']['tmp_name'];
 	move_uploaded_file($lokasi, "../foto_produk/".$nama);
 	$koneksi->query("INSERT INTO produk
-		(nama_produk,harga_produk,berat,foto_produk,deskripsi_produk)
-		VALUES('$_POST[Nama]','$_POST[Harga]','$_POST[Berat]','$nama','$_POST[Deskripsi]')");
+		(nama_produk,harga_produk,berat,foto_produk,deskripsi_produk,stok_produk)
+		VALUES('$_POST[Nama]','$_POST[Harga]','$_POST[Berat]','$nama','$_POST[Deskripsi]'.'$_POST[Stok]')");
 
 	echo "<div class='alert alert-info'>Data Tersimpan !</div>";
  	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=produk'>";
