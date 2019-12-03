@@ -8,12 +8,19 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 .body2 {
   background:url(../img/bgweb.png) no-repeat center center fixed;
   background-size:100% auto;
   background-color: #fff;
-  color: #333;
 }
+@media screen and (max-width: 480px) {
+  .body2 {
+    background-color: #fff;
+
+  }
+}
+
 .body3 {
   background:url(../img/bgweb2.png);
 
