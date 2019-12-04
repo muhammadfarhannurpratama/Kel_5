@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2019 at 02:41 AM
+-- Generation Time: Dec 04, 2019 at 02:23 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -7378,12 +7378,40 @@ CREATE TABLE `pelanggan` (
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `email_pelanggan`, `password_pelanggan`, `nama_pelanggan`, `telepon_pelanggan`, `alamat_pelanggan`, `provinsi`, `kota`, `kecamatan`) VALUES
 (1, 'uus@gmail.com', '12345', 'Fauziyatur Rohmah', '082362358381', '', '', '', ''),
-(2, 'harun@gmail.com', '12345', 'Harun Muhammad', '081391761096', '', '', '', ''),
 (3, 'xiaomi@gmail.com', '12345', 'Xiaomi Xiaoxe', '081546756224', '', '', '', ''),
-(4, 'uus', '123', 'uus', '93747347', '', '', '', ''),
 (5, 'farhan@gmail.com', '12345', 'muhammad farhan', '09878765678', '', '', '', ''),
 (6, 'honey@gmail.com', '12345', 'Honey', '081234565471', 'Jl. K.H Wahid Hasyim No. 28', '', '', ''),
-(7, 'harun.mohammad@gmail.com', '12345', 'Harun Muhammad', '081457652155', 'Jl. kalingga VI No.28 Surakarta', '33', '3372', '3372050');
+(7, 'alvin@gmail.com', '12345', 'alvin', '53434343', 'Jl. jalan yuk', '33', '3376', '3376030'),
+(8, 'arnold@gmail.com', 'arnold', 'Arnold', '081254475521', 'JL. Kol. Sugiono No.48 Bangsalsari Jember', '35', '3509', '3509190'),
+(9, 'bagusduwi9@gmail', '123', 'bagus duwi pra', '0899988998', 'maesan bondowoso', '12', '1215', '1215010');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pembayaran`
+--
+
+CREATE TABLE `pembayaran` (
+  `id_pembayaran` int(11) NOT NULL,
+  `id_pembelian` int(11) NOT NULL,
+  `nama` varchar(25) NOT NULL,
+  `bank` varchar(25) NOT NULL,
+  `jumlah` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `bukti` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pembayaran`
+--
+
+INSERT INTO `pembayaran` (`id_pembayaran`, `id_pembelian`, `nama`, `bank`, `jumlah`, `tanggal`, `bukti`) VALUES
+(17, 15, 'Honey', 'BNI', 101000, '2019-11-30', '20191130144030stm.png'),
+(18, 25, 'honey', 'BRI', 483000, '2019-11-30', '20191130195118rich-decorated-calligraphic-outlined-stroke-monochrome-seamless-pattern-M0FM08.jpg'),
+(19, 18, 'xiaomi', 'BRI', 120000, '2019-12-01', '20191201112804kisspng-state-polytechnic-of-jember-bandung-state-polytech-5b3cc26e6bea11.008767441530708590442.jpg'),
+(20, 26, 'Honey', 'CIMB', 184000, '2019-12-01', '20191201182344med.png'),
+(21, 27, 'Arnold', 'CIMB', 214000, '2019-12-01', '20191201182740PRINT.png'),
+(22, 30, 'FEBI', 'BRI', 93000, '2019-12-02', '20191202035747cici.jpg');
 
 -- --------------------------------------------------------
 
@@ -7400,30 +7428,40 @@ CREATE TABLE `pembelian` (
   `nama_kota` varchar(75) NOT NULL,
   `tarif` int(11) NOT NULL,
   `alamat_pengiriman` text NOT NULL,
-  `status_pembelian` varchar(50) NOT NULL DEFAULT 'Menunggu Pembayaran'
+  `status_pembelian` varchar(50) NOT NULL DEFAULT 'Menunggu Pembayaran',
+  `resi_pengiriman` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pembelian`
 --
 
-INSERT INTO `pembelian` (`id_pembelian`, `id_pelanggan`, `id_ongkir`, `tanggal_pembelian`, `total_pembelian`, `nama_kota`, `tarif`, `alamat_pengiriman`, `status_pembelian`) VALUES
-(7, 1, 1, '2019-11-18', 191000, '', 0, '', 'Menunggu Pembayaran'),
-(8, 3, 1, '2019-11-19', 133000, '', 0, '', 'Menunggu Pembayaran'),
-(9, 5, 2, '2019-11-19', 151000, '', 0, '', 'Menunggu Pembayaran'),
-(10, 3, 1, '2019-11-19', 115000, '', 0, '', 'Menunggu Pembayaran'),
-(11, 3, 0, '2019-11-20', 0, '', 0, '', 'Menunggu Pembayaran'),
-(12, 3, 1, '2019-11-20', 106000, '', 0, '', 'Menunggu Pembayaran'),
-(13, 3, 2, '2019-11-22', 199000, '', 0, '', 'Menunggu Pembayaran'),
-(14, 3, 0, '2019-11-22', 0, '', 0, '', 'Menunggu Pembayaran'),
-(15, 3, 2, '2019-11-22', 101000, 'Bondowoso', 26000, '', 'Menunggu Pembayaran'),
-(16, 3, 1, '2019-11-23', 86000, 'Surabaya', 18000, 'Jl. Trunojoyo B.3 Surabaya, 68211', 'Menunggu Pembayaran'),
-(17, 3, 2, '2019-11-23', 237000, 'Bondowoso', 26000, 'Jl. simpang tugu ambarukmo bondowoso', 'Menunggu Pembayaran'),
-(18, 3, 2, '2019-11-23', 120000, 'Bondowoso', 26000, 'asdasd', 'Menunggu Pembayaran'),
-(19, 7, 1, '2019-11-24', 182000, 'Surabaya', 18000, 'bondowoso', 'Menunggu Pembayaran'),
-(20, 7, 0, '2019-11-24', 0, '', 0, '', 'Menunggu Pembayaran'),
-(21, 7, 1, '2019-11-24', 93000, 'Surabaya', 18000, 'jalan raya', 'Menunggu Pembayaran'),
-(22, 7, 1, '2019-11-24', 86000, 'Surabaya', 18000, 'dsf', 'Menunggu Pembayaran');
+INSERT INTO `pembelian` (`id_pembelian`, `id_pelanggan`, `id_ongkir`, `tanggal_pembelian`, `total_pembelian`, `nama_kota`, `tarif`, `alamat_pengiriman`, `status_pembelian`, `resi_pengiriman`) VALUES
+(7, 1, 1, '2019-11-18', 191000, '', 0, '', 'Menunggu Pembayaran', ''),
+(8, 3, 1, '2019-11-19', 133000, '', 0, '', 'Menunggu Pembayaran', ''),
+(9, 5, 2, '2019-11-19', 151000, '', 0, '', 'Menunggu Pembayaran', ''),
+(10, 3, 1, '2019-11-19', 115000, '', 0, '', 'Menunggu Pembayaran', ''),
+(11, 3, 0, '2019-11-20', 0, '', 0, '', 'Menunggu Pembayaran', ''),
+(12, 3, 1, '2019-11-20', 106000, '', 0, '', 'Menunggu Pembayaran', ''),
+(13, 3, 2, '2019-11-22', 199000, '', 0, '', 'Menunggu Pembayaran', ''),
+(14, 3, 0, '2019-11-22', 0, '', 0, '', 'Menunggu Pembayaran', ''),
+(15, 3, 2, '2019-11-22', 101000, 'Bondowoso', 26000, '', 'barang telah dikirim', '7868t7868761'),
+(17, 3, 2, '2019-11-23', 237000, 'Bondowoso', 26000, 'Jl. simpang tugu ambarukmo bondowoso', 'Menunggu Pembayaran', ''),
+(18, 3, 2, '2019-11-23', 120000, 'Bondowoso', 26000, 'asdasd', 'Barang Telah Dikirim', 'abc123321bca'),
+(19, 7, 1, '2019-11-24', 182000, 'Surabaya', 18000, 'bondowoso', 'Menunggu Pembayaran', ''),
+(20, 7, 0, '2019-11-24', 0, '', 0, '', 'Menunggu Pembayaran', ''),
+(21, 7, 1, '2019-11-24', 93000, 'Surabaya', 18000, 'jalan raya', 'Menunggu Pembayaran', ''),
+(22, 7, 1, '2019-11-24', 86000, 'Surabaya', 18000, 'dsf', 'Menunggu Pembayaran', ''),
+(23, 11, 1, '2019-11-25', 194000, 'Surabaya', 18000, 'Jl. Tahu Tamanan No.28', 'Menunggu Pembayaran', ''),
+(24, 6, 1, '2019-11-25', 373000, 'Surabaya', 18000, 'Jl. Panjaitan', 'Menunggu Pembayaran', ''),
+(25, 6, 1, '2019-11-30', 483000, 'Surabaya', 18000, 'gatot surabaya', 'Telah Melakukan Pembayaran', ''),
+(26, 6, 1, '2019-12-01', 184000, 'Surabaya', 18000, 'Waru No.28 Surabaya', 'Telah Melakukan Pembayaran', ''),
+(27, 8, 1, '2019-12-01', 214000, 'Surabaya', 18000, 'Jl. Kol. Sugiono No.48 Bangsalsari Jember', 'Telah Melakukan Pembayaran', ''),
+(28, 8, 1, '2019-12-02', 163000, 'Surabaya', 18000, 'hh', 'Menunggu Pembayaran', ''),
+(29, 9, 2, '2019-12-02', 146000, 'Bondowoso', 26000, 'kmkmkm', 'Menunggu Pembayaran', ''),
+(30, 3, 1, '2019-12-02', 93000, 'Surabaya', 18000, 'jhkkkla', 'Barang Telah Dikirim', 'hjgjhg12312'),
+(31, 3, 2, '2019-12-02', 183000, 'Bondowoso', 26000, '', 'Menunggu Pembayaran', ''),
+(32, 8, 1, '2019-12-03', 168000, 'Surabaya', 18000, 'jl. KH Wahid hasyim', 'Menunggu Pembayaran', '');
 
 -- --------------------------------------------------------
 
@@ -7468,7 +7506,26 @@ INSERT INTO `pembelian_produk` (`id_pembelian_produk`, `id_pembelian`, `id_produ
 (26, 19, 14, 3, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, 750, 90000),
 (27, 19, 17, 2, 'My Stupid Boss', 37000, 250, 500, 74000),
 (28, 21, 8, 1, 'Kami (Bukan) Sarjana Kertas', 75000, 300, 300, 75000),
-(29, 22, 10, 1, '1 Kos, 3 Cinta, 7 Keberuntungan', 68000, 210, 210, 68000);
+(29, 22, 10, 1, '1 Kos, 3 Cinta, 7 Keberuntungan', 68000, 210, 210, 68000),
+(30, 23, 21, 2, 'The Power of Ideas', 73000, 350, 700, 146000),
+(31, 23, 14, 1, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, 250, 30000),
+(32, 24, 7, 2, 'Jika Kita Tak Pernah Jadi Apa-Apa', 88000, 300, 600, 176000),
+(33, 24, 17, 3, 'My Stupid Boss', 37000, 250, 750, 111000),
+(34, 24, 10, 1, '1 Kos, 3 Cinta, 7 Keberuntungan', 68000, 210, 210, 68000),
+(35, 25, 8, 5, 'Kami (Bukan) Sarjana Kertas', 75000, 300, 1500, 375000),
+(36, 25, 14, 3, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, 750, 90000),
+(37, 26, 14, 1, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, 250, 30000),
+(38, 26, 10, 2, '1 Kos, 3 Cinta, 7 Keberuntungan', 68000, 210, 420, 136000),
+(39, 27, 11, 1, 'SINAU BARENG MARKESOT', 85000, 350, 350, 85000),
+(40, 27, 17, 3, 'My Stupid Boss', 37000, 250, 750, 111000),
+(41, 28, 14, 2, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, 500, 60000),
+(42, 28, 16, 1, 'Catatan Najwa', 85000, 200, 200, 85000),
+(43, 29, 5, 1, 'Islam yang disalahpahami', 80000, 300, 300, 80000),
+(44, 29, 12, 1, 'Dari Allah Menuju Allah', 40000, 300, 300, 40000),
+(45, 30, 8, 1, 'Kami (Bukan) Sarjana Kertas', 75000, 300, 300, 75000),
+(46, 31, 14, 4, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, 1000, 120000),
+(47, 31, 17, 1, 'My Stupid Boss', 37000, 250, 250, 37000),
+(48, 32, 8, 2, 'Kami (Bukan) Sarjana Kertas', 75000, 300, 600, 150000);
 
 -- --------------------------------------------------------
 
@@ -7482,29 +7539,27 @@ CREATE TABLE `produk` (
   `harga_produk` int(11) NOT NULL,
   `berat` int(11) NOT NULL,
   `foto_produk` varchar(50) NOT NULL,
-  `deskripsi_produk` text NOT NULL
+  `deskripsi_produk` text NOT NULL,
+  `stok_produk` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga_produk`, `berat`, `foto_produk`, `deskripsi_produk`) VALUES
-(5, 'Islam yang disalahpahami', 80000, 300, 'islam.jpg', 'menepis kekeliruan'),
-(7, 'Jika Kita Tak Pernah Jadi Apa-Apa', 88000, 300, '113836_f.jpg', 'Penulis :Alvi Syahrin	\r\nPenerbit :GagasMedia \r\nTanggal terbit : November - 2019\r\nJumlah Halaman : 248\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 13x19mm\r\nKategori : Romance\r\nBonus :Bonus Kalender\r\nText Bahasa : Indonesia Â·\r\n\r\n'),
-(8, 'Kami (Bukan) Sarjana Kertas', 75000, 300, '111111_f.jpg', ' 			Penulis : J. S. Khairen	\r\nPenerbit : Bukune \r\nTanggal terbit : Maret - 2019\r\nJumlah Halaman : 372\r\nBerat : 300 gr\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 14x20mm\r\nKategori : Fiksi\r\nText Bahasa : Indonesia Â·\r\n 		'),
-(9, 'PANDUAN RESMI TES SELEKSI CPNS ASN 2018-2019', 107000, 1000, '105297_f.jpg', ' 			Penulis : Tim Smart Genesis	\r\nPenerbit : Genesis Learning \r\nTanggal terbit : Februari - 2018\r\nJumlah Halaman : 468\r\nBerat : 500 gr\r\nJenis Cover : Soft Cover\r\nKategori : Penunjang Pelajaran\r\nText Bahasa : Indonesia  		'),
-(10, '1 Kos, 3 Cinta, 7 Keberuntungan', 68000, 210, '113718_f.jpg', 'Penulis : Astrid Tito	\r\nPenerbit : media Pustaka Utama \r\nTanggal terbit : Oktober - 2019\r\nBerat : 210 gr\r\nJenis Cover : Soft Cover\r\nKategori : Remaja\r\nText Bahasa :Indonesia Â·\r\n'),
-(11, 'SINAU BARENG MARKESOT', 85000, 350, '113835_f.jpg', 'Penulis : EMHA AINUN NADJIB	\r\nPenerbit : Mizan \r\nTanggal terbit : November - 2019\r\nJumlah Halaman : 364\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 13x20mm\r\nKategori : Sosial-Budaya\r\nBonus : Spesial Surat Syair Bertanda Tangan\r\nText Bahasa : Indonesia'),
-(12, 'Dari Allah Menuju Allah', 40000, 300, '110535_f.jpg', 'Penulis : Haidar Bagir	\r\nPenerbit : Noura Book Publising \r\nTanggal terbit : Januari - 2019\r\nJumlah Halaman : 252\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 12x18mm\r\nKategori : Islam\r\nText Bahasa : Indonesia '),
-(14, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, '90421_f.jpg', '\r\nPenulis : Raditya Dika	\r\nPenerbit : GagasMedia \r\nTanggal terbit : Februari - 2016\r\nJumlah Halaman : 140\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 13x19mm\r\nKategori : Komedi\r\nBonus : Edisi Tanda Tangan + Bonus USB LED Light\r\nText Bahasa : Indonesia\r\n'),
-(15, 'Kita, Yang Sebatas Pernah', 47000, 300, '98934_f.jpg', 'Penulis : Penakecil_ID	\r\nPenerbit : TransMedia Pustaka \r\nTanggal terbit : Februari - 2017\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 13x19mm\r\nKategori : Romance\r\nText Bahasa : Indonesia Â·\r\n'),
-(16, 'Catatan Najwa', 85000, 200, '97424_f.jpg', 'Penulis : Najwa Shihab	\r\nPenerbit : Literati-books \r\nTanggal terbit : November - 2016\r\nJumlah Halaman : 208\r\nJenis Cover : Soft Cover\r\nKategori : Biografi\r\nText Bahasa : Indonesia\r\n'),
-(17, 'My Stupid Boss', 37000, 250, '103467_f.jpg', ' 			Penulis : Chaos@work feat Yuyunardi	\r\nPenerbit : Gradien Mediatama \r\nTanggal terbit : November - 2017\r\nJumlah Halaman : 204\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 14x20mm\r\nKategori : Umum\r\nText Bahasa : Indonesia  		'),
-(18, 'Home Cooking', 97000, 250, '107287_f.jpg', 'Penulis : ENDANG INDRIANI	\r\nPenerbit : KawanPustaka \r\nTanggal terbit : Mei - 2018\r\nJumlah Halaman : 128\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 18x24mm\r\nKategori : Resep Masakan\r\nText Bahasa : Indonesia Â·\r\n'),
-(19, 'Catatan Akhir Kuliah 1', 44000, 500, '71849_f.jpg', 'Penulis : Sam @skripsit	\r\nPenerbit : Bentang Belia \r\nTanggal terbit : Januari - 2014\r\nJumlah Halaman : 252\r\nJenis Cover : Soft Cover\r\nKategori : Referensi Umum\r\nText Bahasa : Indonesia\r\n'),
-(20, 'Filosofi Kop', 60000, 200, '49714_f.jpg', 'Penulis : Dee Lestari	\r\nPenerbit : Bentang Pustaka \r\nTanggal terbit : Januari - 2012\r\nJumlah Halaman : 152\r\nJenis Cover : Soft Cover\r\nKategori : Filosofi\r\nText Bahasa : Indonesia Â·\r\n'),
-(21, 'The Power of Ideas', 73000, 350, '112300_f.jpg', '\r\nPenulis : A. Makmur Makka	\r\nPenerbit : Republika \r\nTanggal terbit : 2018\r\nJenis Cover : Soft Cover\r\nKategori : Pengembangan Diri\r\nText Bahasa : Indonesia Â·\r\n');
+INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga_produk`, `berat`, `foto_produk`, `deskripsi_produk`, `stok_produk`) VALUES
+(5, 'Islam yang disalahpahami', 80000, 300, 'islam.jpg', ' 			 			menepis kekeliruan 		 		', 50),
+(8, 'Kami (Bukan) Sarjana Kertas', 75000, 300, '111111_f.jpg', ' 			Penulis : J. S. Khairen	\r\nPenerbit : Bukune \r\nTanggal terbit : Maret - 2019\r\nJumlah Halaman : 372\r\nBerat : 300 gr\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 14x20mm\r\nKategori : Fiksi\r\nText Bahasa : Indonesia Â·\r\n 		', 2),
+(10, '1 Kos, 3 Cinta, 7 Keberuntungan', 68000, 210, '113718_f.jpg', 'Penulis : Astrid Tito	\r\nPenerbit : media Pustaka Utama \r\nTanggal terbit : Oktober - 2019\r\nBerat : 210 gr\r\nJenis Cover : Soft Cover\r\nKategori : Remaja\r\nText Bahasa :Indonesia Â·\r\n', 8),
+(11, 'SINAU BARENG MARKESOT', 85000, 350, '113835_f.jpg', 'Penulis : EMHA AINUN NADJIB	\r\nPenerbit : Mizan \r\nTanggal terbit : November - 2019\r\nJumlah Halaman : 364\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 13x20mm\r\nKategori : Sosial-Budaya\r\nBonus : Spesial Surat Syair Bertanda Tangan\r\nText Bahasa : Indonesia', 9),
+(12, 'Dari Allah Menuju Allah', 40000, 300, '110535_f.jpg', 'Penulis : Haidar Bagir	\r\nPenerbit : Noura Book Publising \r\nTanggal terbit : Januari - 2019\r\nJumlah Halaman : 252\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 12x18mm\r\nKategori : Islam\r\nText Bahasa : Indonesia ', 9),
+(14, 'Komik Dari Twit-nya Raditya Dika', 30000, 250, '90421_f.jpg', '\r\nPenulis : Raditya Dika	\r\nPenerbit : GagasMedia \r\nTanggal terbit : Februari - 2016\r\nJumlah Halaman : 140\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 13x19mm\r\nKategori : Komedi\r\nBonus : Edisi Tanda Tangan + Bonus USB LED Light\r\nText Bahasa : Indonesia\r\n', 0),
+(15, 'Kita, Yang Sebatas Pernah', 47000, 300, '98934_f.jpg', 'Penulis : Penakecil_ID	\r\nPenerbit : TransMedia Pustaka \r\nTanggal terbit : Februari - 2017\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 13x19mm\r\nKategori : Romance\r\nText Bahasa : Indonesia Â·\r\n', 10),
+(16, 'Catatan Najwa', 85000, 200, '97424_f.jpg', 'Penulis : Najwa Shihab	\r\nPenerbit : Literati-books \r\nTanggal terbit : November - 2016\r\nJumlah Halaman : 208\r\nJenis Cover : Soft Cover\r\nKategori : Biografi\r\nText Bahasa : Indonesia\r\n', 9),
+(17, 'My Stupid Boss', 37000, 250, '103467_f.jpg', ' 			Penulis : Chaos@work feat Yuyunardi	\r\nPenerbit : Gradien Mediatama \r\nTanggal terbit : November - 2017\r\nJumlah Halaman : 204\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 14x20mm\r\nKategori : Umum\r\nText Bahasa : Indonesia  		', 6),
+(18, 'Home Cooking', 97000, 250, '107287_f.jpg', 'Penulis : ENDANG INDRIANI	\r\nPenerbit : KawanPustaka \r\nTanggal terbit : Mei - 2018\r\nJumlah Halaman : 128\r\nJenis Cover : Soft Cover\r\nDimensi(L x P) : 18x24mm\r\nKategori : Resep Masakan\r\nText Bahasa : Indonesia Â·\r\n', 10),
+(19, 'Catatan Akhir Kuliah 1', 44000, 500, '71849_f.jpg', 'Penulis : Sam @skripsit	\r\nPenerbit : Bentang Belia \r\nTanggal terbit : Januari - 2014\r\nJumlah Halaman : 252\r\nJenis Cover : Soft Cover\r\nKategori : Referensi Umum\r\nText Bahasa : Indonesia\r\n', 10),
+(20, 'Filosofi Kop', 60000, 200, '49714_f.jpg', 'Penulis : Dee Lestari	\r\nPenerbit : Bentang Pustaka \r\nTanggal terbit : Januari - 2012\r\nJumlah Halaman : 152\r\nJenis Cover : Soft Cover\r\nKategori : Filosofi\r\nText Bahasa : Indonesia Â·\r\n', 10);
 
 -- --------------------------------------------------------
 
@@ -7594,6 +7649,12 @@ ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`id_pelanggan`);
 
 --
+-- Indexes for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+  ADD PRIMARY KEY (`id_pembayaran`);
+
+--
 -- Indexes for table `pembelian`
 --
 ALTER TABLE `pembelian`
@@ -7643,25 +7704,31 @@ ALTER TABLE `ongkir`
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+  MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `pembelian`
 --
 ALTER TABLE `pembelian`
-  MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `pembelian_produk`
 --
 ALTER TABLE `pembelian_produk`
-  MODIFY `id_pembelian_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_pembelian_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
