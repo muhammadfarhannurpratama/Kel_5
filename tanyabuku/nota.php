@@ -146,6 +146,7 @@ $detail=$ambil->fetch_assoc();
 				<strong>KE NOMOR REKENING DI BAWAH INI :</strong> <br>
 				<strong>BANK BCA : 123-444-000-321 A/N. TANYA BUKU</strong>
 			</p>
+      <a href="history.php" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Lanjutkan Pembayaran</a>
 		</div>
 	</div>
 </div>  		
