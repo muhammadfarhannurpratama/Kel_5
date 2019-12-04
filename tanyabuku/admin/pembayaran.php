@@ -50,6 +50,7 @@ $detail = $ambil->fetch_assoc();
  		<select class="form-control" name="status">
  			<option value="">Pilih Status</option>
  			<option value="Lunas">Lunas</option>
+ 			<option value="Proses Packing">Proses Packing</option>
  			<option value="Barang Telah Dikirim">Barang Telah Dikirim</option>
  			<option value="Batal">Batal</option>
  		</select>

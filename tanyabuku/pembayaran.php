@@ -89,9 +89,14 @@ if ($id_pelanggan_login !==$id_Pelanggan_beli)
         <input type="text" class="form-control" name="nama">
       </div>
       <div class="form-group">
-        <label>Bank</label>
-        <input type="text" class="form-control" name="bank">
-      </div>
+    <label>Bank</label>
+    <select class="form-control" name="bank">
+      <option value="">Pilih Bank</option>
+      <option value="Bni">BNI</option>
+      <option value="Bca">BCA</option>
+      <option value="Bri">BRI</option>
+    </select>
+  </div>
       <div class="form-group">
         <label>Jumlah</label>
         <input type="number" class="form-control" name="jumlah" min="1">
