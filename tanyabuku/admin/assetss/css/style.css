@@ -756,7 +756,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /* Video Section
 --------------------------------*/
 #video {
-  background: url(../img/bgvideo.jpg) center center;
+  background: url(../img/bgvideo.png) center center;
+  background-color: skyblue;
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
