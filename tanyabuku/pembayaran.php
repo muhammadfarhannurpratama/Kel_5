@@ -104,7 +104,7 @@ if ($id_pelanggan_login !==$id_Pelanggan_beli)
       <div class="form-group">
         <label>Foto Bukti Pembayaran</label>
         <input type="file" class="form-control" name="bukti">
-        <p class="text-danger">Foto bukti harus JPEG/JPG Maksimal 1MB</p>
+        <p class="text-danger">Foto bukti harus JPEG/JPG Maksimal 5MB</p>
       </div>
       <button class="btn btn-primary" name="kirim">Kirim</button>
     </form>
