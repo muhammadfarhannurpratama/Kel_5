@@ -79,29 +79,36 @@ if(!isset($_SESSION['admin']))
                       
                     </ul>
                   </li>
-                  <li><a href="index.php?halaman=produk"><i class="fa fa-edit"></i> Produk</a>
+                  <li><a href="index.php?halaman=produk"><i class="fa fa-cube"></i> Produk</a>
                     <ul class="nav child_menu">
                       
                     </ul>
                   </li>
-                  <li><a href="index.php?halaman=pembelian"><i class="fa fa-desktop"></i> Pembelian</a>
+                  <li><a href="index.php?halaman=pembelian"><i class="fa fa-shopping-cart"></i> Pembelian</a>
                     <ul class="nav child_menu">
                      
                     </ul>
                   </li>
-                  <li><a href="index.php?halaman=pelanggan"><i class="fa fa-table"></i> Pelanggan </a>
+
+                  <li><a href="index.php?halaman=laporan_pembelian"><i class="fa fa-file"></i> Laporan</a>
+                    <ul class="nav child_menu">
+                     
+                    </ul>
+                  </li>
+
+                  <li><a href="index.php?halaman=pelanggan"><i class="fa fa-user"></i> Pelanggan </a>
                     <ul class="nav child_menu">
 
                     </ul>
 
                     </li>
-                  <li><a href="index.php?halaman=tambahadmin"><i class="fa fa-bar-chart-o"></i> Tambah Admin</a>
+                  <li><a href="index.php?halaman=tambahadmin"><i class="fa fa-user"></i> Tambah Admin</a>
                     <ul class="nav child_menu">
 
                     </ul>
 
                   </li>
-                  <li><a href="index.php?halaman=logout"><i class="fa fa-bar-chart-o"></i> Logout</a>
+                  <li><a href="index.php?halaman=logout"><i class="fa fa-sign-out"></i> Logout</a>
                     <ul class="nav child_menu">
 
                     </ul>
@@ -271,6 +278,10 @@ if(!isset($_SESSION['admin']))
                         elseif ($_GET['halaman']=="pembayaran") 
                         {
                           include 'pembayaran.php';
+                        }
+                        elseif ($_GET['halaman']=="laporan_pembelian") 
+                        {
+                          include 'laporan_pembelian.php';
                         }
                 }
                 else
