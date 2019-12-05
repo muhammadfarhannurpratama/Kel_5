@@ -82,7 +82,7 @@ include 'koneksi.php'
         <div class="col-md-3">
           <div class="feature-block">
             <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" class="container-fluid">
-            <div class="caption">
+            <div class="caption"> <br>
               <h4><?php echo $perproduk['nama_produk']; ?></h4>
               <h5><?php echo number_format($perproduk['harga_produk']); ?></h5>
               <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>

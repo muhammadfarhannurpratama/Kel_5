@@ -57,15 +57,19 @@ include 'koneksi.php'
                     <?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
                     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
                     <div class="col-md-3">
-                    <div class="">
-                        <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" class="container-fluid">
-                        <div class="caption">
+                      <div class="box frame">
+                         <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
+                        <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" height="200" width="140"
+                        style="color: black">
+                        </a>                          
+                        <div class="caption"> <br>
                         <h4><?php echo $perproduk['nama_produk']; ?></h4>
-                        <h5><?php echo number_format($perproduk['harga_produk']); ?></h5>
-                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default" style="color: black">Beli</a>
-                        <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default" style="color: black">Detail</a>              
+                        <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                     
                         </div>
-                    </div>
+                        <br>
+                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-outline-secondary" style="color: black; font-size: 14px;">Beli</a>       
+                      </div>
+       
                     </div>
                     <?php } ?>
 
