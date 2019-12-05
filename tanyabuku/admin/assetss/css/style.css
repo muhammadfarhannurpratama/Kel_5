@@ -40,7 +40,14 @@
   box-shadow: 0 3px 20px rgba(0,0,0,0.3);
   padding: 25px;
   background: white;
-
+}
+@media screen and (max-width: 480px){
+  .box{
+    
+    width: 100%;
+    margin-top: 1%;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1410,9 +1417,19 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #71c55d;
 }
 
-ul#ul-hitam li{
+ol#ol-hitam li a{
   line-height: 50px;
   color: black;
+  text-shadow: #000000;
+  text-decoration: none;
+  position: relative;
+  right: 35px;
+}
+ol#ol-hitam li a:hover{
+  line-height: 50px;
+  color: rgb(193, 48, 161);
+  text-shadow: #000000;
+  text-decoration: none;
 }
 h3{
   line-height: 50px;

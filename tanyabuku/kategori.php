@@ -42,12 +42,12 @@ include 'koneksi.php'
         <!-- katergori -->
         <div class="col-3">
           <h3>Kategori</h3>
-            <ul id="ul-hitam">
-                <li>aksi</li>
-                <li>acak</li>
-                <li>komik</li>
-                <li>blabla</li>
-            </ul>
+            <ol id="ol-hitam">
+                <li><a href="">aksi</a></li>
+                <li><a href="">acak</a></li>
+                <li><a href="">komik</a></li>
+                <li><a href=""></a></li>
+            </ol>
         </div>
 
         <!-- daftar buku -->
@@ -80,7 +80,7 @@ include 'koneksi.php'
         </div>
     </div>
   </div>
-
+<br><br><br><br>
 
 
 
