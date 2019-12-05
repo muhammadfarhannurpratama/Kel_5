@@ -47,10 +47,9 @@ include 'koneksi.php'
         </div>
 
         <!-- daftar buku -->
-        <div class="col-8">
+        <div class="col-10">
         <section id="get-started" class="padd-section text-center wow fadeInUp">
                 <div class="row">
-
                     <?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
                     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
                     <div class="col-md-3">
