@@ -90,7 +90,7 @@ include 'koneksi.php'
                         <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                     
                         </div>
                         <br>
-                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-outline-secondary" style="color: black; font-size: 14px;">Beli</a>       
+                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-secondary" style="font-size: 14px;">Beli</a>       
                       </div>
        
                     </div>

@@ -123,6 +123,15 @@ span {
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
+.beli{
+  border-color: #500553;
+  color: #500553;
+}
+.beli:hover{
+  background-color: #500553;
+  border-color: #500553;
+  color: white;
+}
 
 .btn-default:hover {
   color: #fff;
@@ -1406,5 +1415,5 @@ ul#ul-hitam li{
   color: black;
 }
 h3{
-  line-height: 100px;
+  line-height: 50px;
 }

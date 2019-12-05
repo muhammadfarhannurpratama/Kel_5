@@ -36,6 +36,7 @@ include 'koneksi.php'
 
   <body>
   <?php include 'navbar.php'; ?>\
+  <br><br><br><br><br>
   <div class="container">
     <div class="row">
         <!-- katergori -->
@@ -51,8 +52,9 @@ include 'koneksi.php'
 
         <!-- daftar buku -->
         <div class="col-9">
-        <h3>Daftar Buku</h3>
-        <section id="get-started" class="padd-section text-center wow fadeInUp">
+        <h3><center>Daftar Buku</center></h3>
+        <form action="">
+        <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
                     <?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
                     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
@@ -67,16 +69,14 @@ include 'koneksi.php'
                         <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                     
                         </div>
                         <br>
-                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-outline-secondary" style="color: black; font-size: 14px;">Beli</a>       
+                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-success" style=" font-size: 14px;">Beli</a>       
                       </div>
        
                     </div>
                     <?php } ?>
-
-
                 </div>
-
         </section>
+        </form>
         </div>
     </div>
   </div>
