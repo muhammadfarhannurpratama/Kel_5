@@ -1434,3 +1434,28 @@ ol#ol-hitam li a:hover{
 h3{
   line-height: 50px;
 }
+.dropdown-menu{
+  width: 100%;
+  margin-top: 5%;
+  box-shadow: none;
+  padding: 20px;
+  background: white;
+}
+
+.dropdown-item:hover{
+  background: none;
+}
+@media screen and (max-width: 480px){
+  .dropdown-toggle{
+      
+  }
+  .dropdown-item{
+      width: 100%;
+      background: rgb(253, 249, 249);
+      
+  }
+  .dropdown-item:hover{
+    background: none;
+  }
+  
+}

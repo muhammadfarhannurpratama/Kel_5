@@ -42,12 +42,17 @@ include 'koneksi.php'
         <!-- katergori -->
         <div class="col-3">
           <h3>Kategori</h3>
-            <ol id="ol-hitam">
-                <li><a href="">aksi</a></li>
-                <li><a href="">acak</a></li>
-                <li><a href="">komik</a></li>
-                <li><a href=""></a></li>
-            </ol>
+            <ol id="ol-hitam" class="">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Aksi</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something</a>
+                      <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+            </ol>           
         </div>
 
         <!-- daftar buku -->
