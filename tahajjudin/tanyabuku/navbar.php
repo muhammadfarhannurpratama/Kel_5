@@ -18,6 +18,7 @@
           <li><a href="#team">Best Seller</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#about-us">About</a></li>
+          <li><a href="kategori.php">Kategori</a></li>
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
