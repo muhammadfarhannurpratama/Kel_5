@@ -1399,3 +1399,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
   letter-spacing: 0;
   color: #71c55d;
 }
+
+ul#ul-hitam li{
+  line-height: 50px;
+  color: black;
+}
+h3{
+  line-height: 100px;
+}
