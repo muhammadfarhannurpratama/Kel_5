@@ -1,17 +1,24 @@
 <header id="header" class="header header-hide">
-    <div class="container">
-
+    <div class="container" style="">
       <div id="logo" class="pull-left">
-         <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
+        <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
+
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="index.php"><img src="ico2.png" alt="" title="tanyabuku" /></a>
       </div>
 
+      <div class="pull-left navbar">
+                <input class="form-control" type="search" placeholder="Cari Buku" aria-label="Search">
+      </div>
+
+<!-- #nav-menu-container -->
       <nav id="nav-menu-container">
-        <ul class="nav-menu"> 
+        <ul class="nav-menu">
           <li class="menu-active"><a href="index.php">Home</a></li>
           <li><a href="#team">Best Seller</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
-          <li><a href="#contact">Contact</a></li>
           <li><a href="#about-us">About</a></li>
+          <li><a href="kategori.php">Kategori</a></li>
           <li><a href="checkout.php">Checkout</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
@@ -28,9 +35,5 @@
           <?php endif ?>          
         </ul>
       </nav>
-      <form action="pencarian.php" method="get" class="pull-left navbar">
-            <input type="text" class="form-control" name="keyword" placeholder="cari nama buku...">
-      </form> 
     </div>
   </header>
-
