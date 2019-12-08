@@ -80,7 +80,7 @@ include 'koneksi.php'
         <?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
         <?php while($perproduk=$ambil->fetch_assoc()){ ?>
           <div class="col-md-3">
-                      <div class="box">
+                      <div class="box2">
                          <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
                         <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" height="200" width="140"
                         style="color: black">
