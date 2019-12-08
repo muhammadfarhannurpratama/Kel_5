@@ -1487,3 +1487,10 @@ h3{
   }
   
 }
+.box .tomb{
+  height: 30px;
+  width: 80px;
+  
+  line-height: 15px;
+  text-align: center;
+}

@@ -63,7 +63,12 @@ include 'koneksi.php';
   							<label>Password</label>
   							<input type="password" class="form-control" name="password">
   						</div>
-  						<center><button class="btn btn-primary" name="login">Masuk</button></center>
+                <div>
+                  <center>
+                  <button class="btn btn-primary tomb" name="login" style="margin-right: 120px">Masuk</button> 
+                  <button class="btn btn-danger tomb" name="kembali">Kembali</button>
+                  </center>
+                </div>
   					</form>
   				</div>
   			</div>
