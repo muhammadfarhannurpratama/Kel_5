@@ -90,7 +90,7 @@
   	<div class="row">
       <div class="col-lg-4"></div>
   		<div class="col-lg-4">
-  			<div class="panel panel-default container box">
+  			<div class="panel panel-default container box1">
   				<div class="panel-heading">
   				<center>	<h3 class="panel-title">Daftar Pelanggan</h3> </center>
   					<br>
@@ -147,7 +147,7 @@
   							<input type="text" maxlength="13" minlength="11" onkeypress="return Angkasaja(event)"  class="form-control" name="telepon" required>
   						</div>
   						<div class="form-group">
-  						<center><button class="btn btn-primary" name="daftar">Daftar</button></center>
+  						<center><button class="btn btn-primary tomb" name="daftar">Daftar</button></center>
   						</div>
   					</form>
   					<?php 
