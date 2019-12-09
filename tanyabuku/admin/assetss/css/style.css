@@ -948,7 +948,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 @media (max-width: 991px) {
   #team .team-block {
+    margin: auto 50px;
     margin-bottom: 30px;
+    height: 300px;
+    width: 300px;
   }
 }
 
@@ -1494,6 +1497,10 @@ h3{
   .dropdown-item:hover{
     background: none;
   }
+
+  .round:hover{
+    margin-top: -10px;
+  }
   
 }
 .box .tomb{
@@ -1505,24 +1512,9 @@ h3{
 }
 
 .round{
-  margin: auto 120px;
-  height: 300px;
-  width: 300px;
-  background-color: white;
   border-radius: 50%;
-  background-size: cover;
-  float: inherit;
-  overflow: hidden;
-  margin-block-end: 50px;
 }
 .round:hover{
-  height: 310px;
-  width: 310px;
-  background-color: white;
-  border-radius: 50%;
-  background-size: cover;
-  float: inherit;
-  overflow: hidden;
-  margin-block-end: 50px;
+  margin-top: -40px;
 }
 
