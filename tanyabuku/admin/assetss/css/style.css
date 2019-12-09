@@ -816,10 +816,12 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background-size: cover;
   height: 400px;
   overflow: hidden;
+  
 }
 
 #video .overlay {
   height: 100%;
+  
 }
 
 #video .overlay .play-btn {
