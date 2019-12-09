@@ -83,6 +83,13 @@ if(!isset($_SESSION['admin']))
                     <ul class="nav child_menu">
                       
                     </ul>
+
+                    </li>
+                  <li><a href="index.php?halaman=kategori"><i class="fa fa-cube"></i> Kategori</a>
+                    <ul class="nav child_menu">
+                      
+                    </ul>
+
                   </li>
                   <li><a href="index.php?halaman=pembelian"><i class="fa fa-shopping-cart"></i> Pembelian</a>
                     <ul class="nav child_menu">
@@ -282,6 +289,22 @@ if(!isset($_SESSION['admin']))
                         elseif ($_GET['halaman']=="laporan_pembelian") 
                         {
                           include 'laporan_pembelian.php';
+                        }
+                         elseif ($_GET['halaman']=="kategori") 
+                        {
+                          include 'kategori.php';
+                        }
+                         elseif ($_GET['halaman']=="tambahkategori") 
+                        {
+                          include 'tambahkategori.php';
+                        }
+                         elseif ($_GET['halaman']=="ubahkategori") 
+                        {
+                          include 'ubahkategori.php';
+                        }
+                         elseif ($_GET['halaman']=="hapuskategori") 
+                        {
+                          include 'hapuskategori.php';
                         }
                 }
                 else

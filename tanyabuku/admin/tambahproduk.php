@@ -18,6 +18,20 @@
 		<input type="number" class="form-control" name="Stok" min="1">
 	</div>
 	<div class="form-group">
+ 		<label>Kategori Produk</label>
+ 		<select class="form-control" name="Kategori">
+ 			<option value="">Pilih Status</option>
+ 			<?php 
+                $ambil=$koneksi->query("SELECT * FROM kategori");
+                while($perkategori=$ambil->fetch_assoc()){
+               ?>
+               <option value="<?php echo $perkategori['nama_kategori'] ?>">
+                 <?php echo $perkategori['nama_kategori'] ?>
+               </option>
+              <?php } ?>
+ 		</select>
+ 	</div>	
+	<div class="form-group">
 		<label>Deskripsi</label>
 		<textarea class="form-control" name="Deskripsi" rows="10"></textarea>
 	</div>
@@ -34,8 +48,8 @@ if (isset($_POST['save']))
 	$lokasi = $_FILES['foto']['tmp_name'];
 	move_uploaded_file($lokasi, "../foto_produk/".$nama);
 	$koneksi->query("INSERT INTO produk
-		(nama_produk,harga_produk,berat,foto_produk,deskripsi_produk,stok_produk)
-		VALUES('$_POST[Nama]','$_POST[Harga]','$_POST[Berat]','$nama','$_POST[Deskripsi]'.'$_POST[Stok]')");
+		(nama_produk,harga_produk,berat,foto_produk,deskripsi_produk,stok_produk,nama_kategori)
+		VALUES('$_POST[Nama]','$_POST[Harga]','$_POST[Berat]','$nama','$_POST[Deskripsi]','$_POST[Stok]','$_POST[Kategori]')");
 
 	echo "<div class='alert alert-info'>Data Tersimpan !</div>";
  	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=produk'>";
