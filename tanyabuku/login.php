@@ -66,7 +66,8 @@ include 'koneksi.php';
                 <div>
                   <center>
                   <button class="btn btn-primary tomb" name="login" style="margin-right: 120px">Masuk</button> 
-                  <button class="btn btn-danger tomb" name="kembali">Kembali</button>
+                  <a class="btn btn-primary tomb" href="daftar.php" role="button">Daftar</a>
+                  
                   </center>
                 </div>
   					</form>
