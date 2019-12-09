@@ -1503,3 +1503,26 @@ h3{
   line-height: 15px;
   text-align: center;
 }
+
+.round{
+  margin: auto 120px;
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border-radius: 50%;
+  background-size: cover;
+  float: inherit;
+  overflow: hidden;
+  margin-block-end: 50px;
+}
+.round:hover{
+  height: 310px;
+  width: 310px;
+  background-color: white;
+  border-radius: 50%;
+  background-size: cover;
+  float: inherit;
+  overflow: hidden;
+  margin-block-end: 50px;
+}
+

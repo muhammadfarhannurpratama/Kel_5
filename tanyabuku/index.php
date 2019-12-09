@@ -302,34 +302,20 @@ include 'koneksi.php'
         </div>
 
         <div class="col-sm-6 col-md-3 col-lg-6">
-          <div class="list-menu">
-
-            <h4>Tanya Buku Group</h4>
-
-            <ul class="list-unstyled">
-                <li>Nama: Muhammad Farhan Nur Pratama <br>
-                    NIM: E41181773<br>
-                    PRODI: Teknik Informatika Kampus Bondowoso
-                </li>
-                <br>
-                <li>Nama: Tahajjudin Fajri <br>
-                    NIM: E41182137 <br>
-                    PRODI: Teknik Informatika Kampus Bondowoso
-                </li>
-                <br>
-                <li>Nama: Muhammad Muchlis <br>
-                    NIM: E41182166 <br>
-                    PRODI: Teknik Informatika Kampus Bondowoso
-                </li>
-                <br>
-                <li>Nama: Fauziyatur Rohmah <br>
-                    NIM: E41181624 <br>
-                    PRODI: Teknik Informatika Kampus Bondowoso
-                </li>
-
-              </ul>
-
-          </div>
+            <center><h1 style="color: white">Tanya Buku</h1></center> <br><br>
+            <div class="round">
+                <img src="profil/tahaj.jpeg" alt="" style=" margin-top: -40px;">
+            </div>
+            <div class="round">
+                <img src="profil/farhan.jpeg" alt="" style=" margin-top: -40px;">
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+            ksksks
         </div>
       </div>
     </div>
@@ -344,7 +330,6 @@ include 'koneksi.php'
     </div>
 
   </footer>
-
 
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -364,6 +349,9 @@ include 'koneksi.php'
 
   <!-- Template Main Javascript File -->
   <script src="admin/assetss/js/main.js"></script>
+
+
+
 
 </body>
 </html>
