@@ -282,43 +282,105 @@ include 'koneksi.php'
 
 
 <!--==========================About US============================-->
-<footer class="footer" id="about-us">
+<footer class="footer bg-light" id="about-us">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-lg-6">
-          <div class="footer-logo">
-
-            <div class="navbar-brand" style="color:white;">Toko Doni</div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h1><center>Toko Doni</center></h1> <br>
             <div class="">
-              <img src="admin/assetss/img/img.jpg" alt="" width="400" height="245">
-            </div>
+              <center><img src="admin/assetss/img/img.jpg" alt="" width="400" height="245"></center>
+            </div> <br>
             <p>
               Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
               Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
               Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
             </p>
-
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3 col-lg-6">
-            <center><h1 style="color: white">Tanya Buku</h1></center> <br><br>
-            <div class="round">
-                <img src="profil/tahaj.jpeg" alt="" style=" margin-top: -40px;">
-            </div>
-            <div class="round">
-                <img src="profil/farhan.jpeg" alt="" style=" margin-top: -40px;">
-            </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10">
-            ksksks
+
+<!--==========================Team Section============================-->
+<section id="team" class="padd-section text-center wow fadeInUp bg-light">
+
+<div class="container">
+  <div class="section-title text-center">
+
+    <h2><b>Tanya Buku Group</b></h2>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6 col-md-4 col-lg-3">
+      <div class="team-block bottom round">
+        <img src="profil/tahaj.jpg" class="img-responsive" alt="img">
+        <div class="team-content">
+          <ul class="list-unstyled">
+            <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+          <h4>Tahajjudin Fajri</h4>
+          <h5>NIM: E41182137</h5>
+          <h5>Politeknik Negeri Jember</h5><br>
         </div>
       </div>
     </div>
+
+   <div class="col-md-6 col-md-4 col-lg-3">
+      <div class="team-block bottom round">
+        <img src="profil/farhan.jpeg" class="img-responsive" alt="img">
+        <div class="team-content">
+          <ul class="list-unstyled">
+            <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+          <h4>Muhammad Farhan</h4>
+          <h5>NIM: E41182137</h5>
+          <h5>Politeknik Negeri Jember</h5><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-md-4 col-lg-3">
+      <div class="team-block bottom round">
+        <img src="profil/muchlis.jpeg" class="img-responsive" alt="img">
+        <div class="team-content">
+          <ul class="list-unstyled">
+            <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+          <h4>Muchlish</h4>
+          <h5>NIM: E41182137</h5>
+          <h5>Politeknik Negeri Jember</h5><br>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-md-4 col-lg-3">
+      <div class="team-block bottom round">
+        <img src="profil/uus.jpeg" class="img-responsive" alt="img">
+        <div class="team-content">
+          <ul class="list-unstyled">
+            <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+          <h4>Fauziyah</h4>
+          <h5>NIM: E41182137</h5>
+          <h5>Politeknik Negeri Jember</h5><br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
 
     <div class="copyrights">
       <div class="container">
@@ -330,8 +392,6 @@ include 'koneksi.php'
     </div>
 
   </footer>
-
-
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
