@@ -52,6 +52,7 @@ $detail = $ambil->fetch_assoc();
  			<option value="Lunas">Lunas</option>
  			<option value="Proses Packing">Proses Packing</option>
  			<option value="Barang Telah Dikirim">Barang Telah Dikirim</option>
+ 			<option value="Barang Telah Dikirim">Barang Diterima</option>
  			<option value="Batal">Batal</option>
  		</select>
  	</div>
