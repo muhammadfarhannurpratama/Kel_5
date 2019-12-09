@@ -9,7 +9,9 @@
 			<th>Berat</th>
 			<th>Stok</th>
 			<th>Foto</th>
+			<th>Kategori Produk</th>
 			<th>Button</th>
+			
 		</tr>
 	</thread>
 	<tbody>
@@ -24,6 +26,9 @@
 			<td><?php echo $pecah['stok_produk']; ?></td>
 			<td>
 				<img src="../foto_produk/<?php echo $pecah['foto_produk']; ?>" width="100">
+			</td>
+			<td>
+				<?php echo $pecah['nama_kategori']; ?>
 			</td>
 			<td>
 				<a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" onclick="return confirm('Apakah Anda Yakin Menghapusnya')" class="btn-danger btn">Hapus</a>

@@ -28,6 +28,20 @@ $pecah=$ambil->fetch_assoc();
  		<input type="file" name="foto" class="form-control">
  	</div>
  	<div class="form-group">
+ 		<label>Kategori Produk</label>
+ 		<select class="form-control" name="kategori">
+ 			<option value="">Pilih Status</option>
+ 			<?php 
+                $ambil=$koneksi->query("SELECT * FROM kategori");
+                while($perkategori=$ambil->fetch_assoc()){
+               ?>
+               <option value="<?php echo $perkategori['nama_kategori'] ?>">
+                 <?php echo $perkategori['nama_kategori'] ?>
+               </option>
+              <?php } ?>
+ 		</select>
+ 	</div>
+ 	<div class="form-group">
  		<label>Deskripsi</label>
  		<textarea name="deskripsi" class="form-control" rows="10">
  			<?php echo $pecah['deskripsi_produk']; ?>
@@ -47,14 +61,13 @@ if (isset($_POST['ubah']))
 
 		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
 			harga_produk='$_POST[harga]',berat='$_POST[berat]',
-			foto_produk='$namafoto',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]'
+			foto_produk='$namafoto',nama_kategori='$_POST[kategori]',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]'
 			WHERE id_produk='$_GET[id]'");
 	}
 	else
 	{
 		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
-			harga_produk='$_POST[harga]',berat='$_POST[berat]',
-			deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]' WHERE id_produk='$_GET[id]'");
+			harga_produk='$_POST[harga]',berat='$_POST[berat]',nama_kategori='$_POST[kategori]',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]' WHERE id_produk='$_GET[id]'");
 	}
 	echo "<script>alert('Data Produk Telah Diubah');</script>";
 	echo "<script>location='index.php?halaman=produk';</script>";
