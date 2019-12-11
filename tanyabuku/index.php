@@ -32,6 +32,9 @@ include 'koneksi.php'
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+
+   <!-- font -->
+   <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 
 <body class="body2">
@@ -227,7 +230,7 @@ include 'koneksi.php'
 <div class="container">
   <div class="section-title text-center">
 
-    <h2><b>Tanya Buku Group</b></h2>
+    <h2 style=" font-family: 'Indie Flower', cursive;"><b>Tanya Buku Group</b></h2>
   </div>
 </div>
 
