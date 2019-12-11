@@ -196,7 +196,7 @@ span {
   color: #fff;
   padding: 7px 12px 13px 12px;
   font-size: 16px;
-  border-radius: 2px;
+  border-radius: 50%;
   right: 15px;
   bottom: 15px;
   transition: background 0.5s;
@@ -215,7 +215,7 @@ span {
 }
 
 .back-to-top:hover {
-  background: #55b03f;
+  background: #36a8c7;
   color: #fff;
 }
 
