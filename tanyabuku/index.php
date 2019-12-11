@@ -215,7 +215,7 @@ include 'koneksi.php'
             <div class="">
               <center><img src="admin/assetss/img/img.jpg" alt="" width="400" height="245"></center>
             </div> <br>
-            <p>
+            <p style="font-size: 20px; text-align: justify;">
               Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
               Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
               Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
