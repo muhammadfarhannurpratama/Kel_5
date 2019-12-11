@@ -6,8 +6,7 @@ include 'koneksi.php';
  <?php
 $keyword = $_GET["keyword"];
 $semuadata=array();
-$ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%'
-  OR deskripsi_produk LIKE '%$keyword%'");
+$ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%'");
   while($pecah = $ambil->fetch_assoc())
   {
     $semuadata[]=$pecah;
@@ -62,7 +61,7 @@ $ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword
   <br>
   <br>
 <div class="container">
-  <h3>Hasil Pencarian : <?php echo $keyword ?> </h3>
+  <h3>Hasil Pencarian : <?php echo $keyword; ?> </h3>
 <?php if (empty($semuadata)): ?>
   <div class="alert alert-danger"> Produk <strong><?php echo $keyword ?></strong> tidak ditemukan</div>
 <?php endif ?>

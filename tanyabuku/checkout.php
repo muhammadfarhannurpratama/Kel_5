@@ -108,7 +108,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
           </div>
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>" class="form-control">
+              <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
             </div>
           </div>
           <div class="col-md-4">
