@@ -61,13 +61,13 @@ include 'koneksi.php'
       </div>
     </div>
   </section>
-  <!--==========================Get Started Section============================-->
+  <!--==========================Best Seller============================-->
   <section id="get-started" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
 
-        <h2><b>Beberapa Buku</b> </h2>
+        <h2><b>Best Seller</b> </h2>
         <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
 
       </div>
@@ -100,85 +100,6 @@ include 'koneksi.php'
       </div>
     </div>
 
-  </section>
-
-  <!--==========================Team Section============================-->
-  <section id="team" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2><b>Buku Best Seller</b></h2>
-        <p class="separator">Beberapa Buku Best Seller di Tanya Buku Store..</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/tahaj.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Manager</span>
-              <h4>Tahajjudin Fajri</h4>
-            </div>
-          </div>
-        </div>
-
-       <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/2.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Pendodol Pecel</span>
-              <h4>Markona</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/3.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Pendodol Cupang</span>
-              <h4>Cak Sugeng</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/4.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Pendodol Kripik</span>
-              <h4>Yuk Na dulure Yuk Sri</h4>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
   </section>
 
     <!--==========================Screenshots Section============================-->
