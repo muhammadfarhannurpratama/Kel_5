@@ -15,7 +15,7 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="#team">Best Seller</a></li>
+          <li><a href="#get-started">Best Seller</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="kategori.php">Buku</a></li>

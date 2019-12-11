@@ -32,6 +32,9 @@ include 'koneksi.php'
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+
+   <!-- font -->
+   <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 
 <body class="body2">
@@ -61,13 +64,13 @@ include 'koneksi.php'
       </div>
     </div>
   </section>
-  <!--==========================Get Started Section============================-->
+  <!--==========================Best Seller============================-->
   <section id="get-started" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
 
-        <h2><b>Beberapa Buku</b> </h2>
+        <h2><b>Best Seller</b> </h2>
         <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
 
       </div>
@@ -100,85 +103,6 @@ include 'koneksi.php'
       </div>
     </div>
 
-  </section>
-
-  <!--==========================Team Section============================-->
-  <section id="team" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-
-        <h2><b>Buku Best Seller</b></h2>
-        <p class="separator">Beberapa Buku Best Seller di Tanya Buku Store..</p>
-
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/tahaj.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Manager</span>
-              <h4>Tahajjudin Fajri</h4>
-            </div>
-          </div>
-        </div>
-
-       <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/2.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Pendodol Pecel</span>
-              <h4>Markona</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/3.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Pendodol Cupang</span>
-              <h4>Cak Sugeng</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="admin/assetss/img/team/4.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>Pendodol Kripik</span>
-              <h4>Yuk Na dulure Yuk Sri</h4>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
   </section>
 
     <!--==========================Screenshots Section============================-->
@@ -291,7 +215,7 @@ include 'koneksi.php'
             <div class="">
               <center><img src="admin/assetss/img/img.jpg" alt="" width="400" height="245"></center>
             </div> <br>
-            <p>
+            <p style="font-size: 20px; text-align: justify;">
               Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
               Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
               Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
@@ -306,7 +230,7 @@ include 'koneksi.php'
 <div class="container">
   <div class="section-title text-center">
 
-    <h2><b>Tanya Buku Group</b></h2>
+    <h2 style=" font-family: 'Indie Flower', cursive;"><b>Tanya Buku Group</b></h2>
   </div>
 </div>
 
