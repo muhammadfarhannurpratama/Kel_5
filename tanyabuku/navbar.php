@@ -7,9 +7,9 @@
          <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
       </div>
 
-      <div class="pull-left navbar">
-                <input class="form-control" type="search" placeholder="Cari Buku" aria-label="Search">
-      </div>
+     <!--  <form action="pencarian.php" method="get" class="pull-left navbar">
+        <input name="keyword" class="form-control" type="text" placeholder="Cari Buku" aria-label="Search">
+      </form> -->
 
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
@@ -35,5 +35,8 @@
           <?php endif ?>          
         </ul>
       </nav>
+      <form action="pencarian.php" method="get" class="pull-center navbar">
+          <input type="text" class="form-control" name="keyword" placeholder="Cari Nama Buku Lalu Tekan Enter ..">
+      </form>
     </div>
   </header>

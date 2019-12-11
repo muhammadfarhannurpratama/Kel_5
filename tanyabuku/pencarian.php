@@ -61,7 +61,7 @@ $ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword
   <br>
   <br>
 <div class="container">
-  <h3>Hasil Pencarian : <?php echo $keyword; ?> </h3>
+  <h3>Hasil Pencarian : <?php echo $keyword ?> </h3>
 <?php if (empty($semuadata)): ?>
   <div class="alert alert-danger"> Produk <strong><?php echo $keyword ?></strong> tidak ditemukan</div>
 <?php endif ?>
