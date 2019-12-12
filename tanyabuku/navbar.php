@@ -36,7 +36,7 @@
         </ul>
       </nav>
       <form action="pencarian.php" method="get" class="pull-center navbar">
-          <input type="text" class="form-control" name="keyword" placeholder="Cari Nama Buku Lalu Tekan Enter ..">
+          <input type="text" class="form-control" name="keyword" placeholder="Cari Buku ">
       </form>
     </div>
   </header>

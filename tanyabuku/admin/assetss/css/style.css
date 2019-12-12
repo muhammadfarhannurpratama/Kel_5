@@ -72,6 +72,7 @@
   -1px -1px 10px rgba(0,0,0,0.5);
   transition: .3s;
 }
+
 @media screen and (max-width: 480px){
   
   .box2{
@@ -84,6 +85,12 @@
     margin-top: 10px;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
     -1px -1px 10px rgba(0,0,0,0.5);
+  }
+  .box:hover{
+    margin-top: 5%;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+    -1px -1px 10px rgba(0,0,0,0.5);
+    transition: .3s;
   }
 }
 
@@ -1236,7 +1243,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 @media (max-width: 575px) {
   #newsletter .form-control {
     margin-bottom: 30px;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -1459,7 +1466,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #71c55d;
 }
 
-ol#ol-hitam li a{
+ol#ol-hitam .form-control{
   line-height: 50px;
   color: black;
   text-shadow: #000000;
@@ -1467,7 +1474,7 @@ ol#ol-hitam li a{
   position: relative;
   right: 35px;
 }
-ol#ol-hitam li a:hover{
+ol#ol-hitam .form-control:hover{
   line-height: 50px;
   color: rgb(193, 48, 161);
   text-shadow: #000000;
@@ -1487,6 +1494,7 @@ h3{
 .dropdown-item:hover{
   background: none;
 }
+/* tampil di HP */
 @media screen and (max-width: 480px){
   .dropdown-toggle{
       
@@ -1503,20 +1511,26 @@ h3{
   .round:hover{
     margin-top: -10px;
   }
-  
+  .navbar .form-control {
+    margin-bottom: 30px;
+    width: 90%;
+    
+  }
 }
-.box .tomb{
-  height: 30px;
-  width: 80px;
-  
-  line-height: 15px;
-  text-align: center;
-}
+
+
 
 .round{
   border-radius: 50%;
 }
 .round:hover{
   margin-top: -40px;
+}
+
+/* tombol kategori */
+.kategori{
+  float: left;
+  margin-left: -40px;
+  padding-right: 10px;
 }
 
