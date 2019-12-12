@@ -50,6 +50,8 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 </head>
 
 <body>
+  <!-- <br>
+  <pre><?php echo print_r($_SESSION) ?></pre> -->
 
   <?php include 'navbar.php'; ?>
 
@@ -66,6 +68,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
             <th>No</th>
             <th>Produk</th>
             <th>Harga</th>
+            <th>Berat</th>
             <th>Jumlah</th>
             <th>SubHarga</th>
           </tr>
@@ -84,6 +87,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
             <td><?php echo $nomor; ?></td>
             <td><?php echo $pecah['nama_produk']; ?></td>
             <td>Rp. <?php echo number_format($pecah['harga_produk']); ?></td>
+            <td><?php echo $pecah['berat']*$jumlah; ?> gr</td>
             <td><?php echo $jumlah; ?></td>
             <td>Rp. <?php echo number_format($subharga); ?></td>
           </tr>
@@ -93,7 +97,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
         </tbody>
         <tfoot>
           <tr>
-            <th colspan="4">Total Belanja</th>
+            <th colspan="5">Total Belanja</th>
             <th>Rp. <?php echo number_format($totalbelanja) ?> </th>
           </tr>
         </tfoot>
