@@ -19,7 +19,7 @@
           <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="kategori.php">Buku</a></li>
-          <li><a href="checkout.php">Checkout</a></li>
+          <li><a href="keranjang.php">Keranjang</a></li>
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
             <li><a href="history.php">History</a></li>
