@@ -74,15 +74,15 @@ include 'koneksi.php';
       </nav>
     </div>
   </header>
-  <br><br><br><br><br>
+  <br><br><br>
   <div class="container">
     <div class="row">
+  <div class="col-3">
+  </div>
  <div class="col-9">
-
 <!-- Tampilan Buku-->
-
-
         <h3><center>Daftar Buku</center></h3>
+        <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
@@ -90,7 +90,7 @@ include 'koneksi.php';
                     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
                     <div class="col-md-3">
                       <div class="box">
-                         <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
+                        <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
                         <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" height="200" width="140"
                         style="color: black">
                         </a>                          
@@ -100,8 +100,7 @@ include 'koneksi.php';
                         </div>
                         <br>
                         <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-success" style=" font-size: 14px;">Beli</a>       
-                      </div>
-       
+                      </div>      
                     </div>
                     <?php } ?>
                 </div>
@@ -111,7 +110,7 @@ include 'koneksi.php';
     </div>
   </div>
 <!-- kategori -->
-  <div class="daftar">
+      <div class="list">
           <form class="" action="kategori.php" method="get">
               <div class="kategori">
                   <select class="" name="kategori" onchange="this.form.submit();">
@@ -127,9 +126,6 @@ include 'koneksi.php';
                     </select>
                   </div>        
         </form>
-    </div>
-
-    </div>
-  </div>
-<!--   }
- ?> -->
+      </div>
+  </body>
+  </html>

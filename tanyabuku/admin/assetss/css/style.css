@@ -33,6 +33,8 @@
 
   }
 }
+
+/* box family */
 .box{
   
   width: 100%;
@@ -75,31 +77,31 @@
 
 @media screen and (max-width: 480px){
   
-  .box2{
-    margin: 20px auto;
-    width: 75%;
-    margin-top: 10px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
-  }
-  .box2:hover{
-    margin-top: 10px;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
-    -1px -1px 10px rgba(0,0,0,0.5);
-  }
-  .box{
-  
-    width: 80%;
-    height: 95%;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
-    padding: 25px;
-    background: white;
-  }
-  .box:hover{
-    margin-top: 5%;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
-    -1px -1px 10px rgba(0,0,0,0.5);
-    transition: .3s;
-  }
+      .box2{
+        margin: 20px auto;
+        width: 75%;
+        margin-top: 10px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+      }
+      .box2:hover{
+        margin-top: 10px;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+        -1px -1px 10px rgba(0,0,0,0.5);
+      }
+      .box{
+        float: right;
+        width: 80%;
+        height: 95%;
+        box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+        padding: 25px;
+        background: white;
+      }
+      .box:hover{
+        margin-top: 5%;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+        -1px -1px 10px rgba(0,0,0,0.5);
+        transition: .3s;
+      }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1520,24 +1522,21 @@ h3{
 .option1{
  color: #dd0b0b;
 }
-.daftar{
-  position: fixed; 
-  top:20%;
-  right:200px;
+.list{
+  position: fixed;
+  top: 10%;
+  left: 14%;
 }
 .buku{
   position: relative; 
   left: 40%;
 }
 @media screen and (max-width: 480px){
-  .daftar{
-    position: fixed; 
-    top:20%;
-    right:-80px;
-    
+  .list{
+    left: 5%;     
   }
   .buku{
     position: relative; 
-    left: 15%;
+    left: 35%;
   }
 }

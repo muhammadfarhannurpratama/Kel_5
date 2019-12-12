@@ -70,10 +70,30 @@ include 'koneksi.php'
   </header>
   <div class="container">
   <div class="row">
+        <div class="col-3">
+<!-- kategori -->
+          <br><br><br>
+                    <form class="" action="kategoritampung.php" method="get">
+                        <div class="kategori">
+                            <select class="" name="kategori" onchange="this.form.submit();">
+                                <option value="" class="option1"><h3>Pilih Kategori</h3></option>
+                                <?php 
+                                        $ambil=$koneksi->query("SELECT * FROM kategori");
+                                        while($perkategori=$ambil->fetch_assoc()){
+                                ?>                        
+                                        <option  value="<?php echo $perkategori['nama_kategori'] ?>">
+                                        <?php echo $perkategori['nama_kategori'] ?></option>
+                                        
+                                <?php } ?>
+                              </select>
+                            </div>        
+                  </form>      
+          </div>
 <!-- daftar buku -->
         <div class="col-9">
         <br><br><br>
         <h3 class="buku">Daftar Buku</h3>
+        <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
@@ -99,25 +119,6 @@ include 'koneksi.php'
         </section>
         </form>
         </div>
-<!-- kategori -->
-<div class="daftar">
-          <form class="" action="kategoritampung.php" method="get">
-              <div class="kategori">
-                  <select class="" name="kategori" onchange="this.form.submit();">
-                      <option value="" class="option1"><h3>Pilih Kategori</h3></option>
-                      <?php 
-                              $ambil=$koneksi->query("SELECT * FROM kategori");
-                              while($perkategori=$ambil->fetch_assoc()){
-                      ?>                        
-                              <option  value="<?php echo $perkategori['nama_kategori'] ?>">
-                              <?php echo $perkategori['nama_kategori'] ?></option>
-                              
-                      <?php } ?>
-                    </select>
-                  </div>        
-        </form>
-    </div>
-
     </div>
   </div>
 <br><br><br><br>
