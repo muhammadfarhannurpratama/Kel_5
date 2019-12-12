@@ -68,12 +68,13 @@ include 'koneksi.php';
               <li><a href="daftar.php">Daftar</a></li>
               <li><a href="login.php">Masuk</a></li>
             </ul>
-          </li> 
+      </li> 
           <?php endif ?>          
         </ul>
       </nav>
     </div>
   </header>
+
   <br><br><br>
   <div class="container">
     <div class="row">
