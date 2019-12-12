@@ -73,27 +73,28 @@ include 'koneksi.php'
     <div class="row">
         <!-- katergori -->
         <div class="col-3">
-          <h3>Kategori</h3>
-            <form action="kategoritampung.php" method="get">
-                  <ol class="kategori" id="ol-hitam">
-                    <select class="form-control" name="kategori">
-                      <option value="">Pilih Kategori</option>
+          <div style="position: fixed; top:100px;">
+          <h3 >Kategori</h3>
+            <form class="" action="kategoritampung.php" method="get">
+                  <div class="kategori">
+                    <select class="" name="kategori" onchange="this.form.submit();">
+                      <option value="" class="option1"><b>Pilih Kategori</b></option>
                       <?php 
-                      $ambil=$koneksi->query("SELECT * FROM kategori");
-                      while($perkategori=$ambil->fetch_assoc()){
-                      ?>
-                      <option value="<?php echo $perkategori['nama_kategori'] ?>">
-                      <?php echo $perkategori['nama_kategori'] ?></option>
+                        $ambil=$koneksi->query("SELECT * FROM kategori");
+                        while($perkategori=$ambil->fetch_assoc()){
+                      ?>                        
+                        <option  value="<?php echo $perkategori['nama_kategori'] ?>">
+                        <?php echo $perkategori['nama_kategori'] ?></option>
+                        
                       <?php } ?>
                     </select>
-                  </ol>  
-                <button class="btn btn-primary" type="submit" name="submit" > Pilih</button>         
-                </div>
+                  </div>        
             </form>
-
-        <!-- daftar buku -->
+            </div>
+            </div>
+<!-- daftar buku -->
         <div class="col-9">
-        <h3><center>Daftar Buku</center></h3>
+        <h3 style="position: fixed; top:100px;"><center>Daftar Buku</center></h3> <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
