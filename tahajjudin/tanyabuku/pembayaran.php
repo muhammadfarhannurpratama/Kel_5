@@ -9,15 +9,32 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
    echo "<script>location='login.php';</script>";
    exit();
 }
+
+// mendapatkan id_pembelian dari url
+$idpem = $_GET['id'];
+$ambil = $koneksi->query("SELECT * FROM pembelian WHERE id_pembelian = '$idpem'");
+$detpem = $ambil->fetch_assoc();
+
+// mendapatkan id_pelanggan yg beli
+$id_Pelanggan_beli = $detpem['id_pelanggan'];
+// mendapatkan id_pelanggan yg login
+$id_pelanggan_login = $_SESSION['pelanggan']['id_pelanggan'];
+
+if ($id_pelanggan_login !==$id_Pelanggan_beli) 
+{
+   echo "<script>alert('Gagal!');</script>";
+   echo "<script>location='history.php';</script>";
+   exit();
+}
+
 ?>
 
- ?>
 
  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>History</title>
+  <title>Pembayaran</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -61,63 +78,67 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
   <br>
   <br>
 
-  <!-- <pre><?php print_r($_SESSION); ?></pre> -->
-  <section class="history">
-    <div class="container">
-      <h3><span>HISTORY BELANJA</span> <br><br>
-       Nama Pelanggan : <?php echo $_SESSION['pelanggan']['nama_pelanggan']; ?></h3>
-      <br>
+  <div class="container">
+    <h2>Konfirmasi Pembayaran</h2>
+    <p>Kirim Bukti Pembayaran Anda Disini !</p>
+    <div class="alert alert-info">Total tagihan anda <strong>Rp. <?php echo number_format($detpem['total_pembelian']) ?></strong></div>
 
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>Tanggal</th>
-            <th>Status</th>
-            <th>Total</th>
-            <th>Opsi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php 
-          $nomor=1;
-          //mendapatkan id pelanggan yg login
-          $id_pelanggan = $_SESSION['pelanggan'] ['id_pelanggan'];
+    <form method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Nama Penyetor</label>
+        <input type="text" class="form-control" name="nama">
+      </div>
+      <div class="form-group">
+    <label>Bank</label>
+    <select class="form-control" name="bank">
+      <option value="">Pilih Bank</option>
+      <option value="Bni">BNI</option>
+      <option value="Bca">BCA</option>
+      <option value="Bri">BRI</option>
+    </select>
+  </div>
+      <div class="form-group">
+        <label>Jumlah</label>
+        <input type="number" class="form-control" name="jumlah" min="1">
+      </div>
+      <div class="form-group">
+        <label>Foto Bukti Pembayaran</label>
+        <input type="file" class="form-control" name="bukti">
+        <p class="text-danger">Foto bukti harus JPEG/JPG Maksimal 1MB</p>
+      </div>
+      <button class="btn btn-primary" name="kirim">Kirim</button>
+    </form>
+  </div>
 
-          $ambil = $koneksi->query("SELECT * FROM pembelian WHERE id_pelanggan='$id_pelanggan'");
-          while($pecah = $ambil->fetch_Assoc()){  
-           ?>
-          <tr>
-            <td><?php echo $nomor; ?></td>
-            <td><?php echo $pecah['tanggal_pembelian'] ?></td>
-            <td>
-              <?php echo $pecah['status_pembelian'] ?>
-              <br>
-              <?php if (!empty($pecah['resi_pengiriman'])):?>
-              Resi : <?php echo $pecah['resi_pengiriman']; ?>
-              <?php endif ?>  
-            </td>
-            <td>Rp. <?php echo number_format($pecah['total_pembelian']);  ?></td>
-            <td>
-                <a href="nota.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-info">Nota</a>
+<?php 
 
-                <?php if ($pecah['status_pembelian']=='Menunggu Pembayaran'): ?>
-                <a href="pembayaran.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-success">
-                Lakukan Pembayaran
-              </a>
-                <?php else: ?>
-                  <a href="history_pembayaran.php?id=<?php echo $pecah['id_pembelian']; ?>" class="btn btn-warning">
-                    History Pembayaran
-                  </a>
-                <?php endif ?>
-            </td>
-          </tr>
-          <?php $nomor++; ?>
-          <?php } ?>
-        </tbody>
-      </table>
-    </div>
-  </section>
+// if ada tombol kirim
+if (isset($_POST["kirim"])) 
+{
+  // upload foto bukti transfer
+  $namabukti = $_FILES["bukti"]["name"];
+  $lokasibukti = $_FILES["bukti"]["tmp_name"];
+  $namafix = date("YmdHis").$namabukti;
+  move_uploaded_file($lokasibukti, "bukti_pembayaran/$namafix");
+
+  $nama = $_POST["nama"];
+  $bank = $_POST["bank"];
+  $jumlah = $_POST["jumlah"];
+  $tanggal = date("Y-m-d");
+
+  // simpan pembayaran
+  $koneksi->query("INSERT INTO pembayaran(id_pembelian,nama,bank,jumlah,tanggal,bukti)
+    VALUES ('$idpem','$nama','$bank','$jumlah','$tanggal','$namafix')");
+
+  // update data pembelian dari pending menjadi sudah melakukan pembayaran 
+  $koneksi->query("UPDATE pembelian SET status_pembelian = 'Telah Melakukan Pembayaran' 
+    WHERE id_pembelian = '$idpem'");
+
+  echo "<script>alert('Terimakasih Telah Mengirim Bukti Pembayaran ');</script>";
+  echo "<script>location='history.php';</script>";
+}
+ ?>
+
 
     <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>

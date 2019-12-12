@@ -79,7 +79,7 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Tanya Buku!</h1>
+                  <h1><i class="fa fa-book"></i> Tanya Buku!</h1>
                   <p>©2019 All Rights Reserved. Tanya Buku! is a Bootstrap 4 template. Privacy and Terms</p>
                 </div>
               </div>

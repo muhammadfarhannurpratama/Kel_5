@@ -17,11 +17,29 @@ $pecah=$ambil->fetch_assoc();
  		<input type="number" name="berat" class="form-control" value="<?php echo $pecah ['berat']; ?>">	
  	</div>
  	<div class="form-group">
+ 		<label>Stok</label>
+ 		<input type="number" name="stok" class="form-control" min="1" max="999" value="<?php echo $pecah ['stok_produk']; ?>">	
+ 	</div>
+ 	<div class="form-group">
  		<img src="../foto_produk/<?php echo $pecah['foto_produk'] ?>" width="100">
  	</div>
  	<div class="form-group">
  		<label>Ganti Foto</label>
  		<input type="file" name="foto" class="form-control">
+ 	</div>
+ 	<div class="form-group">
+ 		<label>Kategori Produk</label>
+ 		<select class="form-control" name="kategori">
+ 			<option value="">Pilih Status</option>
+ 			<?php 
+                $ambil=$koneksi->query("SELECT * FROM kategori");
+                while($perkategori=$ambil->fetch_assoc()){
+               ?>
+               <option value="<?php echo $perkategori['nama_kategori'] ?>">
+                 <?php echo $perkategori['nama_kategori'] ?>
+               </option>
+              <?php } ?>
+ 		</select>
  	</div>
  	<div class="form-group">
  		<label>Deskripsi</label>
@@ -43,14 +61,13 @@ if (isset($_POST['ubah']))
 
 		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
 			harga_produk='$_POST[harga]',berat='$_POST[berat]',
-			foto_produk='$namafoto',deskripsi_produk='$_POST[deskripsi]'
+			foto_produk='$namafoto',nama_kategori='$_POST[kategori]',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]'
 			WHERE id_produk='$_GET[id]'");
 	}
 	else
 	{
 		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
-			harga_produk='$_POST[harga]',berat='$_POST[berat]',
-			deskripsi_produk='$_POST[deskripsi]' WHERE id_produk='$_GET[id]'");
+			harga_produk='$_POST[harga]',berat='$_POST[berat]',nama_kategori='$_POST[kategori]',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]' WHERE id_produk='$_GET[id]'");
 	}
 	echo "<script>alert('Data Produk Telah Diubah');</script>";
 	echo "<script>location='index.php?halaman=produk';</script>";
