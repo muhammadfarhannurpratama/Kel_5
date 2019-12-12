@@ -8,6 +8,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html, div, map, dt, isindex, form, select, option {
+  display: block;
+}
 
 .body2 {
   background:url(../img/bgweb.png) no-repeat center center fixed;
@@ -1522,24 +1525,22 @@ h3{
 }
 .daftar{
   position: fixed; 
-  top:27%;
-  left:200px;
+  top:20%;
+  right:200px;
 }
 .buku{
   position: relative; 
-  bottom:96%;
   left: 40%;
 }
 @media screen and (max-width: 480px){
   .daftar{
     position: fixed; 
-    top:27%;
-    left:20px;
+    top:20%;
+    right:-80px;
     
   }
   .buku{
     position: relative; 
-    bottom:99%;
     left: 15%;
   }
 }
