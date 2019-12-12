@@ -68,6 +68,7 @@ if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
             <th>No</th>
             <th>Produk</th>
             <th>Harga</th>
+            <th>Berat</th>
             <th>Jumlah</th>
             <th>SubHarga</th>
             <th>Button</th>
@@ -86,6 +87,7 @@ if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
             <td><?php echo $nomor; ?></td>
             <td><?php echo $pecah['nama_produk']; ?></td>
             <td>Rp. <?php echo number_format($pecah['harga_produk']); ?></td>
+            <td><?php echo $pecah['berat']*$jumlah; ?> gr</td>
             <td><?php echo $jumlah; ?></td>
             <td>Rp. <?php echo number_format($subharga); ?></td>
             <td>
