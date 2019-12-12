@@ -73,7 +73,7 @@ include 'koneksi.php'
         <div class="col-3">
 <!-- kategori -->
           <br><br><br><br><br><br>
-<form action="kategoritampung.php" method="get">
+ <form action="kategoritampung.php" method="get">
   <ul class="nav-menu">
           <li class=" menu-has-children">
             <a href="#" >Pilih Kategori Buku</a>
@@ -91,7 +91,7 @@ include 'koneksi.php'
               </ul>
           </li> 
   </ul>
-</form>
+ </form>
 
           <div class="list">
                     <form class="" action="kategoritampung.php" method="get">
