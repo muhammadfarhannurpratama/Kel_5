@@ -77,14 +77,14 @@ include 'koneksi.php'
             <form action="kategoritampung.php" method="get">
                   <ol class="kategori" id="ol-hitam">
                     <select class="form-control" name="kategori">
-                    <option value="">Pilih Kategori</option>
-                    <?php 
-                    $ambil=$koneksi->query("SELECT * FROM kategori");
-                    while($perkategori=$ambil->fetch_assoc()){
-                    ?>
-                    <option value="<?php echo $perkategori['nama_kategori'] ?>">
-                    <?php echo $perkategori['nama_kategori'] ?></option>
-                    <?php } ?>
+                      <option value="">Pilih Kategori</option>
+                      <?php 
+                      $ambil=$koneksi->query("SELECT * FROM kategori");
+                      while($perkategori=$ambil->fetch_assoc()){
+                      ?>
+                      <option value="<?php echo $perkategori['nama_kategori'] ?>">
+                      <?php echo $perkategori['nama_kategori'] ?></option>
+                      <?php } ?>
                     </select>
                   </ol>  
                 <button class="btn btn-primary" type="submit" name="submit" > Pilih</button>         
