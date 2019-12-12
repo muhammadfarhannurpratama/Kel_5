@@ -86,6 +86,14 @@
     box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
     -1px -1px 10px rgba(0,0,0,0.5);
   }
+  .box{
+  
+    width: 80%;
+    height: 95%;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+    padding: 25px;
+    background: white;
+  }
   .box:hover{
     margin-top: 5%;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
@@ -1494,6 +1502,12 @@ h3{
 .kategori{
   margin-right: 100px;
 }
+.kategori select:hover{
+  color: red;
+}
+.kategori select option{
+  color: rgb(0, 0, 0);
+}
 .kategori select{
   float: left;
   font-size: 20px;
@@ -1504,5 +1518,28 @@ h3{
   -webkit-appearance: none;
 }
 .option1{
- color: #3c4857;
+ color: #dd0b0b;
+}
+.daftar{
+  position: fixed; 
+  top:27%;
+  left:200px;
+}
+.buku{
+  position: relative; 
+  bottom:96%;
+  left: 40%;
+}
+@media screen and (max-width: 480px){
+  .daftar{
+    position: fixed; 
+    top:27%;
+    left:20px;
+    
+  }
+  .buku{
+    position: relative; 
+    bottom:99%;
+    left: 15%;
+  }
 }

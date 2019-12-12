@@ -71,30 +71,10 @@ include 'koneksi.php'
   <br><br><br><br><br>
   <div class="container">
     <div class="row">
-        <!-- katergori -->
-        <div class="col-3">
-          <div style="position: fixed; top:100px;">
-          <h3 >Kategori</h3>
-            <form class="" action="kategoritampung.php" method="get">
-                  <div class="kategori">
-                    <select class="" name="kategori" onchange="this.form.submit();">
-                      <option value="" class="option1"><b>Pilih Kategori</b></option>
-                      <?php 
-                        $ambil=$koneksi->query("SELECT * FROM kategori");
-                        while($perkategori=$ambil->fetch_assoc()){
-                      ?>                        
-                        <option  value="<?php echo $perkategori['nama_kategori'] ?>">
-                        <?php echo $perkategori['nama_kategori'] ?></option>
-                        
-                      <?php } ?>
-                    </select>
-                  </div>        
-            </form>
-            </div>
-            </div>
+        <div class="col-3"></div>
 <!-- daftar buku -->
         <div class="col-9">
-        <h3 style="position: fixed; top:100px;"><center>Daftar Buku</center></h3> <br><br>
+        <br><br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
@@ -119,9 +99,28 @@ include 'koneksi.php'
                 </div>
         </section>
         </form>
+            <h3 class="buku">Daftar Buku</h3>
         </div>
     </div>
   </div>
+<!-- kategori -->
+  <div class="daftar">
+                <form class="" action="kategoritampung.php" method="get">
+                      <div class="kategori">
+                        <select class="" name="kategori" onchange="this.form.submit();">
+                          <option value="" class="option1"><h3>Pilih Kategori</h3></option>
+                          <?php 
+                            $ambil=$koneksi->query("SELECT * FROM kategori");
+                            while($perkategori=$ambil->fetch_assoc()){
+                          ?>                        
+                            <option  value="<?php echo $perkategori['nama_kategori'] ?>">
+                            <?php echo $perkategori['nama_kategori'] ?></option>
+                            
+                          <?php } ?>
+                        </select>
+                      </div>        
+                </form>
+              </div>
 <br><br><br><br>
 
 
