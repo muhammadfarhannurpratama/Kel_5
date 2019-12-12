@@ -73,6 +73,7 @@ include 'koneksi.php'
         <div class="col-3">
 <!-- kategori -->
           <br><br><br>
+          <div class="list">
                     <form class="" action="kategoritampung.php" method="get">
                         <div class="kategori">
                             <select class="" name="kategori" onchange="this.form.submit();">
@@ -87,7 +88,8 @@ include 'koneksi.php'
                                 <?php } ?>
                               </select>
                             </div>        
-                  </form>      
+                  </form>
+              </div>        
           </div>
 <!-- daftar buku -->
         <div class="col-9">
