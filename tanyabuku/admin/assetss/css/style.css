@@ -8,9 +8,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-html, div, map, dt, isindex, form, select, option {
-  display: block;
-}
 
 .body2 {
   background:url(../img/bgweb.png) no-repeat center center fixed;
@@ -80,7 +77,7 @@ html, div, map, dt, isindex, form, select, option {
   
   .box2{
     margin: 20px auto;
-    width: 100%;
+    width: 75%;
     margin-top: 10px;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
   }
