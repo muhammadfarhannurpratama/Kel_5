@@ -2,7 +2,8 @@
 session_start();
 include 'koneksi.php'
  ?>
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -32,57 +33,138 @@ include 'koneksi.php'
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
 </head>
-  <body>
-  <?php include 'navbar.php'; ?>\
-  <div class="container">
-    <div class="row">
-        <!-- katergori -->
-        <div class="col-2">
-            <ul class="kategori">
-                <li>aksi</li>
-                <li>acak</li>
-                <li>komik</li>
-                <li>blabla</li>
-            </ul>
-        </div>
 
-        <!-- daftar buku -->
-        <div class="col-10">
-        <section id="get-started" class="padd-section text-center wow fadeInUp">
+  <body>
+  <header id="header" class="header header-hide">
+    <div class="container" style="">
+      <div id="logo" class="pull-left">
+        <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
+
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
+      </div>
+
+      <?php include 'navbar.php'; ?>
+
+<!-- #nav-menu-container -->
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.php">Home</a></li>
+          <li><a href="checkout.php">Checkout</a></li>
+<!--jika sudah login (ada SESSION pelanggan)-->
+          <?php if (isset($_SESSION['pelanggan'])): ?>
+            <li><a href="history.php">History</a></li>
+            <li><a href="logout.php">Logout</a></li>
+<!--jika belum login ( belum ada SESSION pelanggan)-->
+      <?php else :  ?>
+      <li class="menu-has-children"><a href="">Daftar</a>
+            <ul>
+              <li><a href="daftar.php">Daftar</a></li>
+              <li><a href="login.php">Masuk</a></li>
+            </ul>
+          </li> 
+          <?php endif ?>          
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+  <div class="row">
+        <div class="col-3">
+<!-- kategori -->
+          <br><br><br><br><br><br>
+ <form action="kategoritampung.php" method="get">
+  <ul class="nav-menu">
+          <li class=" menu-has-children">
+            <a href="#" >Pilih Kategori Buku</a>
+              <ul>              
+                <?php 
+                  $ambil=$koneksi->query("SELECT * FROM kategori");
+                  while($perkategori=$ambil->fetch_assoc()){
+                ?>                        
+                  <li  value="<?php echo $perkategori['nama_kategori'] ?>">
+                    <a href="" onchange="this.form.submit();"> 
+                      <?php echo $perkategori['nama_kategori'] ?>
+                    </a>
+                  </li>                                       
+                <?php } ?>              
+              </ul>
+          </li> 
+  </ul>
+ </form>
+
+          <div class="list">
+                    <form class="" action="kategoritampung.php" method="get">
+                        <div class="kategori">
+                            <select class="" name="kategori" onchange="this.form.submit();">
+                                <option value="" class="option1"><h3>Pilih Kategori</h3></option>
+                                <?php 
+                                        $ambil=$koneksi->query("SELECT * FROM kategori");
+                                        while($perkategori=$ambil->fetch_assoc()){
+                                ?>                        
+                                      <option  value="<?php echo $perkategori['nama_kategori'] ?>">
+                                        <?php echo $perkategori['nama_kategori'] ?>
+                                      </option>
+                                        
+                                <?php } ?>
+                              </select>
+                          </div>        
+                  </form>
+            </div>        
+          </div>
+<!-- daftar buku -->
+        <div class="col-9">
+        <br><br><br>
+        <h3 class="buku">Daftar Buku</h3>
+        <br><br>
+        <form action="">
+        <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
                     <?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
                     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
                     <div class="col-md-3">
-                    <div class="">
-                        <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" class="container-fluid">
-                        <div class="caption">
-                        <h4><?php echo $perproduk['nama_produk']; ?></h4>
-                        <h5><?php echo number_format($perproduk['harga_produk']); ?></h5>
-                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Beli</a>
-                        <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>" class="btn btn-default">Detail</a>              
+                      <div class="box">
+                         <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
+                        <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" height="200" width="140"
+                        style="color: black">
+                        </a>                          
+                        <div class="caption"> <br>
+                        <h4><?php echo $perproduk['nama_produk']; ?></h4> <br>
+                        <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                     
                         </div>
-                    </div>
+                        <br>
+                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-success" style=" font-size: 14px;">Beli</a>       
+                      </div>
+       
                     </div>
                     <?php } ?>
-
-
                 </div>
-
         </section>
+        </form>
         </div>
     </div>
   </div>
+<br><br><br><br>
 
 
 
 
 
 
+  <!-- JavaScript Libraries -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
+  <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="admin/assetss/lib/superfish/hoverIntent.js"></script>
+  <script src="admin/assetss/lib/superfish/superfish.min.js"></script>
+  <script src="admin/assetss/lib/easing/easing.min.js"></script>
+  <script src="admin/assetss/lib/modal-video/js/modal-video.js"></script>
+  <script src="admin/assetss/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="admin/assetss/lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="admin/assetss/contactform/contactform.js"></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Template Main Javascript File -->
+  <script src="admin/assetss/js/main.js"></script>
   </body>
 </html>

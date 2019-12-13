@@ -2,13 +2,48 @@
 session_start();
 include 'koneksi.php';
 
+$id_pembelian = $_GET['id'];
+
+$ambil = $koneksi->query("SELECT * FROM pembayaran 
+	LEFT JOIN pembelian ON pembayaran.id_pembelian=pembelian.id_pembelian 
+	WHERE pembelian.id_pembelian ='$id_pembelian'");
+$detailbayar = $ambil->fetch_assoc();
+
+// echo "<pre>";
+// print_r($detailbayar);
+// echo "</pre>";
+
+// jika tidak ada data pembayaran
+if (empty($detailbayar)) 
+{
+	echo "<script>alert('gagal !');</script>";
+   	echo "<script>location='history.php';</script>";
+   	exit();
+}
+
+// jika data pelanggan yg bayar tidak sesuai dengan yg login
+if ($_SESSION['pelanggan']['id_pelanggan']!==$detailbayar['id_pelanggan']) 
+{
+	echo "<script>alert('gagal !');</script>";
+   	echo "<script>location='history.php';</script>";
+   	exit();
+}
+//if belum login, maka masuk login.php 
+if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
+{
+   echo "<script>alert('Silahkan Login !');</script>";
+   echo "<script>location='login.php';</script>";
+   exit();
+}
+?>
+
  ?>
 
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Login Pelanggan</title>
+  <title>History Pembayaran</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -33,96 +68,58 @@ include 'koneksi.php';
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
 
-<body class="body3">
+<body>
 
   <?php include 'navbar.php'; ?>
+
+  <br>
   <br>
   <br>
   <br>
 
   <div class="container">
+  	<h3>History Pembayaran</h3><br>
   	<div class="row">
-      <div class="col-lg-4"></div>
-  		<div class="col-lg-4">
-        <br><br><br>
-  			<div class="panel panel-default container box">
-  				<div class="panel-heading">
-  					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
-  					<br>
-
-  				</div>
-  				<div class="panel-body">
-  					<form method="post">
-  						<div class="form-group">
-  							<label>Email</label>
-  							<input type="email" class="form-control" name="email">
-  						</div>
-  						<div class="form-group">
-  							<label>Password</label>
-  							<input type="password" class="form-control" name="password">
-  						</div>
-                <div>
-                  <center>
-                  <button class="btn btn-primary tomb" name="login" style="margin-right: 120px">Masuk</button> 
-                  <a class="btn btn-primary tomb" href="daftar.php" role="button">Daftar</a>
-                  
-                  </center>
-                </div>
-  					</form>
-  				</div>
-  			</div>
-      </div>
-      <div class="col-lg-4"></div>
+  		<div class="col-md-6">
+  			<table class="table">
+  				<tr>
+  					<th>Nama</th>
+  					<td><?php echo $detailbayar['nama']; ?></td>
+  				</tr>
+  				<tr>
+  					<th>Bank</th>
+  					<td><?php echo $detailbayar['bank']; ?></td>
+  				</tr>
+  				<tr>
+  					<th>Tanggal</th>
+  					<td><?php echo $detailbayar['tanggal']; ?></td>
+  				</tr>
+  				<tr>
+  					<th>Jumlah</th>
+  					<td>Rp. <?php echo number_format($detailbayar['jumlah']); ?></td>
+  				</tr>
+  			</table>
+  		</div>
+  		<div class="col-md-6">
+  			<img src="bukti_pembayaran/<?php echo $detailbayar['bukti']; ?>" alt="" class="img-responsive">
+  			
+  		</div>
   	</div>
   </div>
-<!--sinkron database email pengguna -->
-  <?php  
-  if (isset($_POST['login']))
-  {
-  	$email=$_POST['email'];
-  	$password=$_POST['password'];
-  	//query cek sesuai di database
-  	$ambil=$koneksi->query("SELECT * FROM pelanggan 
-  		WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
 
-  	//mencari akun di db
-  	$akunyangcocok=$ambil->num_rows;
+  
 
-  	if ($akunyangcocok==1)
-  	{
-  		//sukses login
-  		//mendapatkan akun dalam bentuk array
-  		$akun=$ambil->fetch_assoc();
-  		//login di session pelanggan
-  		$_SESSION['pelanggan'] = $akun;
-  		echo "<script>alert('Login Sukses !');</script>";
-
-      //jika sudah ATC
-      if (isset($_SESSION['keranjang']) OR !empty($_SESSION['keranjang'])) 
-      {
-        echo "<script>location='checkout.php';</script>";
-      }
-      else
-      {
-        echo "<script>location='history.php';</script>"; 
-      }
-  		
-
-  	}
-  	else 
-  	{
-  		//gagal login
-  		echo "<script>alert('Login Gagal, Periksa Kembali Akun Anda !');</script>";
-  		echo "<script>location='login.php';</script>";
-  	}
-  }
-
-  ?>
-
-
-  <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
   <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
   <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>

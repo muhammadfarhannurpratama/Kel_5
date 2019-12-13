@@ -68,9 +68,16 @@
     });
 
   </script>
-
-
-
+  <!-- angka saja -->
+  <script type="text/javascript">
+  function Angkasaja(evt) {
+  var charCode = (evt.which) ? evt.which : event.keyCode
+  if (charCode > 31 && (charCode < 48 || charCode > 57))
+  return false;
+  return true;
+  }
+  </script>
+  
 </head>
 
 <body class="body2">
@@ -83,7 +90,7 @@
   	<div class="row">
       <div class="col-lg-4"></div>
   		<div class="col-lg-4">
-  			<div class="panel panel-default container box">
+  			<div class="panel panel-default container box1">
   				<div class="panel-heading">
   				<center>	<h3 class="panel-title">Daftar Pelanggan</h3> </center>
   					<br>
@@ -93,15 +100,16 @@
   					<form method="post">
   						<div class="form-group">
   							<label>Nama</label>
-  							<input type="text" class="form-control" name="nama" required>
+  							<input type="text" min="4" maxlength="25" class="form-control" name="nama" required>
   						</div>
   						<div class="form-group">
   							<label>Email</label>
-  							<input type="email" class="form-control" name="email" required>
+  							<input type="email" maxlength="25" class="form-control" name="email" required>
+                <span class="warning"></span>
   						</div>
   						<div class="form-group">
   							<label>Password</label>
-  							<input type="password" class="form-control" name="password" required>
+  							<input type="password" maxlength="15" minlength="8" class="form-control" name="password" required>
   						</div>
               <div class="form-group">
                 <label>Provinsi</label>
@@ -132,17 +140,18 @@
               </div>
   						<div class="form-group">
   							<label>Alamat</label>
-  							<textarea class="form-control" name="alamat" required></textarea>
+  							<textarea class="form-control" maxlength="50" name="alamat"  required></textarea>
   						</div>
   						<div class="form-group">
   							<label>Telp / HP</label>
-  							<input type="number" class="form-control" name="telepon" required>
+  							<input type="text" maxlength="13" minlength="11" onkeypress="return Angkasaja(event)"  class="form-control" name="telepon" required>
   						</div>
   						<div class="form-group">
-  						<center><button class="btn btn-primary" name="daftar">Daftar</button></center>
+  						<center><button class="btn btn-primary tomb" name="daftar">Daftar</button></center>
   						</div>
   					</form>
   					<?php 
+
   					//if tekan tombol daftar
   					if (isset($_POST['daftar'])) 
   					{

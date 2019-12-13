@@ -68,23 +68,28 @@ include 'koneksi.php';
               <li><a href="daftar.php">Daftar</a></li>
               <li><a href="login.php">Masuk</a></li>
             </ul>
-          </li> 
+      </li> 
           <?php endif ?>          
         </ul>
       </nav>
     </div>
   </header>
-  <br><br><br><br><br>
+
+  <br><br><br>
   <div class="container">
     <div class="row">
+  <div class="col-3">
+  </div>
  <div class="col-9">
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 1b20ace2f1440044d81f66bc88d58f4f54d01688
 <!-- Tampilan Buku-->
-
-
         <h3><center>Daftar Buku</center></h3>
+        <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
@@ -92,7 +97,7 @@ include 'koneksi.php';
                     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
                     <div class="col-md-3">
                       <div class="box">
-                         <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
+                        <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
                         <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" height="200" width="140"
                         style="color: black">
                         </a>                          
@@ -102,8 +107,7 @@ include 'koneksi.php';
                         </div>
                         <br>
                         <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-success" style=" font-size: 14px;">Beli</a>       
-                      </div>
-       
+                      </div>      
                     </div>
                     <?php } ?>
                 </div>
@@ -112,6 +116,7 @@ include 'koneksi.php';
         </div>
     </div>
   </div>
+<<<<<<< HEAD
 
   <!-- kategori -->
 <div class="col-3">
@@ -139,3 +144,25 @@ include 'koneksi.php';
           </form>
 <!--   }
  ?> -->
+=======
+<!-- kategori -->
+      <div class="list">
+          <form class="" action="kategori.php" method="get">
+              <div class="kategori">
+                  <select class="" name="kategori" onchange="this.form.submit();">
+                      <option value="" class="option1"><h3>Pilih Kategori</h3></option>
+                      <?php 
+                              $ambil=$koneksi->query("SELECT * FROM kategori");
+                              while($perkategori=$ambil->fetch_assoc()){
+                      ?>                        
+                              <option  value="<?php echo $perkategori['nama_kategori'] ?>">
+                              <?php echo $perkategori['nama_kategori'] ?></option>
+                              
+                      <?php } ?>
+                    </select>
+                  </div>        
+        </form>
+      </div>
+  </body>
+  </html>
+>>>>>>> 1b20ace2f1440044d81f66bc88d58f4f54d01688

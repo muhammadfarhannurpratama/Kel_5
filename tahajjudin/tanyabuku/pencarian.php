@@ -1,14 +1,26 @@
 <?php 
 session_start();
-include 'koneksi.php';
+//koneksi database
+include 'koneksi.php'; 
+?>
+ <?php
+$keyword = $_GET["keyword"];
+$semuadata=array();
+$ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%'");
+  while($pecah = $ambil->fetch_assoc())
+  {
+    $semuadata[]=$pecah;
+  }
 
- ?>
-
+  //echo"<prev>";
+  //print_r ($semuadata);
+  //echo "</prev>";
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Login Pelanggan</title>
+  <title>Pencarian</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -33,94 +45,45 @@ include 'koneksi.php';
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
 </head>
 
-<body class="body3">
+<body class="body2">
 
   <?php include 'navbar.php'; ?>
   <br>
   <br>
   <br>
+<div class="container">
+  <h3>Hasil Pencarian : <?php echo $keyword ?> </h3>
+<?php if (empty($semuadata)): ?>
+  <div class="alert alert-danger"> Produk <strong><?php echo $keyword ?></strong> tidak ditemukan</div>
+<?php endif ?>
 
-  <div class="container">
-  	<div class="row">
-      <div class="col-lg-4"></div>
-  		<div class="col-lg-4">
-        <br><br><br>
-  			<div class="panel panel-default container box">
-  				<div class="panel-heading">
-  					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
-  					<br>
 
-  				</div>
-  				<div class="panel-body">
-  					<form method="post">
-  						<div class="form-group">
-  							<label>Email</label>
-  							<input type="email" class="form-control" name="email">
-  						</div>
-  						<div class="form-group">
-  							<label>Password</label>
-  							<input type="password" class="form-control" name="password">
-  						</div>
-                <div>
-                  <center>
-                  <button class="btn btn-primary tomb" name="login" style="margin-right: 120px">Masuk</button> 
-                  <a class="btn btn-primary tomb" href="daftar.php" role="button">Daftar</a>
-                  
-                  </center>
-                </div>
-  					</form>
-  				</div>
-  			</div>
+  <div class="row">
+    <?php foreach ($semuadata as $key => $value): ?>
+      <div class="col-md-3">
+        <div class="feature-block">
+          <img src="foto_produk/<?php echo $value["foto_produk"]; ?>" alt="" class="container-fluid">
+          <div class="caption">
+            <h4><?php echo $value["nama_produk"] ?> </h4>
+            <h5>Rp. <?php echo number_format($value['harga_produk']) ?> </h5>
+            <a href="beli.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-primary">Beli</a>
+            <a href="detail.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-primary">Detail</a>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-4"></div>
-  	</div>
+    <?php endforeach ?>
   </div>
-<!--sinkron database email pengguna -->
-  <?php  
-  if (isset($_POST['login']))
-  {
-  	$email=$_POST['email'];
-  	$password=$_POST['password'];
-  	//query cek sesuai di database
-  	$ambil=$koneksi->query("SELECT * FROM pelanggan 
-  		WHERE email_pelanggan='$email' AND password_pelanggan='$password'");
-
-  	//mencari akun di db
-  	$akunyangcocok=$ambil->num_rows;
-
-  	if ($akunyangcocok==1)
-  	{
-  		//sukses login
-  		//mendapatkan akun dalam bentuk array
-  		$akun=$ambil->fetch_assoc();
-  		//login di session pelanggan
-  		$_SESSION['pelanggan'] = $akun;
-  		echo "<script>alert('Login Sukses !');</script>";
-
-      //jika sudah ATC
-      if (isset($_SESSION['keranjang']) OR !empty($_SESSION['keranjang'])) 
-      {
-        echo "<script>location='checkout.php';</script>";
-      }
-      else
-      {
-        echo "<script>location='history.php';</script>"; 
-      }
-  		
-
-  	}
-  	else 
-  	{
-  		//gagal login
-  		echo "<script>alert('Login Gagal, Periksa Kembali Akun Anda !');</script>";
-  		echo "<script>location='login.php';</script>";
-  	}
-  }
-
-  ?>
-
+  
+</div>
 
   <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
