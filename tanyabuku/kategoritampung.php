@@ -79,6 +79,8 @@ include 'koneksi.php';
     <div class="row">
  <div class="col-9">
 
+
+
 <!-- Tampilan Buku-->
 
 
@@ -110,26 +112,30 @@ include 'koneksi.php';
         </div>
     </div>
   </div>
-<!-- kategori -->
-  <div class="daftar">
-          <form class="" action="kategori.php" method="get">
-              <div class="kategori">
-                  <select class="" name="kategori" onchange="this.form.submit();">
-                      <option value="" class="option1"><h3>Pilih Kategori</h3></option>
-                      <?php 
-                              $ambil=$koneksi->query("SELECT * FROM kategori");
-                              while($perkategori=$ambil->fetch_assoc()){
-                      ?>                        
-                              <option  value="<?php echo $perkategori['nama_kategori'] ?>">
-                              <?php echo $perkategori['nama_kategori'] ?></option>
-                              
-                      <?php } ?>
-                    </select>
-                  </div>        
-        </form>
-    </div>
 
-    </div>
-  </div>
+  <!-- kategori -->
+<div class="col-3">
+          <h3>Kategori</h3>
+          <ol id="ol-hitam" class="">
+          <form action="kategoritampung.php" method="get">
+          <li class="dropdown">
+          <select class="form-control" name="kategori">
+          <option value="">Pilih Kategori</option>
+          <?php 
+          $ambil=$koneksi->query("SELECT * FROM kategori");
+          while($perkategori=$ambil->fetch_assoc()){
+          ?>
+          <option value="<?php echo $perkategori['nama_kategori'] ?>">
+          <?php echo $perkategori['nama_kategori'] ?></option>
+          <?php } ?>
+          </select>
+          <div class="dropdown-menu">
+          <div class="dropdown-divider"></div>
+          </div>
+          </ol>
+          </li>  
+          <button class="btn btn-primary" type="submit" name="submit" > Pilih</button>         
+          </div>
+          </form>
 <!--   }
  ?> -->
