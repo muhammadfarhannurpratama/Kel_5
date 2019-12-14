@@ -98,7 +98,7 @@ if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
       </table>
 
       <a href="index.php" class="btn btn-primary">Lanjutkan Belanja</a>
-      <a href="login.php" class="btn btn-primary">Checkout</a>
+      <a href="checkout.php" class="btn btn-primary">Checkout</a>
     </div>
   </section>
 

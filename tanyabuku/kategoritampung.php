@@ -1,7 +1,13 @@
 <?php 
 session_start();
-include 'koneksi.php'
- ?>
+include 'koneksi.php';
+
+// if (isset($_POST['submit'])){
+    $kategori=$_GET['kategori'];
+    // var_dump($kategori);
+    $ambil=$koneksi->query("SELECT * FROM produk WHERE nama_kategori='$kategori'");
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -44,7 +50,7 @@ include 'koneksi.php'
          <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
       </div>
 
-      <?php include 'navbar.php'; ?>
+     <?php include 'navbar.php'; ?>
 
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
@@ -71,38 +77,16 @@ include 'koneksi.php'
   <br><br><br><br><br>
   <div class="container">
     <div class="row">
-        <!-- katergori -->
-        <div class="col-3">
-          <h3>Kategori</h3>
-          <ol id="ol-hitam" class="">
-          <form action="kategoritampung.php" method="get">
-          <li class="dropdown">
-          <select class="form-control" name="kategori">
-          <option value="">Pilih Kategori</option>
-          <?php 
-          $ambil=$koneksi->query("SELECT * FROM kategori");
-          while($perkategori=$ambil->fetch_assoc()){
-          ?>
-          <option value="<?php echo $perkategori['nama_kategori'] ?>">
-          <?php echo $perkategori['nama_kategori'] ?></option>
-          <?php } ?>
-          </select>
-          <div class="dropdown-menu">
-          <div class="dropdown-divider"></div>
-          </div>
-          </ol>
-          </li>  
-          <button class="btn btn-primary" type="submit" name="submit" > Pilih</button>         
-          </div>
-          </form>
+ <div class="col-9">
 
-        <!-- daftar buku -->
-        <div class="col-9">
+<!-- Tampilan Buku-->
+
+
         <h3><center>Daftar Buku</center></h3>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
-                    <?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
+                    
                     <?php while($perproduk=$ambil->fetch_assoc()){ ?>
                     <div class="col-md-3">
                       <div class="box">
@@ -126,27 +110,5 @@ include 'koneksi.php'
         </div>
     </div>
   </div>
-<br><br><br><br>
-
-
-
-
-
-
-  <!-- JavaScript Libraries -->
-  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
-  <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="admin/assetss/lib/superfish/hoverIntent.js"></script>
-  <script src="admin/assetss/lib/superfish/superfish.min.js"></script>
-  <script src="admin/assetss/lib/easing/easing.min.js"></script>
-  <script src="admin/assetss/lib/modal-video/js/modal-video.js"></script>
-  <script src="admin/assetss/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="admin/assetss/lib/wow/wow.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="admin/assetss/contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="admin/assetss/js/main.js"></script>
-  </body>
-</html>
+<!--   }
+ ?> -->

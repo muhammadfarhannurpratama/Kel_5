@@ -19,7 +19,7 @@ if(!isset($_SESSION['admin']))
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+	<link rel="icon" href="images/logotanyabuku.ico" type="image/ico" />
 
     <title>Tanya Buku ! | </title>
 
@@ -49,7 +49,7 @@ if(!isset($_SESSION['admin']))
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Tanya Buku !</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-book"></i> <span>Tanya Buku !</span></a>
             </div>
 
             <div class="clearfix"></div>

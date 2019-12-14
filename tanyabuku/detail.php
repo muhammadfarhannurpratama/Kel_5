@@ -38,6 +38,17 @@ $detail=$ambil->fetch_assoc();
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+
+  <!-- angka saja -->
+  <script type="text/javascript">
+  function Angkasaja(evt) {
+  var charCode = (evt.which) ? evt.which : event.keyCode
+  if (charCode > 31 && (charCode < 48 || charCode > 57))
+  return false;
+  return true;
+  }
+  </script>
+
 </head>
 
 <body class="body2">
@@ -66,7 +77,7 @@ $detail=$ambil->fetch_assoc();
   				<form method="post">
   					<div class="form-group">
   						<div class="input-group">
-  							<input type="number" min="1" class="form-control" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" >
+  							<input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required>
   							<div class="input-group-btn">
   								<button class="btn btn-primary" name="beli">Beli</button>
   							</div>

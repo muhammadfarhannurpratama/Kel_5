@@ -7,15 +7,15 @@
          <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
       </div>
 
-      <div class="pull-left navbar">
-                <input class="form-control" type="search" placeholder="Cari Buku" aria-label="Search">
-      </div>
+     <!--  <form action="pencarian.php" method="get" class="pull-left navbar">
+        <input name="keyword" class="form-control" type="text" placeholder="Cari Buku" aria-label="Search">
+      </form> -->
 
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="#team">Best Seller</a></li>
+          <li><a href="#get-started">Best Seller</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#about-us">About</a></li>
           <li><a href="kategori.php">Buku</a></li>
@@ -35,5 +35,8 @@
           <?php endif ?>          
         </ul>
       </nav>
+      <form action="pencarian.php" method="get" class="pull-center navbar">
+          <input type="text" class="form-control" name="keyword" placeholder="Cari Nama Buku Lalu Tekan Enter ..">
+      </form>
     </div>
   </header>
