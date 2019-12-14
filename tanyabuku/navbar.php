@@ -20,6 +20,13 @@
           <li><a href="#about-us">About</a></li>
           <li><a href="kategori.php">Buku</a></li>
           <li><a href="keranjang.php">Keranjang</a></li>
+
+          <!--jika sudah login (ada SESSION profil)-->
+          <?php if (isset($_SESSION['pelanggan'])): ?>
+            <li><a href="profiluser.php">Profil</a></li>
+            <!--jika belum login ( belum ada SESSION profil)-->
+              <?php endif ?> 
+
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
             <li><a href="history.php">History</a></li>
@@ -36,11 +43,7 @@
         </ul>
       </nav>
       <form action="pencarian.php" method="get" class="pull-center navbar">
-<<<<<<< HEAD
-          <input type="text" class="form-control" name="keyword" placeholder="Cari Nama Buku Lalu Tekan Enter ..">
-=======
           <input type="text" class="form-control" name="keyword" placeholder="Cari Buku ">
->>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
       </form>
     </div>
   </header>
