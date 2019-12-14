@@ -8,24 +8,100 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 .body2 {
   background:url(../img/bgweb.png) no-repeat center center fixed;
   background-size:100% auto;
   background-color: #fff;
-  color: #333;
 }
-.body3 {
-  background:url(../img/bgweb2.png) center center fixed;
-  background-size:100% auto;
+@media screen and (max-width: 480px) {
+  .body2 {
+    background:none;
   background-color: #fff;
-  color: #333;
+
+  }
 }
+
+.body3 {
+  background:url(../img/bgweb2.png);
+
+}
+@media screen and (max-width: 480px) {
+  .body3 {
+    background:url(../img/bgweb2.png) no-repeat center center fixed;
+    background-size: auto auto ;
+
+  }
+}
+
+/* box family */
 .box{
+  
   width: 100%;
+  height: 95%;
   margin-top: 5%;
   box-shadow: 0 3px 20px rgba(0,0,0,0.3);
   padding: 25px;
   background: white;
+}
+.box:hover{
+  margin-top: -5%;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+  -1px -1px 10px rgba(0,0,0,0.5);
+  transition: .3s;
+}
+.box1{
+  
+  width: 100%;
+  height: 95%;
+  margin-top: 5%;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+  padding: 25px;
+  background: white;
+}
+.box2{
+  margin: 50px auto;
+  height: 400px;
+  width: 250px;
+  margin-top: 5%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  padding: 25px;
+  background: white;
+}
+.box2:hover{
+  margin-top: -5%;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+  -1px -1px 10px rgba(0,0,0,0.5);
+  transition: .3s;
+}
+
+@media screen and (max-width: 480px){
+  
+      .box2{
+        margin: 20px auto;
+        width: 75%;
+        margin-top: 10px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+      }
+      .box2:hover{
+        margin-top: 10px;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+        -1px -1px 10px rgba(0,0,0,0.5);
+      }
+      .box{
+        float: right;
+        width: 80%;
+        height: 95%;
+        box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+        padding: 25px;
+        background: white;
+      }
+      .box:hover{
+        margin-top: 5%;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+        -1px -1px 10px rgba(0,0,0,0.5);
+        transition: .3s;
+      }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,9 +117,9 @@ h4 {
   color: #000;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0;
   text-transform: uppercase;
-  line-height: 2;
+  line-height: 1;
 }
 
 h5 {
@@ -94,7 +170,7 @@ span {
   padding-right: 0;
 }
 
-.btn {
+.btn2 {
   border: 1px solid #fff;
   border-radius: 50px;
   color: #fff;
@@ -107,6 +183,15 @@ span {
   -o-transition: all 0.5s ease-in-out 0s;
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
+}
+.beli{
+  border-color: #500553;
+  color: #500553;
+}
+.beli:hover{
+  background-color: #500553;
+  border-color: #500553;
+  color: white;
 }
 
 .btn-default:hover {
@@ -128,7 +213,7 @@ span {
   color: #fff;
   padding: 7px 12px 13px 12px;
   font-size: 16px;
-  border-radius: 2px;
+  border-radius: 50%;
   right: 15px;
   bottom: 15px;
   transition: background 0.5s;
@@ -147,7 +232,7 @@ span {
 }
 
 .back-to-top:hover {
-  background: #55b03f;
+  background: #36a8c7;
   color: #fff;
 }
 
@@ -160,7 +245,7 @@ span {
   left: 0;
   top: 0;
   right: 0;
-  height: 48px;
+  height: 54px;
   z-index: 3;
   transition: all 0.5s ease;
 }
@@ -206,6 +291,7 @@ span {
   width: 100%;
   height: calc(100vh - 40px);
   background: url(../img/kocheng.gif) center bottom no-repeat;
+  background-color: white;
   background-size: 100%;
   position: relative;
   margin-top: 40px;
@@ -214,6 +300,7 @@ span {
 @media (min-width: 1025px) {
   #hero {
     background-attachment: fixed;
+
   }
 }
 
@@ -450,9 +537,7 @@ span {
   outline: none;
   cursor: pointer;
 }
-#mobile-nav-toggle i .body2{
-  background: none;
-}
+
 #mobile-nav-toggle i {
   color: rgb(59, 54, 54);
   font-size: 24px;
@@ -742,15 +827,18 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /* Video Section
 --------------------------------*/
 #video {
-  background: url(../img/bgvideo.jpg) center center;
+  background: url(../img/bgvideo.png) center center;
+  background-color: skyblue;
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
   overflow: hidden;
+  
 }
 
 #video .overlay {
   height: 100%;
+  
 }
 
 #video .overlay .play-btn {
@@ -879,7 +967,10 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 @media (max-width: 991px) {
   #team .team-block {
+    margin: auto 50px;
     margin-bottom: 30px;
+    height: 300px;
+    width: 300px;
   }
 }
 
@@ -1162,7 +1253,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 @media (max-width: 575px) {
   #newsletter .form-control {
     margin-bottom: 30px;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -1224,7 +1315,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /* Contact Section
 --------------------------------*/
 #contact {
-  background: #fff;
+  background:skyblue;
 }
 
 #contact .info {
@@ -1233,7 +1324,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #contact .info i {
   font-size: 32px;
-  color: #71c55d;
+  color: #ffffff;
   float: left;
 }
 
@@ -1241,7 +1332,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
   padding: 0 0 10px 50px;
   margin-bottom: 20px;
   line-height: 22px;
-  font-size: 14px;
+  font-size: 15px;
+  color: white;
 }
 
 #contact .info .email p {
@@ -1255,8 +1347,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 #contact .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #71c55d;
-  color: #fff;
+  background: #ffffff;
+  color: skyblue;
   line-height: 1;
   padding: 6px 0 8px 0;
   border-radius: 50%;
@@ -1267,13 +1359,13 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .social-links a:hover {
-  background: #55b03f;
+  background:skyblue;
   color: #fff;
 }
 
 #contact .form #sendmessage {
   color: #71c55d;
-  border: 1px solid #71c55d;
+  border: 1px solid #d6e4d3;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1312,7 +1404,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .form button[type="submit"] {
-  background: #71c55d;
+  background: #51a6dc;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1320,7 +1412,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #92d283;
+  background: rgb(90, 161, 189);
 }
 
 /*--------------------------------------------------------------
@@ -1376,15 +1468,76 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 14px;
-  letter-spacing: 0;
+  letter-spacing: 0;background-origin: padding-box;
 }
 
 .footer .copyrights p a, .footer .copyrights .credits a {
   letter-spacing: 0;
   color: #71c55d;
 }
-.jarak{
-  padding: 100px;
+h3{
+  line-height: 50px;
 }
 
-ul.kategori li{color: black;}
+/* tampil di HP */
+@media screen and (max-width: 480px){
+
+  .round:hover{
+    margin-top: -10px;
+  }
+  .navbar .form-control {
+    margin-bottom: 30px;
+    width: 90%;
+    
+  }
+}
+
+.round{
+  border-radius: 50%;
+}
+.round:hover{
+  margin-top: -40px;
+}
+
+
+/* tombol kategori */
+.kategori{
+  margin-right: 100px;
+}
+.kategori select:hover{
+  color: red;
+}
+.kategori select option{
+  color: rgb(0, 0, 0);
+}
+.kategori select{
+  float: left;
+  font-size: 20px;
+  height: 40px; 
+  border: none;
+  transition:ease all 0.3s;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+.option1{
+ color: #dd0b0b;
+}
+.list{
+  position: fixed;
+  top: 10%;
+  left: 14%;
+}
+.buku{
+  position: relative; 
+  left: 40%;
+}
+@media screen and (max-width: 480px){
+  .list{
+    position: fixed;
+    left: 5%;     
+  }
+  .buku{
+    position: relative; 
+    left: 35%;
+  }
+}

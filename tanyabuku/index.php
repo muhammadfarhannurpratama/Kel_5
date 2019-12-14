@@ -90,10 +90,11 @@ include 'koneksi.php'
                         </a>                          
                         <div class="caption"> <br>
                         <h4><?php echo $perproduk['nama_produk']; ?></h4> <br>
-                        <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                     
-                        </div>
                         <br>
-                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-secondary" style="font-size: 14px;">Beli</a>       
+                        <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                   
+                        </div>
+                        
+                        <!-- <br><a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-secondary" style="font-size: 14px;">Beli</a> -->       
                       </div>
        
                     </div>
@@ -249,6 +250,7 @@ include 'koneksi.php'
           <h4>Tahajjudin Fajri</h4>
           <h5>NIM: E41182137</h5>
           <h5>Politeknik Negeri Jember</h5><br>
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -265,26 +267,64 @@ include 'koneksi.php'
           <h4>Muhammad Farhan</h4>
           <h5>NIM: E41182137</h5>
           <h5>Politeknik Negeri Jember</h5><br>
+=======
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
         </div>
       </div>
     </div>
 
+<<<<<<< HEAD
     <div class="col-md-6 col-md-4 col-lg-3">
       <div class="team-block bottom round">
         <img src="profil/muchlis.jpeg" class="img-responsive" alt="img">
+=======
+   <div class="col-md-6 col-md-4 col-lg-3">
+      <div class="team-block bottom round">
+        <img src="profil/farhan.jpeg" class="img-responsive" alt="img">
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
         <div class="team-content">
           <ul class="list-unstyled">
             <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
           </ul>
+<<<<<<< HEAD
           <h4>Muchlish</h4>
+=======
+          <h4>Muhammad Farhan</h4>
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
           <h5>NIM: E41182137</h5>
           <h5>Politeknik Negeri Jember</h5><br>
         </div>
       </div>
     </div>
 
+    <div class="col-md-6 col-md-4 col-lg-3">
+      <div class="team-block bottom round">
+<<<<<<< HEAD
+        <img src="profil/uus.jpeg" class="img-responsive" alt="img">
+=======
+        <img src="profil/muchlis.jpeg" class="img-responsive" alt="img">
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
+        <div class="team-content">
+          <ul class="list-unstyled">
+            <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+<<<<<<< HEAD
+          <h4>Fauziyah</h4>
+=======
+          <h4>Muchlish</h4>
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
+          <h5>NIM: E41182137</h5>
+          <h5>Politeknik Negeri Jember</h5><br>
+        </div>
+      </div>
+    </div>
+
+<<<<<<< HEAD
+=======
     <div class="col-md-6 col-md-4 col-lg-3">
       <div class="team-block bottom round">
         <img src="profil/uus.jpeg" class="img-responsive" alt="img">
@@ -301,6 +341,7 @@ include 'koneksi.php'
       </div>
     </div>
 
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
   </div>
 </div>
 </section>

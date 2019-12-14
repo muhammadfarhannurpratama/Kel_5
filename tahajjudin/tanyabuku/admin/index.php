@@ -19,7 +19,7 @@ if(!isset($_SESSION['admin']))
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+	<link rel="icon" href="images/logotanyabuku.ico" type="image/ico" />
 
     <title>Tanya Buku ! | </title>
 
@@ -49,7 +49,7 @@ if(!isset($_SESSION['admin']))
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Tanya Buku !</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-book"></i> <span>Tanya Buku !</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -79,29 +79,43 @@ if(!isset($_SESSION['admin']))
                       
                     </ul>
                   </li>
-                  <li><a href="index.php?halaman=produk"><i class="fa fa-edit"></i> Produk</a>
+                  <li><a href="index.php?halaman=produk"><i class="fa fa-cube"></i> Produk</a>
                     <ul class="nav child_menu">
                       
                     </ul>
+
+                    </li>
+                  <li><a href="index.php?halaman=kategori"><i class="fa fa-cube"></i> Kategori</a>
+                    <ul class="nav child_menu">
+                      
+                    </ul>
+
                   </li>
-                  <li><a href="index.php?halaman=pembelian"><i class="fa fa-desktop"></i> Pembelian</a>
+                  <li><a href="index.php?halaman=pembelian"><i class="fa fa-shopping-cart"></i> Pembelian</a>
                     <ul class="nav child_menu">
                      
                     </ul>
                   </li>
-                  <li><a href="index.php?halaman=pelanggan"><i class="fa fa-table"></i> Pelanggan </a>
+
+                  <li><a href="index.php?halaman=laporan_pembelian"><i class="fa fa-file"></i> Laporan</a>
+                    <ul class="nav child_menu">
+                     
+                    </ul>
+                  </li>
+
+                  <li><a href="index.php?halaman=pelanggan"><i class="fa fa-user"></i> Pelanggan </a>
                     <ul class="nav child_menu">
 
                     </ul>
 
                     </li>
-                  <li><a href="index.php?halaman=tambahadmin"><i class="fa fa-bar-chart-o"></i> Tambah Admin</a>
+                  <li><a href="index.php?halaman=tambahadmin"><i class="fa fa-user"></i> Tambah Admin</a>
                     <ul class="nav child_menu">
 
                     </ul>
 
                   </li>
-                  <li><a href="index.php?halaman=logout"><i class="fa fa-bar-chart-o"></i> Logout</a>
+                  <li><a href="index.php?halaman=logout"><i class="fa fa-sign-out"></i> Logout</a>
                     <ul class="nav child_menu">
 
                     </ul>
@@ -267,6 +281,30 @@ if(!isset($_SESSION['admin']))
                         elseif ($_GET['halaman']=="hapuspelanggan") 
                         {
                           include 'hapuspelanggan.php'; 
+                        }
+                        elseif ($_GET['halaman']=="pembayaran") 
+                        {
+                          include 'pembayaran.php';
+                        }
+                        elseif ($_GET['halaman']=="laporan_pembelian") 
+                        {
+                          include 'laporan_pembelian.php';
+                        }
+                         elseif ($_GET['halaman']=="kategori") 
+                        {
+                          include 'kategori.php';
+                        }
+                         elseif ($_GET['halaman']=="tambahkategori") 
+                        {
+                          include 'tambahkategori.php';
+                        }
+                         elseif ($_GET['halaman']=="ubahkategori") 
+                        {
+                          include 'ubahkategori.php';
+                        }
+                         elseif ($_GET['halaman']=="hapuskategori") 
+                        {
+                          include 'hapuskategori.php';
                         }
                 }
                 else

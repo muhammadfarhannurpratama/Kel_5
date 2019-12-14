@@ -70,6 +70,7 @@ include 'koneksi.php'
   </header>
   <br><br><br><br><br>
   <div class="container">
+<<<<<<< HEAD
     <div class="row">
         <!-- katergori -->
         <div class="col-3">
@@ -99,6 +100,35 @@ include 'koneksi.php'
         <!-- daftar buku -->
         <div class="col-9">
         <h3><center>Daftar Buku</center></h3>
+=======
+  <div class="row">
+        <div class="col-3">
+<!-- kategori -->
+          <br><br><br>
+          <div class="list">
+                    <form class="" action="kategoritampung.php" method="get">
+                        <div class="kategori">
+                            <select class="" name="kategori" onchange="this.form.submit();">
+                                <option value="" class="option1"><h3>Pilih Kategori</h3></option>
+                                <?php 
+                                        $ambil=$koneksi->query("SELECT * FROM kategori");
+                                        while($perkategori=$ambil->fetch_assoc()){
+                                ?>                        
+                                        <option  value="<?php echo $perkategori['nama_kategori'] ?>">
+                                        <?php echo $perkategori['nama_kategori'] ?></option>
+                                        
+                                <?php } ?>
+                              </select>
+                            </div>        
+                  </form>
+              </div>        
+          </div>
+<!-- daftar buku -->
+        <div class="col-9">
+        <br><br><br>
+        <h3 class="buku">Daftar Buku</h3>
+        <br><br>
+>>>>>>> 1b20ace2f1440044d81f66bc88d58f4f54d01688
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">

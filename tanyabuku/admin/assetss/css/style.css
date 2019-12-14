@@ -33,6 +33,8 @@
 
   }
 }
+
+/* box family */
 .box{
   
   width: 100%;
@@ -58,6 +60,10 @@
   background: white;
 }
 .box2{
+<<<<<<< HEAD
+=======
+  margin: 50px auto;
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
   height: 400px;
   width: 250px;
   margin-top: 5%;
@@ -71,19 +77,34 @@
   -1px -1px 10px rgba(0,0,0,0.5);
   transition: .3s;
 }
+
 @media screen and (max-width: 480px){
   
-  .box2{
-    margin: 20px auto;
-    width: 100%;
-    margin-top: 10px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
-  }
-  .box2:hover{
-    margin-top: 10px;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
-    -1px -1px 10px rgba(0,0,0,0.5);
-  }
+      .box2{
+        margin: 20px auto;
+        width: 75%;
+        margin-top: 10px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+      }
+      .box2:hover{
+        margin-top: 10px;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+        -1px -1px 10px rgba(0,0,0,0.5);
+      }
+      .box{
+        float: right;
+        width: 80%;
+        height: 95%;
+        box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+        padding: 25px;
+        background: white;
+      }
+      .box:hover{
+        margin-top: 5%;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+        -1px -1px 10px rgba(0,0,0,0.5);
+        transition: .3s;
+      }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1235,7 +1256,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 @media (max-width: 575px) {
   #newsletter .form-control {
     margin-bottom: 30px;
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -1457,21 +1478,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
   letter-spacing: 0;
   color: #71c55d;
 }
-
-ol#ol-hitam li a{
-  line-height: 50px;
-  color: black;
-  text-shadow: #000000;
-  text-decoration: none;
-  position: relative;
-  right: 35px;
-}
-ol#ol-hitam li a:hover{
-  line-height: 50px;
-  color: rgb(193, 48, 161);
-  text-shadow: #000000;
-  text-decoration: none;
-}
 h3{
   line-height: 50px;
 }
@@ -1486,6 +1492,7 @@ h3{
 .dropdown-item:hover{
   background: none;
 }
+/* tampil di HP */
 @media screen and (max-width: 480px){
   .dropdown-toggle{
       
@@ -1502,6 +1509,7 @@ h3{
   .round:hover{
     margin-top: -10px;
   }
+<<<<<<< HEAD
   
 }
 .box .tomb{
@@ -1510,12 +1518,78 @@ h3{
   
   line-height: 15px;
   text-align: center;
+=======
+  .navbar .form-control {
+    margin-bottom: 30px;
+    width: 90%;
+    
+  }
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
 }
+
+
 
 .round{
   border-radius: 50%;
 }
 .round:hover{
   margin-top: -40px;
+<<<<<<< HEAD
+=======
 }
 
+/* tombol kategori */
+.kategori{
+<<<<<<< HEAD
+  margin-right: 100px;
+}
+.kategori select:hover{
+  color: red;
+}
+.kategori select option{
+  color: rgb(0, 0, 0);
+}
+.kategori select{
+=======
+>>>>>>> parent of db0147b... update kategori
+  float: left;
+  margin-left: -40px;
+  padding-right: 10px;
+}
+ol#ol-hitam .form-control{
+  line-height: 50px;
+  color: black;
+  text-decoration: none;
+}
+ol#ol-hitam .form-control:hover{
+  line-height: 50px;
+  color: rgb(193, 48, 161);
+  text-decoration: none;
+}
+<<<<<<< HEAD
+.option1{
+ color: #dd0b0b;
+}
+.list{
+  position: fixed;
+  top: 10%;
+  left: 14%;
+}
+.buku{
+  position: relative; 
+  left: 40%;
+}
+@media screen and (max-width: 480px){
+  .list{
+    position: fixed;
+    left: 5%;     
+  }
+  .buku{
+    position: relative; 
+    left: 35%;
+  }
+>>>>>>> 696721693d2cceee8c9f4977f4eea764c54935e9
+}
+=======
+
+>>>>>>> parent of db0147b... update kategori
