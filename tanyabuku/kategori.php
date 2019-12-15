@@ -41,10 +41,8 @@ include 'koneksi.php'
         <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
 
         <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
+         <a href="index.php"><img src="ico/ico30.png" alt="" title="tanyabuku" /></a>
       </div>
-
-      <?php include 'navbar.php'; ?>
 
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
@@ -68,6 +66,7 @@ include 'koneksi.php'
       </nav>
     </div>
   </header>
+  
   <div class="container">
   <div class="row">
         <div class="col-3">
