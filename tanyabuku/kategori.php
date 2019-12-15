@@ -58,13 +58,13 @@ include 'koneksi.php'
                   $ambil=$koneksi->query("SELECT * FROM kategori");
                   while($perkategori=$ambil->fetch_assoc()){
                 ?>                        
-                  <li  value="<?php echo $perkategori['nama_kategori'] ?>">
-                    <a href="" onchange="this.form.submit();"> 
-                      <?php echo $perkategori['nama_kategori'] ?>
-                    </a>
+                  <li  value="<?php echo $perkategori['nama_kategori'] ?>" onchange="this.form.submit();">
+                      <a href="kategoritampung.php?">
+                        <?php echo $perkategori['nama_kategori'] ?>
+                      </a>
                   </li>                                       
                 <?php } ?>  
-                </form>             
+              </form>             
               </ul> 
           </li>       
 <!--jika sudah login (ada SESSION pelanggan)-->
