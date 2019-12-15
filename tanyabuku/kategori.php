@@ -68,43 +68,31 @@ include 'koneksi.php'
       </nav>
     </div>
   </header>
-  <br><br><br><br><br>
   <div class="container">
-<<<<<<< HEAD
-    <div class="row">
-        <!-- katergori -->
-        <div class="col-3">
-          <h3>Kategori</h3>
-          <ol id="ol-hitam" class="">
-          <form action="kategoritampung.php" method="get">
-          <li class="dropdown">
-          <select class="form-control" name="kategori">
-          <option value="">Pilih Kategori</option>
-          <?php 
-          $ambil=$koneksi->query("SELECT * FROM kategori");
-          while($perkategori=$ambil->fetch_assoc()){
-          ?>
-          <option value="<?php echo $perkategori['nama_kategori'] ?>">
-          <?php echo $perkategori['nama_kategori'] ?></option>
-          <?php } ?>
-          </select>
-          <div class="dropdown-menu">
-          <div class="dropdown-divider"></div>
-          </div>
-          </ol>
-          </li>  
-          <button class="btn btn-primary" type="submit" name="submit" > Pilih</button>         
-          </div>
-          </form>
-
-        <!-- daftar buku -->
-        <div class="col-9">
-        <h3><center>Daftar Buku</center></h3>
-=======
   <div class="row">
         <div class="col-3">
 <!-- kategori -->
-          <br><br><br>
+          <br><br><br><br><br><br>
+ <form action="kategoritampung.php" method="get">
+  <ul class="nav-menu">
+          <li class=" menu-has-children">
+            <a href="#" >Pilih Kategori Buku</a>
+              <ul>              
+                <?php 
+                  $ambil=$koneksi->query("SELECT * FROM kategori");
+                  while($perkategori=$ambil->fetch_assoc()){
+                ?>                        
+                  <li  value="<?php echo $perkategori['nama_kategori'] ?>">
+                    <a href="" onchange="this.form.submit();"> 
+                      <?php echo $perkategori['nama_kategori'] ?>
+                    </a>
+                  </li>                                       
+                <?php } ?>              
+              </ul>
+          </li> 
+  </ul>
+ </form>
+
           <div class="list">
                     <form class="" action="kategoritampung.php" method="get">
                         <div class="kategori">
@@ -114,21 +102,21 @@ include 'koneksi.php'
                                         $ambil=$koneksi->query("SELECT * FROM kategori");
                                         while($perkategori=$ambil->fetch_assoc()){
                                 ?>                        
-                                        <option  value="<?php echo $perkategori['nama_kategori'] ?>">
-                                        <?php echo $perkategori['nama_kategori'] ?></option>
+                                      <option  value="<?php echo $perkategori['nama_kategori'] ?>">
+                                        <?php echo $perkategori['nama_kategori'] ?>
+                                      </option>
                                         
                                 <?php } ?>
                               </select>
-                            </div>        
+                          </div>        
                   </form>
-              </div>        
+            </div>        
           </div>
 <!-- daftar buku -->
         <div class="col-9">
         <br><br><br>
         <h3 class="buku">Daftar Buku</h3>
         <br><br>
->>>>>>> 1b20ace2f1440044d81f66bc88d58f4f54d01688
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">

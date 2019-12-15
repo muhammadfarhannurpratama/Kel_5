@@ -85,15 +85,15 @@ include 'koneksi.php'
           <div class="col-md-3">
                       <div class="box2">
                          <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
-                        <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" 
+                        <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" height="200" width="140"
                         style="color: black">
-                        </a> <br><br>                     
-                        <div class="caption">
+                        </a>                          
+                        <div class="caption"> <br>
                         <h4><?php echo $perproduk['nama_produk']; ?></h4> <br>
-                        <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                   
+                        <h5>Harga: <?php echo number_format($perproduk['harga_produk']); ?></h5>                     
                         </div>
-                        
-                        <!-- <br><a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-secondary" style="font-size: 14px;">Beli</a> -->       
+                        <br>
+                        <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-secondary" style="font-size: 14px;">Beli</a>       
                       </div>
        
                     </div>
