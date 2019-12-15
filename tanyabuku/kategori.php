@@ -49,6 +49,24 @@ include 'koneksi.php'
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.php">Home</a></li>
           <li><a href="checkout.php">Checkout</a></li>
+<!-- kategori -->
+          <li class=" menu-has-children">
+            <a href="#" >Pilih Kategori Buku</a>
+              <ul>   
+              <form action="kategoritampung.php" method="get">           
+                <?php 
+                  $ambil=$koneksi->query("SELECT * FROM kategori");
+                  while($perkategori=$ambil->fetch_assoc()){
+                ?>                        
+                  <li  value="<?php echo $perkategori['nama_kategori'] ?>">
+                    <a href="" onchange="this.form.submit();"> 
+                      <?php echo $perkategori['nama_kategori'] ?>
+                    </a>
+                  </li>                                       
+                <?php } ?>  
+                </form>             
+              </ul> 
+          </li>       
 <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
             <li><a href="history.php">History</a></li>
@@ -69,29 +87,7 @@ include 'koneksi.php'
   
   <div class="container">
   <div class="row">
-        <div class="col-3">
-<!-- kategori -->
-          <br><br><br><br><br><br>
- <form action="kategoritampung.php" method="get">
-  <ul class="nav-menu">
-          <li class=" menu-has-children">
-            <a href="#" >Pilih Kategori Buku</a>
-              <ul>              
-                <?php 
-                  $ambil=$koneksi->query("SELECT * FROM kategori");
-                  while($perkategori=$ambil->fetch_assoc()){
-                ?>                        
-                  <li  value="<?php echo $perkategori['nama_kategori'] ?>">
-                    <a href="" onchange="this.form.submit();"> 
-                      <?php echo $perkategori['nama_kategori'] ?>
-                    </a>
-                  </li>                                       
-                <?php } ?>              
-              </ul>
-          </li> 
-  </ul>
- </form>
-
+        <div class="col">
           <div class="list">
                     <form class="" action="kategoritampung.php" method="get">
                         <div class="kategori">
@@ -112,7 +108,7 @@ include 'koneksi.php'
             </div>        
           </div>
 <!-- daftar buku -->
-        <div class="col-9">
+        <div class="col-10">
         <br><br><br>
         <h3 class="buku">Daftar Buku</h3>
         <br><br>
