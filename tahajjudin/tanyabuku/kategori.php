@@ -85,7 +85,7 @@ include 'koneksi.php'
   </header>
   <div class="container">
   <div class="row">
-        <div class="col-3">
+        <!-- <div class="col-3">
         <br><br><br><br><br><br>
           <div class="list">
                     <form class="" action="kategoritampung.php" method="get">
@@ -105,9 +105,10 @@ include 'koneksi.php'
                           </div>        
                   </form>
             </div>        
-          </div>
+          </div> -->
+          <div class="col-2"></div>
 <!-- daftar buku -->
-        <div class="col-9">
+        <div class="col-8">
         <br><br><br>
         <h3 class="buku">Daftar Buku</h3>
         <br><br>
