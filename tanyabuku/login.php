@@ -47,7 +47,7 @@ include 'koneksi.php';
       <div class="col-lg-4"></div>
   		<div class="col-lg-4">
         <br><br><br>
-  			<div class="panel panel-default container box">
+  			<div class="panel panel-default container box3">
   				<div class="panel-heading">
   					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
   					<br>
