@@ -2,7 +2,12 @@
 session_start();
 include 'koneksi.php'
  ?>
-<!DOCTYPE html>
+
+ <?php 
+$ambil=$koneksi->query("SELECT * FROM pelanggan WHERE id_pelanggan='$_GET[id]'");
+$pecah=$ambil->fetch_assoc();
+ ?>
+ <!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -37,7 +42,8 @@ include 'koneksi.php'
    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 
-<body class="body2">
+<body class="body2"><!-- 
+	<pre><?php echo print_r($_SESSION) ?></pre> -->
 
   <?php include 'navbar.php'; ?>
 
@@ -47,8 +53,6 @@ include 'koneksi.php'
       <div class="col-lg-4">
         <div class="panel panel-default container box">
           <div class="panel-heading">
-            <br>
-            <br>
           <center>  <h3 class="panel-title">Profil Pelanggan</h3> </center>
             <br>
     </div>
@@ -57,29 +61,30 @@ include 'koneksi.php'
 
               <div class="form-group">
                 <label>Email</label>
-                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['email_pelanggan'] ?>" class="form-control">
+                <input type="text" name="email" class="form-control" value="<?php echo $_SESSION['pelanggan']['email_pelanggan'] ?>">
               </div>
 
               <div class="form-group">
                 <label>Password</label>
-                <input type="password" readonly value="<?php echo $_SESSION['pelanggan']['password_pelanggan'] ?>" class="form-control">
+                 <input type="password" name="pass" class="form-control" value="<?php echo $_SESSION['pelanggan']['password_pelanggan'] ?>">
               </div>
 
                <div class="form-group">
                 <label>Nama Pelanggan</label>
-                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>" class="form-control">
+                <input type="text" name="nama" class="form-control" value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>">
               </div>
 
               <div class="form-group">
                 <label>Telepon</label>
-                <input type="number" readonly value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>" class="form-control">
+                 <input type="number" name="telepon" class="form-control" value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>">
               </div>
 
            <div class="form-group">
                 <label>Alamat</label>
-                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
+                 <input type="text" name="alamat" class="form-control" value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>">
               </div>
-<a class="btn btn-primary" href="ubahprofil.php" role="button">Ubah</a>
+
+            <button class="btn btn-primary" name="ubah">Ubah</button>
             </form>
           </div>
         </div>
@@ -87,3 +92,16 @@ include 'koneksi.php'
       <div class="col-lg-4"></div>
     </div>
   </div>
+
+  <?php 
+if (isset($_POST['ubah']))
+{
+
+		$koneksi->query("UPDATE pelanggan SET email_pelanggan='$_POST[email]',password_pelanggan='$_POST[pass]',nama_pelanggan='$_POST[nama]',telepon_pelanggan='$_POST[telepon]',alamat_pelanggan='$_POST[alamat]'
+			WHERE id_pelanggan='$_GET[id]'");
+
+	echo "<script> alert('Data Pelanggan Telah Diubah');</script>";
+
+}
+	
+  ?>
