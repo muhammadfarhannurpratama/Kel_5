@@ -1338,6 +1338,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /* Contact Section
 --------------------------------*/
 #contact {
+  background-image: url(admin/assetss/img/food.png);
   background:skyblue;
 }
 

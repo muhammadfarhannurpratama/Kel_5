@@ -134,7 +134,7 @@ include 'koneksi.php'
   </section>
 
   <!--==========================Contact Section============================-->
-  <section id="contact" class="padd-section wow fadeInUp">
+  <section id="contact" class="padd-section wow fadeInUp" style="background-image: url()">
 
     <div class="container">
       <div class="section-title text-center">
