@@ -37,7 +37,7 @@ include 'koneksi.php'
    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 
-<body>
+<body class="body2">
 
   <?php include 'navbar.php'; ?>
 
