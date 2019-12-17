@@ -38,10 +38,10 @@
 
           $.ajax({
             type: 'POST',
-            url: 'kota.php',
+            url: 'kabupaten.php',
             data: 'prov_id='+provinsi_id,
             success: function(response) {
-              $('#kota').html(response);
+              $('#kabupaten').html(response);
             }
           });
       })
@@ -52,15 +52,34 @@
   <script>
     
     $(document).ready(function() {
-      $('#kota').change(function(){
-          var kota_id = $(this).val();
+      $('#kabupaten').change(function(){
+          var kabupaten_id = $(this).val();
 
           $.ajax({
             type: 'POST',
             url: 'kecamatan.php',
-            data: 'kabupaten_id='+kota_id,
+            data: 'kabupaten_id='+kabupaten_id,
             success: function(response) {
               $('#kecamatan').html(response);
+            }
+          });
+      })
+
+    });
+
+  </script>
+  <script>
+    
+    $(document).ready(function() {
+      $('#kecamatan').change(function(){
+          var kecamatan_id = $(this).val();
+
+          $.ajax({
+            type: 'POST',
+            url: 'kelurahan.php',
+            data: 'kecamatan_id='+kecamatan_id,
+            success: function(response) {
+              $('#kelurahan').html(response);
             }
           });
       })
@@ -117,24 +136,34 @@
                 <select name="provinsi" id="provinsi" class="form-control" required>
                   <option value="">Pilih Provinsi</option>
                   <?php while($row_provinsi = mysqli_fetch_array($sql_provinsi)) { ?>
-                  <option value="<?php echo $row_provinsi['id_prov'] ?>"><?php echo $row_provinsi['nama_prov'] ?></option>
+                  <option value="<?php echo $row_provinsi['id_prov'] ?>"><?php echo $row_provinsi['nama'] ?></option>
                 <?php } ?>
                 </select>
               </div>
               <div class="form-group">
-                <label>Kota</label>
-                <?php $sql_kota=$koneksi->query("SELECT * FROM kota"); ?>
-                <select name="kota" id="kota" class="form-control" required>
-                  <option value="">Pilih Kota</option>
-                  <?php while($row_kota = mysqli_fetch_array($sql_kota)) { ?>
-                  <option value="<?php echo $row_kota['id_kabkot'] ?>"><?php echo $row_kota['nama_kabkot'] ?></option>
+                <label>Kabupaten</label>
+                <?php $sql_kabupaten=$koneksi->query("SELECT * FROM kabupaten"); ?>
+                <select name="kabupaten" id="kabupaten" class="form-control" required>
+                  <option value="">Pilih Kabupaten</option>
+                  <?php while($row_kabupaten = mysqli_fetch_array($sql_kabupaten)) { ?>
+                  <option value="<?php echo $row_kabupaten['id_kab'] ?>"><?php echo $row_kabupaten['nama'] ?></option>
                 <?php } ?>
                 </select>
               </div>
               <div class="form-group">
                 <label>Kecamatan</label>
+                <?php $sql_kecamatan=$koneksi->query("SELECT * FROM kecamatan"); ?>
                 <select name="kecamatan" id="kecamatan" class="form-control" required>
                   <option value="">Pilih Kecamatan</option>
+                  <?php while($row_kecamatan = mysqli_fetch_array($sql_kecamatan)) { ?>
+                  <option value="<?php echo $row_kecamatan['id_kec'] ?>"><?php echo $row_kecamatan['nama'] ?></option>
+                <?php } ?>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Kelurahan</label>
+                <select name="kelurahan" id="kelurahan" class="form-control" required>
+                  <option value="">Pilih Kelurahan</option>
                   <option></option>
                 </select>
               </div>
@@ -162,7 +191,7 @@
   						$alamat=$_POST['alamat'];
   						$telepon=$_POST['telepon'];
               $provinsi=$_POST['provinsi'];
-              $kota=$_POST['kota'];
+              $kabupaten=$_POST['kabupaten'];
               $kecamatan=$_POST['kecamatan'];
 
   						//cek email sudah digunakan /belum
@@ -176,7 +205,7 @@
   						else
   						{
   							//query insert ke tabel pelanggan
-  							$koneksi->query("INSERT INTO pelanggan (email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan,alamat_pelanggan,provinsi,kota,kecamatan) VALUES ('$email','$password','$nama','$telepon','$alamat','$provinsi','$kota','$kecamatan')");
+  							$koneksi->query("INSERT INTO pelanggan (email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan,alamat_pelanggan,provinsi,kota,kecamatan) VALUES ('$email','$password','$nama','$telepon','$alamat','$provinsi','$kabupaten','$kecamatan')");
 
   							echo "<script>alert('Pendaftaran Berhasil, Silahkan Login !');</script>";
   							echo "<script>location='login.php';</script>";
