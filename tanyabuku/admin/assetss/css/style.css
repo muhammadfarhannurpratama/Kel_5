@@ -1564,3 +1564,32 @@ h3{
     left: 35%;
   }
 }
+
+/* profil */
+.box-profil{
+  height: 550px;
+  width: 75%;
+  background-color: lightgray;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 175px;
+}
+.panel{
+  height: 150px;
+  width: 150px;
+  background-color: rgb(137, 28, 28);
+  color: white;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.panel h3{
+  font-size: initial;
+  line-height: 150px;
+}

@@ -37,22 +37,20 @@ include 'koneksi.php'
    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 
-<body class="body2">
+<body class="">
 
   <?php include 'navbar.php'; ?>
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-4"></div>
-      <div class="col-lg-4">
-        <div class="panel panel-default container box">
-          <div class="panel-heading">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        <div class="container">
+          <div class="panel">
+              <center>  <h3>Profil Pelanggan</h3> </center>
+          </div>
+          <div class="panel-body box-profil">
             <br>
-            <br>
-          <center>  <h3 class="panel-title">Profil Pelanggan</h3> </center>
-            <br>
-    </div>
-          <div class="panel-body">
             <form method="post">
 
               <div class="form-group">
@@ -75,15 +73,15 @@ include 'koneksi.php'
                 <input type="number" readonly value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>" class="form-control">
               </div>
 
-           <div class="form-group">
+              <div class="form-group">
                 <label>Alamat</label>
                 <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
               </div>
-<a class="btn btn-primary" href="ubahprofil.php" role="button">Ubah</a>
+              <center><a class="btn btn-primary" href="ubahprofil.php" role="button">Ubah</a></center>
             </form>
           </div>
         </div>
       </div>
-      <div class="col-lg-4"></div>
+      <div class="col-lg-2"></div>
     </div>
   </div>
