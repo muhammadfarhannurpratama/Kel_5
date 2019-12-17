@@ -35,7 +35,7 @@ include 'koneksi.php';
   <link href="admin/assetss/css/style.css" rel="stylesheet">
 </head>
 
-<body class="body3">
+<body>
 
   <?php include 'navbar.php'; ?>
   <br>

@@ -80,7 +80,7 @@
   
 </head>
 
-<body class="body2">
+<body>
 
  <?php include 'navbar.php'; ?>
  <br>
