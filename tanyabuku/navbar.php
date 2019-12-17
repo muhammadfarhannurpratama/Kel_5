@@ -33,7 +33,7 @@
             <li><a href="logout.php">Logout</a></li>
           <!--jika belum login ( belum ada SESSION pelanggan)-->
       <?php else :  ?>
-      <li class="menu-has-children"><a href="">Daftar</a>
+      <li class="menu-has-children"><a href="#">Daftar</a>
             <ul>
               <li><a href="daftar.php">Daftar</a></li>
               <li><a href="login.php">Masuk</a></li>
