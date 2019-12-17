@@ -40,13 +40,31 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  <script src="js/jquery.js"></script>
+  <script>
+      $(document).ready(function(){
+        $("#form-input").css("display","none"); //Menghilangkan form-input ketika pertama kali dijalankan
+            $(".detail").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
+              if ($("input[name='alamat']:checked").val() == "berbeda" ) { //Jika radio button "berbeda" dipilih maka tampilkan form-inputan
+                  $("#form-input").slideDown("fast"); //Efek Slide Down (Menampilkan Form Input)
+              } else {
+                  $("#form-input").slideUp("fast");  //Efek Slide Up (Menghilangkan Form Input)
+              }
+          });
+        });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#form-input2").css("display","none"); //Menghilangkan form-input ketika pertama kali dijalankan
+            $(".detail").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
+              if ($("input[name='alamat']:checked").val() == "sama" ) { //Jika radio button "berbeda" dipilih maka tampilkan form-inputan
+                  $("#form-input2").slideDown("fast"); //Efek Slide Down (Menampilkan Form Input)
+              } else {
+                  $("#form-input2").slideUp("fast");  //Efek Slide Up (Menghilangkan Form Input)
+              }
+          });
+        });
+    </script>
 </head>
 
 <body>
@@ -105,7 +123,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 
       <form method="post">  
         
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-4">
             <div class="form-group">
               <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>" class="form-control"></div>
@@ -129,11 +147,30 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
               <?php } ?>
             </select>
           </div>
-        </div>
-        <div class="form-group">
-          <label>Alamat Lengkap Pengiriman</label>
-          <textarea class="form-control" name="alamat_pengiriman" placeholder="Masukkan Alamat Pengiriman"></textarea>
-        </div>
+        </div> -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <h3>Alamat Tujuan Pengiriman</h3>
+              <input type="radio" name="alamat" value="sama" class="detail" required> Sesuai Profil
+              <div id="form-input2" class="form-group">
+                <label>Nama Pengirim</label>
+                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>" class="form-control">
+                <label>Alamat Lengkap Pengiriman</label>
+                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="radio" name="alamat" value="berbeda" class="detail"> Dropship 
+              <div id="form-input" class="form-group">
+                <label>Nama Pengirim</label>
+                <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Pengirim">
+                <label>Alamat Lengkap Pengiriman</label>
+                <textarea class="form-control" name="alamat_pengiriman" placeholder="Masukkan Alamat Pengiriman"></textarea>
+              </div> 
+            </div>
+          </div>
+        </div>       
         <button class="btn btn-primary " name="checkout">Checkout</button>
       </form>
 
