@@ -37,7 +37,7 @@ include 'koneksi.php'
    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 
-<body class="">
+<body>
 
   <?php include 'navbar.php'; ?>
 
@@ -46,13 +46,11 @@ include 'koneksi.php'
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <div class="container">
-          <div class="panel">
+          <div class="profil">
               <center>  <h3>Profil Pelanggan</h3> </center>
           </div>
-          <div class="panel-body box-profil">
-            <br>
+          <div class="box-profil">
             <form method="post">
-
               <div class="form-group">
                 <label>Email</label>
                 <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['email_pelanggan'] ?>" class="form-control">

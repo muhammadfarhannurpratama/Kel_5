@@ -90,7 +90,7 @@
   	<div class="row">
       <div class="col-lg-4"></div>
   		<div class="col-lg-4">
-  			<div class="panel panel-default container box1">
+  			<div class="container box1">
   				<div class="panel-heading">
   				<center>	<h3 class="panel-title">Daftar Pelanggan</h3> </center>
   					<br>

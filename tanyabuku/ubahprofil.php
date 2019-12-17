@@ -42,21 +42,20 @@ $pecah=$ambil->fetch_assoc();
    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
 </head>
 
-<body class="body2"><!-- 
+<body class=""><!-- 
 	<pre><?php echo print_r($_SESSION) ?></pre> -->
 
   <?php include 'navbar.php'; ?>
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-4"></div>
-      <div class="col-lg-4">
-        <div class="panel panel-default container box">
-          <div class="panel-heading">
-          <center>  <h3 class="panel-title">Profil Pelanggan</h3> </center>
-            <br>
-    </div>
-          <div class="panel-body">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+        <div class="container">
+          <div class="profil">
+          <center>  <h3 class="">Profil Pelanggan</h3> </center>
+          </div>
+          <div class="box-profil">
             <form method="post">
 
               <div class="form-group">
@@ -84,12 +83,12 @@ $pecah=$ambil->fetch_assoc();
                  <input type="text" name="alamat" class="form-control" value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>">
               </div>
 
-            <button class="btn btn-primary" name="ubah">Ubah</button>
+            <center><button class="btn btn-primary" name="ubah">Ubah</button></center>
             </form>
           </div>
         </div>
       </div>
-      <div class="col-lg-4"></div>
+      <div class="col-lg-2"></div>
     </div>
   </div>
 
