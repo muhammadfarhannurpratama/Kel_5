@@ -57,9 +57,9 @@
   height: 400px;
   width: 250px;
   margin-top: 5%;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5),  -1px -1px 5px rgba(0,0,0,0.5);
   padding: 25px;
-  background: white;
+  background-color: rgba(255, 255, 255, 0.5);
   -webkit-transition: .3s;
   -moz-transition: .3s;
   -ms-transition: .3s;
@@ -67,6 +67,7 @@
 }
 .box2:hover{
   box-shadow: 1px 1px 10px rgba(0,0,0,0.5),  -1px -1px 10px rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   transition: .3s;
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
