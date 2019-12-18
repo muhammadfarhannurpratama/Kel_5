@@ -1,10 +1,7 @@
-<header id="header" class="header header-hide" style="background-color: rgba(255, 255, 255, 0.2)">
+<header id="header" class="header header-hide">
     <div class="container" style="">
       <div id="logo" class="pull-left">
-        <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
-
-        <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.php"><img src="ico/ico30.png" alt="" title="tanyabuku" /></a>
+        <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
       </div>
 
      <!--  <form action="pencarian.php" method="get" class="pull-left navbar">

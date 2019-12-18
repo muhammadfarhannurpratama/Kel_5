@@ -276,7 +276,8 @@ span {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -318,6 +319,9 @@ span {
 .scroll-header {
   background: #fff;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+#header .form-control{
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*--------------------------------------------------------------
@@ -529,7 +533,11 @@ span {
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-  color: #66dc78;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .nav-menu > li {
@@ -558,7 +566,11 @@ span {
 }
 
 .nav-menu ul li:hover > a {
-  color: #71c55d;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .nav-menu ul ul {
