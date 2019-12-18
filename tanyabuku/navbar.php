@@ -1,10 +1,18 @@
-<header id="header" class="header header-hide" style="background-color: rgba(255, 255, 255, 0.2)">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <!-- Main Stylesheet File -->
+    <link href="admin/assetss/css/style.css" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="header header-hide">
     <div class="container" style="">
       <div id="logo" class="pull-left">
-        <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
-
-        <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.php"><img src="ico/ico30.png" alt="" title="tanyabuku" /></a>
+        <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1>
       </div>
 
      <!--  <form action="pencarian.php" method="get" class="pull-left navbar">
@@ -43,7 +51,10 @@
         </ul>
       </nav>
       <form action="pencarian.php" method="get" class="pull-center navbar">
-          <input type="text" class="form-control" name="keyword" placeholder="Cari Buku ">
+          <input type="text" class="form-control " name="keyword" placeholder="Cari Buku ">
       </form>
     </div>
   </header>
+
+</body>
+</html>

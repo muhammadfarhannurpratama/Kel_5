@@ -21,9 +21,12 @@
 @media screen and (max-width: 480px) {
   .body2 {
   background:none;
-  background-color: #fff;
-
+  background-color: skyblue;
   }
+  .body3{
+    background:url(../img/book.jpg)no-repeat center;
+    
+}
 }
 
 /* box family */
@@ -276,7 +279,7 @@ span {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background:rgba(255, 255, 255, 0.2);
   position: fixed;
   left: 0;
   top: 0;
@@ -285,7 +288,11 @@ span {
   z-index: 3;
   transition: all 0.5s ease;
 }
-
+@media screen and (max-width: 480px) {
+  #header{
+    background:white;
+  }
+}
 #header #logo {
   padding: 6px 0 0 0;
 }
@@ -319,13 +326,15 @@ span {
   background: #fff;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
-
+#header .pull-center .form-control{
+ background-color: rgba(255, 255, 255, 0.5);
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: calc(100vh - 40px);
+  height: calc(120vh - 40px);
   background: url(../img/kocheng.gif) center bottom no-repeat;
   background-color: white;
   background-size: 100%;
@@ -340,7 +349,17 @@ span {
 
   }
 }
-
+@media (max-width: 480px) {
+  #hero {
+    background: none;
+    background-color: skyblue;
+    margin-top: -150px;
+    height: calc(120vh - 40px);
+  }
+  #hero .hero-container{
+    margin-top: 120px;
+  }
+}
 #hero .hero-container {
   position: absolute;
   bottom: 0;
@@ -367,8 +386,9 @@ span {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 25px;
+    line-height: 30px;
+    color: #ffffff;
   }
 }
 
@@ -414,7 +434,36 @@ span {
   background: #71c55d;
   color: #fff;
 }
+@media screen and (max-width: 480px){
 
+  #hero .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 11px 36px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-bottom: 30px;
+    border: 2px solid #ffffff;
+    background: skyblue;
+    color: white;
+    text-decoration: none;
+  }
+  
+  #hero .btn-get-started:hover {
+    background: transparent;
+    color: white;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    border: 2px solid #ffffff;
+} 
+}
 #hero .btns a {
   color: #555;
   font-size: 11px;
@@ -516,16 +565,22 @@ span {
   display: inline-block;
   color: rgb(0, 0, 0);
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
   letter-spacing: 0;
   transition: 0.3s;
-  font-weight: 900;
+  font-weight: 500;
+  text-shadow: 2px 2px 5px white,-2px -2px 5px white ;
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-  color: #66dc78;
+  color: #000000;
+  text-shadow: 2px 2px 5px white,-2px -2px 5px white ;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 .nav-menu > li {
@@ -536,8 +591,6 @@ span {
 .nav-menu ul {
   margin: 0;
   padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  background: #fff;
 }
 
 .nav-menu ul li {
@@ -554,7 +607,7 @@ span {
 }
 
 .nav-menu ul li:hover > a {
-  color: #71c55d;
+  color: #000000;
 }
 
 .nav-menu ul ul {
@@ -871,13 +924,16 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
-  overflow: hidden;
-  
+  overflow: hidden;  
+}
+@media (max-width: 480px){
+  #video{
+    background-color: transparent;
+  }
 }
 
 #video .overlay {
-  height: 100%;
-  
+  height: 100%;  
 }
 
 #video .overlay .play-btn {
