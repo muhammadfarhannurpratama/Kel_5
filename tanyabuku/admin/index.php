@@ -56,12 +56,9 @@ if(!isset($_SESSION['admin']))
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
               <div class="profile_info">
-                <span>Selamat Datang,</span>
-                <h2>Haroen Mohammed</h2>
+                <span>Selamat Datang</span>
+                <h2><?php echo $_SESSION['admin']['nama_lengkap'] ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
