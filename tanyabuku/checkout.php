@@ -65,6 +65,87 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
           });
         });
     </script>
+    <script>
+      $(document).ready(function(){
+        $("#form-input1").css("display","none"); //Menghilangkan form-input ketika pertama kali dijalankan
+            $(".det").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
+              if ($("input[name='kurir']:checked").val() == "JNE" ) { //Jika radio button "berbeda" dipilih maka tampilkan form-inputan
+                  $("#form-input1").slideDown("fast"); //Efek Slide Down (Menampilkan Form Input)
+              } else {
+                  $("#form-input1").slideUp("fast");  //Efek Slide Up (Menghilangkan Form Input)
+              }
+          });
+        });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $("#form-input3").css("display","none"); //Menghilangkan form-input ketika pertama kali dijalankan
+            $(".det").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
+              if ($("input[name='kurir']:checked").val() == "J&T" ) { //Jika radio button "berbeda" dipilih maka tampilkan form-inputan
+                  $("#form-input3").slideDown("fast"); //Efek Slide Down (Menampilkan Form Input)
+              } else {
+                  $("#form-input3").slideUp("fast");  //Efek Slide Up (Menghilangkan Form Input)
+              }
+          });
+        });
+    </script>
+    <script>
+    
+    $(document).ready(function() {
+      $('#provinsi').change(function(){
+          var provinsi_id = $(this).val();
+
+          $.ajax({
+            type: 'POST',
+            url: 'kabupaten.php',
+            data: 'prov_id='+provinsi_id,
+            success: function(response) {
+              $('#kabupaten').html(response);
+            }
+          });
+      })
+
+    });
+
+  </script>
+  <script>
+    
+    $(document).ready(function() {
+      $('#kabupaten').change(function(){
+          var kabupaten_id = $(this).val();
+
+          $.ajax({
+            type: 'POST',
+            url: 'kecamatan.php',
+            data: 'kabupaten_id='+kabupaten_id,
+            success: function(response) {
+              $('#kecamatan').html(response);
+            }
+          });
+      })
+
+    });
+
+  </script>
+  <script>
+    
+    $(document).ready(function() {
+      $('#kecamatan').change(function(){
+          var kecamatan_id = $(this).val();
+
+          $.ajax({
+            type: 'POST',
+            url: 'kelurahan.php',
+            data: 'kecamatan_id='+kecamatan_id,
+            success: function(response) {
+              $('#kelurahan').html(response);
+            }
+          });
+      })
+
+    });
+
+  </script>
 </head>
 
 <body>
@@ -163,10 +244,68 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
             <div class="form-group">
               <input type="radio" name="alamat" value="berbeda" class="detail"> Dropship 
               <div id="form-input" class="form-group">
-                <label>Nama Pengirim</label>
-                <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Pengirim">
-                <label>Alamat Lengkap Pengiriman</label>
-                <textarea class="form-control" name="alamat_pengiriman" placeholder="Masukkan Alamat Pengiriman"></textarea>
+              <div class="row" >
+                <div class="col-md-4">
+                  <label>Nama Pengirim</label>
+                  <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Pengirim">
+                  <label>Pilih Provinsi</label>
+                  <?php $sql_provinsi=$koneksi->query("SELECT * FROM provinsi"); ?>
+                  <select name="provinsi" id="provinsi" class="form-control" required>
+                    <option value="">Pilih Provinsi</option>
+                    <?php while($row_provinsi = mysqli_fetch_array($sql_provinsi)) { ?>
+                    <option value="<?php echo $row_provinsi['id_prov'] ?>"><?php echo $row_provinsi['nama'] ?></option>
+                  <?php } ?>
+                  </select>
+                  <label>Pilih Kabupaten</label>
+                  <?php $sql_kabupaten=$koneksi->query("SELECT * FROM kabupaten"); ?>
+                  <select name="kabupaten" id="kabupaten" class="form-control" required>
+                    <option value="">Pilih Kabupaten</option>
+                    <?php while($row_kabupaten = mysqli_fetch_array($sql_kabupaten)) { ?>
+                    <option value="<?php echo $row_kabupaten['id_kab'] ?>"><?php echo $row_kabupaten['nama'] ?></option>
+                  <?php } ?>
+                  </select>
+                  <label>Pilih Kecamatan</label>
+                  <?php $sql_kecamatan=$koneksi->query("SELECT * FROM kecamatan"); ?>
+                  <select name="kecamatan" id="kecamatan" class="form-control" required>
+                    <option value="">Pilih Kecamatan</option>
+                    <?php while($row_kecamatan = mysqli_fetch_array($sql_kecamatan)) { ?>
+                    <option value="<?php echo $row_kecamatan['id_kec'] ?>"><?php echo $row_kecamatan['nama'] ?></option>
+                  <?php } ?>
+                  </select>
+                  <label>Pilih Kelurahan</label>
+                  <select name="kelurahan" id="kelurahan" class="form-control" required>
+                    <option value="">Pilih Kelurahan</option>
+                    <option></option>
+                  </select>
+                  </div>
+                  <div class="col-md-8">
+                  <label>Alamat Lengkap Pengiriman</label>
+                  <textarea class="form-control" name="alamat_pengiriman" placeholder="Masukkan Alamat Pengiriman" style="height: 180px;"></textarea>
+                  <label>Pilih Jasa Pengiriman</label><br>
+                  <input type="radio" name="kurir" value="JNE" class="det" required> JNE
+                  <input type="radio" name="kurir" value="J&T" class="det"> J&T Express
+                  <div id="form-input1" class="form-group">
+                      <label>Ongkos Kirim JNE</label>
+                        <select class="form-control" name="ongkir">
+                          <option value="Lunas">Lunas</option>
+                          <option value="Proses Packing">Proses Packing</option>
+                          <option value="Barang Telah Dikirim">Barang Telah Dikirim</option>
+                          <option value="Barang Telah Dikirim">Barang Diterima</option>
+                          <option value="Batal">Batal</option>
+                        </select>
+                    </div>
+                    <div id="form-input3" class="form-group">
+                      <label>Ongkos Kirim J&T Express</label>
+                        <select class="form-control" name="ongkir">
+                          <option value="Lunas">J&T Murah</option>
+                          <option value="Proses Packing">Murah yukk</option>
+                          <option value="Barang Telah Dikirim">Barang Telah Dikirim</option>
+                          <option value="Barang Telah Dikirim">Barang Diterima</option>
+                          <option value="Batal">Batal</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
               </div> 
             </div>
           </div>
