@@ -18,7 +18,20 @@
           <li><a href="#get-started">Best Seller</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#about-us">About</a></li>
-          <li><a href="kategori.php">Buku</a></li>
+          <li><a href="kategori.php"class="menu-has-children">Kategori</a>
+             <ul>
+               <?php 
+                  $ambil=$koneksi->query("SELECT * FROM kategori");
+                  while($perkategori=$ambil->fetch_assoc()){
+                ?>                        
+                  <li  value="<?php echo $perkategori['nama_kategori'] ?>" onchange="this.form.submit();">
+                      <a href="kategoritampung.php?nama_kategori=<?=$perkategori['nama_kategori']  ?>">
+                        <?php echo $perkategori['nama_kategori'] ?>
+                      </a>
+                  </li>                                       
+                <?php } ?>
+            </ul>
+          </li>
           <li><a href="keranjang.php">Keranjang</a></li>
 
           <!--jika sudah login (ada SESSION profil)-->

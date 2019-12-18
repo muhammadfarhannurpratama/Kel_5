@@ -44,69 +44,8 @@ include 'koneksi.php'
          <a href="index.php"><img src="ico/ico30.png" alt="" title="tanyabuku" /></a>
       </div>
 
-<!-- #nav-menu-container -->
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="checkout.php">Checkout</a></li>
-<!-- kategori -->
-          <li class=" menu-has-children">
-            <a href="#" >Pilih Kategori Buku</a>
-              <ul>   
-              <form action="kategoritampung.php" method="get">           
-                <?php 
-                  $ambil=$koneksi->query("SELECT * FROM kategori");
-                  while($perkategori=$ambil->fetch_assoc()){
-                ?>                        
-                  <li  value="<?php echo $perkategori['nama_kategori'] ?>" onchange="this.form.submit();">
-                      <a href="kategoritampung.php?">
-                        <?php echo $perkategori['nama_kategori'] ?>
-                      </a>
-                  </li>                                       
-                <?php } ?>  
-              </form>             
-              </ul> 
-          </li>       
-<!--jika sudah login (ada SESSION pelanggan)-->
-          <?php if (isset($_SESSION['pelanggan'])): ?>
-            <li><a href="history.php">History</a></li>
-            <li><a href="logout.php">Logout</a></li>
-<!--jika belum login ( belum ada SESSION pelanggan)-->
-      <?php else :  ?>
-      <li class="menu-has-children"><a href="#">Daftar</a>
-            <ul>
-              <li><a href="daftar.php">Daftar</a></li>
-              <li><a href="login.php">Masuk</a></li>
-            </ul>
-          </li> 
-          <?php endif ?>          
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  <div class="container">
-  <div class="row">
-        <div class="col">
-          <div class="list">
-                    <form class="" action="kategoritampung.php" method="get">
-                        <div class="kategori">
-                            <select class="" name="kategori" onchange="this.form.submit();">
-                                <option value="" class="option1"><h3>Pilih Kategori</h3></option>
-                                <?php 
-                                        $ambil=$koneksi->query("SELECT * FROM kategori");
-                                        while($perkategori=$ambil->fetch_assoc()){
-                                ?>                        
-                                      <option  value="<?php echo $perkategori['nama_kategori'] ?>">
-                                        <?php echo $perkategori['nama_kategori'] ?>
-                                      </option>
-                                        
-                                <?php } ?>
-                              </select>
-                          </div>        
-                  </form>
-            </div>        
-          </div>
+   <?php include 'navbar.php'; ?>
+ 
 <!-- daftar buku -->
         <div class="col-10">
         <br><br><br>

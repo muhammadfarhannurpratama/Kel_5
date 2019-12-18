@@ -3,9 +3,9 @@ session_start();
 include 'koneksi.php';
 
 // if (isset($_POST['submit'])){
-    $kategori=$_GET['kategori'];
+    $kategori=$_GET['nama_kategori'];
     // var_dump($kategori);
-    $ambil=$koneksi->query("SELECT * FROM produk WHERE nama_kategori='$kategori'");
+    $ambile=$koneksi->query("SELECT * FROM produk WHERE nama_kategori='$kategori'");
 ?>
 
 <!DOCTYPE html>
@@ -50,30 +50,7 @@ include 'koneksi.php';
          <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
       </div>
 
-     <?php include 'navbar.php'; ?>
-
-<!-- #nav-menu-container -->
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="checkout.php">Checkout</a></li>
-<!--jika sudah login (ada SESSION pelanggan)-->
-          <?php if (isset($_SESSION['pelanggan'])): ?>
-            <li><a href="history.php">History</a></li>
-            <li><a href="logout.php">Logout</a></li>
-<!--jika belum login ( belum ada SESSION pelanggan)-->
-      <?php else :  ?>
-      <li class="menu-has-children"><a href="">Daftar</a>
-            <ul>
-              <li><a href="daftar.php">Daftar</a></li>
-              <li><a href="login.php">Masuk</a></li>
-            </ul>
-      </li> 
-          <?php endif ?>          
-        </ul>
-      </nav>
-    </div>
-  </header>
+ <?php include 'navbar.php'; ?>
 
   <br><br><br>
   <div class="container">
@@ -81,17 +58,18 @@ include 'koneksi.php';
   <div class="col-3">
   </div>
  <div class="col-9">
-<!-- Tampilan Buku-->
-        <h3><center>Daftar Buku</center></h3>
+<!-- daftar buku -->
+        <div class="col-10">
+        <br><br><br>
+        <h3 class="buku">Daftar Buku</h3>
         <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
                 <div class="row">
-                    
-                    <?php while($perproduk=$ambil->fetch_assoc()){ ?>
+                    <?php while($perproduk=$ambile->fetch_assoc()){ ?>
                     <div class="col-md-3">
                       <div class="box">
-                        <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
+                         <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
                         <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" height="200" width="140"
                         style="color: black">
                         </a>                          
@@ -101,7 +79,8 @@ include 'koneksi.php';
                         </div>
                         <br>
                         <a href="beli.php?id=<?php echo $perproduk['id_produk']; ?>" class="beli btn btn-outline-success" style=" font-size: 14px;">Beli</a>       
-                      </div>      
+                      </div>
+       
                     </div>
                     <?php } ?>
                 </div>
@@ -110,23 +89,7 @@ include 'koneksi.php';
         </div>
     </div>
   </div>
-<!-- kategori -->
-      <div class="list">
-          <form class="" action="kategori.php" method="get">
-              <div class="kategori">
-                  <select class="" name="kategori" onchange="this.form.submit();">
-                      <option value="" class="option1"><h3>Pilih Kategori</h3></option>
-                      <?php 
-                              $ambil=$koneksi->query("SELECT * FROM kategori");
-                              while($perkategori=$ambil->fetch_assoc()){
-                      ?>                        
-                              <option  value="<?php echo $perkategori['nama_kategori'] ?>">
-                              <?php echo $perkategori['nama_kategori'] ?></option>
-                              
-                      <?php } ?>
-                    </select>
-                  </div>        
-        </form>
-      </div>
+<br><br><br><br>
+
   </body>
   </html>
