@@ -35,7 +35,7 @@ include 'koneksi.php';
   <link href="admin/assetss/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="body3">
 
   <?php include 'navbar.php'; ?>
   <br>
@@ -47,28 +47,23 @@ include 'koneksi.php';
       <div class="col-lg-4"></div>
   		<div class="col-lg-4">
         <br><br><br>
-  			<div class="container box3">
-  				<div class="panel-heading">
-  					<h3 class="panel-title"><center>Login Pelanggan</center></h3>
-  					<br>
-
-  				</div>
+  			  <div class="container box3">
+  				  <div class="panel-heading">
+  					<h3><center>Login Pelanggan</center></h3><br>
+  				  </div>
   				<div class="panel-body">
   					<form method="post">
   						<div class="form-group">
   							<label>Email</label>
-  							<input type="email" class="form-control" name="email">
+  							<input type="email" class="form-control" name="email" placeholder="Masukan Username">
   						</div>
   						<div class="form-group">
   							<label>Password</label>
-  							<input type="password" class="form-control" name="password">
+  							<input type="password" class="form-control" name="password" placeholder="Masukan Password">
   						</div>
                 <div>
-                  <center>
                   <button class="btn btn-primary tomb" name="login" style="margin-right: 120px">Masuk</button> 
-                  <a class="btn btn-primary tomb" href="daftar.php" role="button">Daftar</a>
-                  
-                  </center>
+                  <a class="btn btn-primary tomb" href="daftar.php" role="button">Daftar</a>                  
                 </div>
   					</form>
   				</div>

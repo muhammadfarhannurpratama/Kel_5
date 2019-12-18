@@ -1,4 +1,4 @@
-<header id="header" class="header header-hide">
+<header id="header" class="header header-hide" style="background-color: rgba(255, 255, 255, 0.2)">
     <div class="container" style="">
       <div id="logo" class="pull-left">
         <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
