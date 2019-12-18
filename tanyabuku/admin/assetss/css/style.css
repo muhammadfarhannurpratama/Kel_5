@@ -11,7 +11,7 @@
 
 .body2 {
   background:url(../img/sun.png);
-  background-color: #ffff;
+  background-color: #fff;
 }
 .body3{
   background:url(../img/book.jpg)no-repeat center;
@@ -325,7 +325,7 @@ span {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: calc(100vh - 40px);
+  height: calc(120vh - 40px);
   background: url(../img/kocheng.gif) center bottom no-repeat;
   background-color: white;
   background-size: 100%;
@@ -333,7 +333,11 @@ span {
   margin-top: 0;
   background-position-y: bottom;
 }
-
+@media screen and (max-width: 480px){
+  #hero{
+    height: calc(106vh - 40px);
+  }
+}
 @media (min-width: 1025px) {
   #hero {
     background-attachment: fixed;
