@@ -14,6 +14,7 @@
   background-color: #fff;
 }
 /* --------------.body3----------- */
+/* --------Desktop------- */
 @media (min-width: 992px) { 
   .body3{
     background:url(../img/book.jpg)no-repeat center;
@@ -30,10 +31,11 @@
     position: absolute;
   }
 }
+/* --------Phone------- */
 .body3{
   background:url(../img/book.jpg)no-repeat center;
   background-size: cover;
-  height: 900px ;
+  height: 745px ;
   width: height: 900px ;
   position: relative;
 }
