@@ -16,7 +16,16 @@
 .body3{
   background:url(../img/book.jpg)no-repeat center;
   background-size: cover;
-
+  position: relative;
+}
+.body3::after{
+  content: "";
+  display: block;
+  height: 75px;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(255,255,255,0.5),rgba(255,255,255,0.5));
+  top: 0;
+  position: absolute;
 }
 @media screen and (max-width: 480px) {
   .body2 {
