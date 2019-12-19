@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.body2 {
-  background:url(../img/sun.png);
-  background-color: #fff;
-}
 /* --------------.body3----------- */
 /* --------Desktop------- */
 @media (min-width: 992px) { 
@@ -30,6 +26,10 @@
   position: relative;
 }
 /* --------------.body3 tutup----------- */
+.body2 {
+  background:url(../img/sun.png);
+  background-color: #fff;
+}
 @media screen and (max-width: 480px) {
   .body2 {
   background:none;
@@ -297,24 +297,31 @@ span {
 }
 
 /* -----------------Navbar----------------- */
+/* -------Desktop------ */
 @media (min-width: 992px){
-  #header {
-    background: rgba(255, 255, 255, 0);
-    box-shadow: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 54px;
-    z-index: 3;
-    transition: all 0.5s ease;
+  .pull-center .form-control{
+    width: 800px;
   }
 }
+
 /* -------Phone------ */
+#header {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 54px;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+.pull-center .form-control{
+  width: 250px;
+}
 #header #logo {
   padding: 6px 0 0 0;
 }
-
 #header #logo h1 {
   color: #505050;
   font-family: "Philosopher", sans-serif;
@@ -345,14 +352,9 @@ span {
   padding: 0;
   margin: 0;
 }
-.pull-center .form-control{
-  width: 90%;
-}
 /* -----------------Navbar Tutup----------------- */
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+/*-----------------Hero Section--------------------*/
 #hero {
   width: 100%;
   height: calc(120vh - 40px);
@@ -1563,27 +1565,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
 h3{
   line-height: 50px;
 }
-
-/* Profil*/
-@media screen and (max-width: 480px){
-  .navbar .form-control {
-    margin-bottom: 30px;
-    width: 90%;
-    
-  }
-}
-
-.round{
-  border-radius: 50%;
-}
-.round:hover{
- transform: scale(1.15);
- -webkit-transform: scale(1.15);
- -moz-transform: scale(1.15);
- -ms-transform: scale(1.15);
- -o-transform: scale(1.15);
-}
-
 
 /* tombol kategori */
 .kategori{
