@@ -2,7 +2,7 @@
 /* --------------.body----------- */
 /* --------Phone------- */
 .body{
-  background:url(../img/book3.jpg)no-repeat center;
+  background:url(../img/book34.jpg)no-repeat center;
   height: 50%;
   width: 100%;
   position: relative;
@@ -541,6 +541,7 @@ span {
 }
 /*-----------------Tampilan Awal Tutup--------------------*/
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -562,9 +563,24 @@ span {
 .nav-menu li {
   position: relative;
   white-space: nowrap;
-  
 }
-
+.nav-menu li ul{
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+}
+.nav-menu li ul li{
+  width: min-content;
+}
+.nav-menu li ul li:hover a{
+  display: inline-block;
+  text-shadow: -3px -3px 3px rgb(255, 255, 255),3px 3px 3px rgb(255, 255, 255) ;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 .nav-menu > li {
   float: left;
 }
@@ -741,7 +757,7 @@ span {
 }
 
 #mobile-nav ul li a:hover {
-  color: rgb(221, 230, 141);
+  color: rgb(230, 255, 5);
 }
 
 #mobile-nav ul li li {
@@ -754,11 +770,11 @@ span {
   z-index: 99;
   padding: 15px;
   cursor: pointer;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #ffffff;
+  color: #c8ff00;
 }
 
 #mobile-nav ul .menu-item-active {
