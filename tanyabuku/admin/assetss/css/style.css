@@ -2,11 +2,20 @@
 /* --------------.body----------- */
 /* --------Phone------- */
 .body{
-  background:url(../img/book.jpg)no-repeat center;
-  background-size: cover;
-  height: 100% ;
-  width: 900px ;
+  background:url(../img/book3.jpg)no-repeat center;
+  height: 50%;
+  width: 100%;
   position: relative;
+  background-size: cover;
+}
+.body::after{
+  content: "";
+  display: block;
+  height: 7%;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2),rgba(255,255,255,0.3),rgba(255, 255, 255, 0.4),rgba(0, 0, 0, 0.5));
+  position: fixed;
+  top: 0;  
 }
 .body2 {
   background:url(../img/sun.png);
@@ -25,8 +34,7 @@
 .body3{
   background:url(../img/book.jpg)no-repeat center;
   background-size: cover;
-  height: 745px ;
-  position: relative;
+  height: 750px;
 }
 .body3::after{
   content: "";
@@ -34,8 +42,8 @@
   height: 7%;
   width: 100%;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2),rgba(255,255,255,0.3),rgba(255, 255, 255, 0.4),rgba(0, 0, 0, 0.5));
-  top: 0;
-  position: absolute;
+  position: fixed;
+  top: 0;  
 }
 /* --------Desktop------- */
 @media (min-width: 992px) { 
@@ -51,7 +59,7 @@
     width: 100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(0, 0, 0, 0.5));
     top: 0;
-    position: absolute;
+    position: fixed;
   }
 }
 /* --------------.body tutup----------- */

@@ -99,7 +99,7 @@
   
 </head>
 
-<body class="">
+<body class="body">
 
  <?php include 'navbar.php'; ?>
  <br>
@@ -119,16 +119,16 @@
   					<form method="post">
   						<div class="form-group">
   							<label>Nama</label>
-  							<input type="text" min="4" maxlength="25" class="form-control" name="nama" required>
+  							<input type="text" min="4" maxlength="25" class="form-control" name="nama" required placeholder="Masukan Nama">
   						</div>
   						<div class="form-group">
   							<label>Email</label>
-  							<input type="email" maxlength="25" class="form-control" name="email" required>
+  							<input type="email" maxlength="25" class="form-control" name="email" required placeholder="Masukan Email">
                 <span class="warning"></span>
   						</div>
   						<div class="form-group">
   							<label>Password</label>
-  							<input type="password" maxlength="15" minlength="8" class="form-control" name="password" required>
+  							<input type="password" maxlength="15" minlength="8" class="form-control" name="password" required placeholder="Masukan Password">
   						</div>
               <div class="form-group">
                 <label>Provinsi</label>
