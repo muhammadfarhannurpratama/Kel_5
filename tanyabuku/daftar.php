@@ -115,7 +115,7 @@
   					<br>
 
   				</div>
-  				<div class="panel-body">
+  				<div class="daftar">
   					<form method="post">
   						<div class="form-group">
   							<label>Nama</label>

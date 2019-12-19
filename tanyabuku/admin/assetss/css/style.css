@@ -146,7 +146,7 @@
         padding: 25px;
         background-color: rgba(248, 248, 248, 0.1);  
       }
-       .box3 h3,label{
+       .box3 label{
         color: white;
         text-shadow: 0 2px 3px black ;
        }
@@ -168,6 +168,10 @@
           -moz-transition:  .3s;
           -ms-transition:  .3s;
           -o-transition:  .3s;
+        }
+        .daftar{
+          color: white;
+          text-shadow: 0 2px 3px black ;
         }
 /* -----Desktop----- */
 @media (min-width: 992px) { 
@@ -216,7 +220,7 @@
     padding: 25px;
     background-color: rgba(248, 248, 248, 0.1);  
   }
-   .box3 h3,label{
+   .box3 label{
     color: white;
     text-shadow: 0 2px 3px black ;
    }
@@ -1672,27 +1676,12 @@ h3{
   }
 }
 
-/* profil */
+/*--------profil--------- */
 .box-profil{
-  height: 500px;
+  height: 600px;
   width: 75%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 50px auto;
-  border: 3px solid rgb(0, 0, 0);
 }
-.profil{
-  height: 150px;
-  width: 50%;
-  background-color: rgb(137, 28, 28);
-  color: white;
-  margin: 0 auto;
-  position: relative;
-  top: 80px;
-  border: 3px solid rgb(0, 0, 0);
-}
-.profil h3{
-  font-size: initial;
-  line-height: 150px;
-}
-
+/*--------profil tutup--------- */

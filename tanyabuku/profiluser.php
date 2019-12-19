@@ -46,10 +46,9 @@ include 'koneksi.php'
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <div class="container">
-          <div class="profil">
-              <center>  <h3>Profil Pelanggan</h3> </center>
-          </div>
+        <br>
           <div class="box-profil">
+          <center><h3>Profil Pelanggan</h3> </center><br>
             <form method="post">
               <div class="form-group">
                 <label>Email</label>
