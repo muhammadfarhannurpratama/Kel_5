@@ -1,5 +1,18 @@
 @charset "UTF-8";
-/* --------------.body3----------- */
+/* --------------.body----------- */
+/* --------Phone------- */
+.body2 {
+  background:url(../img/sun.png);
+  background-color: #fff;
+}
+
+.body3{
+  background:url(../img/book.jpg)no-repeat center;
+  background-size: cover;
+  height: 745px ;
+  width: height: 900px ;
+  position: relative;
+}
 /* --------Desktop------- */
 @media (min-width: 992px) { 
   .body3{
@@ -17,73 +30,10 @@
     position: absolute;
   }
 }
-/* --------Phone------- */
-.body3{
-  background:url(../img/book.jpg)no-repeat center;
-  background-size: cover;
-  height: 745px ;
-  width: height: 900px ;
-  position: relative;
-}
-/* --------------.body3 tutup----------- */
-.body2 {
-  background:url(../img/sun.png);
-  background-color: #fff;
-}
-@media screen and (max-width: 480px) {
-  .body2 {
-  background:none;
-  background-color: #fff;
+/* --------------.body tutup----------- */
 
-  }
-}
 
 /*------------ box family-------------- */
-/* -----Desktop----- */
-@media (min-width: 992px) { 
-  .box{
-  
-    width: 200px;
-    height: 400px;
-    margin: 30px 0 0;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
-    padding: 25px;
-    background: white;
-  }
-  .box:hover{
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
-    -1px -1px 10px rgba(0,0,0,0.5);
-    transition: .3s;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
-  }
-  .box2{
-    margin: 20px auto;
-    width: 75%;
-    margin-top: 10px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
-  }
-  .box2:hover{
-    margin-top: 10px;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
-    -1px -1px 10px rgba(0,0,0,0.5);
-  }
-  .box3{
-    width: 400px;
-    height: 400px;
-    margin: 30px 0 0;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
-    padding: 25px;
-    background-color: rgba(248, 248, 248, 0.1);  
-  }
-   .box3 h3,label{
-    color: white;
-    text-shadow: 0 2px 3px black ;
-   }
- }
-
  /* -----Phone----- */
       .box{
         float: right;
@@ -99,8 +49,7 @@
       }
       .box2{
         margin: 50px auto;
-        height: 400px;
-        width: 250px;
+        width: 50%;
         margin-top: 5%;
         box-shadow: 1px 1px 5px rgba(0,0,0,0.5),  -1px -1px 5px rgba(0,0,0,0.5);
         padding: 25px;
@@ -163,6 +112,50 @@
           -ms-transition:  .3s;
           -o-transition:  .3s;
         }
+        /* -----Desktop----- */
+@media (min-width: 992px) { 
+  .box{ 
+    width: 200px;
+    height: 400px;
+    margin: 30px 0 0;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+    padding: 25px;
+    background: white;
+  }
+  .box:hover{
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+    -1px -1px 10px rgba(0,0,0,0.5);
+    transition: .3s;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+  }
+  .box2{
+    margin: 20px auto;
+    height: 400px;
+    width: 250px;
+    margin-top: 10px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+  }
+  .box2:hover{
+    margin-top: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5),
+    -1px -1px 10px rgba(0,0,0,0.5);
+  }
+  .box3{
+    width: 400px;
+    height: 400px;
+    margin: 30px 0 0;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+    padding: 25px;
+    background-color: rgba(248, 248, 248, 0.1);  
+  }
+   .box3 h3,label{
+    color: white;
+    text-shadow: 0 2px 3px black ;
+   }
+ }
 /*------------ box family tutup-------------- */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
