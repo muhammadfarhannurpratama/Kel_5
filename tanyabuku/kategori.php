@@ -34,20 +34,15 @@ include 'koneksi.php'
   <link href="admin/assetss/css/style.css" rel="stylesheet">
 </head>
 
-  <body>
-  <header id="header" class="header header-hide">
-    <div class="container" style="">
-      <div id="logo" class="pull-left">
-        <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
-
-      </div>
-
+<body>
    <?php include 'navbar.php'; ?>
-
+<div class="container">
+  <div class="row">
+        <div class="col-lg-2"></div>
 <!-- daftar buku -->
-        <div class="col-10">
+        <div class="col-lg-10">
         <br><br><br>
-        <h3 class="buku">Daftar Buku</h3>
+        <h3 class="judulbuku">Daftar Buku</h3>
         <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
@@ -74,9 +69,11 @@ include 'koneksi.php'
         </section>
         </form>
         </div>
+        <div class="col-lg-2"></div>
     </div>
-  </div>
+</div>
 <br><br><br><br>
+
 
 
 

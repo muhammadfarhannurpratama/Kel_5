@@ -41,27 +41,16 @@ include 'koneksi.php';
 </head>
 
   <body>
-  <header id="header" class="header header-hide">
-    <div class="container" style="">
-      <div id="logo" class="pull-left">
-        <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
-
-        <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.php"><img src="ico30.png" alt="" title="tanyabuku" /></a>
-      </div>
-
  <?php include 'navbar.php'; ?>
 
   <br><br><br>
   <div class="container">
     <div class="row">
-  <div class="col-3">
-  </div>
- <div class="col-9">
+  <div class="col-lg-2"></div>
+ <div class="col-lg-10">
 <!-- daftar buku -->
-        <div class="col-10">
         <br><br><br>
-        <h3 class="buku">Daftar Buku</h3>
+        <h3 class="judulbuku">Daftar Buku</h3>
         <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
@@ -86,8 +75,9 @@ include 'koneksi.php';
                 </div>
         </section>
         </form>
-        </div>
     </div>
+    <div class="col-lg-2"></div>
+  </div>
   </div>
 <br><br><br><br>
 
