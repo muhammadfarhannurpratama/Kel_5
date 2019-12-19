@@ -354,16 +354,21 @@ span {
   
 /* -----------------Navbar Tutup----------------- */
 
-/*-----------------Hero Section--------------------*/
+/*-----------------Tampilan Awal--------------------*/
 #hero {
   width: 100%;
-  height: calc(120vh - 40px);
+  height: calc(106vh - 40px);
   background: url(../img/kocheng.gif) center bottom no-repeat;
   background-color: white;
   background-size: 100%;
   position: relative;
   margin-top: 0;
   background-position-y: bottom;
+}
+@media (min-width: 992px){
+  #hero{
+    height: calc(120vh - 40px);
+  }
 }
 @media screen and (max-width: 480px){
   #hero{
@@ -470,6 +475,7 @@ span {
 #hero .btns a:hover {
   color: #71c55d;
 }
+/*-----------------Tampilan Awal Tutup--------------------*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
