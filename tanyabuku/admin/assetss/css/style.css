@@ -5,6 +5,15 @@
   background:url(../img/sun.png);
   background-color: #fff;
 }
+.body2::after {
+  content: '';
+  background: white;
+  height: 7%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+}
 
 .body3{
   background:url(../img/book.jpg)no-repeat center;
@@ -12,6 +21,15 @@
   height: 745px ;
   width: height: 900px ;
   position: relative;
+}
+.body3::after{
+  content: "";
+  display: block;
+  height: 7%;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2),rgba(255,255,255,0.3),rgba(255, 255, 255, 0.4),rgba(0, 0, 0, 0.5));
+  top: 0;
+  position: absolute;
 }
 /* --------Desktop------- */
 @media (min-width: 992px) { 
@@ -23,9 +41,9 @@
   .body3::after{
     content: "";
     display: block;
-    height: 75px;
+    height: 7%;
     width: 100%;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.2),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(255,255,255,0.5));
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2),rgba(255,255,255,0.3),rgba(255,255,255,0.4),rgba(0, 0, 0, 0.5));
     top: 0;
     position: absolute;
   }
@@ -58,6 +76,10 @@
         -moz-transition: .3s;
         -ms-transition: .3s;
         -o-transition: .3s;
+      }
+      .box2 img{
+        height: 200px; 
+        width: 140px;
       }
       .box2:hover{
         box-shadow: 1px 1px 10px rgba(0,0,0,0.5),  -1px -1px 10px rgba(0,0,0,0.5);
@@ -112,7 +134,7 @@
           -ms-transition:  .3s;
           -o-transition:  .3s;
         }
-        /* -----Desktop----- */
+/* -----Desktop----- */
 @media (min-width: 992px) { 
   .box{ 
     width: 200px;
@@ -137,6 +159,10 @@
     width: 250px;
     margin-top: 10px;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+  }
+  .box2 img{
+    height: 200px; 
+    width: 140px;
   }
   .box2:hover{
     margin-top: 10px;
