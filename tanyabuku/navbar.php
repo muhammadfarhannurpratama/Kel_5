@@ -15,8 +15,9 @@
           <li><a href="#get-started">Best Seller</a></li>
           <li><a href="#screenshots">Testimoni</a></li>
           <li><a href="#about-us">About</a></li>
-          <li><a href="kategori.php"class="menu-has-children">Kategori</a>
+          <li><a href="kategori.php"class="menu-has-children">Semua Buku</a>
              <ul>
+             <h5>Kategori</h5>
                <?php 
                   $ambil=$koneksi->query("SELECT * FROM kategori");
                   while($perkategori=$ambil->fetch_assoc()){
