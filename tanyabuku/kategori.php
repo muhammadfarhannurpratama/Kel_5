@@ -40,12 +40,10 @@ include 'koneksi.php'
       <div id="logo" class="pull-left">
         <!-- <h1><a href="index.php" class="scrollto"><span>T</span>anya<span>B</span>uku</a></h1> -->
 
-        <!-- Uncomment below if you prefer to use an image logo -->
-         <a href="index.php"><img src="ico/ico30.png" alt="" title="tanyabuku" /></a>
       </div>
 
    <?php include 'navbar.php'; ?>
- 
+
 <!-- daftar buku -->
         <div class="col-10">
         <br><br><br>
