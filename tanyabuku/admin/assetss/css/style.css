@@ -1,6 +1,13 @@
 @charset "UTF-8";
 /* --------------.body----------- */
 /* --------Phone------- */
+.body{
+  background:url(../img/book.jpg)no-repeat center;
+  background-size: cover;
+  height: 100% ;
+  width: 900px ;
+  position: relative;
+}
 .body2 {
   background:url(../img/sun.png);
   background-color: #fff;
@@ -19,7 +26,6 @@
   background:url(../img/book.jpg)no-repeat center;
   background-size: cover;
   height: 745px ;
-  width: height: 900px ;
   position: relative;
 }
 .body3::after{
