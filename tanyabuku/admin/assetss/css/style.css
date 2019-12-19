@@ -1,14 +1,4 @@
 @charset "UTF-8";
-/*
-  Theme Name: eStartup
-  Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-
 .body2 {
   background:url(../img/sun.png);
   background-color: #fff;
@@ -306,21 +296,21 @@ span {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-#header {
-  background: rgba(255, 255, 255, 0);
-  box-shadow: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 54px;
-  z-index: 3;
-  transition: all 0.5s ease;
+/* -----------------Navbar----------------- */
+@media (min-width: 992px){
+  #header {
+    background: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 54px;
+    z-index: 3;
+    transition: all 0.5s ease;
+  }
 }
-
+/* -------Phone------ */
 #header #logo {
   padding: 6px 0 0 0;
 }
@@ -343,13 +333,7 @@ span {
 
 #header #logo h1 a span {
   color: #000000;
-}
-
-#header #logo img {
-  padding: 0;
-  margin: 0;
-}
-
+} 
 .scroll-header {
   background: #fff;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
@@ -357,6 +341,14 @@ span {
 #header .form-control{
   background-color: rgba(255, 255, 255, 0.5);
 }
+#header #logo img {
+  padding: 0;
+  margin: 0;
+}
+.pull-center .form-control{
+  width: 90%;
+}
+/* -----------------Navbar Tutup----------------- */
 
 /*--------------------------------------------------------------
 # Hero Section
