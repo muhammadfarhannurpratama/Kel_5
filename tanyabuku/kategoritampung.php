@@ -40,14 +40,13 @@ include 'koneksi.php';
   <link href="admin/assetss/css/style.css" rel="stylesheet">
 </head>
 
-  <body>
+  <body class="body2">
  <?php include 'navbar.php'; ?>
 
   <br><br><br>
   <div class="container">
     <div class="row">
-  <div class="col-lg-2"></div>
- <div class="col-lg-10">
+ <div class="col-lg">
 <!-- daftar buku -->
         <br><br><br>
         <h3 class="judulbuku">Daftar Buku</h3>
@@ -76,7 +75,6 @@ include 'koneksi.php';
         </section>
         </form>
     </div>
-    <div class="col-lg-2"></div>
   </div>
   </div>
 <br><br><br><br>
