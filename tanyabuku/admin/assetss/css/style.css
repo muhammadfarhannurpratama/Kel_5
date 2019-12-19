@@ -297,13 +297,6 @@ span {
 }
 
 /* -----------------Navbar----------------- */
-/* -------Desktop------ */
-@media (min-width: 992px){
-  .pull-center .form-control{
-    width: 800px;
-  }
-}
-
 /* -------Phone------ */
 #header {
   background: rgba(255, 255, 255, 0);
@@ -315,9 +308,6 @@ span {
   height: 54px;
   z-index: 3;
   transition: all 0.5s ease;
-}
-.pull-center .form-control{
-  width: 250px;
 }
 #header #logo {
   padding: 6px 0 0 0;
@@ -352,6 +342,16 @@ span {
   padding: 0;
   margin: 0;
 }
+.pull-center .form-control{
+  width: 250px;
+}
+/* -------Desktop------ */
+@media (min-width: 992px){
+  .pull-center .form-control{
+    width: 800px;
+  }
+  }
+  
 /* -----------------Navbar Tutup----------------- */
 
 /*-----------------Hero Section--------------------*/
