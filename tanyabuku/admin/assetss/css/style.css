@@ -914,8 +914,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background: #ddd;
 }
 
-/* Video Section
---------------------------------*/
+/*-----------Video--------*/
 #video {
   background: url(../img/bgvideo.png) center center;
   background-color: skyblue;
@@ -1044,6 +1043,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
     opacity: 0;
   }
 }
+/*-----------Video Tutup--------*/
+
 
 /* Team Section
 --------------------------------*/
@@ -1053,6 +1054,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
   overflow: hidden;
   position: relative;
   width: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 @media (max-width: 991px) {
