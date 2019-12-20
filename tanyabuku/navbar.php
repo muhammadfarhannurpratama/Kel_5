@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- jqu -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
+</head>
+<body>
 <header id="header" class="header header-hide">
     <div class="container" style="">
       <div id="logo" class="pull-left">
@@ -12,10 +23,10 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.php">Home</a></li>
-          <li><a href="#get-started">Best Seller</a></li>
-          <li><a href="#screenshots">Testimoni</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="kategori.php"class="menu-has-children">Semua Buku</a>
+          <li><a class="nav-buku" href="#get-started">Best Seller</a></li>
+          <li><a class="nav-test" href="#screenshots">Testimoni</a></li>
+          <li><a class="nav-about" href="#about-us">About</a></li>
+          <li><a  href="kategori.php"class="menu-has-children nav-kategori">Semua Buku</a>
              <ul>
              <h5>Kategori</h5>
                <?php 
@@ -58,3 +69,5 @@
       </form>
     </div>
   </header>
+</body>
+</html>

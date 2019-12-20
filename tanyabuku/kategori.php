@@ -32,6 +32,8 @@ include 'koneksi.php'
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+  <!-- jqu -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
 </head>
 
 <body class="body2">
@@ -97,3 +99,12 @@ include 'koneksi.php'
   <script src="admin/assetss/js/main.js"></script>
   </body>
 </html>
+  <script>
+    $(document).ready(function(){
+      $('.nav-kategori').on('click', function(){
+        $('.nav-buku').hide();
+        $('.nav-buku').hide();
+        $('.nav-buku').hide();
+      });
+    });
+  </script>
