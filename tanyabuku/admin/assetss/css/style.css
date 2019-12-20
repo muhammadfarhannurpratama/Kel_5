@@ -1711,5 +1711,6 @@ h3{
   -moz-transition: .3s;
   -ms-transition: .3s;
   -o-transition: .3s;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 /*--------profil tutup--------- */
