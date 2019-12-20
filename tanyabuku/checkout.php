@@ -391,3 +391,10 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 
 </body>
 </html>
+<script>
+    $(document).ready(function(){      
+        $('.nav-buku').hide();
+        $('.nav-test').hide();
+        $('.nav-about').hide();
+    });
+</script>
