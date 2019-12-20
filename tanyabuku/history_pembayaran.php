@@ -37,8 +37,6 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 }
 ?>
 
- ?>
-
  <!DOCTYPE html>
 <html lang="en">
 <head>
