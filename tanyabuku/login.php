@@ -33,6 +33,8 @@ include 'koneksi.php';
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+  <!-- jqu -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
 </head>
 
 <body class="body3">
@@ -135,3 +137,13 @@ include 'koneksi.php';
 
 </body>
 </html>
+<script>
+    $(document).ready(function(){  
+        $('.nav-kategori').hide();    
+        $('.nav-buku').hide();
+        $('.nav-test').hide();
+        $('.nav-keranjang').hide();
+        $('.nav-about').hide();
+        $('.nav-cari').hide();
+    });
+</script>

@@ -41,7 +41,7 @@
                 <?php } ?>
             </ul>
           </li>
-          <li><a href="keranjang.php">Keranjang</a></li>
+          <li><a class="nav-keranjang" href="keranjang.php">Keranjang</a></li>
 
           <!--jika sudah login (ada SESSION profil)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
@@ -64,7 +64,7 @@
           <?php endif ?>          
         </ul>
       </nav>
-      <form action="pencarian.php" method="get" class="pull-center navbar">
+      <form action="pencarian.php" method="get" class="pull-center navbar nav-cari">
           <input type="text" class="form-control" name="keyword" placeholder="Cari Buku ">
       </form>
     </div>

@@ -100,11 +100,9 @@ include 'koneksi.php'
   </body>
 </html>
   <script>
-    $(document).ready(function(){
-      $('.nav-kategori').on('click', function(){
+    $(document).ready(function(){      
         $('.nav-buku').hide();
-        $('.nav-buku').hide();
-        $('.nav-buku').hide();
-      });
+        $('.nav-test').hide();
+        $('.nav-about').hide();
     });
   </script>
