@@ -48,24 +48,34 @@ $detail=$ambil->fetch_assoc();
   return true;
   }
   </script>
-
+<style>
+.foto{
+  height: 600px;
+  width: 400px;
+  background-size: cover;
+  border-top: 5px solid lightcoral;
+  border-left: 5px solid lightcoral;
+  border-bottom: 5px solid lightblue;
+  border-right: 5px solid lightblue;
+}
+.foto img{
+  height: 100%;
+  width: 100%;  
+  ;
+</style>
 </head>
 
 <body class="body2">
 
   <?php include 'navbar.php'; ?>
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
+  <br><br><br>
   <section class="konten">
   	<div class="container">
   		<div class="row">
   			<div class="col-md-6">
-  				<img src="foto_produk/<?php echo $detail['foto_produk']; ?>" alt="" class="img-responsive">
+  				<div class="foto">
+            <img src="foto_produk/<?php echo $detail['foto_produk']; ?>" alt="" class="">
+          </div>
   			</div>
   			<div class="col-md-6">
   				<h2><?php echo $detail['nama_produk']; ?></h2>
