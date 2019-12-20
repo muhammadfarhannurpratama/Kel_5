@@ -82,3 +82,23 @@ include 'koneksi.php'
       <div class="col-lg-2"></div>
     </div>
   </div>
+
+
+
+  <!-- JavaScript Libraries -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
+  <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="admin/assetss/lib/superfish/hoverIntent.js"></script>
+  <script src="admin/assetss/lib/superfish/superfish.min.js"></script>
+  <script src="admin/assetss/lib/easing/easing.min.js"></script>
+  <script src="admin/assetss/lib/modal-video/js/modal-video.js"></script>
+  <script src="admin/assetss/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="admin/assetss/lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="admin/assetss/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="admin/assetss/js/main.js"></script>
+</body>
+</html>

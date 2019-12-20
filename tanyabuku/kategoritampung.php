@@ -38,6 +38,8 @@ include 'koneksi.php';
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
+  <!-- jqu -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
 </head>
 
   <body class="body2">
@@ -79,5 +81,27 @@ include 'koneksi.php';
   </div>
 <br><br><br><br>
 
+<!-- JavaScript Libraries -->
+<script src="admin/assetss/lib/jquery/jquery.min.js"></script>
+  <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="admin/assetss/lib/superfish/hoverIntent.js"></script>
+  <script src="admin/assetss/lib/superfish/superfish.min.js"></script>
+  <script src="admin/assetss/lib/easing/easing.min.js"></script>
+  <script src="admin/assetss/lib/modal-video/js/modal-video.js"></script>
+  <script src="admin/assetss/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="admin/assetss/lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="admin/assetss/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="admin/assetss/js/main.js"></script>
   </body>
   </html>
+  <script>
+    $(document).ready(function(){      
+        $('.nav-buku').hide();
+        $('.nav-test').hide();
+        $('.nav-about').hide();
+    });
+  </script>

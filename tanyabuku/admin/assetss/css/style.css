@@ -1663,7 +1663,7 @@ h3{
   margin-right: 100px;
 }
 .kategori select:hover{
-  color: red;
+  color: rgb(37, 22, 22);
 }
 .kategori select option{
   color: rgb(0, 0, 0);
