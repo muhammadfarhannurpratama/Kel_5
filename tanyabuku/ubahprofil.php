@@ -2,12 +2,7 @@
 session_start();
 include 'koneksi.php'
  ?>
-
- <?php 
-$ambil=$koneksi->query("SELECT * FROM pelanggan WHERE id_pelanggan='$_GET[id]'");
-$pecah=$ambil->fetch_assoc();
- ?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -40,10 +35,11 @@ $pecah=$ambil->fetch_assoc();
 
    <!-- font -->
    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
+  <!-- jqu -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
 </head>
 
-<body class=""><!-- 
-	<pre><?php echo print_r($_SESSION) ?></pre> -->
+<body>
 
   <?php include 'navbar.php'; ?>
 
@@ -52,38 +48,35 @@ $pecah=$ambil->fetch_assoc();
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
         <div class="container">
-          <div class="profil">
-          <center>  <h3 class="">Profil Pelanggan</h3> </center>
-          </div>
+        <br>
           <div class="box-profil">
+          <center><h3>Profil Pelanggan</h3> </center><br>
             <form method="post">
-
               <div class="form-group">
                 <label>Email</label>
-                <input type="text" name="email" class="form-control" value="<?php echo $_SESSION['pelanggan']['email_pelanggan'] ?>">
+                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['email_pelanggan'] ?>" class="form-control">
               </div>
 
               <div class="form-group">
                 <label>Password</label>
-                 <input type="password" name="pass" class="form-control" value="<?php echo $_SESSION['pelanggan']['password_pelanggan'] ?>">
+                <input type="password" readonly value="<?php echo $_SESSION['pelanggan']['password_pelanggan'] ?>" class="form-control">
               </div>
 
                <div class="form-group">
                 <label>Nama Pelanggan</label>
-                <input type="text" name="nama" class="form-control" value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>">
+                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>" class="form-control">
               </div>
 
               <div class="form-group">
                 <label>Telepon</label>
-                 <input type="number" name="telepon" class="form-control" value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>">
+                <input type="number" readonly value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>" class="form-control">
               </div>
 
-           <div class="form-group">
+              <div class="form-group">
                 <label>Alamat</label>
-                 <input type="text" name="alamat" class="form-control" value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>">
+                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
               </div>
-
-            <center><button class="btn btn-primary" name="ubah">Ubah</button></center>
+              <center><a class="btn btn-primary" href="ubahprofil.php" role="button">Ubah</a></center>
             </form>
           </div>
         </div>
@@ -92,15 +85,29 @@ $pecah=$ambil->fetch_assoc();
     </div>
   </div>
 
-  <?php 
-if (isset($_POST['ubah']))
-{
 
-		$koneksi->query("UPDATE pelanggan SET email_pelanggan='$_POST[email]',password_pelanggan='$_POST[pass]',nama_pelanggan='$_POST[nama]',telepon_pelanggan='$_POST[telepon]',alamat_pelanggan='$_POST[alamat]'
-			WHERE id_pelanggan='$_GET[id]'");
 
-	echo "<script> alert('Data Pelanggan Telah Diubah');</script>";
+  <!-- JavaScript Libraries -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
+  <script src="admin/assetss/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="admin/assetss/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="admin/assetss/lib/superfish/hoverIntent.js"></script>
+  <script src="admin/assetss/lib/superfish/superfish.min.js"></script>
+  <script src="admin/assetss/lib/easing/easing.min.js"></script>
+  <script src="admin/assetss/lib/modal-video/js/modal-video.js"></script>
+  <script src="admin/assetss/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="admin/assetss/lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="admin/assetss/contactform/contactform.js"></script>
 
-}
-	
-  ?>
+  <!-- Template Main Javascript File -->
+  <script src="admin/assetss/js/main.js"></script>
+</body>
+</html>
+<script>
+    $(document).ready(function(){      
+        $('.nav-buku').hide();
+        $('.nav-test').hide();
+        $('.nav-about').hide();
+    });
+</script>

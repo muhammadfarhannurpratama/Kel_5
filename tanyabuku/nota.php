@@ -171,3 +171,10 @@ $detail=$ambil->fetch_assoc();
 
 </body>
 </html>
+<script>
+    $(document).ready(function(){      
+        $('.nav-buku').hide();
+        $('.nav-test').hide();
+        $('.nav-about').hide();
+    });
+</script>
