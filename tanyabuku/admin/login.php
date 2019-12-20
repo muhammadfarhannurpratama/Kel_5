@@ -26,6 +26,9 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+
+    <!-- New Style -->
+    <link rel="stylesheet" href="../build/css/newstyle.css">
   </head>
 
   <body class="login">
@@ -46,7 +49,6 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
               </div>
               <div>
                 <button class="btn btn-primay" name="login">Log in</button>
-                <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
               <div class="clearfix"></div>
@@ -115,7 +117,7 @@ $koneksi=new mysqli("localhost","root","","db_tanyabuku");
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Tanya Buku!</h1>
+                  <h1><i class="fa fa-book"></i> Tanya Buku!</h1>
                   <p>©2019 All Rights Reserved. Tanya Buku! is a Bootstrap 4 template. Privacy and Terms</p>
                 </div>
               </div>
