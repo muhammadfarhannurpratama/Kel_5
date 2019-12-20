@@ -17,7 +17,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>History</title>
+  <title>Tanya Buku Online Store</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -42,14 +42,11 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
-  <script src="js/jquery-3.4.1.min.js"></script>
 
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+   <!-- font -->
+   <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
+  <!-- jqu -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
 </head>
 
 <body>
@@ -137,3 +134,10 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 
 </body>
 </html>
+<script>
+    $(document).ready(function(){      
+        $('.nav-buku').hide();
+        $('.nav-test').hide();
+        $('.nav-about').hide();
+    });
+</script>

@@ -35,6 +35,8 @@ include 'koneksi.php'
 
    <!-- font -->
    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet"> 
+  <!-- jqu -->
+  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
 </head>
 
 <body>
@@ -102,3 +104,10 @@ include 'koneksi.php'
   <script src="admin/assetss/js/main.js"></script>
 </body>
 </html>
+<script>
+    $(document).ready(function(){      
+        $('.nav-buku').hide();
+        $('.nav-test').hide();
+        $('.nav-about').hide();
+    });
+</script>
