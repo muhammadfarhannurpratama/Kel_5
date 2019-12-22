@@ -30,7 +30,7 @@ if ($id_pelanggan_login !==$id_Pelanggan_beli)
 ?>
 
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -60,13 +60,22 @@ if ($id_pelanggan_login !==$id_Pelanggan_beli)
   <!-- Main Stylesheet File -->
   <link href="admin/assetss/css/style.css" rel="stylesheet">
   <script src="js/jquery-3.4.1.min.js"></script>
+  
+  <script>
+  $('#foto_transaksi').on('change',function(){
+                    var filename = this.files[0].name.split('.').pop();
+                    if ((this).files[0].size > 5000000) {
+                      $('.foto_transaksi').text('Ukuran Gambar Yang Anda Upload Tidak Boleh Melebihi 5MB!');
+                      var kel = $(this).val(null);
+                    }else if(filename != 'jpeg' && filename != 'jpg' && filename != 'png'){
+                      $('.foto_transaksi').text('Format Gambar Yang Anda Upload Tidak Benar!');
+                      var kel = $(this).val(null);
+                    }else{
+                      $('.foto_transaksi').text('');
+                    }
 
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+                    });
+  </script>
 </head>
 
 <body>
@@ -99,17 +108,21 @@ if ($id_pelanggan_login !==$id_Pelanggan_beli)
   </div>
       <div class="form-group">
         <label>Jumlah</label>
-        <input type="number" class="form-control" name="jumlah" min="1">
+        <input type="number" class="form-control" name="jumlah" min="1"> 
       </div>
+
       <div class="form-group">
-        <label>Foto Bukti Pembayaran</label>
-        <input type="file" class="form-control" name="bukti">
-        <p class="text-danger">Foto bukti harus JPEG/JPG Maksimal 1MB</p>
-      </div>
+      <label class="fa fa-camera" for="buktitrans"> Upload Bukti Bayar (Gambar Maks 5Mb) </label>
+      <div class="input-icon">
+      <input type="hidden" name="bukti">
+      <input id="foto_transaksi" name="bukti" type="file" required>
+      <p class="foto_transaksi" style="color: red;"></p>
+      </div> 
+       <div class="modal-footer">
       <button class="btn btn-primary" name="kirim">Kirim</button>
+      </div>
     </form>
   </div>
-
 <?php 
 
 // if ada tombol kirim
