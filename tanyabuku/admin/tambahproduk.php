@@ -35,10 +35,13 @@
 		<label>Deskripsi</label>
 		<textarea class="form-control" name="Deskripsi" rows="10"></textarea>
 	</div>
-	<div class="form-group">
-		<label>Foto</label>
-		<input type="file" class="form-control" name="foto">
-	</div>
+	  <div class="form-group">
+      <label class="fa fa-camera" for="buktitrans"> Upload Bukti Bayar (Gambar Maks 5Mb) </label>
+      <div class="input-icon">
+      <input type="hidden" name="bukti">
+      <input id="foto_transaksi" name="foto" type="file" required>
+      <p class="foto_transaksi" style="color: red;"></p>
+      </div> 
 	<button class="btn btn-primary" name="save"> SIMPAN </button>
 </form>
 <?php 
@@ -55,3 +58,18 @@ if (isset($_POST['save']))
  	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=produk'>";
 }
  ?>
+  <script>
+  $('#foto_transaksi').on('change',function(){
+                    var filename = this.files[0].name.split('.').pop();
+                    if ((this).files[0].size > 5000000) {
+                      $('.foto_transaksi').text('Ukuran Gambar Yang Anda Upload Tidak Boleh Melebihi 5MB!');
+                      var kel = $(this).val(null);
+                    }else if(filename != 'jpeg' && filename != 'jpg' && filename != 'png'){
+                      $('.foto_transaksi').text('Format Gambar Yang Anda Upload Tidak Benar!');
+                      var kel = $(this).val(null);
+                    }else{
+                      $('.foto_transaksi').text('');
+                    }
+
+                    });
+  </script>

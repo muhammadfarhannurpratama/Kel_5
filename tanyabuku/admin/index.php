@@ -364,3 +364,18 @@ if(!isset($_SESSION['admin']))
 	
   </body>
 </html>
+  <script>
+  $('#foto_transaksi').on('change',function(){
+                    var filename = this.files[0].name.split('.').pop();
+                    if ((this).files[0].size > 5000000) {
+                      $('.foto_transaksi').text('Ukuran Gambar Yang Anda Upload Tidak Boleh Melebihi 5MB!');
+                      var kel = $(this).val(null);
+                    }else if(filename != 'jpeg' && filename != 'jpg' && filename != 'png'){
+                      $('.foto_transaksi').text('Format Gambar Yang Anda Upload Tidak Benar!');
+                      var kel = $(this).val(null);
+                    }else{
+                      $('.foto_transaksi').text('');
+                    }
+
+                    });
+  </script>
