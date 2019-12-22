@@ -23,10 +23,13 @@ $pecah=$ambil->fetch_assoc();
  	<div class="form-group">
  		<img src="../foto_produk/<?php echo $pecah['foto_produk'] ?>" width="100">
  	</div>
- 	<div class="form-group">
- 		<label>Ganti Foto</label>
- 		<input type="file" name="foto" class="form-control">
- 	</div>
+ 	  <div class="form-group">
+      <label class="fa fa-camera" for="buktitrans"> Upload Bukti Bayar (Gambar Maks 5Mb) </label>
+      <div class="input-icon">
+      <input type="hidden" name="bukti">
+      <input id="foto_transaksi" name="foto" type="file" required>
+      <p class="foto_transaksi" style="color: red;"></p>
+      </div> 
  	<div class="form-group">
  		<label>Kategori Produk</label>
  		<select class="form-control" name="kategori">
