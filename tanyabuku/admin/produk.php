@@ -1,6 +1,6 @@
 <h2>Data Produk</h2>
 
-<div class="kotak-produk">
+<div class="kotak">
 <table class="table table-bordered">
 	<thread>
 		<tr>
@@ -41,4 +41,4 @@
 	</tbody>
 </table>
 </div>
-<a href="index.php?halaman=tambahproduk" class="btn btn-primary">Tambah Data</a>
+<a href="index.php?halaman=tambahproduk" class="btn btn-primary atas-kanan">Tambah Data</a>
