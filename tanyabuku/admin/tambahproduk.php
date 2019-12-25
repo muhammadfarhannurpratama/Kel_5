@@ -1,6 +1,9 @@
 <h2>Tambah Produk</h2>
-
+<div class="kotak2">
+<div class="container">
+<div class="row">
 <form method="post" enctype="multipart/form-data">
+<div class="col-sm-6">
 	<div class="form-group">
 		<label>Judul Buku</label>
 		<input type="text" class="form-control" name="Nama">
@@ -13,6 +16,8 @@
 		<label>Berat (gr)</label>
 		<input type="number" class="form-control" name="Berat">
 	</div>
+</div>
+<div class="col-sm-6">
 	<div class="form-group">
 		<label>Stok</label>
 		<input type="number" class="form-control" name="Stok" min="1">
@@ -35,14 +40,23 @@
 		<label>Deskripsi</label>
 		<textarea class="form-control" name="Deskripsi" rows="10"></textarea>
 	</div>
-	  <div class="form-group">
+	<div class="form-group">
       <label class="fa fa-camera" for="buktitrans"> Upload Bukti Bayar (Gambar Maks 5Mb) </label>
       <div class="input-icon">
       <input type="hidden" name="bukti">
       <input id="foto_transaksi" name="foto" type="file" required>
       <p class="foto_transaksi" style="color: red;"></p>
-      </div> 
-	<button class="btn btn-primary" name="save"> SIMPAN </button>
+	  </div> 
+	</div>
+</div>
+	<div class="row">
+		<div class="col-sm-6"></div>
+		<div class="col-sm-6">
+		<div class="btn-panjang">
+		<button class="btn btn-primary" name="save"> SIMPAN </button>
+		</div>
+		</div>
+	</div>
 </form>
 <?php 
 if (isset($_POST['save']))
@@ -73,3 +87,6 @@ if (isset($_POST['save']))
 
                     });
   </script>
+</div>
+</div>
+</div>

@@ -1,5 +1,6 @@
 <h2>Data Pembelian</h2>
 
+<div class="kotak">
 <table class="table table-bordered">
 	<thead>
 		<tr>
@@ -34,3 +35,4 @@
 	<?php } ?>
 	</tbody>
 </table>
+</div>
