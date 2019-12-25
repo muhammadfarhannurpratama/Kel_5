@@ -1,5 +1,5 @@
 <h2>Data Pembayaran</h2>
-
+<div class="">
 <?php 
 // mendapatkan id_pembelian dari url
 $id_pembelian = $_GET['id'];
@@ -72,3 +72,4 @@ if (isset($_POST['proses']))
 }
 
   ?>  
+</div>
