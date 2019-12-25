@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link href="../build/css/ne" rel="stylesheet">
-</head>
-<body>
 <h2>Data Produk</h2>
 
+<div class="kotak-produk">
 <table class="table table-bordered">
 	<thread>
 		<tr>
@@ -47,8 +38,7 @@
 		</tr>
 		<?php $nomor++; ?>
 	<?php } ?>
-	</tbody>	
+	</tbody>
 </table>
+</div>
 <a href="index.php?halaman=tambahproduk" class="btn btn-primary">Tambah Data</a>
-</body>
-</html>
