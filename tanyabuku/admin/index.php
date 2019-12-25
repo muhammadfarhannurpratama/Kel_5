@@ -120,9 +120,7 @@ if(!isset($_SESSION['admin']))
                 </ul>    
               </div>
             </div>
-            <!-- /sidebar menu -->
 
-            <!-- /menu footer buttons -->
           </div>
         </div>
 
@@ -223,7 +221,7 @@ if(!isset($_SESSION['admin']))
         <div class="right_col" role="main">
           <!-- top tiles -->
           <div class="row" style="display: inline-block;" >
-          <div class="tile_count"> 
+          <div class=" col-sm-12"> 
             <?php 
                 if (isset($_GET['halaman'])) 
                 {
@@ -311,15 +309,9 @@ if(!isset($_SESSION['admin']))
                 ?>
           </div>
         </div>
-          <!-- /top tiles -->
-          <br />
-        <!-- /page content -->
-
-        <!-- footer content -->
-      
-        <!-- /footer content -->
       </div>
     </div>
+  </div>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
