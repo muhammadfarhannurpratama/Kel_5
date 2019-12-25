@@ -1,6 +1,13 @@
 <?php 
 session_start();
-include 'koneksi.php'
+include 'koneksi.php';
+
+if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
+{
+   echo "<script>alert('Silahkan Login !');</script>";
+   echo "<script>location='login.php';</script>";
+   exit();
+}
  ?>
 <!DOCTYPE html>
 
@@ -41,6 +48,8 @@ include 'koneksi.php'
 
 <body class="body2">
 
+<!-- <pre><?php echo print_r($_SESSION) ?></pre> -->
+
   <?php include 'navbar.php'; ?>
 
   <div class="container">
@@ -76,7 +85,7 @@ include 'koneksi.php'
                 <label>Alamat</label>
                 <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
               </div>
-              <center><a class="btn btn-primary" href="ubahprofil.php" role="button">Ubah</a></center>
+              <center><a class="btn btn-primary" href="ubahprofil.php?id=<?php echo $_SESSION['pelanggan']['id_pelanggan']; ?>" role="button">Ubah Profil</a></center>
             </form>
           </div>
         </div>

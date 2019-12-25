@@ -1,6 +1,13 @@
 <?php 
 session_start();
-include 'koneksi.php'
+include 'koneksi.php';
+
+//if belum login, maka masuk login.php 
+// if (!isset($_SESSION['pelanggan']))
+// {
+//    echo "<script>alert('Silahkan Login !');</script>";
+//    echo "<script>location='login.php';</script>";
+// }
  ?>
 <!DOCTYPE html>
 
@@ -40,6 +47,27 @@ include 'koneksi.php'
 </head>
 
 <body class="body2">
+  <?php 
+$ambil=$koneksi->query("SELECT * FROM pelanggan
+  WHERE id_pelanggan='$_GET[id]'");
+$pecah=$ambil->fetch_assoc();
+ ?>
+
+ <!-- jika pelanggan yang beli tidak sama dgn pelanggan yg login maka dilarikan ke history.php (tdk berhak melihat note org lain) -->
+ <!-- pelanggan yg beli harus yg login -->
+ <?php 
+// mendapatkan id pelanggan yg beli
+ $id_pelangganygubah = $pecah['id_pelanggan'];
+ // medapatkan id pelanggan yg login
+ $id_pelangganyglogin = $_SESSION['pelanggan']['id_pelanggan'];
+
+ if ($id_pelangganygubah!==$id_pelangganyglogin) 
+ {
+   echo "<script>alert('gagal !');</script>";
+   echo "<script>location='profiluser.php';</script>";
+   exit();
+ }
+  ?>
 
   <?php include 'navbar.php'; ?>
 
@@ -54,29 +82,29 @@ include 'koneksi.php'
             <form method="post">
               <div class="form-group">
                 <label>Email</label>
-                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['email_pelanggan'] ?>" class="form-control">
+               <input type="text" name="email" class="form-control" value="<?php echo $pecah['email_pelanggan']; ?>">
               </div>
 
               <div class="form-group">
                 <label>Password</label>
-                <input type="password" readonly value="<?php echo $_SESSION['pelanggan']['password_pelanggan'] ?>" class="form-control">
+                <input type="password" name="pass" class="form-control" value="<?php echo $pecah['password_pelanggan']; ?>">
               </div>
 
                <div class="form-group">
                 <label>Nama Pelanggan</label>
-                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>" class="form-control">
+                 <input type="text" name="nama" class="form-control" value="<?php echo $pecah['nama_pelanggan']; ?>">
               </div>
 
               <div class="form-group">
                 <label>Telepon</label>
-                <input type="number" readonly value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>" class="form-control">
+               <input type="number" name="telepon" class="form-control" value="<?php echo $pecah['telepon_pelanggan']; ?>">
               </div>
 
               <div class="form-group">
                 <label>Alamat</label>
-                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
+               <input type="text" name="alamat" class="form-control" value="<?php echo $pecah['alamat_pelanggan']; ?>">
               </div>
-              <center><a class="btn btn-primary" href="ubahprofil.php" role="button">Ubah</a></center>
+             <center><button class="btn btn-primary" name="ubah">Ubah Profil</button></center> 
             </form>
           </div>
         </div>
@@ -85,7 +113,20 @@ include 'koneksi.php'
     </div>
   </div>
 
+<?php 
+if (isset($_POST['ubah']))
+{
 
+    $koneksi->query("UPDATE pelanggan SET email_pelanggan='$_POST[email]',password_pelanggan='$_POST[pass]',nama_pelanggan='$_POST[nama]',telepon_pelanggan='$_POST[telepon]',alamat_pelanggan='$_POST[alamat]'
+      WHERE id_pelanggan='$_GET[id]'");
+
+  echo "<script> alert('Data Pelanggan Telah Diubah, Silahkan Login Kembali !');</script>";
+  session_destroy();
+  echo "<script> location='login.php';</script>";
+
+}
+  
+  ?>
 
   <!-- JavaScript Libraries -->
   <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
