@@ -108,6 +108,8 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
           });
           });
         </script>
+        <!-- jqu -->
+        <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
       </head>
 
 <body class="body4">
