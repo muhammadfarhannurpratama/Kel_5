@@ -15,7 +15,7 @@ $detail = $ambil->fetch_assoc();
  ?>
 
  <div class="row">
- 	<div class="col-md-6">
+ 	<div class="col-md-12">
  		<table class="table">
  			<tr>
  				<th>Tanggal</th>
@@ -36,7 +36,9 @@ $detail = $ambil->fetch_assoc();
  		</table>
  	</div>
  	<div class="col-md-6">
- 		<img src="../bukti_pembayaran/<?php echo $detail['bukti'] ?>" alt="" class="img-responsive"	>
+		 <div class="img">
+			<a href="#img"><img src="../bukti_pembayaran/<?php echo $detail['bukti'] ?>" alt="" class="img-responsive thumbnail"></a>
+		 </div>
  	</div>
  </div>
 
