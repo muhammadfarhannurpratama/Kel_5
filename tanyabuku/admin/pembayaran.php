@@ -15,7 +15,7 @@ $detail = $ambil->fetch_assoc();
  ?>
 
  <div class="row">
- 	<div class="col-md-12">
+ 	<div class="col-md-6">
  		<table class="table">
  			<tr>
  				<th>Tanggal</th>
@@ -41,7 +41,8 @@ $detail = $ambil->fetch_assoc();
 		 </div>
  	</div>
  </div>
-
+<div class="row">
+<div class="col-sm-12">
  <form method="post">
  	<div class="form-group">
  		<label>No Resi Pengiriman</label>
@@ -57,9 +58,12 @@ $detail = $ambil->fetch_assoc();
  			<option value="Barang Telah Dikirim">Barang Diterima</option>
  			<option value="Batal">Batal</option>
  		</select>
- 	</div>
+	 </div>
+	 <br><br><br><br><br><br><br>
  	<button class="btn btn-primary" name="proses">Proses</button>
  </form>
+ </div>
+ </div>
 
  <?php 
 if (isset($_POST['proses'])) 
