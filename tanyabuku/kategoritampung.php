@@ -44,11 +44,10 @@ include 'koneksi.php';
 
   <body class="body2">
  <?php include 'navbar.php'; ?>
-
-  <br><br><br>
   <div class="container">
     <div class="row">
- <div class="col-lg">
+      <div class="col-sm-1"></div>
+ <div class="col-sm-10">
 <!-- daftar buku -->
         <br><br><br>
         <h3 class="judulbuku">Daftar Buku</h3>

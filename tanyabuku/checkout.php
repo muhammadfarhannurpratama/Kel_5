@@ -110,7 +110,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
         </script>
       </head>
 
-      <body>
+<body class="body4">
   <!-- <br>
     <pre><?php echo print_r($_SESSION) ?></pre> -->
 

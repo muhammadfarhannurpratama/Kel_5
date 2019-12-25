@@ -40,9 +40,9 @@ include 'koneksi.php'
    <?php include 'navbar.php'; ?>
 <div class="container">
   <div class="row">
-        <div class="col-lg-2"></div>
+        <div class="col-sm-1"></div>
 <!-- daftar buku -->
-        <div class="col-lg-10">
+        <div class="col-sm-10">
         <br><br><br>
         <h3 class="judulbuku">Daftar Buku</h3>
         <br><br>
@@ -71,7 +71,6 @@ include 'koneksi.php'
         </section>
         </form>
         </div>
-        <div class="col-lg-2"></div>
     </div>
 </div>
 <br><br><br><br>

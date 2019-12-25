@@ -97,7 +97,7 @@
   }
   </script>
   <!-- jqu -->
-  <script src="admin/assetss/lib/jquery/jquery.min.js"></script>
+ 
 </head>
 
 <body class="body">
