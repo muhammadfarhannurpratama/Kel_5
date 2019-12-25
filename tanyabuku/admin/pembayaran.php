@@ -1,5 +1,5 @@
 <h2>Data Pembayaran</h2>
-<div class="">
+<div class="kotak">
 <?php 
 // mendapatkan id_pembelian dari url
 $id_pembelian = $_GET['id'];
