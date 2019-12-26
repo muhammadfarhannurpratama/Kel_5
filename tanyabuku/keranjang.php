@@ -89,7 +89,7 @@ if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
             <td><?php echo $jumlah; ?></td>
             <td>Rp. <?php echo number_format($subharga); ?></td>
             <td>
-              <a href="hapuskeranjang.php?id=<?php echo $id_produk ?>"class="btn btn-danger btn-xs">Hapus</a>
+              <a href="hapuskeranjang.php?id=<?php echo $id_produk ?>" onclick="return confirm('Apakah Anda Yakin Menghapusnya')"class="btn btn-danger btn-xs">Hapus</a>
             </td>
           </tr>
           <?php $nomor++; ?>

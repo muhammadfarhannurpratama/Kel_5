@@ -16,7 +16,7 @@
       <td><?php echo $nomor; ?></td>
       <td><?php echo $pecah['nama_kategori']; ?></td>
       <td>
-        <a href="index.php?halaman=hapuskategori&id=<?php echo $pecah['id_kategori']; ?>" class="btn-danger btn">Hapus</a>
+        <a href="index.php?halaman=hapuskategori&id=<?php echo $pecah['id_kategori']; ?>" onclick="return confirm('Apakah Anda Yakin Menghapusnya')" class="btn-danger btn">Hapus</a>
         <a href="index.php?halaman=ubahkategori&id=<?php echo $pecah['id_kategori']; ?>" class="btn btn-warning">Ubah</a>
       </td>
     </tr>
