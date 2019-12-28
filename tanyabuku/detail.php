@@ -70,49 +70,49 @@ $detail=$ambil->fetch_assoc();
   <?php include 'navbar.php'; ?>
   <br><br><br>
   <section class="konten">
-  	<div class="container">
-  		<div class="row">
-  			<div class="col-md-6">
-  				<div class="foto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="foto">
             <img src="foto_produk/<?php echo $detail['foto_produk']; ?>" alt="" class="">
           </div>
-  			</div>
-  			<div class="col-md-6">
-  				<h2><?php echo $detail['nama_produk']; ?></h2>
-  				<h4>Rp. <?php echo number_format($detail['harga_produk']); ?></h4>
+        </div>
+        <div class="col-md-6">
+          <h2><?php echo $detail['nama_produk']; ?></h2>
+          <h4>Rp. <?php echo number_format($detail['harga_jual']); ?></h4>
 
           <h5>Stok : <?php echo $detail['stok_produk'] ?></h5>
           <br>
 
-  				<form method="post">
-  					<div class="form-group">
-  						<div class="input-group">
-  							<input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required>
-  							<div class="input-group-btn">
-  								<button class="btn btn-primary" name="beli">Beli</button>
-  							</div>
-  						</div>
-  					</div>
-  				</form>
+          <form method="post">
+            <div class="form-group">
+              <div class="input-group">
+                <input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required>
+                <div class="input-group-btn">
+                  <button class="btn btn-primary" name="beli">Beli</button>
+                </div>
+              </div>
+            </div>
+          </form>
 
-  				<?php 
-  				// if tombol beli
-  				if (isset($_POST['beli']))
-  				{
-  					//medapatkkan jumlah yg di inputkan
-  					$jumlah=$_POST['jumlah'];
-  					//masukkan dikeranjang belanja
-  					$_SESSION['keranjang'][$id_produk] = $jumlah;
+          <?php 
+          // if tombol beli
+          if (isset($_POST['beli']))
+          {
+            //medapatkkan jumlah yg di inputkan
+            $jumlah=$_POST['jumlah'];
+            //masukkan dikeranjang belanja
+            $_SESSION['keranjang'][$id_produk] = $jumlah;
 
-  					echo "<script>alert('Produk Telah Masuk Ke Keranjang Belanja !');</script>";
-  					echo "<script>location='keranjang.php';</script>";
-  				}
-  				 ?>
+            echo "<script>alert('Produk Telah Masuk Ke Keranjang Belanja !');</script>";
+            echo "<script>location='keranjang.php';</script>";
+          }
+           ?>
 
-  				<p><?php echo $detail['deskripsi_produk']; ?></p>
-  			</div>
-  		</div>
-  	</div>
+          <p><?php echo $detail['deskripsi_produk']; ?></p>
+        </div>
+      </div>
+    </div>
   </section>
 
 
