@@ -144,13 +144,13 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
               <?php
               $ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$id_produk'");
               $pecah=$ambil->fetch_assoc();
-              $subharga=$pecah['harga_produk']*$jumlah;
+              $subharga=$pecah['harga_jual']*$jumlah;
               $subberat=$pecah['berat']*$jumlah;
               ?>
               <tr>
                 <td><?php echo $nomor; ?></td>
                 <td><?php echo $pecah['nama_produk']; ?></td>
-                <td>Rp. <?php echo number_format($pecah['harga_produk']); ?></td>
+                <td>Rp. <?php echo number_format($pecah['harga_jual']); ?></td>
                 <td><?php echo $subberat; ?> gr</td>
                 <td><?php echo $jumlah; ?></td>
                 <td>Rp. <?php echo number_format($subharga); ?></td>
