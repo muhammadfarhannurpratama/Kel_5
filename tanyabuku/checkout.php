@@ -44,30 +44,6 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
   <link href="admin/assetss/css/style.css" rel="stylesheet">
   <script src="js/jquery.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-        $("#form-input").css("display","none"); //Menghilangkan form-input ketika pertama kali dijalankan
-            $(".detail").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
-              if ($("input[name='alamat']:checked").val() == "berbeda" ) { //Jika radio button "berbeda" dipilih maka tampilkan form-inputan
-                  $("#form-input").slideDown("fast"); //Efek Slide Down (Menampilkan Form Input)
-              } else {
-                  $("#form-input").slideUp("fast");  //Efek Slide Up (Menghilangkan Form Input)
-                }
-              });
-          });
-        </script>
-        <script>
-          $(document).ready(function(){
-        $("#form-input2").css("display","none"); //Menghilangkan form-input ketika pertama kali dijalankan
-            $(".detail").click(function(){ //Memberikan even ketika class detail di klik (class detail ialah class radio button)
-              if ($("input[name='alamat']:checked").val() == "sama" ) { //Jika radio button "berbeda" dipilih maka tampilkan form-inputan
-                  $("#form-input2").slideDown("fast"); //Efek Slide Down (Menampilkan Form Input)
-              } else {
-                  $("#form-input2").slideUp("fast");  //Efek Slide Up (Menghilangkan Form Input)
-                }
-              });
-          });
-        </script>
         <script type="text/javascript">
 
           $(document).ready(function(){
@@ -174,113 +150,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
         <form method="post">  
           <div class="row">
             <div class="col-md-12">
-              <div class="form-group">
                 <h3>Alamat Tujuan Pengiriman</h3>
-                <input type="radio" name="alamat" value="sama" class="detail" required> Sesuai Profil
-                <div id="form-input2" class="form-group">
-                  <div class="row" >
-                    <div class="col-md-4">
-                      <div>
-                        <?php
-                  //Get Data Kabupaten
-                        $curl = curl_init();
-                        curl_setopt_array($curl, array(
-                          CURLOPT_URL => "http://api.rajaongkir.com/starter/city",
-                          CURLOPT_RETURNTRANSFER => true,
-                          CURLOPT_ENCODING => "",
-                          CURLOPT_MAXREDIRS => 10,
-                          CURLOPT_TIMEOUT => 30,
-                          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                          CURLOPT_CUSTOMREQUEST => "GET",
-                          CURLOPT_HTTPHEADER => array(
-                            "key:e23602a5ea1c864e7c56a93dbdecaac4"
-                          ),
-                        ));
-
-                        $response = curl_exec($curl);
-                        $err = curl_error($curl);
-
-                        curl_close($curl);
-                        echo "
-                        <div class= \"form-group\"><br>
-                        <label for=\"asal\">Kota/Kabupaten Asal </label>
-                        <select disabled class=\"form-control\" name='asal' id='asal'>";
-                  // echo "<option>Pilih Kota Asal</option>";
-                        $data = json_decode($response, true);
-                        for ($i=85; $i < count($data['rajaongkir']['results']); $i++) {
-                          echo "<option value='".$data['rajaongkir']['results'][$i]['city_id']."'>".$data['rajaongkir']['results'][$i]['city_name']."</option>";
-                        }
-                        echo "</select>
-                        </div>";
-                  //Get Data Kabupaten
-                  //-----------------------------------------------------------------------------
-
-                  //Get Data Provinsi
-                        $curl = curl_init();
-
-                        curl_setopt_array($curl, array(
-                          CURLOPT_URL => "http://api.rajaongkir.com/starter/province",
-                          CURLOPT_RETURNTRANSFER => true,
-                          CURLOPT_ENCODING => "",
-                          CURLOPT_MAXREDIRS => 10,
-                          CURLOPT_TIMEOUT => 30,
-                          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                          CURLOPT_CUSTOMREQUEST => "GET",
-                          CURLOPT_HTTPHEADER => array(
-                            "key:e23602a5ea1c864e7c56a93dbdecaac4"
-                          ),
-                        ));
-
-                        $response = curl_exec($curl);
-                        $err = curl_error($curl);
-
-                        echo "
-                        <div class= \"form-group\">
-                        <label for=\"provinsi\">Provinsi Tujuan </label>
-                        <select class=\"form-control\" name='provinsi' id='provinsi' required>";
-                        echo "<option>Pilih Provinsi Tujuan</option>";
-                        $data = json_decode($response, true);
-                        for ($i=0; $i < count($data['rajaongkir']['results']); $i++) {
-                          echo "<option value='".$data['rajaongkir']['results'][$i]['province_id']."'>".$data['rajaongkir']['results'][$i]['province']."</option>";
-                        }
-                        echo "</select>
-                        </div>";
-                      //Get Data Provinsi
-                        ?>
-
-                        <div class="form-group">
-                          <label for="kabupaten">Kota/Kabupaten Tujuan</label><br>
-                          <select class="form-control" id="kabupaten" name="kabupaten" required=""></select>
-                        </div>
-                        <div class="form-group">
-                          <label for="kurir">Kurir</label><br>
-                          <select class="form-control" id="kurir" name="kurir">
-                            <option value="jne">JNE</option>
-                            <option value="tiki">TIKI</option>
-                            <option value="pos">POS INDONESIA</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="berat">Berat (gram)</label><br>
-                          <input class="form-control" id="berat" type="text" name="berat" readonly value="<?php echo $totalberat; ?>" />
-                        </div>
-                        <button class="btn btn-block btn-danger" id="cek" type="button" name="button"><i class="material-icons">cached</i></button>
-                      </div>
-                    </div>
-                    <div class="col-md-8"><br>
-                      <label>Pilih Ongkos & Estimasi Pengiriman</label><br>
-                      <select id="ongkir" class="form-control" required=""></select><br>
-                      <label>Nama Pengirim</label>
-                      <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['nama_pelanggan'] ?>" class="form-control">
-                      <label>Alamat Lengkap Pengiriman</label>
-                      <textarea readonly="readonly" class="form-control" name="alamat_pengiriman" style="height: 217px;"><?php echo $_SESSION['pelanggan']['alamat_pelanggan']; ?></textarea>                   
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="radio" name="alamat" value="berbeda" class="detail"> Dropship 
-                <div id="form-input" class="form-group">
                   <div class="row" >
                     <div class="col-md-4">
                       <div>
@@ -376,34 +246,34 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
                       <label>Nama Pengirim</label>
                       <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Pengirim" required="">
                       <label>Alamat Lengkap Pengiriman</label>
-                      <textarea class="form-control" name="alamat_pengiriman" maxlength="70" placeholder="Masukkan Alamat Pengiriman" style="height: 217px;" required=""></textarea>                   
+                      <textarea class="form-control" name="alamat_pengiriman" maxlength="70" placeholder="Masukkan Alamat Pengiriman" style="height: 279px;" required=""></textarea>                   
                     </div>
                   </div>
                 </div> 
-              </div>
+              </div><br>
+              <button class="btn btn-block btn-info" name="checkout">Checkout</button>
             </div>
           </div>       
-          <button class="btn btn-block btn-info" name="checkout">Checkout</button>
         </form>
 
         <?php 
         if (isset($_POST['checkout'])) 
         {
           $id_pelanggan=$_SESSION['pelanggan']['id_pelanggan'];
-          $id_ongkir=$_POST['id_ongkir'];
+          $id_kurir=$_POST['kurir'];
           $tanggal_pembelian=date("Y-m-d");
           $alamat_pengiriman=$_POST['alamat_pengiriman'];
+          $tarif=$_POST['ongkir'];
+          $nama_kota=$_POST['kabupaten'];
+          $nama_penerima=$_POST['nama'];
 
-          $ambil=$koneksi->query("SELECT * FROM ongkir WHERE id_ongkir='$id_ongkir'");
-          $arrayongkir=$ambil->fetch_assoc();
-          $nama_kota=$arrayaongkir['nama_kota'];
-          $tarif=$arrayongkir['tarif'];
+          
 
           $total_pembelian=$totalbelanja + $tarif;
 
         # 1. simpan data ke tabel pembelian
-          $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif,alamat_pengiriman )
-            VALUES('$id_pelanggan','$id_ongkir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman')");
+          $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif,alamat_pengiriman,nama_penerima )
+            VALUES('$id_pelanggan','$id_kurir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman','$nama_penerima')");
 
         # 2. mendapatkan id_pembelian yg baru saja terjadi
           $id_pembelian_baru_terjadi=$koneksi->insert_id;
