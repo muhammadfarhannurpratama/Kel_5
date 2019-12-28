@@ -93,7 +93,7 @@ $detail=$ambil->fetch_assoc();
    </div>
    <div class="col-md-4">
      <h3>Pelanggan</h3>
-     <strong><?php echo $detail['nama_pelanggan']; ?></strong> <br> 
+     <strong><?php echo $detail['nama_penerima']; ?></strong> <br> 
      <p>
       <?php echo $detail['telepon_pelanggan']; ?> <br>
       <?php  echo $detail['email_pelanggan']; ?>
