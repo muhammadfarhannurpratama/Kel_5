@@ -1,23 +1,38 @@
 <h2>Tambah Produk</h2>
+<?php $ambil=$koneksi->query("SELECT * FROM persen_laba"); ?>
+<?php $pecah=$ambil->fetch_assoc();?>
+<!-- <pre><?php echo print_r($pecah) ?></pre> -->
 <div class="kotak2">
 <div class="container">
 <div class="row">
-<form method="post" enctype="multipart/form-data">
+<form method="post" name="autoCalForm" enctype="multipart/form-data">
 <div class="col-sm-6">
 	<div class="form-group">
 		<label>Judul Buku</label>
 		<input type="text" class="form-control" name="Nama">
 	</div>
 	<div class="form-group">
-		<label>Harga (Rp)</label>
-		<input type="number" class="form-control" name="Harga">
+		<label>Harga Beli</label>
+		<input class="form-control" type='number' name='harga_beli'    onFocus="startCalc();" onBlur="stopCalc();" />	
+	</div>
+	 <div class="form-group">
+		<label>Laba</label>
+		<input class="form-control" readonly type=text value='0' name="laba"  readonly>	
+	</div>
+	<div class="form-group">
+		<label>Harga Jual</label>
+		<input class="form-control" readonly type=text value='0' name="harga_jual"  readonly>	
+	</div>
+	<div class="form-group">
+		<input type='hidden' name='persen'   readonly="" value="<?php echo $pecah['persen']; ?>"	  size='23'   onFocus="startCalc();" onBlur="stopCalc();" />	
+	</div>
+	<div class="form-group">
+		<input type='hidden' name="pembagian"   readonly="	" value="100"  onFocus="startCalc();" onBlur="stopCalc();"  />	
 	</div>
 	<div class="form-group">
 		<label>Berat (gr)</label>
 		<input type="number" class="form-control" name="Berat">
 	</div>
-</div>
-<div class="col-sm-6">
 	<div class="form-group">
 		<label>Stok</label>
 		<input type="number" class="form-control" name="Stok" min="1">
@@ -36,6 +51,17 @@
               <?php } ?>
  		</select>
  	</div>	
+</div>
+<div class="col-sm-6">
+	<div class="form-group">
+ 		<label>Pengadaan Barang</label>
+ 		<select class="form-control" name="Barang">
+ 			<option value="">Pilih Status</option>
+ 			<option value="Suppliyer">Suppliyer</option>
+ 			<option value="Kos">Konsinyasi</option>
+ 		</select>
+ 	</div>
+	
 	<div class="form-group">
 		<label>Deskripsi</label>
 		<textarea class="form-control" name="Deskripsi" rows="10"></textarea>
@@ -65,8 +91,8 @@ if (isset($_POST['save']))
 	$lokasi = $_FILES['foto']['tmp_name'];
 	move_uploaded_file($lokasi, "../foto_produk/".$nama);
 	$koneksi->query("INSERT INTO produk
-		(nama_produk,harga_produk,berat,foto_produk,deskripsi_produk,stok_produk,nama_kategori)
-		VALUES('$_POST[Nama]','$_POST[Harga]','$_POST[Berat]','$nama','$_POST[Deskripsi]','$_POST[Stok]','$_POST[Kategori]')");
+		(nama_produk,harga_jual,berat,foto_produk,deskripsi_produk,stok_produk,nama_kategori,pengadaan_barang,harga_beli,laba,persen)
+		VALUES('$_POST[Nama]','$_POST[harga_jual]','$_POST[Berat]','$nama','$_POST[Deskripsi]','$_POST[Stok]','$_POST[Kategori]','$_POST[Barang]','$_POST[harga_beli]','$_POST[laba]','$_POST[persen]')");
 
 	echo "<div class='alert alert-info'>Data Tersimpan !</div>";
  	echo "<meta http-equiv='refresh' content='1;url=index.php?halaman=produk'>";
@@ -87,6 +113,22 @@ if (isset($_POST['save']))
 
                     });
   </script>
+
+<script><!-- 
+
+function startCalc(){
+interval = setInterval("calc()",1);}
+function calc(){
+one = document.autoCalForm.harga_beli.value;
+two = document.autoCalForm.persen.value; 
+three = document.autoCalForm.pembagian.value; 
+four = document.autoCalForm.laba.value = (one * 1) * (two * 1) / (three * 1);
+
+document.autoCalForm.harga_jual.value = (one * 1) + (four * 1);}
+
+function stopCalc(){
+clearInterval(interval);}
+</script>
 </div>
 </div>
 </div>

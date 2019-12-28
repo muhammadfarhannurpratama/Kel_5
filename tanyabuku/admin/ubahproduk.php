@@ -1,28 +1,40 @@
 <h2>Ubah Produk</h2>
-<div class="kotak2">
-<div class="row">
 <?php 
 $ambil=$koneksi->query("SELECT * FROM produk WHERE id_produk='$_GET[id]'");
 $pecah=$ambil->fetch_assoc();
  ?>
-	<form method="post" enctype="multipart/form-data">	
+ <form method="post" name="autoCalForm" enctype="multipart/form-data">
 	<div class="col-sm-3">
-		<div class="form-group">
-			<label>Nama Produk</label>
-			<input type="text" name="nama" class="form-control" value="<?php echo $pecah['nama_produk']; ?>">
-		</div>
-		<div class="form-group">
-			<label>Harga (Rp)</label>
-			<input type="number" name="harga" class="form-control" value="<?php echo $pecah ['harga_produk']; ?>">
-		</div>
-		<div class="form-group">
-			<label>Berat (gr)</label>
-			<input type="number" name="berat" class="form-control" value="<?php echo $pecah ['berat']; ?>">	
-		</div>
-		<div class="form-group">
-			<label>Stok</label>
-			<input type="number" name="stok" class="form-control" min="1" max="999" value="<?php echo $pecah ['stok_produk']; ?>">	
-		</div>
+	<div class="form-group">
+		<label>Judul Buku</label>
+		<input type="text" class="form-control" name="nama_produk">
+	</div>
+	<div class="form-group">
+		<label>Harga Beli</label>
+		<input class="form-control" type='number' name='harga_beli'    onFocus="startCalc();" onBlur="stopCalc();" />	
+	</div>
+	 <div class="form-group">
+		<label>Laba</label>
+		<input class="form-control" readonly type=text value='0' name="laba"  readonly>	
+	</div>
+	<div class="form-group">
+		<label>Harga Jual</label>
+		<input class="form-control" readonly type=text value='0' name="harga_jual"  readonly>	
+	</div>
+	<div class="form-group">
+		<input type='hidden' name='persen'   readonly="" value="<?php echo $pecah['persen']; ?>"	  size='23'   onFocus="startCalc();" onBlur="stopCalc();" />	
+	</div>
+	<div class="form-group">
+		<input type='hidden' name="pembagian"   readonly="	" value="100"  onFocus="startCalc();" onBlur="stopCalc();"  />	
+	</div>
+	<div class="form-group">
+		<label>Berat (gr)</label>
+		<input type="number" class="form-control" name="Berat">
+	</div>
+	<div class="form-group">
+		<label>Stok</label>
+		<input type="number" class="form-control" name="Stok" min="1">
+	</div>
 	</div>
 	<div class="col-sm-3">
 		<div class="form-group">
@@ -52,6 +64,14 @@ $pecah=$ambil->fetch_assoc();
 		</div>
 	</div>
 	<div class="col-sm-6">
+		 	<div class="form-group">
+ 		<label>Pengadaan Barang</label>
+ 		<select class="form-control" name="Barang">
+ 			<option><?php echo $pecah['pengadaan_barang']; ?></option>
+ 			<option value="Suppliyer">Suppliyer</option>
+ 			<option value="Konsinyasi">Konsinyasi</option>
+ 		</select>
+ 	</div>
 		<div class="form-group">
 			<label>Deskripsi</label>
 			<textarea name="deskripsi" class="form-control" rows="10">
@@ -79,18 +99,51 @@ if (isset($_POST['ubah']))
 	{
 		move_uploaded_file($lokasifoto, "../foto_produk/$namafoto");
 
-		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
-			harga_produk='$_POST[harga]',berat='$_POST[berat]',
-			foto_produk='$namafoto',nama_kategori='$_POST[kategori]',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]'
+		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',harga_jual='$_POST[harga_jual]',berat='$_POST[berat]',foto_produk='$namafoto',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]',nama_kategori='$_POST[kategori]',pengadaan_barang='$_POST[Barang]',harga_beli='$_POST[harga_beli]',laba='$_POST[laba]',persen='$_POST[persen]'
 			WHERE id_produk='$_GET[id]'");
 	}
 	else
 	{
 		$koneksi->query("UPDATE produk SET nama_produk='$_POST[nama]',
-			harga_produk='$_POST[harga]',berat='$_POST[berat]',nama_kategori='$_POST[kategori]',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]' WHERE id_produk='$_GET[id]'");
+			harga_jual='$_POST[harga_jual]',berat='$_POST[berat]',deskripsi_produk='$_POST[deskripsi]',stok_produk='$_POST[stok]',nama_kategori='$_POST[kategori]',pengadaan_barang='$_POST[Barang]',harga_beli='$_POST[harga_beli]',laba='$_POST[laba]',persen='$_POST[persen]' WHERE id_produk='$_GET[id]'");
 	}
 	echo "<script>alert('Data Produk Telah Diubah');</script>";
 	echo "<script>location='index.php?halaman=produk';</script>";
+
 }
   ?>
-  </div>
+
+  <script><!-- 
+
+function startCalc(){
+interval = setInterval("calc()",1);}
+function calc(){
+one = document.autoCalForm.harga_beli.value;
+two = document.autoCalForm.persen.value; 
+three = document.autoCalForm.pembagian.value; 
+four = document.autoCalForm.laba.value = (one * 1) * (two * 1) / (three * 1);
+
+document.autoCalForm.harga_jual.value = (one * 1) + (four * 1);}
+
+function stopCalc(){
+clearInterval(interval);}
+</script>
+<!-- <form method="post" name="autoCalForm" enctype="multipart/form-data">
+	<div class="form-group">
+		<label>Harga Beli</label>
+		<input class="form-control" type='number' name='harga_beli'  value="<?php echo $pecah['harga_beli']; ?>"  onFocus="startCalc();" onBlur="stopCalc();" />	
+	</div>
+	 <div class="form-group">
+		<label>Laba</label>
+		<input class="form-control" readonly type=text value='0' name="laba"  readonly>	
+	</div>
+	<div class="form-group">
+		<label>Harga Jual</label>
+		<input class="form-control" readonly type=text value='0' name="harga_jual"  readonly>	
+	</div>
+	<div class="form-group">
+		<input type='hidden' name='persen'   readonly="" value="<?php echo $pecah['persen']; ?>"	  size='23'   onFocus="startCalc();" onBlur="stopCalc();" />	
+	</div>
+	<div class="form-group">
+		<input type='hidden' name="pembagian"   readonly="	" value="100"  onFocus="startCalc();" onBlur="stopCalc();"  />	
+	</div> -->

@@ -19,7 +19,7 @@ if(!isset($_SESSION['admin']))
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/logotanyabuku.ico" type="image/ico" />
+  <link rel="icon" href="images/logotanyabuku.ico" type="image/ico" />
 
     <title>Tanya Buku ! | </title>
 
@@ -31,7 +31,7 @@ if(!isset($_SESSION['admin']))
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-	
+  
     <!-- bootstrap-progressbar -->
     <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
@@ -43,7 +43,7 @@ if(!isset($_SESSION['admin']))
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
 
-  <body style="background-color: white" class="nav-md">
+  <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -111,6 +111,12 @@ if(!isset($_SESSION['admin']))
 
                     </ul>
 
+                     </li>
+                  <li><a href="index.php?halaman=persenlaba"><i class="fa fa-file"></i> Persen Laba</a>
+                    <ul class="nav child_menu">
+
+                    </ul>
+
                   </li>
                   <li><a href="index.php?halaman=logout"><i class="fa fa-sign-out"></i> Logout</a>
                     <ul class="nav child_menu">
@@ -120,7 +126,9 @@ if(!isset($_SESSION['admin']))
                 </ul>    
               </div>
             </div>
+            <!-- /sidebar menu -->
 
+            <!-- /menu footer buttons -->
           </div>
         </div>
 
@@ -221,7 +229,7 @@ if(!isset($_SESSION['admin']))
         <div class="right_col" role="main">
           <!-- top tiles -->
           <div class="row" style="display: inline-block;" >
-          <div class=" col-sm-12"> 
+          <div class="tile_count"> 
             <?php 
                 if (isset($_GET['halaman'])) 
                 {
@@ -301,6 +309,18 @@ if(!isset($_SESSION['admin']))
                         {
                           include 'hapuskategori.php';
                         }
+                          elseif ($_GET['halaman']=="persenlaba") 
+                        {
+                          include 'persenlaba.php';
+                        }
+                          elseif ($_GET['halaman']=="listpersen") 
+                        {
+                          include 'listpersen.php';
+                        }
+                          elseif ($_GET['halaman']=="hapuspersen") 
+                        {
+                          include 'hapuspersen.php';
+                        }
                 }
                 else
                 {
@@ -309,9 +329,15 @@ if(!isset($_SESSION['admin']))
                 ?>
           </div>
         </div>
+          <!-- /top tiles -->
+          <br />
+        <!-- /page content -->
+
+        <!-- footer content -->
+      
+        <!-- /footer content -->
       </div>
     </div>
-  </div>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
@@ -353,7 +379,7 @@ if(!isset($_SESSION['admin']))
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-	
+  
   </body>
 </html>
   <script>
