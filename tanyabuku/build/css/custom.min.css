@@ -29,13 +29,15 @@
 }
 @media (max-width: 992px){
     .kotak{
-        width: 480px;
-        height: 500px;
+        margin-left: 5px;
+        width:500px;
+        height: 450px;
         background-color: white;
         overflow: auto;
         border-bottom: 5px solid salmon;
     }
     .kotak2{
+        margin-left: 5px;
         width: 100%;
         height: 600px;
         background-color: white;
