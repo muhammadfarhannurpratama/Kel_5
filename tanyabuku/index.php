@@ -83,7 +83,7 @@ include 'koneksi.php'
         <?php $ambil=$koneksi->query("SELECT * FROM produk"); ?>
         <?php while($perproduk=$ambil->fetch_assoc()){ ?>
           <div class="col-md-3">
-                      <div class="box2">
+                <div class="box2">
                          <a href="detail.php?id=<?php echo $perproduk['id_produk']; ?>">
                         <img src="foto_produk/<?php echo $perproduk['foto_produk']; ?>" alt="" 
                         style="color: black">
@@ -94,9 +94,8 @@ include 'koneksi.php'
                         </div>
                         <br>
                         <strong><label style="font-size: 14px;" > Stok : <?php echo $perproduk['stok_produk'] ?> Buku</label></strong>    
-                      </div>
-       
-                    </div>
+                </div>      
+            </div>
         <?php } ?>
 
 
