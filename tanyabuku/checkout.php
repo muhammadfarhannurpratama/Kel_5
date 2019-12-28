@@ -288,7 +288,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
             $nama=$perproduk['nama_produk'];
             $harga=$perproduk['harga_produk'];
             $berat=$perproduk['berat'];
-
+            
             $subberat=$perproduk['berat']*$jumlah;
             $subharga=$perproduk['harga_produk']*$jumlah;
             $koneksi->query("INSERT INTO pembelian_produk (id_pembelian,id_produk,nama,harga,berat,subberat,subharga,jumlah)

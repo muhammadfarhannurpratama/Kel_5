@@ -91,7 +91,7 @@ if (isset($_POST['save']))
 	$lokasi = $_FILES['foto']['tmp_name'];
 	move_uploaded_file($lokasi, "../foto_produk/".$nama);
 	$koneksi->query("INSERT INTO produk
-		(nama_produk,harga_jual,berat,foto_produk,deskripsi_produk,stok_produk,nama_kategori,pengadaan_barang,harga_beli,laba,persen)
+		(nama_produk,harga_jual,berat,foto_produk,deskripsi_produk,stok_produk,nama_kategori,pengadaan_barang,harga_beli,laba,persen_produk)
 		VALUES('$_POST[Nama]','$_POST[harga_jual]','$_POST[Berat]','$nama','$_POST[Deskripsi]','$_POST[Stok]','$_POST[Kategori]','$_POST[Barang]','$_POST[harga_beli]','$_POST[laba]','$_POST[persen]')");
 
 	echo "<div class='alert alert-info'>Data Tersimpan !</div>";
