@@ -22,7 +22,7 @@
 <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="index.php">Home</a></li>
+          <li class=""><a href="index.php">Home</a></li>
           <li><a class="nav-buku" href="#get-started">Best Seller</a></li>
           <li><a class="nav-test" href="#screenshots">Testimoni</a></li>
           <li><a class="nav-about" href="#about-us">About</a></li>

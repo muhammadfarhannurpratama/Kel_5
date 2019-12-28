@@ -42,7 +42,7 @@ include 'koneksi.php'
   <div class="row">
         <div class="col-sm-1"></div>
 <!-- daftar buku -->
-        <div class="col-sm-10">
+        <div class="col-sm-12">
         <br><br><br>
         <h3 class="judulbuku">Daftar Buku</h3>
         <br><br>
@@ -63,9 +63,8 @@ include 'koneksi.php'
                         </div>
                         <br>
                         <strong><label style="font-size: 14px;" > Stok : <?php echo $perproduk['stok_produk'] ?> Buku</label></strong>    
-                      </div>
-       
-                    </div>
+                      </div>      
+            </div>
         <?php } ?>
 
 
