@@ -21,6 +21,11 @@
     height: 600px;
     background-color: white;
     overflow: hidden;
+} 
+.tombol{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
 }
 @media (max-width: 992px){
     .kotak{
@@ -37,9 +42,9 @@
         overflow: auto;
     }
 }
-.atas-kanan{
-    position: absolute;
-    bottom: -80px;
+.tombol{
+    position: relative;
+    bottom: -10px;
     left: 10px;
 }
 .btn-panjang .btn{

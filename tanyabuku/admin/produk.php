@@ -47,4 +47,5 @@
 	<?php } ?>
 	</tbody>	
 </table>
-<a href="index.php?halaman=tambahproduk" class="btn btn-primary">Tambah Data</a>
+</div>
+<a href="index.php?halaman=tambahproduk" class="btn btn-primary tombol">Tambah Data</a>
