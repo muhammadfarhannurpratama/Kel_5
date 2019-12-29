@@ -70,37 +70,41 @@ if (isset($_POST['kirim']))
   <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800"></h1>
-    <p class="mb-4"></a>.</p>
+    <!-- <h1 class="h3 mb-2 text-gray-800"></h1>
+    <p class="mb-4"></a>.</p> -->
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Laporan Tanya Buku</h6>
+        <h6 class="m-0 font-weight-bold text-primary">LAPORAN PENJUALAN</h6>
       </div>
-      <div class="card-body">
-        <div class="table-responsive">
-          <form method="post">
-	<div class="col-md-5">
-		<div class="form-group">
+
+<div class="card-body">    
+   <form method="post">
+    <div class="row">      	
+	<div class="col-md-6">
+			<div class="form-group">
 			<label>Tanggal Mulai</label>
 			<input type="date" class="form-control" name="tglm" value="<?php echo $tgl_mulai ?>">
 		</div>
 	</div>
-	<div class="col-md-5">
+	<div class="col-md-6">
 		<div class="form-group">
 			<label>Tanggal Selesai</label>
 			<input type="date" class="form-control" name="tgls" value="<?php echo $tgl_selesai ?>">
 		</div>
+	</div>	
 	</div>
-	<div class="col-md-2">
-		<label>&nbsp;</label> 
-		<button class="btn btn-primary" name="kirim">Cari</button>
+	<div class="col-md-12">
+		 <label>&nbsp;</label> 
+		<button class="btn btn-primary btn-block" name="kirim">Cari</button>
 	</div>
+</div>	
 </form>
 <br>
-
-<table class="table table-bordered">
+<div class="card-body">
+	<div class="table-responsive">
+		<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 	<thead>
 		<tr>
 			<th>No</th>

@@ -51,20 +51,16 @@ if(!isset($_SESSION['admin']))
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Silahkan Memilih Berapa Persen Laba Buku</h6>
+        <h6 class="m-0 font-weight-bold text-primary">SILAHKAN PILIH PERSEN LABA TOKO</h6>
       </div>
       <div class="card-body">
         <div class="table-responsive">
           <form method="post" enctype="multipart/form-data">
  	<div class="form-group">
- 		<label>Pilih Persen Laba Yang Akan Digunakan Toko</label><br>
- 			<input type="radio" name="persen" value="10">10% <br>
-			<input type="radio" name="persen" value="20">20% <br>
-			<input type="radio" name="persen" value="30">30% <br>
-			<input type="radio" name="persen" value="40">40% <br>
-			<input type="radio" name="persen" value="50">50% <br>
-			<input type="radio" name="persen" value="60">60% <br>
-			<input type="radio" name="persen" value="70">70% <br>	
+ 			<input type="radio" name="persen" value="10" class="form-group">10% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="persen" value="20" class="form-group">20% <br>
+      <input type="radio" name="persen" value="30" class="form-group">30% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="persen" value="40" class="form-group">40% <br>
+      <input type="radio" name="persen" value="50" class="form-group">50% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="persen" value="60" class="form-group">60% <br>
+      <input type="radio" name="persen" value="70" class="form-group">70% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="persen" value="80" class="form-group">80% <br>
  	</div>
  	<button class="btn btn-primary" name="simpan">Simpan</button>
 

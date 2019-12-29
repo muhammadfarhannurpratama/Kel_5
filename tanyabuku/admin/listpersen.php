@@ -22,7 +22,7 @@ if(!isset($_SESSION['admin']))
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tanya Admin - Produk</title>
+  <title>Tanya Admin - Persen</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,13 +45,13 @@ if(!isset($_SESSION['admin']))
   <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Produk</h1>
-    <p class="mb-4">Keseluruhan Barang pada Tanya Buku Store</a>.</p>
+    <!-- <h1 class="h3 mb-2 text-gray-800">Produk</h1>
+    <p class="mb-4">Keseluruhan Barang pada Tanya Buku Store</a>.</p> -->
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Produk Tanya Buku</h6>
+        <h6 class="m-0 font-weight-bold text-primary">PERSEN TOKO</h6>
       </div>
       <div class="card-body">
         <div class="table-responsive">

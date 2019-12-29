@@ -2,6 +2,14 @@
 session_start();
 //koneksi database
 $koneksi = new mysqli("localhost","root","","db_tanyabuku");
+
+if(!isset($_SESSION['admin']))
+{
+  echo "<script>alert('Anda Harus Login !');</script>";
+  echo "<script>location='login.php';</script>";
+  header('location:login.php');
+  exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,76 +54,48 @@ $koneksi = new mysqli("localhost","root","","db_tanyabuku");
  <!-- DataTales Example -->
     <div class="card shadow mb-4">
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Kategori Produk</h6>
+        <h6 class="m-0 font-weight-bold text-primary">KATEGORI PRODUK</h6>
       </div>
       <div class="card-body">
         <div class="table-responsive">
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-            <thread>
+            <thead>
              <tr> 
-             <th>No</th>
-             <th><center>Nama Kategori</center></th>  
-            <th><center>Opsi</center></th>
+                 <th>No</th>
+                 <th><center>Nama Kategori</center></th>  
+                  <th><center>Opsi</center></th>
              </tr>
-             </thread>
+             </thead>
                 <tbody>
                   <?php $nomor=1; ?>
                   <?php $ambil=$koneksi->query("SELECT * FROM kategori"); ?>
                   <?php while($pecah=$ambil->fetch_assoc()){ ?>
                     <tr>
-                      <td><?php echo $nomor; ?></td>
-                       <td><?php echo $pecah['nama_kategori']; ?></td>
-                     <td>
+                        <td><?php echo $nomor; ?></td>
+                        <td><?php echo $pecah['nama_kategori']; ?></td>
+                        <td>
 
                       <center><a href="ubahkategori.php?id=<?php echo $pecah['id_kategori']; ?>" class="btn btn-warning">Ubah</a>
                       <a href="hapuskategori.php?id=<?php echo $pecah['id_kategori']; ?>" onclick="return confirm('Apakah Anda Yakin Menghapusnya')" class="btn-danger btn">Hapus</a></center>  
-      </td>
-    </tr>
-    <?php $nomor++; ?>
-  <?php } ?>
-  </tbody>  
-</table>
-<center><a href="tambahkategori.php" class="btn btn-primary btn-block">Tambah Kategori</a></center>
-
+                        </td>
+                      </tr>
+                      <?php $nomor++; ?>
+                    <?php } ?>
+                    </tbody>  
+                  </table><br>
+                  <center><a href="tambahkategori.php" class="btn btn-primary btn-block">Tambah Kategori</a></center>
             </div>
           </div>
         </div>
 
+      </div> 
+
     
       <!-- /.container-fluid -->
-
+    </div>
     <!-- End of Main Content -->
 
 <?php include 'footer.php'; ?>
-
-
- <!--
-<table class="table table-bordered">
-  <thread>
-    <tr> 
-      <th>No</th>
-      <th><center>Nama Kategori</center></th>  
-      <th>Button</th>
-    </tr>
-  </thread>
-  <tbody>
-    <?php $nomor=1; ?>
-    <?php $ambil=$koneksi->query("SELECT * FROM kategori"); ?>
-    <?php while($pecah=$ambil->fetch_assoc()){ ?>
-    <tr>
-      <td><?php echo $nomor; ?></td>
-      <td><?php echo $pecah['nama_kategori']; ?></td>
-      <td>
-        <a href="index.php?halaman=hapuskategori&id=<?php echo $pecah['id_kategori']; ?>" onclick="return confirm('Apakah Anda Yakin Menghapusnya')" class="btn-danger btn">Hapus</a>
-        <a href="index.php?halaman=ubahkategori&id=<?php echo $pecah['id_kategori']; ?>" class="btn btn-warning">Ubah</a>
-      </td>
-    </tr>
-    <?php $nomor++; ?>
-  <?php } ?>
-  </tbody>  
-</table>
-<a href="index.php?halaman=tambahkategori" class="btn btn-primary">Tambah Kategori</a>
--->
 
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
