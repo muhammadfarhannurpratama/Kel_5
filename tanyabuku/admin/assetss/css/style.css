@@ -1688,7 +1688,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 .footer .copyrights {
-  background: #fff;
   margin-top: 50px;
   text-align: center;
   padding: 25px;
@@ -1701,6 +1700,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0;background-origin: padding-box;
+  color: white;
 }
 
 .footer .copyrights p a, .footer .copyrights .credits a {
