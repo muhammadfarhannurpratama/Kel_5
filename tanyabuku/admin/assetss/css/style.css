@@ -186,6 +186,31 @@
           color: white;
           text-shadow: 0 2px 3px black ;
         }
+        .book{
+          width: auto;
+          height: 80%;
+          background-color: white;
+          padding: 10px;
+        }
+        .book p{
+          color: black;
+          font-size: 13px;
+          text-align: left;
+          font-weight: bold;
+        }
+        .foto{
+         height: 600px;
+         width: 400px;
+         background-size: cover;
+         border-top: 5px solid lightcoral;
+         border-left: 5px solid lightcoral;
+         border-bottom: 5px solid lightblue;
+         border-right: 5px solid lightblue;
+       }
+       .foto img{
+         height: 100%;
+         width: 100%;  
+         ;}
 /* -----Desktop----- */
 @media (min-width: 992px) { 
   .box{ 
@@ -237,6 +262,24 @@
     color: white;
     text-shadow: 0 2px 3px black ;
    }
+   .book{
+     width: auto;
+     height: 80%;
+     background-color: white;
+   }
+   .foto{
+    height: 600px;
+    width: 400px;
+    background-size: cover;
+    border-top: 5px solid lightcoral;
+    border-left: 5px solid lightcoral;
+    border-bottom: 5px solid lightblue;
+    border-right: 5px solid lightblue;
+  }
+  .foto img{
+    height: 100%;
+    width: 100%;  
+    ;}
  }
 /*------------ box family tutup-------------- */
 

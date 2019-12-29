@@ -48,24 +48,9 @@ $detail=$ambil->fetch_assoc();
   return true;
   }
   </script>
-<style>
-.foto{
-  height: 600px;
-  width: 400px;
-  background-size: cover;
-  border-top: 5px solid lightcoral;
-  border-left: 5px solid lightcoral;
-  border-bottom: 5px solid lightblue;
-  border-right: 5px solid lightblue;
-}
-.foto img{
-  height: 100%;
-  width: 100%;  
-  ;
-</style>
 </head>
 
-<body class="body2">
+<body class="body4">
 
   <?php include 'navbar.php'; ?>
   <br><br><br>
@@ -78,11 +63,11 @@ $detail=$ambil->fetch_assoc();
           </div>
         </div>
         <div class="col-md-6">
-          <h2><?php echo $detail['nama_produk']; ?></h2>
+          <div class="book">
+          <h2><?php echo $detail['nama_produk']; ?></h2> <br>
           <h4>Rp. <?php echo number_format($detail['harga_jual']); ?></h4>
 
-          <h5>Stok : <?php echo $detail['stok_produk'] ?></h5>
-          <br>
+          <p>Stok : <?php echo $detail['stok_produk'] ?></p>
 
           <form method="post">
             <div class="form-group">
@@ -110,6 +95,7 @@ $detail=$ambil->fetch_assoc();
            ?>
 
           <p><?php echo $detail['deskripsi_produk']; ?></p>
+        </div>
         </div>
       </div>
     </div>
