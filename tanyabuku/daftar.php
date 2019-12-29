@@ -130,54 +130,17 @@
   						<div class="form-group">
   							<label>Password</label>
   							<input type="password" maxlength="15" minlength="8" class="form-control" name="password" required placeholder="Masukan Password">
-  						</div>
               <div class="form-group">
-                <label>Provinsi</label>
-                <?php $sql_provinsi=$koneksi->query("SELECT * FROM provinsi"); ?>
-                <select name="provinsi" id="provinsi" class="form-control" required>
-                  <option value="">Pilih Provinsi</option>
-                  <?php while($row_provinsi = mysqli_fetch_array($sql_provinsi)) { ?>
-                  <option value="<?php echo $row_provinsi['id_prov'] ?>"><?php echo $row_provinsi['nama'] ?></option>
-                <?php } ?>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Kabupaten</label>
-                <?php $sql_kabupaten=$koneksi->query("SELECT * FROM kabupaten"); ?>
-                <select name="kabupaten" id="kabupaten" class="form-control" required>
-                  <option value="">Pilih Kabupaten</option>
-                  <?php while($row_kabupaten = mysqli_fetch_array($sql_kabupaten)) { ?>
-                  <option value="<?php echo $row_kabupaten['id_kab'] ?>"><?php echo $row_kabupaten['nama'] ?></option>
-                <?php } ?>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Kecamatan</label>
-                <?php $sql_kecamatan=$koneksi->query("SELECT * FROM kecamatan"); ?>
-                <select name="kecamatan" id="kecamatan" class="form-control" required>
-                  <option value="">Pilih Kecamatan</option>
-                  <?php while($row_kecamatan = mysqli_fetch_array($sql_kecamatan)) { ?>
-                  <option value="<?php echo $row_kecamatan['id_kec'] ?>"><?php echo $row_kecamatan['nama'] ?></option>
-                <?php } ?>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Kelurahan</label>
-                <select name="kelurahan" id="kelurahan" class="form-control" required>
-                  <option value="">Pilih Kelurahan</option>
-                  <option></option>
-                </select>
-              </div>
   						<div class="form-group">
   							<label>Alamat</label>
-  							<textarea class="form-control" maxlength="50" name="alamat"  required></textarea>
+  							<textarea class="form-control" maxlength="50" name="alamat"  required placeholder="Masukan Alamat"></textarea>
   						</div>
   						<div class="form-group">
   							<label>Telp / HP</label>
-  							<input type="text" maxlength="13" minlength="11" onkeypress="return Angkasaja(event)"  class="form-control" name="telepon" required>
+  							<input type="text" maxlength="13" minlength="11" onkeypress="return Angkasaja(event)"  class="form-control" name="telepon" required placeholder="Masukan No Telepon">
   						</div>
   						<div class="form-group">
-  						<center><button class="btn btn-primary tomb" name="daftar">Daftar</button></center>
+  						<center><button class="btn btn-primary tombol" name="daftar">Daftar</button></center>
   						</div>
   					</form>
   					<?php 

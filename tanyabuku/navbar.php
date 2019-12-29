@@ -26,6 +26,11 @@
           <li><a class="nav-buku" href="#get-started">Terlaris</a></li>
           <li><a class="nav-test" href="#screenshots">Testimoni</a></li>
           <li><a class="nav-about" href="#about-us">tentang</a></li>
+          <!--jika sudah login (ada SESSION profil)-->
+            <?php if (isset($_SESSION['pelanggan'])): ?>
+              <li><a href="profiluser.php">Profil</a></li>
+          <!--jika belum login ( belum ada SESSION profil)-->
+            <?php endif ?>           
           <li><a  href="kategori.php"class="menu-has-children nav-kategori">Semua Buku</a>
              <ul>
              <h5>Kategori</h5>
@@ -42,13 +47,6 @@
             </ul>
           </li>
           <li><a class="nav-keranjang" href="keranjang.php">Keranjang</a></li>
-
-          <!--jika sudah login (ada SESSION profil)-->
-          <?php if (isset($_SESSION['pelanggan'])): ?>
-            <li><a href="profiluser.php">Profil</a></li>
-            <!--jika belum login ( belum ada SESSION profil)-->
-              <?php endif ?> 
-
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
             <li><a href="history.php">History</a></li>

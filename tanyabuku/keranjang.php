@@ -53,7 +53,7 @@ if (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
 
   <!--mulai coding keranjang-->
   
-  <section class="konten">
+  <section class="keranjang">
     <div class="container">
       <br>
       <br>

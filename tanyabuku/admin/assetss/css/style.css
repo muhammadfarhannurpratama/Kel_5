@@ -3,7 +3,7 @@
 /* --------Phone------- */
 .body{
   background:url(../img/book34.jpg)no-repeat center;
-  height: 50%;
+  min-height: 700px;
   width: 100%;
   position: relative;
   background-size: cover;
@@ -1770,3 +1770,7 @@ h3{
   background-color: rgba(255, 255, 255, 0.2);
 }
 /*--------profil tutup--------- */
+
+.tombol{
+  width: 100%;
+}
