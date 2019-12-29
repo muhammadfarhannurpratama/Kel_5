@@ -38,17 +38,7 @@
 			 <div class="row">
 			 	<div class="col-md-8">
 			 		<select class="form-control">
-			 		<!-- <option value="">Pilih Ongkir</option> -->
-			 		<?php
-					for ($l=0; $l < count($data['rajaongkir']['results'][$k]['costs']); $l++) {
-					?>
-				 	<option value="<?php echo $data['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['value'];?>"><?php echo $data['rajaongkir']['results'][$k]['costs'][$l]['service'];?> -
-					 	Rp. <?php echo number_format($data['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['value']);?> ||
-					 	<?php echo $data['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['etd']; ?> hari
-				 	</option>
-				 	<?php 
-			 		}
-			 		?>	
+			 		<option value="<?php echo $data['rajaongkir']['destination_details']['province'];?>"><?php echo $data['rajaongkir']['destination_details']['province'];?></option>	
 			 		</select>
 			 </div>			 		
 		 </div>

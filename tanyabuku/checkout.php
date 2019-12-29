@@ -58,7 +58,7 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
               data :  'prov_id=' + prov,
               success: function (data) {
 
-                //jika data berhasil didapatkan, tampilkan ke dalam option select kabupaten
+                //jika data berhasil didapatkan, tampilkan ke dalam option select 
                 $("#kabupaten").html(data);
               }
             });
@@ -82,8 +82,47 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
               }
             });
           });
+
+            $("#cek").click(function(){
+            //Mengambil value dari option select provinsi asal, kabupaten, kurir, berat kemudian parameternya dikirim menggunakan ajax
+            var asal = $('#asal').val();
+            var kab = $('#kabupaten').val();
+            var kurir = $('#kurir').val();
+            var berat = $('#berat').val();
+
+            $.ajax({
+              type : 'POST',
+              url : 'http://localhost/Kel_5/tanyabuku/cek_prov.php',
+              data :  {'kab_id' : kab, 'kurir' : kurir, 'asal' : asal, 'berat' : berat},
+              success: function (data) {
+
+                //jika data berhasil didapatkan, tampilkan ke dalam element div ongkir
+                $("#pro").html(data);
+              }
+            });
+          });
+
+            $("#cek").click(function(){
+            //Mengambil value dari option select provinsi asal, kabupaten, kurir, berat kemudian parameternya dikirim menggunakan ajax
+            var asal = $('#asal').val();
+            var kab = $('#kabupaten').val();
+            var kurir = $('#kurir').val();
+            var berat = $('#berat').val();
+
+            $.ajax({
+              type : 'POST',
+              url : 'http://localhost/Kel_5/tanyabuku/cek_kab.php',
+              data :  {'kab_id' : kab, 'kurir' : kurir, 'asal' : asal, 'berat' : berat},
+              success: function (data) {
+
+                //jika data berhasil didapatkan, tampilkan ke dalam element div ongkir
+                $("#kab").html(data);
+              }
+            });
+          });
           });
         </script>
+
 
       </head>
 
@@ -92,13 +131,12 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
     <pre><?php echo print_r($_SESSION) ?></pre> -->
 
     <?php include 'navbar.php'; ?>
-
     <section class="konten">
       <div class="container">
         <br>
         <br>
         <br>
-        <h3>Keranjang Belanja</h3>
+        <h3>Checkout</h3>
         <hr>
         <table class="table table-bordered">
           <thead>
@@ -242,11 +280,13 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
                     </div>
                     <div class="col-md-8"><br>
                       <label>Pilih Ongkos & Estimasi Pengiriman</label><br>
-                      <select id="ongkir" class="form-control" required=""></select><br>
+                      <select id="ongkir" name="ongkir" class="form-control" required=""></select><br>
+                      <select id="pro" name="pro" class="form-control" hidden=""></select>
+                      <select id="kab" name="kab" class="form-control"  hidden=""></select>
                       <label>Nama Pengirim</label>
                       <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Pengirim" required="">
                       <label>Alamat Lengkap Pengiriman</label>
-                      <textarea class="form-control" name="alamat_pengiriman" maxlength="70" placeholder="Masukkan Alamat Pengiriman" style="height: 279px;" required=""></textarea>                   
+                      <textarea class="form-control" name="alamat_pengiriman" maxlength="70" placeholder="Masukkan Alamat Pengiriman" style="height: 279px;" required=""></textarea>
                     </div>
                   </div>
                 </div> 
@@ -266,14 +306,15 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
           $tarif=$_POST['ongkir'];
           $nama_kota=$_POST['kabupaten'];
           $nama_penerima=$_POST['nama'];
-
+          $pro=$_POST['pro'];
+          $kab=$_POST['kab'];
           
 
           $total_pembelian=$totalbelanja + $tarif;
 
         # 1. simpan data ke tabel pembelian
-          $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif,alamat_pengiriman,nama_penerima )
-            VALUES('$id_pelanggan','$id_kurir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman','$nama_penerima')");
+          $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif,alamat_pengiriman,nama_penerima,provinsi,kota )
+            VALUES('$id_pelanggan','$id_kurir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman','$nama_penerima','$pro','$kab')");
 
         # 2. mendapatkan id_pembelian yg baru saja terjadi
           $id_pembelian_baru_terjadi=$koneksi->insert_id;
@@ -286,11 +327,11 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
 
 
             $nama=$perproduk['nama_produk'];
-            $harga=$perproduk['harga_produk'];
+            $harga=$perproduk['harga_jual'];
             $berat=$perproduk['berat'];
             
             $subberat=$perproduk['berat']*$jumlah;
-            $subharga=$perproduk['harga_produk']*$jumlah;
+            $subharga=$perproduk['harga_jual']*$jumlah;
             $koneksi->query("INSERT INTO pembelian_produk (id_pembelian,id_produk,nama,harga,berat,subberat,subharga,jumlah)
               VALUES ('$id_pembelian_baru_terjadi','$id_produk','$nama','$harga','$berat','$subberat','$subharga','$jumlah')");
 
