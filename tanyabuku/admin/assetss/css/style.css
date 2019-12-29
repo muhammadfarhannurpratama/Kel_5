@@ -1201,8 +1201,9 @@ body.mobile-nav-active #mobile-nav-toggle i {
   #team .team-block {
     margin: auto 50px;
     margin-bottom: 30px;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
+    
   }
 }
 
