@@ -3,7 +3,7 @@
 /* --------Phone------- */
 .body{
   background:url(../img/book34.jpg)no-repeat center;
-  min-height: 700px;
+  height: 50%;
   width: 100%;
   position: relative;
   background-size: cover;
@@ -186,31 +186,6 @@
           color: white;
           text-shadow: 0 2px 3px black ;
         }
-        .book{
-          width: auto;
-          height: 80%;
-          background-color: white;
-          padding: 10px;
-        }
-        .book p{
-          color: black;
-          font-size: 13px;
-          text-align: left;
-          font-weight: bold;
-        }
-        .foto{
-         height: 600px;
-         width: 400px;
-         background-size: cover;
-         border-top: 5px solid lightcoral;
-         border-left: 5px solid lightcoral;
-         border-bottom: 5px solid lightblue;
-         border-right: 5px solid lightblue;
-       }
-       .foto img{
-         height: 100%;
-         width: 100%;  
-         ;}
 /* -----Desktop----- */
 @media (min-width: 992px) { 
   .box{ 
@@ -262,24 +237,6 @@
     color: white;
     text-shadow: 0 2px 3px black ;
    }
-   .book{
-     width: auto;
-     height: 80%;
-     background-color: white;
-   }
-   .foto{
-    height: 600px;
-    width: 400px;
-    background-size: cover;
-    border-top: 5px solid lightcoral;
-    border-left: 5px solid lightcoral;
-    border-bottom: 5px solid lightblue;
-    border-right: 5px solid lightblue;
-  }
-  .foto img{
-    height: 100%;
-    width: 100%;  
-    ;}
  }
 /*------------ box family tutup-------------- */
 
@@ -628,6 +585,15 @@ span {
 .nav-menu li ul li{
   width: min-content;
 }
+.nav-menu li ul li:hover a{
+  display: inline-block;
+  text-shadow: -3px -3px 3px rgb(255, 255, 255),3px 3px 3px rgb(255, 255, 255) ;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 .nav-menu > li {
   float: left;
 }
@@ -712,36 +678,31 @@ span {
   padding: 10px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   background: #fff;
-  
-  
 }
 
 .nav-menu ul li {
   transition: 0.3s;
 }
 
-.nav-menu ul li a, .nav-menu ul h5{
+.nav-menu ul li a {
   padding: 5px 10px;
   color: rgb(47, 76, 51);
   transition: 0.3s;
   display: block;
   font-size: 14px;
   text-transform: none;
-  background-color: white;
 }
 
 .nav-menu ul li:hover > a {
-  transform: none;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  color: rgb(241, 42, 42);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .nav-menu ul ul {
   margin: 0;
-  
 }
 
 /* Mobile Nav Toggle */
@@ -1182,24 +1143,23 @@ body.mobile-nav-active #mobile-nav-toggle i {
 --------------------------------*/
 #team .team-block {
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  height: 254px;
   overflow: hidden;
   position: relative;
+  width: 100%;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  height: 200px;
-  width: 200px;
 }
 
 @media (max-width: 991px) {
   #team .team-block {
     margin: auto 50px;
     margin-bottom: 30px;
-    height: 200px;
-    width: 200px;
-    
+    height: 300px;
+    width: 300px;
   }
 }
 
@@ -1541,7 +1501,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #fff;
 }
 
-/* kontak
+/* Contact Section
 --------------------------------*/
 #contact {
   background-image: url(../img/food.png);
@@ -1553,7 +1513,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .info i {
-  font-size: 18px;
+  font-size: 32px;
   color: #ffffff;
   float: left;
 }
@@ -1576,7 +1536,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .social-links a {
-  font-size: 13px;
+  font-size: 18px;
   display: inline-block;
   background: #ffffff;
   color: skyblue;
@@ -1584,8 +1544,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
   padding: 6px 0 8px 0;
   border-radius: 50%;
   text-align: center;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   transition: 0.3s;
 }
 
@@ -1688,6 +1648,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 .footer .copyrights {
+  background: #fff;
   margin-top: 50px;
   text-align: center;
   padding: 25px;
@@ -1700,7 +1661,6 @@ body.mobile-nav-active #mobile-nav-toggle i {
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0;background-origin: padding-box;
-  color: white;
 }
 
 .footer .copyrights p a, .footer .copyrights .credits a {
@@ -1767,7 +1727,3 @@ h3{
   background-color: rgba(255, 255, 255, 0.2);
 }
 /*--------profil tutup--------- */
-
-.tombol{
-  width: 100%;
-}

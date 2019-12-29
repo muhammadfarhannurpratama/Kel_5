@@ -3,128 +3,110 @@ session_start();
 //koneksi
 $koneksi=new mysqli("localhost","root","","db_tanyabuku");
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Tanya Buku! | </title>
+<head>
 
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+  <title>Tanya Buku - Login</title>
 
-    <!-- New Style -->
-    <link rel="stylesheet" href="../build/css/newstyle.css">
-  </head>
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
-      <div class="login_wrapper">
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form method="post">
-              <h1>Login Administrator</h1>
-              <div>
-                <input type="text" class="form-control" name="user" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" name="pass" required="" />
-              </div>
-              <div>
-                <button class="btn btn-primay" name="login">Log in</button>
-              </div>
+</head>
 
-              <div class="clearfix"></div>
+<body class="bg-gradient-primary">
+  
+  <div class="container">
 
-              <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>  
-                </p>
-                <?php 
-                if (isset($_POST['login']))
-                {
-                  $ambil=$koneksi->query("SELECT * FROM admin WHERE username='$_POST[user]'
-                    AND password='$_POST[pass]'");
-                  $yangcocok=$ambil->num_rows;
-                  if($yangcocok==1)
-                  {
-                    $_SESSION['admin']=$ambil->fetch_assoc();
-                    echo "<div class='alert alert-info'>Login Berhasil !</div>";
-                    echo "<meta http-equiv='refresh' content='1;url=index.php'>";
-                  }
-                  else 
-                  {
-                    echo "<div class='alert alert-danger'>Login Gagal !</div>";
-                    echo "<meta http-equiv='refresh' content='1;url=login.php'>";
-                  }
-                }
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
 
-                 ?>
-                <div class="clearfix"></div>
-                <br />
+      <div class="col-xl-10 col-lg-12 col-md-9">
 
-                <div>
-                  <h1><i class="fa fa-book"></i> Tanya Buku!</h1>
-                  <p>©2019 All Rights Reserved. Tanya Buku! is a Bootstrap 4 template. Privacy and Terms</p>
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
+                  </div>
+                  <form method="POST" class="user">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" name="user" placeholder="Masukkan Username" required="">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-user" name="pass" placeholder="Masukkan Password" required="">
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck">
+                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary btn-user btn-block" name="login">Login</button>
+                  </form>
+                  <hr>
+                  <div class="text-center">
+                    <a class="small" href="forgot-password.html">Lupa Password?</a>
+                  </div>
                 </div>
               </div>
-            </form>
-          </section>
+            </div>
+          </div>
         </div>
 
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-book"></i> Tanya Buku!</h1>
-                  <p>©2019 All Rights Reserved. Tanya Buku! is a Bootstrap 4 template. Privacy and Terms</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
       </div>
+
     </div>
-  </body>
+
+  </div>
+
+  <!-- query login -->
+<?php 
+if (isset($_POST['login']))
+{
+  $ambil=$koneksi->query("SELECT * FROM admin WHERE username='$_POST[user]'
+    AND password='$_POST[pass]'");
+  $yangcocok=$ambil->num_rows;
+  if($yangcocok==1)
+  {
+    $_SESSION['admin']=$ambil->fetch_assoc();
+    echo "<div class='alert alert-info'>Login Berhasil !</div>";
+    echo "<meta http-equiv='refresh' content='1;url=index.php'>";
+  }
+  else 
+  {
+    echo "<div class='alert alert-danger'>Login Gagal !</div>";
+    echo "<meta http-equiv='refresh' content='1;url=login.php'>";
+  }
+}
+
+?>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
 </html>
