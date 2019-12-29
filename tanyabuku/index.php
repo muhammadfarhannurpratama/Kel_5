@@ -104,7 +104,7 @@ include 'koneksi.php'
 
   </section>
 
-    <!--==========================Screenshots Section============================-->
+    <!--==========================Testimonni============================-->
   <section id="screenshots" class="padd-section text-center wow fadeInUp">
 
     <div class="container">
@@ -132,13 +132,13 @@ include 'koneksi.php'
 
   </section>
 
-  <!--==========================Contact Section============================-->
+  <!--==========================Contact============================-->
   <section id="contact" class="padd-section wow fadeInUp">
 
     <div class="container">
       <div class="section-title text-center">
-        <h2><b>Contact</b></h2>
-        <p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        <h2><b>Hubungi</b></h2>
+        <p class="separator">siap menerima pesan 24 jam</p>
       </div>
     </div>
 
@@ -204,7 +204,7 @@ include 'koneksi.php'
   </section>
 
 
-<!--==========================About US============================-->
+<!--==========================tentang============================-->
 <footer class="footer bg-light" id="about-us">
     <div class="container">
       <div class="row">
@@ -223,7 +223,7 @@ include 'koneksi.php'
       </div>
     </div>
 
-<!--==========================Team Section============================-->
+<!--==========================Tanya buku group============================-->
 <section id="team" class="padd-section text-center wow fadeInUp bg-light">
 
 <div class="container">
