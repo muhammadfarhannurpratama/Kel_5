@@ -1544,7 +1544,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #fff;
 }
 
-/* Contact Section
+/* kontak
 --------------------------------*/
 #contact {
   background-image: url(../img/food.png);
@@ -1556,7 +1556,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .info i {
-  font-size: 32px;
+  font-size: 18px;
   color: #ffffff;
   float: left;
 }
@@ -1579,7 +1579,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .social-links a {
-  font-size: 18px;
+  font-size: 13px;
   display: inline-block;
   background: #ffffff;
   color: skyblue;
@@ -1587,8 +1587,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
   padding: 6px 0 8px 0;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   transition: 0.3s;
 }
 
