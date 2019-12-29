@@ -23,9 +23,9 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class=""><a href="index.php">Home</a></li>
-          <li><a class="nav-buku" href="#get-started">Best Seller</a></li>
+          <li><a class="nav-buku" href="#get-started">Terlaris</a></li>
           <li><a class="nav-test" href="#screenshots">Testimoni</a></li>
-          <li><a class="nav-about" href="#about-us">About</a></li>
+          <li><a class="nav-about" href="#about-us">tentang</a></li>
           <li><a  href="kategori.php"class="menu-has-children nav-kategori">Semua Buku</a>
              <ul>
              <h5>Kategori</h5>
@@ -52,7 +52,7 @@
           <!--jika sudah login (ada SESSION pelanggan)-->
           <?php if (isset($_SESSION['pelanggan'])): ?>
             <li><a href="history.php">History</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="logout.php">Keluar</a></li>
           <!--jika belum login ( belum ada SESSION pelanggan)-->
           <?php else :  ?>
           <li class="menu-has-children"><a href="#">Daftar</a>
