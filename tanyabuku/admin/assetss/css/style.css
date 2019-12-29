@@ -875,6 +875,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 .section-title {
   margin-bottom: 80px;
+  
 }
 
 @media (max-width: 992px) {
@@ -885,11 +886,15 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 .section-title h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 45px;
-  font-weight: 100;
+  font-size: 50px;
+  font-weight: 150;
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-transform: capitalize;
+}
+.section-title .white {
+  color: white;
+  font-weight: 200;
 }
 
 .section-title .separator {
@@ -1564,7 +1569,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   line-height: 22px;
   font-size: 15px;
   color: white;
-  font-weight: 700;
+  font-weight: 100;
 }
 
 #contact .info .email p {

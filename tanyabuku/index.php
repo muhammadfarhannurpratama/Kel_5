@@ -70,7 +70,7 @@ include 'koneksi.php'
     <div class="container">
       <div class="section-title text-center">
 
-        <h2><b>Best Seller</b> </h2>
+        <h2>Best Seller </h2>
         <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
 
       </div>
@@ -109,7 +109,7 @@ include 'koneksi.php'
 
     <div class="container">
       <div class="section-title text-center">
-        <h2><b>Testimoni</b></h2>
+        <h2>Testimoni</h2>
         <p class="separator">Beberapa testimoni dari user Tanya Buku..</p>
       </div>
     </div>
@@ -137,8 +137,8 @@ include 'koneksi.php'
 
     <div class="container">
       <div class="section-title text-center">
-        <h2><b>Hubungi</b></h2>
-        <p class="separator">siap menerima pesan 24 jam</p>
+        <h2 class="white">Kontak Kami</h2>
+        <p class="white">Hubungi kami, kami siap melayani pertanyaan Anda</p>
       </div>
     </div>
 
