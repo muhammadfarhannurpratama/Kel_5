@@ -301,7 +301,7 @@ include 'koneksi.php'
 </section>
 
 
-    <div class="copyrights">
+    <div class="copyrights bg-dark">
       <div class="container">
         <p>&copy; Copyrights Tanya Buku. All rights reserved.</p>
         <div class="credits">
