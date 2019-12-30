@@ -313,8 +313,8 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
           $total_pembelian=$totalbelanja + $tarif;
 
         # 1. simpan data ke tabel pembelian
-          $koneksi->query("INSERT INTO pembelian (id_pelanggan, id_ongkir, tanggal_pembelian, total_pembelian,nama_kota,tarif,alamat_pengiriman,nama_penerima,provinsi,kota )
-            VALUES('$id_pelanggan','$id_kurir','$tanggal_pembelian','$total_pembelian','$nama_kota','$tarif','$alamat_pengiriman','$nama_penerima','$pro','$kab')");
+          $koneksi->query("INSERT INTO pembelian (id_pelanggan,tanggal_pembelian,total_pembelian,tarif,alamat_pengiriman,nama_penerima,provinsi,kota )
+            VALUES('$id_pelanggan','$tanggal_pembelian','$total_pembelian','$tarif','$alamat_pengiriman','$nama_penerima','$pro','$kab')");
 
         # 2. mendapatkan id_pembelian yg baru saja terjadi
           $id_pembelian_baru_terjadi=$koneksi->insert_id;
