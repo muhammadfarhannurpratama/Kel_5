@@ -77,9 +77,9 @@ if(!isset($_SESSION['admin']))
 			<td><?php echo $pecah['status_pembelian'] ?></td>
 			<td><?php echo $pecah['total_pembelian']; ?></td>
 			<td>
-				<a href="detail.php?id=<?php echo $pecah['id_pembelian']; ?>" class="btn btn-info">Detail</a>		
+				<a href="index.php?halaman=detail&id=<?php echo $pecah['id_pembelian']; ?>" class="btn btn-info">Detail</a>		
 				<?php if ($pecah['status_pembelian']!=="Menunggu Pembayaran"): ?>
-				<a href="pembayaran1.php?id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-success">Lihat Pembayaran</a>
+				<a href="index.php?halaman=pembayaran&id=<?php echo $pecah['id_pembelian'] ?>" class="btn btn-success">Lihat Pembayaran</a>
 				<?php endif ?>
 			</td>
 

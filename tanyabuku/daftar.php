@@ -130,11 +130,16 @@
   						<div class="form-group">
   							<label>Password</label>
   							<input type="password" maxlength="15" minlength="8" class="form-control" name="password" required placeholder="Masukan Password">
-              </div>
-                <div class="form-group">
+              <div class="form-group">
+  						<div class="form-group">
+  							<label>Alamat</label>
+  							<textarea class="form-control" maxlength="50" name="alamat"  required placeholder="Masukan Alamat"></textarea>
+  						</div>
+  						<div class="form-group">
   							<label>Telp / HP</label>
   							<input type="text" maxlength="13" minlength="11" onkeypress="return Angkasaja(event)"  class="form-control" name="telepon" required placeholder="Masukan No Telepon">
-  						</div><br>
+  						</div>
+  						<div class="form-group">
   						<center><button class="btn btn-primary tombol" name="daftar">Daftar</button></center>
   						</div>
   					</form>
@@ -147,7 +152,12 @@
   						$nama=$_POST['nama'];
   						$email=$_POST['email'];
   						$password=$_POST['password'];
+  						$alamat=$_POST['alamat'];
   						$telepon=$_POST['telepon'];
+              $provinsi=$_POST['provinsi'];
+              $kabupaten=$_POST['kabupaten'];
+              $kecamatan=$_POST['kecamatan'];
+
   						//cek email sudah digunakan /belum
   						$ambil=$koneksi->query("SELECT * FROM pelanggan WHERE email_pelanggan='$email'");
   						$yangcocok=$ambil->num_rows;
@@ -159,7 +169,7 @@
   						else
   						{
   							//query insert ke tabel pelanggan
-  							$koneksi->query("INSERT INTO pelanggan (email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan) VALUES ('$email','$password','$nama','$telepon')");
+  							$koneksi->query("INSERT INTO pelanggan (email_pelanggan,password_pelanggan,nama_pelanggan,telepon_pelanggan,alamat_pelanggan,provinsi,kota,kecamatan) VALUES ('$email','$password','$nama','$telepon','$alamat','$provinsi','$kabupaten','$kecamatan')");
 
   							echo "<script>alert('Pendaftaran Berhasil, Silahkan Login !');</script>";
   							echo "<script>location='login.php';</script>";
