@@ -133,7 +133,7 @@ if (isset($_POST['proses']))
     WHERE id_pembelian='$id_pembelian'");
   
   echo "<script>alert ('Data Pembelian Telah TerUpdate !');</script>";
-  echo "<script>location='index.php?halaman=pembelian';</script>";
+  echo "<script>location='pembelian.php';</script>";
 }
 
   ?>

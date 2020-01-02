@@ -121,6 +121,7 @@ $detail=$ambil->fetch_assoc();
 				</div>
             	<br>
             </div>
+            <a href="pembelian.php" class="btn btn-primary btn-block">Kembali</a>
           </div>
         </div>
 
