@@ -1,4 +1,5 @@
-<?php include 'koneksi.php';
+<?php 
+include 'koneksi.php';
 
 $kecamatan_id=$_POST['kecamatan_id'];
 $sql_kelurahan=$koneksi->query("SELECT * FROM kelurahan WHERE id_kec = $kecamatan_id");

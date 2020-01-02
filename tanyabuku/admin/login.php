@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 //koneksi
-$koneksi=new mysqli("localhost","root","","db_tanyabuku");
+include '../koneksi.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
