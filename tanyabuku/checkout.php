@@ -283,8 +283,8 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
                       <select id="ongkir" name="ongkir" class="form-control" required=""></select><br>
                       <select id="pro" name="pro" class="form-control" hidden=""></select>
                       <select id="kab" name="kab" class="form-control"  hidden=""></select>
-                      <label>Nama Pengirim</label>
-                      <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Pengirim" required="">
+                      <label>Nama Penerima</label>
+                      <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Penerima" required="">
                       <label>Alamat Lengkap Pengiriman</label>
                       <textarea class="form-control" name="alamat_pengiriman" maxlength="70" placeholder="Masukkan Alamat Pengiriman" style="height: 279px;" required=""></textarea>
                     </div>

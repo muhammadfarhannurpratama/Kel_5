@@ -22,7 +22,7 @@ if(!isset($_SESSION['admin']))
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tanya Admin - Produk</title>
+  <title>Tanya Admin - Detail</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,16 +45,14 @@ if(!isset($_SESSION['admin']))
   <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Produk</h1>
-    <p class="mb-4">Keseluruhan Barang pada Tanya Buku Store</a>.</p>
+    <!-- <h1 class="h3 mb-2 text-gray-800">Produk</h1>
+    <p class="mb-4">Keseluruhan Barang pada Tanya Buku Store</a>.</p> -->
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
       <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Produk Tanya Buku</h6>
+        <h6 class="m-0 font-weight-bold text-primary">NOTA</h6>
       </div>
-      <div class="card-body">
-        <div class="table-responsive">
         	<?php 
 $ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan
 	ON pembelian.id_pelanggan=pelanggan.id_pelanggan
@@ -62,7 +60,7 @@ $ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan
 $detail=$ambil->fetch_assoc();
  ?>
 
-          
+<div class="card-body">          
 <div class="row">
 	<div class="col-md-4">
 		<h3>Pembelian</h3>
@@ -82,16 +80,17 @@ $detail=$ambil->fetch_assoc();
 	</div>
 	<div class="col-md-4">
 		<h3>Pengiriman</h3>
-		<strong><?php echo $detail['nama_kota']; ?></strong>
+		<strong>Kota Tujuan : <?php echo $detail['kota']; ?></strong>
 		<p>
 			Tarif : Rp. <?php echo number_format($detail['tarif']); ?><br>
-			Alamat:	<?php echo $detail['alamat_pengiriman']; ?>
+			Alamat:	<?php echo $detail['alamat_pengiriman'];?>, <?php echo $detail ['kota']; ?>, <?php echo $detail['provinsi']; ?>
 		</p>
+		</div>
 	</div>
 </div>
 
-
-<table class="table table-bordered">
+<div class="table-resposive">
+	<table class="table table-bordered">
 	<thead>
 		<tr>
 			<th>No</th>
@@ -119,7 +118,7 @@ $detail=$ambil->fetch_assoc();
 	<?php } ?>
 	</tbody>
 </table> 
-
+				</div>
             	<br>
             </div>
           </div>

@@ -76,26 +76,27 @@ if ($id_pelanggan_login !==$id_Pelanggan_beli)
   <div class="container">
     <h2>Konfirmasi Pembayaran</h2>
     <p>Kirim Bukti Pembayaran Anda Disini !</p>
-    <div class="alert alert-info">Total tagihan anda <strong>Rp. <?php echo number_format($detpem['total_pembelian']) ?></strong></div>
 
     <form method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label>Nama Penyetor</label>
-        <input type="text" class="form-control" name="nama">
+        <input type="text" class="form-control" name="nama" placeholder="Nama Harus Sesuai Dengan Nama Penyetor Di Bukti Struk Pembayaran">
       </div>
       <div class="form-group">
     <label>Bank</label>
     <select class="form-control" name="bank">
       <option value="">Pilih Bank</option>
-      <option value="Bni">BNI</option>
-      <option value="Bca">BCA</option>
-      <option value="Bri">BRI</option>
+      <option value="BNI">BNI</option>
+      <option value="BCA">BCA</option>
+      <option value="BRI">BRI</option>
+      <option value="MANDIRI">MANDIRI</option>
     </select>
   </div>
       <div class="form-group">
         <label>Jumlah</label>
-        <input type="number" class="form-control" name="jumlah" min="1"> 
+        <input type="number" class="form-control" name="jumlah" min="1" placeholder="Jumlah Harus Sesuai Dengan Total Tagihan Anda"> 
       </div>
+      <div class="alert alert-info">Total Tagihan Anda <strong>Rp. <?php echo number_format($detpem['total_pembelian']) ?></strong></div>
 
       <div class="form-group">
       <label class="fa fa-camera" for="buktitrans"> Upload Bukti Bayar (Gambar Maks 5Mb) </label>
@@ -133,7 +134,7 @@ if (isset($_POST["kirim"]))
   $koneksi->query("UPDATE pembelian SET status_pembelian = 'Telah Melakukan Pembayaran' 
     WHERE id_pembelian = '$idpem'");
 
-  echo "<script>alert('Terimakasih Telah Mengirim Bukti Pembayaran ');</script>";
+  echo "<script>alert('Terimakasih Telah Mengirimkan Bukti Pembayaran ');</script>";
   echo "<script>location='history.php';</script>";
 }
  ?>
