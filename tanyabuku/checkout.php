@@ -9,6 +9,11 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
   echo "<script>location='login.php';</script>";
   exit();
 }
+elseif (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang'])) 
+{
+  echo "<script>alert ('Tidak Bisa Checkout !, Silahkan Berbelanja Terlebih Dahulu..');</script>";
+  echo "<script>location='index.php';</script>";
+}
 ?>
 
 <!DOCTYPE html>
