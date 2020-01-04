@@ -126,6 +126,10 @@
         -ms-transition: .3s;
         -o-transition: .3s;
       }
+      .daftar{
+        color: white;
+        text-shadow: 0 2px 3px black ;
+      }
       .box2{
         margin: 10px auto;
         width: 80%;
@@ -192,10 +196,6 @@
           -moz-transition:  .3s;
           -ms-transition:  .3s;
           -o-transition:  .3s;
-        }
-        .daftar{
-          color: white;
-          text-shadow: 0 2px 3px black ;
         }
         .book{
           width: auto;
