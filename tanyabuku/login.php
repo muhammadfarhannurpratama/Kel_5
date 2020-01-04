@@ -40,15 +40,11 @@ include 'koneksi.php';
 <body class="body3">
 
   <?php include 'navbar.php'; ?>
-  <br>
-  <br>
-  <br>
 
   <div class="container">
   	<div class="row">
       <div class="col-lg-4"></div>
   		<div class="col-lg-4">
-        <br><br><br>
   			  <div class="container box3">
   				  <div class="panel-heading">
   					<h3><center>Login Pelanggan</center></h3><br>
@@ -64,8 +60,8 @@ include 'koneksi.php';
   							<input type="password" class="form-control" name="password" placeholder="Masukan Password">
   						</div>
                 <div>
-                  <button class="btn btn-primary tomb" name="login" style="margin-right: 120px">Masuk</button> 
-                  <a class="btn btn-primary tomb" href="daftar.php" role="button">Daftar</a>                  
+                  <button class="btn btn-primary tomb" name="login" style="right:0;">Masuk</button> 
+                  <a class="btn btn-primary tomb" href="daftar.php" role="button" style="left:0;">Daftar</a>                  
                 </div>
   					</form>
   				</div>

@@ -103,9 +103,6 @@
 <body class="body">
 
  <?php include 'navbar.php'; ?>
- <br>
- <br>
- <br>
  <div class="container">
   	<div class="row">
       <div class="col-lg-4"></div>
