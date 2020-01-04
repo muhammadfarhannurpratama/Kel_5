@@ -73,7 +73,7 @@ $detail=$ambil->fetch_assoc();
             <div class="form-group">
               <div class="input-group">
                 <input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required>
-                <div class="input-group-btn">
+                <div class="btn-beli">
                   <button class="btn btn-primary" name="beli">Beli</button>
                 </div>
               </div>
