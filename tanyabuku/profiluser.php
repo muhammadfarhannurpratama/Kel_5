@@ -80,11 +80,6 @@ if (!isset($_SESSION['pelanggan']) OR empty($_SESSION['pelanggan']))
                 <label>Telepon</label>
                 <input type="number" readonly value="<?php echo $_SESSION['pelanggan']['telepon_pelanggan'] ?>" class="form-control">
               </div>
-
-              <div class="form-group">
-                <label>Alamat</label>
-                <input type="text" readonly value="<?php echo $_SESSION['pelanggan']['alamat_pelanggan'] ?>" class="form-control">
-              </div>
               <center><a class="btn btn-primary" href="ubahprofil.php?id=<?php echo $_SESSION['pelanggan']['id_pelanggan']; ?>" role="button">Ubah Profil</a></center>
             </form>
           </div>

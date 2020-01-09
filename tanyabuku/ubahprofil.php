@@ -99,11 +99,6 @@ $pecah=$ambil->fetch_assoc();
                 <label>Telepon</label>
                <input type="number" name="telepon" class="form-control" value="<?php echo $pecah['telepon_pelanggan']; ?>">
               </div>
-
-              <div class="form-group">
-                <label>Alamat</label>
-               <input type="text" name="alamat" class="form-control" value="<?php echo $pecah['alamat_pelanggan']; ?>">
-              </div>
              <center><button class="btn btn-primary" name="ubah">Ubah Profil</button></center> 
             </form>
           </div>
@@ -117,7 +112,7 @@ $pecah=$ambil->fetch_assoc();
 if (isset($_POST['ubah']))
 {
 
-    $koneksi->query("UPDATE pelanggan SET email_pelanggan='$_POST[email]',password_pelanggan='$_POST[pass]',nama_pelanggan='$_POST[nama]',telepon_pelanggan='$_POST[telepon]',alamat_pelanggan='$_POST[alamat]'
+    $koneksi->query("UPDATE pelanggan SET email_pelanggan='$_POST[email]',password_pelanggan='$_POST[pass]',nama_pelanggan='$_POST[nama]',telepon_pelanggan='$_POST[telepon]'
       WHERE id_pelanggan='$_GET[id]'");
 
   echo "<script> alert('Data Pelanggan Telah Diubah, Silahkan Login Kembali !');</script>";
