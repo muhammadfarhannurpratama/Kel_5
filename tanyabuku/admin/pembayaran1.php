@@ -106,7 +106,7 @@ if(!isset($_SESSION['admin']))
         <div class="col-md-12">
           <div class="form-group">
            <label>No Resi Pengiriman</label>
-    <input type="text" class="form-control" name="resi">
+    <input type="text" class="form-control" name="resi" >
   </div>
   <div class="form-group">
     <label>Status</label>
@@ -115,7 +115,7 @@ if(!isset($_SESSION['admin']))
       <option value="Lunas">Lunas</option>
       <option value="Proses Packing">Proses Packing</option>
       <option value="Barang Telah Dikirim">Barang Telah Dikirim</option>
-      <option value="Barang Telah Dikirim">Barang Diterima</option>
+      <option value="Barang Telah Diterima">Barang Diterima</option>
       <option value="Batal">Batal</option>
     </select>
    </div><br><br>
