@@ -50,7 +50,7 @@ include 'koneksi.php';
  <div class="col-sm-10">
 <!-- daftar buku -->
         <br><br><br>
-        <h3 class="judulbuku">Daftar Buku</h3>
+        <h3 class="judulbuku">Daftar Kopi</h3>
         <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">

@@ -7,7 +7,7 @@ include 'koneksi.php'
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Tanya Buku Online Store</title>
+  <title>Kopi Sugara Online Store</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -44,7 +44,7 @@ include 'koneksi.php'
 <!-- daftar buku -->
         <div class="col-sm-12">
         <br><br><br>
-        <h3 class="judulbuku">Daftar Buku</h3>
+        <h3 class="judulbuku">Daftar Kopi</h3>
         <br><br>
         <form action="">
         <section id="get-started" class=" text-center wow fadeInUp">
@@ -62,7 +62,7 @@ include 'koneksi.php'
                         <h5>Harga: <?php echo number_format($perproduk['harga_jual']); ?></h5>                     
                         </div>
                         <br>
-                        <strong><label style="font-size: 14px;" > Stok : <?php echo $perproduk['stok_produk'] ?> Buku</label></strong>    
+                        <strong><label style="font-size: 14px;" > Stok : <?php echo $perproduk['stok_produk'] ?> Kopi</label></strong>    
                       </div>      
             </div>
         <?php } ?>

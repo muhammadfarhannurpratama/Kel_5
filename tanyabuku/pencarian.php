@@ -74,7 +74,7 @@ $ambil = $koneksi->query("SELECT * FROM produk WHERE nama_produk LIKE '%$keyword
           <img src="foto_produk/<?php echo $value["foto_produk"]; ?>" alt="" class="container-fluid">
           <div class="caption">
             <h4><?php echo $value["nama_produk"] ?> </h4>
-            <h5>Rp. <?php echo number_format($value['harga_produk']) ?> </h5>
+            <h5>Rp. <?php echo number_format($value['harga_jual']) ?> </h5>
             <a href="beli.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-primary">Beli</a>
             <a href="detail.php?id=<?php echo $value['id_produk']; ?>" class="btn btn-primary">Detail</a>
           </div>

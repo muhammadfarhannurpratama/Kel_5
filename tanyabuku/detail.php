@@ -65,14 +65,14 @@ $detail=$ambil->fetch_assoc();
         <div class="col-md-6">
           <div class="book">
           <h2><?php echo $detail['nama_produk']; ?></h2> <br>
-          <h4>Rp. <?php echo number_format($detail['harga_jual']); ?></h4>
+         <!-- <h4>Rp. <?php echo number_format($detail['harga_jual']); ?></h4> -->
 
-          <p>Stok : <?php echo $detail['stok_produk'] ?></p>
+         <!-- <p>Stok : <?php echo $detail['stok_produk'] ?></p> -->
 
           <form method="post">
             <div class="form-group">
               <div class="input-group">
-                <input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required>
+              <!--  <input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required> -->
                 <div class="btn-beli">
                   <button class="btn btn-primary" name="beli">Beli</button>
                 </div>
