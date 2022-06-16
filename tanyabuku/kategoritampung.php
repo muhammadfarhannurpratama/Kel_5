@@ -67,7 +67,7 @@ include 'koneksi.php';
                         <h5>Harga: <?php echo number_format($perproduk['harga_jual']); ?></h5>                     
                         </div>
                         <br>
-                        <strong><label style="font-size: 14px;" > Stok : <?php echo $perproduk['stok_produk'] ?> Buku</label></strong>    
+                        <!-- <strong><label style="font-size: 14px;" > Stok : <?php echo $perproduk['stok_produk'] ?> Buku</label></strong>   --> 
                       </div>
        
                     </div>

@@ -72,9 +72,10 @@ $detail=$ambil->fetch_assoc();
           <form method="post">
             <div class="form-group">
               <div class="input-group">
-              <!--  <input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required> -->
-                <div class="btn-beli">
-                  <button class="btn btn-primary" name="beli">Beli</button>
+               <!-- <input onkeypress="return Angkasaja(event)" type="number" min="1" class="form-control" placeholder="Masukan Banyak Barang Yang Ingin Dibeli" name="jumlah" max="<?php echo $detail['stok_produk'] ?>" required>
+-->
+<div class="btn-beli">
+                  <button> <a href="https://shopee.co.id/tahajjudin_fajri">Beli</a> </button>
                 </div>
               </div>
             </div>
