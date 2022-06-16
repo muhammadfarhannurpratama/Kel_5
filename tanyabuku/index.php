@@ -47,23 +47,10 @@ include 'koneksi.php'
       <h1>Selamat Datang di Tanya Buku Store</h1>
       <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
       <img src="admin/assetss/img/tanyabuku.png">
-      <a href="#video" class="btn-get-started scrollto">video</a>
       <br>
     </div>
   </section>
 
-  <!--==========================Video============================-->
-  <section id="video" class="text-center wow fadeInUp">
-    <div class="overlay">
-      <div class="container-fluid container-full">
-
-        <div class="row">
-          <a href="#" class="js-modal-btn play-btn" data-video-id="59e0NheJnHg"></a>
-        </div>
-
-      </div>
-    </div>
-  </section>
   <!--==========================Best Seller============================-->
  <section id="get-started" class="padd-section text-center wow fadeInUp">
 
@@ -104,33 +91,7 @@ include 'koneksi.php'
 
   </section>
 
-    <!--==========================Testimonni============================-->
-  <section id="screenshots" class="padd-section text-center wow fadeInUp">
-
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Testimoni</h2>
-        <p class="separator">Beberapa testimoni dari user Tanya Buku..</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="owl-carousel owl-theme">
-
-        <div><img src="admin/assetss/img/screen/1.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/2.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/3.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/4.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/5.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/6.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/7.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/8.jpg" alt="img"></div>
-        <div><img src="admin/assetss/img/screen/9.jpg" alt="img"></div>
-
-      </div>
-    </div>
-
-  </section>
+   
 
   <!--==========================Contact============================-->
   <section id="contact" class="padd-section wow fadeInUp">
@@ -160,7 +121,7 @@ include 'koneksi.php'
 
             <div>
               <i class="fa fa-phone"></i>
-              <p>082330044949</p>
+              <p>085231453908</p>
             </div>
           </div>
 
@@ -202,22 +163,7 @@ include 'koneksi.php'
 
 <!--==========================tentang============================-->
 <footer class="footer bg-light" id="about-us">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-            <h1><center>Toko Doni</center></h1> <br>
-            <div class="">
-              <center><img src="admin/assetss/img/img.jpg" alt="" width="400" height="245"></center>
-            </div> <br>
-            <p style="font-size: 20px; text-align: justify;">
-              Toko Doni yang terletak di  Jalan R.A. Kartini No. 18, Patemon, Blindungan,Kec. Bondowoso, Kabupaten Bondowoso, Jawa Timur 68212, Indonesia. Telp: +62 332 422077. 
-              Merupakan salah satu toko yang menjual berbagai jenis alat musik, alat olahraga, alat tulis, aksesoris, buku, seragam dan lain-lain. Pemilik Toko Doni adalah Bapak Hj. Ahmad Soekarno berumur 73 Tahun. 
-              Toko Doni ini juga mempunyai karyawan sejumlah 53 orang.
-            </p>
-        </div>
-      </div>
-    </div>
+   
 
 <!--==========================Tanya buku group============================-->
 <section id="team" class="padd-section text-center wow fadeInUp bg-light">
@@ -232,7 +178,7 @@ include 'koneksi.php'
 <div class="container">
   <div class="row">
 
-    <div class="col-md-6 col-md-4 col-lg-3">
+    <div class="col-md-6 col-md-5 col-lg-3">
       <div class="team-block bottom round">
         <img src="profil/tahaj.jpg" class="img-responsive" alt="img">
         <div class="team-content">
@@ -248,7 +194,7 @@ include 'koneksi.php'
       </div>
     </div>
 
-   <div class="col-md-6 col-md-4 col-lg-3">
+   <div class="col-md-6 col-md-5 col-lg-3">
       <div class="team-block bottom round">
         <img src="profil/farhan.jpeg" class="img-responsive" alt="img">
         <div class="team-content">
@@ -264,33 +210,19 @@ include 'koneksi.php'
       </div>
     </div>
 
-    <div class="col-md-6 col-md-4 col-lg-3">
-      <div class="team-block bottom round">
-        <img src="profil/muchlis.jpeg" class="img-responsive" alt="img">
-        <div class="team-content">
-          <ul class="list-unstyled">
-            <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-          <h4>Muchlish</h4>
-          <h5>NIM: E41182137</h5>
-          <h5>Politeknik Negeri Jember</h5><br>
-        </div>
-      </div>
-    </div>
+   
 
-    <div class="col-md-6 col-md-4 col-lg-3">
+    <div class="col-md-6 col-md-5 col-lg-3">
       <div class="team-block bottom round">
-        <img src="profil/uus.jpeg" class="img-responsive" alt="img">
+        <img src="profil/agung.png" class="img-responsive" alt="img">
         <div class="team-content">
           <ul class="list-unstyled">
             <li><a href="https://www.instazu.com/profile/haroenmohammed"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
           </ul>
-          <h4>Fauziyah</h4>
-          <h5>NIM: E41182137</h5>
+          <h4>Agung Joyo</h4>
+          <h5>NIM: E41182206</h5>
           <h5>Politeknik Negeri Jember</h5><br>
         </div>
       </div>

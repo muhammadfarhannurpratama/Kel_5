@@ -223,7 +223,7 @@ elseif (empty($_SESSION['keranjang']) OR !isset($_SESSION['keranjang']))
                         <select disabled class=\"form-control\" name='asal' id='asal'>";
                   // echo "<option>Pilih Kota Asal</option>";
                         $data = json_decode($response, true);
-                        for ($i=85; $i < count($data['rajaongkir']['results']); $i++) {
+                        for ($i=159; $i < count($data['rajaongkir']['results']); $i++) {
                           echo "<option value='".$data['rajaongkir']['results'][$i]['city_id']."'>".$data['rajaongkir']['results'][$i]['city_name']."</option>";
                         }
                         echo "</select>
