@@ -7,7 +7,7 @@ include 'koneksi.php'
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Tanya Buku Online Store</title>
+  <title>Toko Kopi Online Store</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -44,9 +44,9 @@ include 'koneksi.php'
   <!--==========================Tampilan Awal============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <h1>Selamat Datang di Tanya Buku Store</h1>
-      <h2>Merupakan Situs Belanja Buku Online terUpdate & terPercaya..</h2>
-      <img src="admin/assetss/img/tanyabuku.png">
+      <h1>Selamat Datang di Toko Kopi Store </h1>
+      <h2>Merupakan Situs Belanja Kopi Online terUpdate & terPercaya..</h2>
+
       <br>
     </div>
   </section>
@@ -58,7 +58,7 @@ include 'koneksi.php'
       <div class="section-title text-center">
 
         <h2>Best Seller </h2>
-        <p class="separator">terbaru dan best seller hanya di tanya buku..</p>
+        <p class="separator">terbaru dan best seller hanya di Kopi Sugara..</p>
 
       </div>
     </div>
@@ -171,7 +171,7 @@ include 'koneksi.php'
 <div class="container">
   <div class="section-title text-center">
 
-    <h2 style=" font-family: 'Indie Flower', cursive;"><b>Tanya Buku Group</b></h2>
+    <h2 style=" font-family: 'Indie Flower', cursive;"><b>Kopi Sugara Group</b></h2>
   </div>
 </div>
 
